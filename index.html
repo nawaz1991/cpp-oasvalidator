@@ -1,0 +1,25 @@
+
+    <html>
+    <head>
+        <title>Benchmark Report</title>
+        <style>
+            body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; color: #333; }
+            .container { width: 80%; margin: 20px auto; }
+            h1 { text-align: center; }
+            .info-table, .benchmark-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+            .info-table td, .benchmark-table th, .benchmark-table td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+            .info-table .key-cell { width: 20%; font-weight: bold; }
+            .inner-table { width: 100%; margin-top: 5px; }
+            .inner-table td { border: none; padding: 4px; font-size: 0.9em; }
+            .benchmark-table th { background-color: #4CAF50; color: white; }
+            tr:nth-child(even) { background-color: #f2f2f2; }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Benchmark Report</h1>
+            <h2>Context</h2><table class='info-table'><tr><td class='key-cell'><strong>date</strong></td><td>2023-11-14T16:39:32+00:00</td></tr><tr><td class='key-cell'><strong>host_name</strong></td><td>fv-az1499-124</td></tr><tr><td class='key-cell'><strong>executable</strong></td><td>build/test/perftest/oasvalidator-perftests</td></tr><tr><td class='key-cell'><strong>num_cpus</strong></td><td>4</td></tr><tr><td class='key-cell'><strong>mhz_per_cpu</strong></td><td>3212</td></tr><tr><td class='key-cell'><strong>cpu_scaling_enabled</strong></td><td>False</td></tr><tr><td class='key-cell'><strong>caches</strong></td><td><table class='inner-table'><tr><td>type: Data</td><td>level: 1</td><td>size: 32768</td><td>num_sharing: 2</td></tr><tr><td>type: Instruction</td><td>level: 1</td><td>size: 32768</td><td>num_sharing: 2</td></tr><tr><td>type: Unified</td><td>level: 2</td><td>size: 524288</td><td>num_sharing: 2</td></tr><tr><td>type: Unified</td><td>level: 3</td><td>size: 33554432</td><td>num_sharing: 4</td></tr></table></td></tr><tr><td class='key-cell'><strong>load_avg</strong></td><td><table class='inner-table'><tr><td>0.907227</td></tr><tr><td>0.425781</td></tr><tr><td>0.170898</td></tr></table></td></tr><tr><td class='key-cell'><strong>library_build_type</strong></td><td>release</td></tr></table><h2>Benchmarks</h2><table class='benchmark-table'><tr><th>Index</th><th>Benchmark</th><th>iterations</th><th>Real Time (us)</th><th>CPU Time (us)</th></tr><tr><td>1</td><td>InvalidMethod</td><td>41065335</td><td>0.119</td><td>0.119</td></tr><tr><td>2</td><td>ValidRoute</td><td>84803902</td><td>0.057</td><td>0.057</td></tr><tr><td>3</td><td>InvalidRoute</td><td>2273895</td><td>2.175</td><td>2.175</td></tr><tr><td>4</td><td>ValidPathParam</td><td>1845401</td><td>2.698</td><td>2.698</td></tr><tr><td>5</td><td>InvalidPathParam</td><td>953130</td><td>5.150</td><td>5.150</td></tr><tr><td>6</td><td>ValidQueryParam</td><td>14532488</td><td>0.337</td><td>0.337</td></tr><tr><td>7</td><td>InvalidQueryParam</td><td>1759877</td><td>2.782</td><td>2.782</td></tr><tr><td>8</td><td>ValidHeaderParam</td><td>15977544</td><td>0.307</td><td>0.307</td></tr><tr><td>9</td><td>InvalidHeaderParam</td><td>1779518</td><td>2.782</td><td>2.782</td></tr><tr><td>10</td><td>ValidBody</td><td>4252619</td><td>1.254</td><td>1.254</td></tr><tr><td>11</td><td>InvalidBody</td><td>4384809</td><td>1.065</td><td>1.065</td></tr><tr><td>12</td><td>ValidRequest</td><td>830711</td><td>5.892</td><td>5.891</td></tr><tr><td>13</td><td>InvalidRequest1</td><td>30749069</td><td>0.151</td><td>0.151</td></tr><tr><td>14</td><td>InvalidRequest2</td><td>2256325</td><td>2.171</td><td>2.171</td></tr><tr><td>15</td><td>InvalidRequest3</td><td>638376</td><td>7.710</td><td>7.710</td></tr><tr><td>16</td><td>InvalidRequest4</td><td>549850</td><td>8.903</td><td>8.902</td></tr><tr><td>17</td><td>InvalidRequest5</td><td>580789</td><td>8.424</td><td>8.423</td></tr><tr><td>18</td><td>ComplexValidRequest</td><td>202845</td><td>24.227</td><td>24.226</td></tr></table>
+        </div>
+    </body>
+    </html>
+    

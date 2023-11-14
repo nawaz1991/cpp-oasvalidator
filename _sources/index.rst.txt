@@ -9,10 +9,6 @@ oasvalidator
   :alt: Gitlab releases
   :target: https://github.com/nawaz1991/cpp-oasvalidator/releases
 
-.. image:: https://github.com/nawaz1991/cpp-oasvalidator/actions/workflows/build.yml/badge.svg
-  :alt: Build Status
-  :target:
-
 .. image:: https://codecov.io/gh/nawaz1991/cpp-oasvalidator/branch/main/graph/badge.svg?token=96b475c2-8dc1-4693-8ce3-84a572720d43
   :alt: Code Coverage
   :target: https://codecov.io/gh/nawaz1991/cpp-oasvalidator

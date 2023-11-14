@@ -1,0 +1,29 @@
+.. _exhale_class_classBaseDeserializer:
+
+Class BaseDeserializer
+======================
+
+- Defined in :ref:`file_deserializers_base_deserializer.hpp`
+
+
+Inheritance Relationships
+-------------------------
+
+Derived Types
+*************
+
+- ``public ArrayDeserializer`` (:ref:`exhale_class_classArrayDeserializer`)
+- ``public ContentDeserializer`` (:ref:`exhale_class_classContentDeserializer`)
+- ``public ObjectDeserializer`` (:ref:`exhale_class_classObjectDeserializer`)
+- ``public PrimitiveDeserializer`` (:ref:`exhale_class_classPrimitiveDeserializer`)
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: BaseDeserializer
+   :project: Doxygen XML
+   :members:
+   :protected-members:
+   :undoc-members:

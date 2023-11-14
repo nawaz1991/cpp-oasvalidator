@@ -1,0 +1,27 @@
+.. _exhale_class_classPathTrie:
+
+Class PathTrie
+==============
+
+- Defined in :ref:`file_utils_path_trie.hpp`
+
+
+Nested Relationships
+--------------------
+
+
+Nested Types
+************
+
+- :ref:`exhale_struct_structPathTrie_1_1Node`
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: PathTrie
+   :project: Doxygen XML
+   :members:
+   :protected-members:
+   :undoc-members:

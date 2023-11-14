@@ -1,0 +1,28 @@
+.. _exhale_class_classValidatorsStore:
+
+Class ValidatorsStore
+=====================
+
+- Defined in :ref:`file_validators_validators_store.hpp`
+
+
+Nested Relationships
+--------------------
+
+
+Nested Types
+************
+
+- :ref:`exhale_struct_structValidatorsStore_1_1PathParamValidatorInfo`
+- :ref:`exhale_struct_structValidatorsStore_1_1QueryParamValidatorInfo`
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: ValidatorsStore
+   :project: Doxygen XML
+   :members:
+   :protected-members:
+   :undoc-members:

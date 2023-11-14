@@ -1,0 +1,26 @@
+.. _exhale_class_classPathParamValidator:
+
+Class PathParamValidator
+========================
+
+- Defined in :ref:`file_validators_param_validators.hpp`
+
+
+Inheritance Relationships
+-------------------------
+
+Base Type
+*********
+
+- ``public ParamValidator`` (:ref:`exhale_class_classParamValidator`)
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: PathParamValidator
+   :project: Doxygen XML
+   :members:
+   :protected-members:
+   :undoc-members:

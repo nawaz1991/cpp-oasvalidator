@@ -1,0 +1,44 @@
+.. _exhale_class_classParamValidator:
+
+Class ParamValidator
+====================
+
+- Defined in :ref:`file_validators_param_validators.hpp`
+
+
+Nested Relationships
+--------------------
+
+
+Nested Types
+************
+
+- :ref:`exhale_struct_structParamValidator_1_1ParamInfo`
+
+
+Inheritance Relationships
+-------------------------
+
+Base Type
+*********
+
+- ``public JsonValidator`` (:ref:`exhale_class_classJsonValidator`)
+
+
+Derived Types
+*************
+
+- ``public HeaderParamValidator`` (:ref:`exhale_class_classHeaderParamValidator`)
+- ``public PathParamValidator`` (:ref:`exhale_class_classPathParamValidator`)
+- ``public QueryParamValidator`` (:ref:`exhale_class_classQueryParamValidator`)
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: ParamValidator
+   :project: Doxygen XML
+   :members:
+   :protected-members:
+   :undoc-members:

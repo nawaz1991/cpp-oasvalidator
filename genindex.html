@@ -1,0 +1,728 @@
+<!doctype html>
+<html class="no-js">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="#" /><link rel="search" title="Search" href="search.html" />
+
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.09.29"/><title>Index - oasvalidator</title>
+<link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=d81277517bee4d6b0349d71bb2661d4890b5617c" />
+    <link rel="stylesheet" type="text/css" href="_static/collapsible-lists/css/tree_view.css" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  --color-api-overall: #cccccc;
+  --color-api-keyword: #e62569;
+  --color-api-name: #8ee22c;
+  --color-brand-content: #67d8ef;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="index.html"><div class="brand">oasvalidator</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
+  
+  
+  <span class="sidebar-brand-text">oasvalidator</span>
+  
+</a><form class="sidebar-search-container" method="get" action="search.html" role="search">
+  <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <ul class="current">
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Index</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          
+<section class="genindex-section">
+  <h1 id="index">Index</h1>
+  <div class="genindex-jumpbox"><a href="#A"><strong>A</strong></a> | <a href="#B"><strong>B</strong></a> | <a href="#C"><strong>C</strong></a> | <a href="#D"><strong>D</strong></a> | <a href="#E"><strong>E</strong></a> | <a href="#H"><strong>H</strong></a> | <a href="#J"><strong>J</strong></a> | <a href="#M"><strong>M</strong></a> | <a href="#O"><strong>O</strong></a> | <a href="#P"><strong>P</strong></a> | <a href="#Q"><strong>Q</strong></a> | <a href="#S"><strong>S</strong></a> | <a href="#V"><strong>V</strong></a></div>
+</section>
+<section id="A" class="genindex-section">
+  <h2>A</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/classArrayDeserializer.html#_CPPv417ArrayDeserializer">ArrayDeserializer (C++ class)</a>
+</li>
+        <li><a href="api/classArrayDeserializer.html#_CPPv4N17ArrayDeserializer17ArrayDeserializerERKNSt6stringEcb13PrimitiveTypecbb">ArrayDeserializer::ArrayDeserializer (C++ function)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/classArrayDeserializer.html#_CPPv4N17ArrayDeserializer11DeserializeEPKcPCKc">ArrayDeserializer::Deserialize (C++ function)</a>
+</li>
+        <li><a href="api/classArrayDeserializer.html#_CPPv4N17ArrayDeserializerD0Ev">ArrayDeserializer::~ArrayDeserializer (C++ function)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="B" class="genindex-section">
+  <h2>B</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/classBaseDeserializer.html#_CPPv416BaseDeserializer">BaseDeserializer (C++ class)</a>
+</li>
+        <li><a href="api/classBaseDeserializer.html#_CPPv4N16BaseDeserializer16BaseDeserializerERKNSt6stringEcb">BaseDeserializer::BaseDeserializer (C++ function)</a>
+</li>
+        <li><a href="api/classBaseDeserializer.html#_CPPv4NK16BaseDeserializer9CheckDataERPKcPCKc">BaseDeserializer::CheckData (C++ function)</a>
+</li>
+        <li><a href="api/classBaseDeserializer.html#_CPPv4NK16BaseDeserializer8CheckEndERPKcPCKc">BaseDeserializer::CheckEnd (C++ function)</a>
+</li>
+        <li><a href="api/classBaseDeserializer.html#_CPPv4NK16BaseDeserializer14CheckNSkipCharERPKcPCKcKc">BaseDeserializer::CheckNSkipChar (C++ function)</a>
+</li>
+        <li><a href="api/classBaseDeserializer.html#_CPPv4NK16BaseDeserializer14CheckNSkipNameERPKcPCKc">BaseDeserializer::CheckNSkipName (C++ function)</a>
+</li>
+        <li><a href="api/classBaseDeserializer.html#_CPPv4NK16BaseDeserializer15CheckNSkipStartERPKc">BaseDeserializer::CheckNSkipStart (C++ function)</a>
+</li>
+        <li><a href="api/classBaseDeserializer.html#_CPPv4N16BaseDeserializer11DeserializeEPKcPCKc">BaseDeserializer::Deserialize (C++ function)</a>
+</li>
+        <li><a href="api/classBaseDeserializer.html#_CPPv4NK16BaseDeserializer18DeserializeBooleanERPKcPCKcRNSt6stringE">BaseDeserializer::DeserializeBoolean (C++ function)</a>
+</li>
+        <li><a href="api/classBaseDeserializer.html#_CPPv4NK16BaseDeserializer18DeserializeIntegerERPKcPCKcRNSt6stringE">BaseDeserializer::DeserializeInteger (C++ function)</a>
+</li>
+        <li><a href="api/classBaseDeserializer.html#_CPPv4NK16BaseDeserializer17DeserializeNumberERPKcPCKcRNSt6stringE">BaseDeserializer::DeserializeNumber (C++ function)</a>
+</li>
+        <li><a href="api/classBaseDeserializer.html#_CPPv4NK16BaseDeserializer17DeserializeStringERPKcPCKcKcRNSt6stringE">BaseDeserializer::DeserializeString (C++ function)</a>, <a href="api/classBaseDeserializer.html#_CPPv4NK16BaseDeserializer17DeserializeStringERPKcPCKcRNSt6stringE">[1]</a>
+</li>
+        <li><a href="api/classBaseDeserializer.html#_CPPv4N16BaseDeserializer15kHexLookupTableE">BaseDeserializer::kHexLookupTable (C++ member)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/classBaseDeserializer.html#_CPPv4N16BaseDeserializer11param_name_E">BaseDeserializer::param_name_ (C++ member)</a>
+</li>
+        <li><a href="api/classBaseDeserializer.html#_CPPv4N16BaseDeserializer10skip_name_E">BaseDeserializer::skip_name_ (C++ member)</a>
+</li>
+        <li><a href="api/classBaseDeserializer.html#_CPPv4N16BaseDeserializer6start_E">BaseDeserializer::start_ (C++ member)</a>
+</li>
+        <li><a href="api/classBaseDeserializer.html#_CPPv4N16BaseDeserializerD0Ev">BaseDeserializer::~BaseDeserializer (C++ function)</a>
+</li>
+        <li><a href="api/classBaseValidator.html#_CPPv413BaseValidator">BaseValidator (C++ class)</a>
+</li>
+        <li><a href="api/classBaseValidator.html#_CPPv4N13BaseValidator13BaseValidatorE15ValidationError">BaseValidator::BaseValidator (C++ function)</a>, <a href="api/classBaseValidator.html#_CPPv4N13BaseValidator13BaseValidatorERKNSt6vectorINSt6stringEEE15ValidationError">[1]</a>
+</li>
+        <li><a href="api/classBaseValidator.html#_CPPv4N13BaseValidator14code_on_error_E">BaseValidator::code_on_error_ (C++ member)</a>
+</li>
+        <li><a href="api/classBaseValidator.html#_CPPv4N13BaseValidator11err_header_E">BaseValidator::err_header_ (C++ member)</a>
+</li>
+        <li><a href="api/classBaseValidator.html#_CPPv4NK13BaseValidator12GetErrHeaderEv">BaseValidator::GetErrHeader (C++ function)</a>
+</li>
+        <li><a href="api/classBaseValidator.html#_CPPv4N13BaseValidator13InitErrHeaderEv">BaseValidator::InitErrHeader (C++ function)</a>
+</li>
+        <li><a href="api/classBaseValidator.html#_CPPv4N13BaseValidator12ValidateJsonERKNSt6stringERNSt6stringE">BaseValidator::ValidateJson (C++ function)</a>
+</li>
+        <li><a href="api/classBaseValidator.html#_CPPv4N13BaseValidatorD0Ev">BaseValidator::~BaseValidator (C++ function)</a>
+</li>
+        <li><a href="api/classBodyValidator.html#_CPPv413BodyValidator">BodyValidator (C++ class)</a>
+</li>
+        <li><a href="api/classBodyValidator.html#_CPPv4N13BodyValidator13BodyValidatorERKN9rapidjson5ValueERKNSt6vectorINSt6stringEEE">BodyValidator::BodyValidator (C++ function)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="C" class="genindex-section">
+  <h2>C</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/define_common_8hpp_1a8eafe4836a90504d10ce945bd8aaca0b.html#c.CHECK_ERROR">CHECK_ERROR (C macro)</a>
+</li>
+        <li><a href="api/classContentDeserializer.html#_CPPv419ContentDeserializer">ContentDeserializer (C++ class)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/classContentDeserializer.html#_CPPv4N19ContentDeserializer19ContentDeserializerERKNSt6stringEcb">ContentDeserializer::ContentDeserializer (C++ function)</a>
+</li>
+        <li><a href="api/classContentDeserializer.html#_CPPv4N19ContentDeserializer11DeserializeEPKcPCKc">ContentDeserializer::Deserialize (C++ function)</a>
+</li>
+        <li><a href="api/classContentDeserializer.html#_CPPv4N19ContentDeserializerD0Ev">ContentDeserializer::~ContentDeserializer (C++ function)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="D" class="genindex-section">
+  <h2>D</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/classDeserializationException.html#_CPPv424DeserializationException">DeserializationException (C++ class)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/classDeserializationException.html#_CPPv4N24DeserializationException24DeserializationExceptionERKNSt6stringE">DeserializationException::DeserializationException (C++ function)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="E" class="genindex-section">
+  <h2>E</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/function_common_8hpp_1a87afbcd5256dc089a2c20b8ad9a6b29a.html#_CPPv411EscapeSlashRKNSt6stringE">EscapeSlash (C++ function)</a>
+</li>
+        <li><a href="api/enum_common_8hpp_1ab48fecf14b8eafb9688c36303f032401.html#_CPPv412ExtendedType">ExtendedType (C++ enum)</a>
+</li>
+        <li><a href="api/enum_common_8hpp_1ab48fecf14b8eafb9688c36303f032401.html#_CPPv4N12ExtendedType5ARRAYE">ExtendedType::ARRAY (C++ enumerator)</a>
+</li>
+        <li><a href="api/enum_common_8hpp_1ab48fecf14b8eafb9688c36303f032401.html#_CPPv4N12ExtendedType7BOOLEANE">ExtendedType::BOOLEAN (C++ enumerator)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/enum_common_8hpp_1ab48fecf14b8eafb9688c36303f032401.html#_CPPv4N12ExtendedType7INTEGERE">ExtendedType::INTEGER (C++ enumerator)</a>
+</li>
+        <li><a href="api/enum_common_8hpp_1ab48fecf14b8eafb9688c36303f032401.html#_CPPv4N12ExtendedType6NUMBERE">ExtendedType::NUMBER (C++ enumerator)</a>
+</li>
+        <li><a href="api/enum_common_8hpp_1ab48fecf14b8eafb9688c36303f032401.html#_CPPv4N12ExtendedType6OBJECTE">ExtendedType::OBJECT (C++ enumerator)</a>
+</li>
+        <li><a href="api/enum_common_8hpp_1ab48fecf14b8eafb9688c36303f032401.html#_CPPv4N12ExtendedType6STRINGE">ExtendedType::STRING (C++ enumerator)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="H" class="genindex-section">
+  <h2>H</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/classHeaderParamValidator.html#_CPPv420HeaderParamValidator">HeaderParamValidator (C++ class)</a>
+</li>
+        <li><a href="api/classHeaderParamValidator.html#_CPPv4N20HeaderParamValidator20HeaderParamValidatorERKN9rapidjson5ValueERKNSt6vectorINSt6stringEEE">HeaderParamValidator::HeaderParamValidator (C++ function)</a>
+</li>
+        <li><a href="api/classHeaderParamValidator.html#_CPPv4N20HeaderParamValidatorD0Ev">HeaderParamValidator::~HeaderParamValidator (C++ function)</a>
+</li>
+        <li><a href="api/enum_common_8hpp_1a4353a75834bb35c4acd80b51434eef59.html#_CPPv410HttpMethod">HttpMethod (C++ enum)</a>
+</li>
+        <li><a href="api/enum_common_8hpp_1a4353a75834bb35c4acd80b51434eef59.html#_CPPv4N10HttpMethod7CONNECTE">HttpMethod::CONNECT (C++ enumerator)</a>
+</li>
+        <li><a href="api/enum_common_8hpp_1a4353a75834bb35c4acd80b51434eef59.html#_CPPv4N10HttpMethod5COUNTE">HttpMethod::COUNT (C++ enumerator)</a>
+</li>
+        <li><a href="api/enum_common_8hpp_1a4353a75834bb35c4acd80b51434eef59.html#_CPPv4N10HttpMethod6DELETEE">HttpMethod::DELETE (C++ enumerator)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/enum_common_8hpp_1a4353a75834bb35c4acd80b51434eef59.html#_CPPv4N10HttpMethod3GETE">HttpMethod::GET (C++ enumerator)</a>
+</li>
+        <li><a href="api/enum_common_8hpp_1a4353a75834bb35c4acd80b51434eef59.html#_CPPv4N10HttpMethod4HEADE">HttpMethod::HEAD (C++ enumerator)</a>
+</li>
+        <li><a href="api/enum_common_8hpp_1a4353a75834bb35c4acd80b51434eef59.html#_CPPv4N10HttpMethod7OPTIONSE">HttpMethod::OPTIONS (C++ enumerator)</a>
+</li>
+        <li><a href="api/enum_common_8hpp_1a4353a75834bb35c4acd80b51434eef59.html#_CPPv4N10HttpMethod5PATCHE">HttpMethod::PATCH (C++ enumerator)</a>
+</li>
+        <li><a href="api/enum_common_8hpp_1a4353a75834bb35c4acd80b51434eef59.html#_CPPv4N10HttpMethod4POSTE">HttpMethod::POST (C++ enumerator)</a>
+</li>
+        <li><a href="api/enum_common_8hpp_1a4353a75834bb35c4acd80b51434eef59.html#_CPPv4N10HttpMethod3PUTE">HttpMethod::PUT (C++ enumerator)</a>
+</li>
+        <li><a href="api/enum_common_8hpp_1a4353a75834bb35c4acd80b51434eef59.html#_CPPv4N10HttpMethod5TRACEE">HttpMethod::TRACE (C++ enumerator)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="J" class="genindex-section">
+  <h2>J</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/function_common_8hpp_1a1b90bf6d19aa66971103c283b69a0d49.html#_CPPv413JoinReferenceRKNSt6vectorINSt6stringEEE">JoinReference (C++ function)</a>
+</li>
+        <li><a href="api/classJsonValidator.html#_CPPv413JsonValidator">JsonValidator (C++ class)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/classJsonValidator.html#_CPPv4N13JsonValidator13JsonValidatorERKN9rapidjson5ValueERKNSt6vectorINSt6stringEEE15ValidationError">JsonValidator::JsonValidator (C++ function)</a>
+</li>
+        <li><a href="api/classJsonValidator.html#_CPPv4N13JsonValidator12ValidateJsonERKNSt6stringERNSt6stringE">JsonValidator::ValidateJson (C++ function)</a>
+</li>
+        <li><a href="api/classJsonValidator.html#_CPPv4N13JsonValidatorD0Ev">JsonValidator::~JsonValidator (C++ function)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="M" class="genindex-section">
+  <h2>M</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/classMethodValidator.html#_CPPv415MethodValidator">MethodValidator (C++ class)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/classMethodValidator.html#_CPPv4N15MethodValidator15MethodValidatorEv">MethodValidator::MethodValidator (C++ function)</a>
+</li>
+        <li><a href="api/classMethodValidator.html#_CPPv4N15MethodValidator12ValidateJsonERKNSt6stringERNSt6stringE">MethodValidator::ValidateJson (C++ function)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="O" class="genindex-section">
+  <h2>O</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/classOASValidator.html#_CPPv412OASValidator">OASValidator (C++ class)</a>
+</li>
+        <li><a href="api/classOASValidator.html#_CPPv4N12OASValidator12OASValidatorERKNSt6stringE">OASValidator::OASValidator (C++ function)</a>
+</li>
+        <li><a href="api/classOASValidator.html#_CPPv4N12OASValidator12ValidateBodyERKNSt6stringERKNSt6stringERKNSt6stringERNSt6stringE">OASValidator::ValidateBody (C++ function)</a>
+</li>
+        <li><a href="api/classOASValidator.html#_CPPv4N12OASValidator15ValidateHeadersERKNSt6stringERKNSt6stringERKNSt13unordered_mapINSt6stringENSt6stringEEERNSt6stringE">OASValidator::ValidateHeaders (C++ function)</a>
+</li>
+        <li><a href="api/classOASValidator.html#_CPPv4N12OASValidator17ValidatePathParamERKNSt6stringERKNSt6stringERNSt6stringE">OASValidator::ValidatePathParam (C++ function)</a>
+</li>
+        <li><a href="api/classOASValidator.html#_CPPv4N12OASValidator18ValidateQueryParamERKNSt6stringERKNSt6stringERNSt6stringE">OASValidator::ValidateQueryParam (C++ function)</a>
+</li>
+        <li><a href="api/classOASValidator.html#_CPPv4N12OASValidator15ValidateRequestERKNSt6stringERKNSt6stringERKNSt13unordered_mapINSt6stringENSt6stringEEERNSt6stringE">OASValidator::ValidateRequest (C++ function)</a>, <a href="api/classOASValidator.html#_CPPv4N12OASValidator15ValidateRequestERKNSt6stringERKNSt6stringERKNSt6stringERKNSt13unordered_mapINSt6stringENSt6stringEEERNSt6stringE">[1]</a>, <a href="api/classOASValidator.html#_CPPv4N12OASValidator15ValidateRequestERKNSt6stringERKNSt6stringERKNSt6stringERNSt6stringE">[2]</a>, <a href="api/classOASValidator.html#_CPPv4N12OASValidator15ValidateRequestERKNSt6stringERKNSt6stringERNSt6stringE">[3]</a>
+</li>
+        <li><a href="api/classOASValidator.html#_CPPv4N12OASValidator13ValidateRouteERKNSt6stringERKNSt6stringERNSt6stringE">OASValidator::ValidateRoute (C++ function)</a>
+</li>
+        <li><a href="api/classOASValidator.html#_CPPv4N12OASValidatorD0Ev">OASValidator::~OASValidator (C++ function)</a>
+</li>
+        <li><a href="api/classOASValidatorImp.html#_CPPv415OASValidatorImp">OASValidatorImp (C++ class)</a>
+</li>
+        <li><a href="api/classOASValidatorImp.html#_CPPv4N15OASValidatorImp15OASValidatorImpERKNSt6stringE">OASValidatorImp::OASValidatorImp (C++ function)</a>
+</li>
+        <li><a href="api/structOASValidatorImp_1_1PerMethod.html#_CPPv4N15OASValidatorImp9PerMethodE">OASValidatorImp::PerMethod (C++ struct)</a>
+</li>
+        <li><a href="api/structOASValidatorImp_1_1PerMethod.html#_CPPv4N15OASValidatorImp9PerMethod9path_trieE">OASValidatorImp::PerMethod::path_trie (C++ member)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/structOASValidatorImp_1_1PerMethod.html#_CPPv4N15OASValidatorImp9PerMethod19per_path_validatorsE">OASValidatorImp::PerMethod::per_path_validators (C++ member)</a>
+</li>
+        <li><a href="api/classOASValidatorImp.html#_CPPv4N15OASValidatorImp12ValidateBodyERKNSt6stringERKNSt6stringERKNSt6stringERNSt6stringE">OASValidatorImp::ValidateBody (C++ function)</a>
+</li>
+        <li><a href="api/classOASValidatorImp.html#_CPPv4N15OASValidatorImp15ValidateHeadersERKNSt6stringERKNSt6stringERKNSt13unordered_mapINSt6stringENSt6stringEEERNSt6stringE">OASValidatorImp::ValidateHeaders (C++ function)</a>
+</li>
+        <li><a href="api/classOASValidatorImp.html#_CPPv4N15OASValidatorImp17ValidatePathParamERKNSt6stringERKNSt6stringERNSt6stringE">OASValidatorImp::ValidatePathParam (C++ function)</a>
+</li>
+        <li><a href="api/classOASValidatorImp.html#_CPPv4N15OASValidatorImp18ValidateQueryParamERKNSt6stringERKNSt6stringERNSt6stringE">OASValidatorImp::ValidateQueryParam (C++ function)</a>
+</li>
+        <li><a href="api/classOASValidatorImp.html#_CPPv4N15OASValidatorImp15ValidateRequestERKNSt6stringERKNSt6stringERKNSt13unordered_mapINSt6stringENSt6stringEEERNSt6stringE">OASValidatorImp::ValidateRequest (C++ function)</a>, <a href="api/classOASValidatorImp.html#_CPPv4N15OASValidatorImp15ValidateRequestERKNSt6stringERKNSt6stringERKNSt6stringERKNSt13unordered_mapINSt6stringENSt6stringEEERNSt6stringE">[1]</a>, <a href="api/classOASValidatorImp.html#_CPPv4N15OASValidatorImp15ValidateRequestERKNSt6stringERKNSt6stringERKNSt6stringERNSt6stringE">[2]</a>, <a href="api/classOASValidatorImp.html#_CPPv4N15OASValidatorImp15ValidateRequestERKNSt6stringERKNSt6stringERNSt6stringE">[3]</a>
+</li>
+        <li><a href="api/classOASValidatorImp.html#_CPPv4N15OASValidatorImp13ValidateRouteERKNSt6stringERKNSt6stringERNSt6stringE">OASValidatorImp::ValidateRoute (C++ function)</a>
+</li>
+        <li><a href="api/classOASValidatorImp.html#_CPPv4N15OASValidatorImpD0Ev">OASValidatorImp::~OASValidatorImp (C++ function)</a>
+</li>
+        <li><a href="api/classObjectDeserializer.html#_CPPv418ObjectDeserializer">ObjectDeserializer (C++ class)</a>
+</li>
+        <li><a href="api/classObjectDeserializer.html#_CPPv4N18ObjectDeserializer11DeserializeEPKcPCKc">ObjectDeserializer::Deserialize (C++ function)</a>
+</li>
+        <li><a href="api/classObjectDeserializer.html#_CPPv4N18ObjectDeserializer18ObjectDeserializerERKNSt6stringEcbccbRK8ObjKTMap">ObjectDeserializer::ObjectDeserializer (C++ function)</a>
+</li>
+        <li><a href="api/classObjectDeserializer.html#_CPPv4N18ObjectDeserializerD0Ev">ObjectDeserializer::~ObjectDeserializer (C++ function)</a>
+</li>
+        <li><a href="api/typedef_object__deserializer_8hpp_1a070d83ea5e622cf6bc083a94b76cd324.html#_CPPv48ObjKTMap">ObjKTMap (C++ type)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="P" class="genindex-section">
+  <h2>P</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/structParamRange.html#_CPPv410ParamRange">ParamRange (C++ struct)</a>
+</li>
+        <li><a href="api/structParamRange.html#_CPPv4N10ParamRange3begE">ParamRange::beg (C++ member)</a>
+</li>
+        <li><a href="api/structParamRange.html#_CPPv4N10ParamRange3endE">ParamRange::end (C++ member)</a>
+</li>
+        <li><a href="api/enum_common_8hpp_1a643d48752abc8b74ba2284a8b264bbc7.html#_CPPv410ParamStyle">ParamStyle (C++ enum)</a>
+</li>
+        <li><a href="api/enum_common_8hpp_1a643d48752abc8b74ba2284a8b264bbc7.html#_CPPv4N10ParamStyle7CONTENTE">ParamStyle::CONTENT (C++ enumerator)</a>
+</li>
+        <li><a href="api/enum_common_8hpp_1a643d48752abc8b74ba2284a8b264bbc7.html#_CPPv4N10ParamStyle8DEEP_OBJE">ParamStyle::DEEP_OBJ (C++ enumerator)</a>
+</li>
+        <li><a href="api/enum_common_8hpp_1a643d48752abc8b74ba2284a8b264bbc7.html#_CPPv4N10ParamStyle4FORME">ParamStyle::FORM (C++ enumerator)</a>
+</li>
+        <li><a href="api/enum_common_8hpp_1a643d48752abc8b74ba2284a8b264bbc7.html#_CPPv4N10ParamStyle5LABELE">ParamStyle::LABEL (C++ enumerator)</a>
+</li>
+        <li><a href="api/enum_common_8hpp_1a643d48752abc8b74ba2284a8b264bbc7.html#_CPPv4N10ParamStyle6MATRIXE">ParamStyle::MATRIX (C++ enumerator)</a>
+</li>
+        <li><a href="api/enum_common_8hpp_1a643d48752abc8b74ba2284a8b264bbc7.html#_CPPv4N10ParamStyle10PIPE_DELIME">ParamStyle::PIPE_DELIM (C++ enumerator)</a>
+</li>
+        <li><a href="api/enum_common_8hpp_1a643d48752abc8b74ba2284a8b264bbc7.html#_CPPv4N10ParamStyle6SIMPLEE">ParamStyle::SIMPLE (C++ enumerator)</a>
+</li>
+        <li><a href="api/enum_common_8hpp_1a643d48752abc8b74ba2284a8b264bbc7.html#_CPPv4N10ParamStyle11SPACE_DELIME">ParamStyle::SPACE_DELIM (C++ enumerator)</a>
+</li>
+        <li><a href="api/classParamValidator.html#_CPPv414ParamValidator">ParamValidator (C++ class)</a>
+</li>
+        <li><a href="api/classParamValidator.html#_CPPv4NK14ParamValidator14ErrorOnMissingERNSt6stringE">ParamValidator::ErrorOnMissing (C++ function)</a>
+</li>
+        <li><a href="api/classParamValidator.html#_CPPv4N14ParamValidator12GetParamInfoERKN9rapidjson5ValueERKNSt6stringEbbRKNSt6vectorINSt6stringEEE">ParamValidator::GetParamInfo (C++ function)</a>
+</li>
+        <li><a href="api/classParamValidator.html#_CPPv4NK14ParamValidator10IsRequiredEv">ParamValidator::IsRequired (C++ function)</a>
+</li>
+        <li><a href="api/structParamValidator_1_1ParamInfo.html#_CPPv4N14ParamValidator9ParamInfoE">ParamValidator::ParamInfo (C++ struct)</a>
+</li>
+        <li><a href="api/structParamValidator_1_1ParamInfo.html#_CPPv4N14ParamValidator9ParamInfo12deserializerE">ParamValidator::ParamInfo::deserializer (C++ member)</a>
+</li>
+        <li><a href="api/structParamValidator_1_1ParamInfo.html#_CPPv4N14ParamValidator9ParamInfo4nameE">ParamValidator::ParamInfo::name (C++ member)</a>
+</li>
+        <li><a href="api/structParamValidator_1_1ParamInfo.html#_CPPv4N14ParamValidator9ParamInfo8requiredE">ParamValidator::ParamInfo::required (C++ member)</a>
+</li>
+        <li><a href="api/structParamValidator_1_1ParamInfo.html#_CPPv4N14ParamValidator9ParamInfo6schemaE">ParamValidator::ParamInfo::schema (C++ member)</a>
+</li>
+        <li><a href="api/classParamValidator.html#_CPPv4N14ParamValidator14ParamValidatorERK9ParamInfoRKNSt6vectorINSt6stringEEE15ValidationError">ParamValidator::ParamValidator (C++ function)</a>
+</li>
+        <li><a href="api/classParamValidator.html#_CPPv4N14ParamValidator13ValidateParamEPKcPKcRNSt6stringE">ParamValidator::ValidateParam (C++ function)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/classParamValidator.html#_CPPv4N14ParamValidatorD0Ev">ParamValidator::~ParamValidator (C++ function)</a>
+</li>
+        <li><a href="api/classPathParamValidator.html#_CPPv418PathParamValidator">PathParamValidator (C++ class)</a>
+</li>
+        <li><a href="api/classPathParamValidator.html#_CPPv4N18PathParamValidator18PathParamValidatorERKN9rapidjson5ValueERKNSt6vectorINSt6stringEEE">PathParamValidator::PathParamValidator (C++ function)</a>
+</li>
+        <li><a href="api/classPathParamValidator.html#_CPPv4N18PathParamValidatorD0Ev">PathParamValidator::~PathParamValidator (C++ function)</a>
+</li>
+        <li><a href="api/classPathTrie.html#_CPPv48PathTrie">PathTrie (C++ class)</a>
+</li>
+        <li><a href="api/classPathTrie.html#_CPPv4N8PathTrie6InsertERKNSt6stringE">PathTrie::Insert (C++ function)</a>
+</li>
+        <li><a href="api/structPathTrie_1_1Node.html#_CPPv4N8PathTrie4NodeE">PathTrie::Node (C++ struct)</a>
+</li>
+        <li><a href="api/structPathTrie_1_1Node.html#_CPPv4N8PathTrie4Node8childrenE">PathTrie::Node::children (C++ member)</a>
+</li>
+        <li><a href="api/structPathTrie_1_1Node.html#_CPPv4N8PathTrie4Node3dirE">PathTrie::Node::dir (C++ member)</a>
+</li>
+        <li><a href="api/structPathTrie_1_1Node.html#_CPPv4N8PathTrie4Node8frag_idxE">PathTrie::Node::frag_idx (C++ member)</a>
+</li>
+        <li><a href="api/structPathTrie_1_1Node.html#_CPPv4N8PathTrie4Node8is_paramE">PathTrie::Node::is_param (C++ member)</a>
+</li>
+        <li><a href="api/classPathTrie.html#_CPPv4N8PathTrie8PathTrieEv">PathTrie::PathTrie (C++ function)</a>
+</li>
+        <li><a href="api/classPathTrie.html#_CPPv4N8PathTrie6SearchEPKcPKcRNSt6stringE">PathTrie::Search (C++ function)</a>, <a href="api/classPathTrie.html#_CPPv4N8PathTrie6SearchEPKcPKcRNSt6stringERNSt13unordered_mapI6size_t10ParamRangeEE">[1]</a>
+</li>
+        <li><a href="api/classPathTrie.html#_CPPv4N8PathTrieD0Ev">PathTrie::~PathTrie (C++ function)</a>
+</li>
+        <li><a href="api/classPrimitiveDeserializer.html#_CPPv421PrimitiveDeserializer">PrimitiveDeserializer (C++ class)</a>
+</li>
+        <li><a href="api/classPrimitiveDeserializer.html#_CPPv4N21PrimitiveDeserializer11DeserializeEPKcPCKc">PrimitiveDeserializer::Deserialize (C++ function)</a>
+</li>
+        <li><a href="api/classPrimitiveDeserializer.html#_CPPv4N21PrimitiveDeserializer21PrimitiveDeserializerERKNSt6stringEcb13PrimitiveType">PrimitiveDeserializer::PrimitiveDeserializer (C++ function)</a>
+</li>
+        <li><a href="api/classPrimitiveDeserializer.html#_CPPv4N21PrimitiveDeserializerD0Ev">PrimitiveDeserializer::~PrimitiveDeserializer (C++ function)</a>
+</li>
+        <li><a href="api/enum_common_8hpp_1a240c1924416689e5700ff0d9f30539d9.html#_CPPv413PrimitiveType">PrimitiveType (C++ enum)</a>
+</li>
+        <li><a href="api/enum_common_8hpp_1a240c1924416689e5700ff0d9f30539d9.html#_CPPv4N13PrimitiveType7BOOLEANE">PrimitiveType::BOOLEAN (C++ enumerator)</a>
+</li>
+        <li><a href="api/enum_common_8hpp_1a240c1924416689e5700ff0d9f30539d9.html#_CPPv4N13PrimitiveType7INTEGERE">PrimitiveType::INTEGER (C++ enumerator)</a>
+</li>
+        <li><a href="api/enum_common_8hpp_1a240c1924416689e5700ff0d9f30539d9.html#_CPPv4N13PrimitiveType6NUMBERE">PrimitiveType::NUMBER (C++ enumerator)</a>
+</li>
+        <li><a href="api/enum_common_8hpp_1a240c1924416689e5700ff0d9f30539d9.html#_CPPv4N13PrimitiveType6STRINGE">PrimitiveType::STRING (C++ enumerator)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="Q" class="genindex-section">
+  <h2>Q</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/classQueryParamValidator.html#_CPPv419QueryParamValidator">QueryParamValidator (C++ class)</a>
+</li>
+        <li><a href="api/classQueryParamValidator.html#_CPPv4NK19QueryParamValidator14IsEmptyAllowedEv">QueryParamValidator::IsEmptyAllowed (C++ function)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/classQueryParamValidator.html#_CPPv4N19QueryParamValidator19QueryParamValidatorERKN9rapidjson5ValueERKNSt6vectorINSt6stringEEE">QueryParamValidator::QueryParamValidator (C++ function)</a>
+</li>
+        <li><a href="api/classQueryParamValidator.html#_CPPv4N19QueryParamValidatorD0Ev">QueryParamValidator::~QueryParamValidator (C++ function)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="S" class="genindex-section">
+  <h2>S</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/enum_common_8hpp_1ac7b092659a3a26b190537c0b322ca427.html#_CPPv412SecurityType">SecurityType (C++ enum)</a>
+</li>
+        <li><a href="api/enum_common_8hpp_1ac7b092659a3a26b190537c0b322ca427.html#_CPPv4N12SecurityType13APIKEY_HEADERE">SecurityType::APIKEY_HEADER (C++ enumerator)</a>
+</li>
+        <li><a href="api/enum_common_8hpp_1ac7b092659a3a26b190537c0b322ca427.html#_CPPv4N12SecurityType12APIKEY_QUERYE">SecurityType::APIKEY_QUERY (C++ enumerator)</a>
+</li>
+        <li><a href="api/enum_common_8hpp_1ac7b092659a3a26b190537c0b322ca427.html#_CPPv4N12SecurityType10HTTP_BASICE">SecurityType::HTTP_BASIC (C++ enumerator)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/enum_common_8hpp_1ac7b092659a3a26b190537c0b322ca427.html#_CPPv4N12SecurityType11HTTP_BEARERE">SecurityType::HTTP_BEARER (C++ enumerator)</a>
+</li>
+        <li><a href="api/enum_common_8hpp_1ac7b092659a3a26b190537c0b322ca427.html#_CPPv4N12SecurityType6OAUTH2E">SecurityType::OAUTH2 (C++ enumerator)</a>
+</li>
+        <li><a href="api/enum_common_8hpp_1ac7b092659a3a26b190537c0b322ca427.html#_CPPv4N12SecurityType4OIDCE">SecurityType::OIDC (C++ enumerator)</a>
+</li>
+        <li><a href="api/function_common_8hpp_1adfaf610071d621358e87454603d03f5b.html#_CPPv44SeekPKcPKcKc">Seek (C++ function)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="V" class="genindex-section">
+  <h2>V</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/define_common_8hpp_1a838ca36f37b19a874eabd4eeff5be860.html#c.VALIDATION_ERROR">VALIDATION_ERROR (C macro)</a>, <a href="api/define_oas__validator_8hpp_1a838ca36f37b19a874eabd4eeff5be860.html#c.VALIDATION_ERROR">[1]</a>
+</li>
+        <li><a href="api/enum_common_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2b.html#_CPPv415ValidationError">ValidationError (C++ enum)</a>, <a href="api/enum_oas__validator_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2b.html#_CPPv415ValidationError">[1]</a>
+</li>
+        <li><a href="api/enum_common_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2b.html#_CPPv4N15ValidationError12INVALID_BODYE">ValidationError::INVALID_BODY (C++ enumerator)</a>, <a href="api/enum_common_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2b.html#_CPPv4N15ValidationError12INVALID_BODYE">[1]</a>, <a href="api/enum_oas__validator_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2b.html#_CPPv4N15ValidationError12INVALID_BODYE">[2]</a>, <a href="api/enum_oas__validator_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2b.html#_CPPv4N15ValidationError12INVALID_BODYE">[3]</a>
+</li>
+        <li><a href="api/enum_common_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2b.html#_CPPv4N15ValidationError20INVALID_HEADER_PARAME">ValidationError::INVALID_HEADER_PARAM (C++ enumerator)</a>, <a href="api/enum_common_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2b.html#_CPPv4N15ValidationError20INVALID_HEADER_PARAME">[1]</a>, <a href="api/enum_oas__validator_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2b.html#_CPPv4N15ValidationError20INVALID_HEADER_PARAME">[2]</a>, <a href="api/enum_oas__validator_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2b.html#_CPPv4N15ValidationError20INVALID_HEADER_PARAME">[3]</a>
+</li>
+        <li><a href="api/enum_common_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2b.html#_CPPv4N15ValidationError14INVALID_METHODE">ValidationError::INVALID_METHOD (C++ enumerator)</a>, <a href="api/enum_common_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2b.html#_CPPv4N15ValidationError14INVALID_METHODE">[1]</a>, <a href="api/enum_oas__validator_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2b.html#_CPPv4N15ValidationError14INVALID_METHODE">[2]</a>, <a href="api/enum_oas__validator_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2b.html#_CPPv4N15ValidationError14INVALID_METHODE">[3]</a>
+</li>
+        <li><a href="api/enum_common_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2b.html#_CPPv4N15ValidationError18INVALID_PATH_PARAME">ValidationError::INVALID_PATH_PARAM (C++ enumerator)</a>, <a href="api/enum_common_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2b.html#_CPPv4N15ValidationError18INVALID_PATH_PARAME">[1]</a>, <a href="api/enum_oas__validator_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2b.html#_CPPv4N15ValidationError18INVALID_PATH_PARAME">[2]</a>, <a href="api/enum_oas__validator_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2b.html#_CPPv4N15ValidationError18INVALID_PATH_PARAME">[3]</a>
+</li>
+        <li><a href="api/enum_common_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2b.html#_CPPv4N15ValidationError19INVALID_QUERY_PARAME">ValidationError::INVALID_QUERY_PARAM (C++ enumerator)</a>, <a href="api/enum_common_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2b.html#_CPPv4N15ValidationError19INVALID_QUERY_PARAME">[1]</a>, <a href="api/enum_oas__validator_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2b.html#_CPPv4N15ValidationError19INVALID_QUERY_PARAME">[2]</a>, <a href="api/enum_oas__validator_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2b.html#_CPPv4N15ValidationError19INVALID_QUERY_PARAME">[3]</a>
+</li>
+        <li><a href="api/enum_common_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2b.html#_CPPv4N15ValidationError13INVALID_ROUTEE">ValidationError::INVALID_ROUTE (C++ enumerator)</a>, <a href="api/enum_common_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2b.html#_CPPv4N15ValidationError13INVALID_ROUTEE">[1]</a>, <a href="api/enum_oas__validator_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2b.html#_CPPv4N15ValidationError13INVALID_ROUTEE">[2]</a>, <a href="api/enum_oas__validator_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2b.html#_CPPv4N15ValidationError13INVALID_ROUTEE">[3]</a>
+</li>
+        <li><a href="api/enum_common_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2b.html#_CPPv4N15ValidationError11INVALID_RSPE">ValidationError::INVALID_RSP (C++ enumerator)</a>, <a href="api/enum_common_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2b.html#_CPPv4N15ValidationError11INVALID_RSPE">[1]</a>, <a href="api/enum_oas__validator_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2b.html#_CPPv4N15ValidationError11INVALID_RSPE">[2]</a>, <a href="api/enum_oas__validator_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2b.html#_CPPv4N15ValidationError11INVALID_RSPE">[3]</a>
+</li>
+        <li><a href="api/enum_common_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2b.html#_CPPv4N15ValidationError4NONEE">ValidationError::NONE (C++ enumerator)</a>, <a href="api/enum_common_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2b.html#_CPPv4N15ValidationError4NONEE">[1]</a>, <a href="api/enum_oas__validator_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2b.html#_CPPv4N15ValidationError4NONEE">[2]</a>, <a href="api/enum_oas__validator_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2b.html#_CPPv4N15ValidationError4NONEE">[3]</a>
+</li>
+        <li><a href="api/classValidatorInitExc.html#_CPPv416ValidatorInitExc">ValidatorInitExc (C++ class)</a>
+</li>
+        <li><a href="api/classValidatorInitExc.html#_CPPv4N16ValidatorInitExc16ValidatorInitExcENSt6stringE">ValidatorInitExc::ValidatorInitExc (C++ function)</a>
+</li>
+        <li><a href="api/classValidatorsStore.html#_CPPv415ValidatorsStore">ValidatorsStore (C++ class)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/classValidatorsStore.html#_CPPv4N15ValidatorsStore18AddParamValidatorsERKNSt6stringERKN9rapidjson5ValueERNSt6vectorINSt6stringEEE">ValidatorsStore::AddParamValidators (C++ function)</a>
+</li>
+        <li><a href="api/structValidatorsStore_1_1PathParamValidatorInfo.html#_CPPv4N15ValidatorsStore22PathParamValidatorInfoE">ValidatorsStore::PathParamValidatorInfo (C++ struct)</a>
+</li>
+        <li><a href="api/structValidatorsStore_1_1PathParamValidatorInfo.html#_CPPv4N15ValidatorsStore22PathParamValidatorInfo3idxE">ValidatorsStore::PathParamValidatorInfo::idx (C++ member)</a>
+</li>
+        <li><a href="api/structValidatorsStore_1_1PathParamValidatorInfo.html#_CPPv4N15ValidatorsStore22PathParamValidatorInfo9validatorE">ValidatorsStore::PathParamValidatorInfo::validator (C++ member)</a>
+</li>
+        <li><a href="api/structValidatorsStore_1_1QueryParamValidatorInfo.html#_CPPv4N15ValidatorsStore23QueryParamValidatorInfoE">ValidatorsStore::QueryParamValidatorInfo (C++ struct)</a>
+</li>
+        <li><a href="api/structValidatorsStore_1_1QueryParamValidatorInfo.html#_CPPv4N15ValidatorsStore23QueryParamValidatorInfo4nameE">ValidatorsStore::QueryParamValidatorInfo::name (C++ member)</a>
+</li>
+        <li><a href="api/structValidatorsStore_1_1QueryParamValidatorInfo.html#_CPPv4N15ValidatorsStore23QueryParamValidatorInfo9validatorE">ValidatorsStore::QueryParamValidatorInfo::validator (C++ member)</a>
+</li>
+        <li><a href="api/classValidatorsStore.html#_CPPv4N15ValidatorsStore12ValidateBodyERKNSt6stringERNSt6stringE">ValidatorsStore::ValidateBody (C++ function)</a>
+</li>
+        <li><a href="api/classValidatorsStore.html#_CPPv4N15ValidatorsStore20ValidateHeaderParamsERKNSt13unordered_mapINSt6stringENSt6stringEEERNSt6stringE">ValidatorsStore::ValidateHeaderParams (C++ function)</a>
+</li>
+        <li><a href="api/classValidatorsStore.html#_CPPv4N15ValidatorsStore18ValidatePathParamsERNSt13unordered_mapI6size_t10ParamRangeEERNSt6stringE">ValidatorsStore::ValidatePathParams (C++ function)</a>
+</li>
+        <li><a href="api/classValidatorsStore.html#_CPPv4N15ValidatorsStore19ValidateQueryParamsERKNSt6stringERNSt6stringE">ValidatorsStore::ValidateQueryParams (C++ function)</a>
+</li>
+        <li><a href="api/classValidatorsStore.html#_CPPv4N15ValidatorsStore15ValidatorsStoreERKN9rapidjson5ValueERKNSt6vectorINSt6stringEEE">ValidatorsStore::ValidatorsStore (C++ function)</a>, <a href="api/classValidatorsStore.html#_CPPv4N15ValidatorsStore15ValidatorsStoreEv">[1]</a>
+</li>
+        <li><a href="api/classValidatorsStore.html#_CPPv4N15ValidatorsStoreD0Ev">ValidatorsStore::~ValidatorsStore (C++ function)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          
+          
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; Muhammad Nawaz
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            <div class="icons">
+              
+            </div>
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer no-toc">
+      
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/scripts/furo.js"></script>
+    <script src="_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+    <script src="_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    </body>
+</html>

@@ -1,0 +1,17 @@
+.. _dir_utils:
+
+
+Directory utils
+===============
+
+
+*Directory path:* ``utils``
+
+
+Files
+-----
+
+- :ref:`file_utils_common.hpp`
+- :ref:`file_utils_path_trie.hpp`
+
+

@@ -1,0 +1,26 @@
+.. _exhale_class_classDeserializationException:
+
+Class DeserializationException
+==============================
+
+- Defined in :ref:`file_deserializers_base_deserializer.hpp`
+
+
+Inheritance Relationships
+-------------------------
+
+Base Type
+*********
+
+- ``public std::exception``
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: DeserializationException
+   :project: Doxygen XML
+   :members:
+   :protected-members:
+   :undoc-members:

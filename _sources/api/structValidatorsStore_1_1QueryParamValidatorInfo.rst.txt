@@ -1,0 +1,23 @@
+.. _exhale_struct_structValidatorsStore_1_1QueryParamValidatorInfo:
+
+Struct ValidatorsStore::QueryParamValidatorInfo
+===============================================
+
+- Defined in :ref:`file_validators_validators_store.hpp`
+
+
+Nested Relationships
+--------------------
+
+This struct is a nested type of :ref:`exhale_class_classValidatorsStore`.
+
+
+Struct Documentation
+--------------------
+
+
+.. doxygenstruct:: ValidatorsStore::QueryParamValidatorInfo
+   :project: Doxygen XML
+   :members:
+   :protected-members:
+   :undoc-members:

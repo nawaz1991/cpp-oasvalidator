@@ -1,0 +1,50 @@
+
+.. _program_listing_file_utils_path_trie.hpp:
+
+Program Listing for File path_trie.hpp
+======================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file_utils_path_trie.hpp>` (``utils/path_trie.hpp``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   /*
+    * Copyright (c) 2023 Muhammad Nawaz
+    * Licensed under the MIT License. See LICENSE file for more information.
+    */
+   
+   #ifndef PATH_TRIE_HPP
+   #define PATH_TRIE_HPP
+   #include "utils/common.hpp"
+   
+   #include <string>
+   #include <unordered_map>
+   
+   class PathTrie
+   {
+   public:
+       PathTrie()
+           : root_(new Node())
+       {
+       }
+       void Insert(const std::string& path);
+       bool Search(const char* beg, const char* end, std::string& oas_path);
+       bool Search(const char* beg, const char* end, std::string& oas_path, std::unordered_map<size_t, ParamRange>& param_idxs);
+       ~PathTrie();
+   
+   private:
+       struct Node
+       {
+           std::string dir;
+           bool is_param{false};
+           int frag_idx{0};
+           std::unordered_map<std::string, Node*> children;
+       };
+   
+       void DeleteNode(Node* node);
+       Node* root_;
+   };
+   
+   #endif // PATH_TRIE_HPP

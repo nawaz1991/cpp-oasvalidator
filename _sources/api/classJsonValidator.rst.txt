@@ -1,0 +1,33 @@
+.. _exhale_class_classJsonValidator:
+
+Class JsonValidator
+===================
+
+- Defined in :ref:`file_validators_json_validator.hpp`
+
+
+Inheritance Relationships
+-------------------------
+
+Base Type
+*********
+
+- ``public BaseValidator`` (:ref:`exhale_class_classBaseValidator`)
+
+
+Derived Types
+*************
+
+- ``public BodyValidator`` (:ref:`exhale_class_classBodyValidator`)
+- ``public ParamValidator`` (:ref:`exhale_class_classParamValidator`)
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: JsonValidator
+   :project: Doxygen XML
+   :members:
+   :protected-members:
+   :undoc-members:

@@ -1,0 +1,64 @@
+
+.. _file_deserializers_base_deserializer.hpp:
+
+File base_deserializer.hpp
+==========================
+
+|exhale_lsh| :ref:`Parent directory <dir_deserializers>` (``deserializers``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+Definition (``deserializers/base_deserializer.hpp``)
+----------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_deserializers_base_deserializer.hpp.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``array`` (:ref:`file_deserializers_array_deserializer.hpp`)
+
+- ``cstring``
+
+- ``stdexcept``
+
+- ``string``
+
+- ``utils/common.hpp`` (:ref:`file_utils_common.hpp`)
+
+
+
+Included By
+-----------
+
+
+- :ref:`file_deserializers_array_deserializer.hpp`
+
+- :ref:`file_deserializers_content_deserializer.hpp`
+
+- :ref:`file_deserializers_object_deserializer.hpp`
+
+- :ref:`file_deserializers_primitive_deserializer.hpp`
+
+- :ref:`file_validators_param_validators.hpp`
+
+
+
+
+Classes
+-------
+
+
+- :ref:`exhale_class_classBaseDeserializer`
+
+- :ref:`exhale_class_classDeserializationException`
+

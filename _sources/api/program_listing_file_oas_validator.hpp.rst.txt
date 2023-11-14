@@ -1,0 +1,68 @@
+
+.. _program_listing_file_oas_validator.hpp:
+
+Program Listing for File oas_validator.hpp
+==========================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file_oas_validator.hpp>` (``oas_validator.hpp``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   
+   #ifndef OAS_VALIDATOR_HPP
+   #define OAS_VALIDATOR_HPP
+   
+   #include <exception>
+   #include <string>
+   #include <unordered_map>
+   
+   class ValidatorInitExc; 
+   class OASValidatorImp; 
+   
+   #ifndef VALIDATION_ERROR
+   #define VALIDATION_ERROR
+   enum class ValidationError
+   {
+       NONE = 0, 
+       INVALID_METHOD = -1, 
+       INVALID_ROUTE = -2, 
+       INVALID_PATH_PARAM = -3, 
+       INVALID_QUERY_PARAM = -4, 
+       INVALID_HEADER_PARAM = -5, 
+       INVALID_BODY = -6, 
+       INVALID_RSP = -7 
+   };
+   #endif
+   
+   class OASValidator
+   {
+   private:
+       OASValidatorImp* impl_; 
+   
+   public:
+       explicit OASValidator(const std::string& spec_path);
+   
+       ValidationError ValidateRoute(const std::string& method, const std::string& http_path, std::string& error_msg);
+       ValidationError ValidateBody(const std::string& method, const std::string& http_path, const std::string& json_body, std::string& error_msg);
+   
+       ValidationError ValidatePathParam(const std::string& method, const std::string& http_path, std::string& error_msg);
+   
+       ValidationError ValidateQueryParam(const std::string& method, const std::string& http_path, std::string& error_msg);
+   
+       ValidationError ValidateHeaders(const std::string& method, const std::string& http_path, const std::unordered_map<std::string, std::string>& headers, std::string& error_msg);
+   
+       ValidationError ValidateRequest(const std::string& method, const std::string& http_path, std::string& error_msg);
+   
+       ValidationError ValidateRequest(const std::string& method, const std::string& http_path, const std::string& json_body, std::string& error_msg);
+   
+       ValidationError ValidateRequest(const std::string& method, const std::string& http_path, const std::unordered_map<std::string, std::string>& headers, std::string& error_msg);
+   
+       ValidationError ValidateRequest(const std::string& method, const std::string& http_path, const std::string& json_body,
+                                       const std::unordered_map<std::string, std::string>& headers, std::string& error_msg);
+   
+       ~OASValidator();
+   };
+   
+   #endif // OAS_VALIDATOR_HPP

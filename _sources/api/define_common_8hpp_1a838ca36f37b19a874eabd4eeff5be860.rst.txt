@@ -1,0 +1,14 @@
+.. _exhale_define_common_8hpp_1a838ca36f37b19a874eabd4eeff5be860:
+
+Define VALIDATION_ERROR
+=======================
+
+- Defined in :ref:`file_utils_common.hpp`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: VALIDATION_ERROR
+   :project: Doxygen XML

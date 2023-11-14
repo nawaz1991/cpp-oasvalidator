@@ -3,14 +3,14 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Index" href="genindex.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" />
 
     <meta name="generator" content="sphinx-4.5.0, furo 2022.09.29"/>
-        <title>oasvalidator</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=d81277517bee4d6b0349d71bb2661d4890b5617c" />
-    <link rel="stylesheet" type="text/css" href="_static/collapsible-lists/css/tree_view.css" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
+        <title>Program Listing for File body_validator.hpp - oasvalidator</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=d81277517bee4d6b0349d71bb2661d4890b5617c" />
+    <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
 
@@ -128,7 +128,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="#"><div class="brand">oasvalidator</div></a>
+      <a href="../index.html"><div class="brand">oasvalidator</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -148,19 +148,19 @@
   <aside class="sidebar-drawer">
     <div class="sidebar-container">
       
-      <div class="sidebar-sticky"><a class="sidebar-brand" href="#">
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
   
   
   <span class="sidebar-brand-text">oasvalidator</span>
   
-</a><form class="sidebar-search-container" method="get" action="search.html" role="search">
+</a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
   <input type="hidden" name="check_keywords" value="yes">
   <input type="hidden" name="area" value="default">
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <ul>
-<li class="toctree-l1"><a class="reference internal" href="genindex.html">Index</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
 </ul>
 
 </div>
@@ -195,18 +195,30 @@
           </label>
         </div>
         <article role="main">
-          <section id="oasvalidator">
-<h1>oasvalidator<a class="headerlink" href="#oasvalidator" title="Permalink to this headline">#</a></h1>
-<a class="reference external image-reference" href="https://isocpp.org"><img alt="Language C++17" src="https://img.shields.io/badge/language-c++-blue.svg?logo=c%2B%2B" /></a>
-<a class="reference external image-reference" href="/releases"><img alt="Gitlab releases" src="https://img.shields.io/github/release/nawaz1991/cpp-oasvalidator.svg" /></a>
-<a class="reference external image-reference" href="https://codecov.io/gh/nawaz1991/cpp-oasvalidator"><img alt="Coverage status" src="https://img.shields.io/github/release/nawaz1991/cpp-oasvalidator.svg" /></a>
-<a class="reference external image-reference" href="../LICENSE"><img alt="License" src="https://img.shields.io/github/license/nawaz1991/cpp-oasvalidator.svg" /></a>
-<p>A FAST C++ library to validate the HTTP requests against the OpenAPI specifications of the REST server.</p>
-<p><a class="reference external" href="benchmark_report.html">Benchmark Report</a></p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="genindex.html">Index</a></li>
-</ul>
+          <section id="program-listing-for-file-body-validator-hpp">
+<span id="program-listing-file-validators-body-validator-hpp"></span><h1>Program Listing for File body_validator.hpp<a class="headerlink" href="#program-listing-for-file-body-validator-hpp" title="Permalink to this headline">#</a></h1>
+<p>↰ <a class="reference internal" href="file_validators_body_validator.hpp.html#file-validators-body-validator-hpp"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">validators/body_validator.hpp</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
+<span class="cm"> * Copyright (c) 2023 Muhammad Nawaz</span>
+<span class="cm"> * Licensed under the MIT License. See LICENSE file for more information.</span>
+<span class="cm"> */</span>
+
+<span class="cp">#ifndef BODY_VALIDATOR_HPP</span>
+<span class="cp">#define BODY_VALIDATOR_HPP</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;validators/json_validator.hpp&quot;</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">BodyValidator</span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">JsonValidator</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+<span class="w">    </span><span class="k">explicit</span><span class="w"> </span><span class="n">BodyValidator</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">rapidjson</span><span class="o">::</span><span class="n">Value</span><span class="o">&amp;</span><span class="w"> </span><span class="n">schema_val</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">ref_keys</span><span class="p">)</span>
+<span class="w">        </span><span class="o">:</span><span class="w"> </span><span class="n">JsonValidator</span><span class="p">(</span><span class="n">schema_val</span><span class="p">,</span><span class="w"> </span><span class="n">ref_keys</span><span class="p">,</span><span class="w"> </span><span class="n">ValidationError</span><span class="o">::</span><span class="n">INVALID_BODY</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">};</span>
+
+<span class="cp">#endif </span><span class="c1">// BODY_VALIDATOR_HPP</span>
+</pre></div>
 </div>
 </section>
 
@@ -215,15 +227,7 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="genindex.html">
-              <div class="page-info">
-                <div class="context">
-                  <span>Next</span>
-                </div>
-                <div class="title">Index</div>
-              </div>
-              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
-            </a>
+          
           
         </div>
         <div class="bottom-of-page">
@@ -251,12 +255,12 @@
       
     </aside>
   </div>
-</div><script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/scripts/furo.js"></script>
-    <script src="_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
-    <script src="_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+</div><script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/furo.js"></script>
+    <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+    <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
     </body>
 </html>

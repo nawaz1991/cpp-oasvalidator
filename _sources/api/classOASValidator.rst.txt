@@ -1,0 +1,17 @@
+.. _exhale_class_classOASValidator:
+
+Class OASValidator
+==================
+
+- Defined in :ref:`file_oas_validator.hpp`
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: OASValidator
+   :project: Doxygen XML
+   :members:
+   :protected-members:
+   :undoc-members:

@@ -1,0 +1,26 @@
+.. _exhale_class_classMethodValidator:
+
+Class MethodValidator
+=====================
+
+- Defined in :ref:`file_validators_method_validator.hpp`
+
+
+Inheritance Relationships
+-------------------------
+
+Base Type
+*********
+
+- ``public BaseValidator`` (:ref:`exhale_class_classBaseValidator`)
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: MethodValidator
+   :project: Doxygen XML
+   :members:
+   :protected-members:
+   :undoc-members:

@@ -1,0 +1,25 @@
+
+    <html>
+    <head>
+        <title>Benchmark Report</title>
+        <style>
+            body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; color: #333; }
+            .container { width: 80%; margin: 20px auto; }
+            h1 { text-align: center; }
+            .info-table, .benchmark-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+            .info-table td, .benchmark-table th, .benchmark-table td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+            .info-table .key-cell { width: 20%; font-weight: bold; }
+            .inner-table { width: 100%; margin-top: 5px; }
+            .inner-table td { border: none; padding: 4px; font-size: 0.9em; }
+            .benchmark-table th { background-color: #4CAF50; color: white; }
+            tr:nth-child(even) { background-color: #f2f2f2; }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Benchmark Report</h1>
+            <h2>Context</h2><table class='info-table'><tr><td class='key-cell'><strong>date</strong></td><td>2023-11-14T17:52:59+00:00</td></tr><tr><td class='key-cell'><strong>host_name</strong></td><td>fv-az711-229</td></tr><tr><td class='key-cell'><strong>executable</strong></td><td>build/test/perftest/oasvalidator-perftests</td></tr><tr><td class='key-cell'><strong>num_cpus</strong></td><td>4</td></tr><tr><td class='key-cell'><strong>mhz_per_cpu</strong></td><td>2509</td></tr><tr><td class='key-cell'><strong>cpu_scaling_enabled</strong></td><td>False</td></tr><tr><td class='key-cell'><strong>caches</strong></td><td><table class='inner-table'><tr><td>type: Data</td><td>level: 1</td><td>size: 32768</td><td>num_sharing: 2</td></tr><tr><td>type: Instruction</td><td>level: 1</td><td>size: 32768</td><td>num_sharing: 2</td></tr><tr><td>type: Unified</td><td>level: 2</td><td>size: 524288</td><td>num_sharing: 2</td></tr><tr><td>type: Unified</td><td>level: 3</td><td>size: 33554432</td><td>num_sharing: 4</td></tr></table></td></tr><tr><td class='key-cell'><strong>load_avg</strong></td><td><table class='inner-table'><tr><td>1.09961</td></tr><tr><td>0.44873</td></tr><tr><td>0.181641</td></tr></table></td></tr><tr><td class='key-cell'><strong>library_build_type</strong></td><td>release</td></tr></table><h2>Benchmarks</h2><table class='benchmark-table'><tr><th>Index</th><th>Benchmark</th><th>Iterations</th><th>Real Time (us)</th><th>CPU Time (us)</th></tr><tr><td>1</td><td>InvalidMethod</td><td>5762835</td><td>0.119</td><td>0.119</td></tr><tr><td>2</td><td>ValidRoute</td><td>12243135</td><td>0.059</td><td>0.059</td></tr><tr><td>3</td><td>InvalidRoute</td><td>318930</td><td>2.214</td><td>2.214</td></tr><tr><td>4</td><td>ValidPathParam</td><td>255873</td><td>2.739</td><td>2.739</td></tr><tr><td>5</td><td>InvalidPathParam</td><td>137368</td><td>5.132</td><td>5.131</td></tr><tr><td>6</td><td>ValidQueryParam</td><td>2078332</td><td>0.337</td><td>0.337</td></tr><tr><td>7</td><td>InvalidQueryParam</td><td>252020</td><td>2.788</td><td>2.788</td></tr><tr><td>8</td><td>ValidHeaderParam</td><td>2296540</td><td>0.303</td><td>0.303</td></tr><tr><td>9</td><td>InvalidHeaderParam</td><td>253088</td><td>2.788</td><td>2.788</td></tr><tr><td>10</td><td>ValidBody</td><td>606982</td><td>1.163</td><td>1.163</td></tr><tr><td>11</td><td>InvalidBody</td><td>672598</td><td>1.043</td><td>1.043</td></tr><tr><td>12</td><td>ValidRequest</td><td>119180</td><td>5.950</td><td>5.949</td></tr><tr><td>13</td><td>InvalidRequest1</td><td>4568642</td><td>0.166</td><td>0.166</td></tr><tr><td>14</td><td>InvalidRequest2</td><td>326858</td><td>2.145</td><td>2.145</td></tr><tr><td>15</td><td>InvalidRequest3</td><td>93299</td><td>7.566</td><td>7.566</td></tr><tr><td>16</td><td>InvalidRequest4</td><td>78878</td><td>8.870</td><td>8.870</td></tr><tr><td>17</td><td>InvalidRequest5</td><td>83816</td><td>8.419</td><td>8.419</td></tr><tr><td>18</td><td>ComplexValidRequest</td><td>29470</td><td>23.771</td><td>23.770</td></tr></table>
+        </div>
+    </body>
+    </html>
+    

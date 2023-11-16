@@ -5,12 +5,9 @@ project(oasvalidator-example LANGUAGES CXX)
 
 # Create the executable
 add_executable(example example.cpp)
-
+find_package(Threads REQUIRED)
 # Link the executable with the library
-target_link_libraries(example oasvalidator)
+target_link_libraries(example oasvalidator Threads::Threads)
 
-# Copy openAPI_example.json to the build directory where the example will be built
-add_custom_command(TARGET example POST_BUILD
-        COMMAND ${CMAKE_COMMAND} -E copy
-        ${CMAKE_SOURCE_DIR}/openAPI_example.json
-        $<TARGET_FILE_DIR:example>)
+set(SPEC_FILE_ABSOLUTE_PATH "${CMAKE_SOURCE_DIR}/data/openAPI_example.json")
+add_definitions(-DSPEC_PATH="${SPEC_FILE_ABSOLUTE_PATH}")

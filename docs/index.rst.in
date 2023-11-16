@@ -1,0 +1,30 @@
+cpp-oasvalidator
+================
+
+.. image:: https://img.shields.io/badge/language-c++-blue.svg?logo=c%2B%2B
+  :alt: Language C++17
+  :target: https://isocpp.org
+
+.. image:: https://img.shields.io/github/release/nawaz1991/cpp-oasvalidator.svg
+  :alt: Gitlab releases
+  :target: https://github.com/nawaz1991/cpp-oasvalidator/releases
+
+.. image:: https://codecov.io/gh/nawaz1991/cpp-oasvalidator/branch/main/graph/badge.svg?token=96b475c2-8dc1-4693-8ce3-84a572720d43
+  :alt: Code Coverage
+  :target: https://codecov.io/gh/nawaz1991/cpp-oasvalidator
+
+.. image:: https://img.shields.io/github/license/nawaz1991/cpp-oasvalidator.svg
+  :alt: License
+  :target: https://github.com/nawaz1991/cpp-oasvalidator/blob/main/LICENSE
+
+@PROJECT_DESCRIPTION@.
+
+.. toctree::
+   :maxdepth: 2
+
+   oasvalidator
+   @EXHALE_REL_OUTPUT_DIR@/library_root
+   codecov
+   classdiagram
+   benchmark
+   genindex

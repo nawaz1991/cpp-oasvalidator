@@ -16,7 +16,7 @@
 #include <string>
 #include <unordered_map>
 
-class OASValidatorException; ///< Forward declaration for the custom exception class.
+class ValidatorInitExc; ///< Forward declaration for the custom exception class.
 class OASValidatorImp; ///< Forward declaration for the implementation class.
 
 /**

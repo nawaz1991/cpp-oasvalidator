@@ -1,0 +1,2872 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "REST Server Testing API",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://0.0.0.0:9000/test/api"
+    }
+  ],
+  "paths": {
+    "/test/dummy":
+    {
+      "get":
+      {
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/integer_simple_true/{param}": {
+      "get": {
+        "parameters": [
+          {
+            "name": "param",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "maximum": 1000
+            },
+            "style": "simple",
+            "explode": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/integer_simple_false/{param}": {
+      "get": {
+        "parameters": [
+          {
+            "name": "param",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            },
+            "style": "simple",
+            "explode": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/integer_label_true/{param}": {
+      "get": {
+        "parameters": [
+          {
+            "name": "param",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            },
+            "style": "label",
+            "explode": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/integer_label_false/{param}": {
+      "get": {
+        "parameters": [
+          {
+            "name": "param",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            },
+            "style": "label",
+            "explode": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/integer_matrix_true/{param}": {
+      "get": {
+        "parameters": [
+          {
+            "name": "param",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            },
+            "style": "matrix",
+            "explode": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/integer_matrix_false/{param}": {
+      "get": {
+        "parameters": [
+          {
+            "name": "param",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            },
+            "style": "matrix",
+            "explode": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/string_simple_true/{param}": {
+      "get": {
+        "parameters": [
+          {
+            "name": "param",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "style": "simple",
+            "explode": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/string_simple_false/{param}": {
+      "get": {
+        "parameters": [
+          {
+            "name": "param",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "style": "simple",
+            "explode": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/string_label_true/{param}": {
+      "get": {
+        "parameters": [
+          {
+            "name": "param",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "maxLength": 2
+            },
+            "style": "label",
+            "explode": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/string_label_false/{param}": {
+      "get": {
+        "parameters": [
+          {
+            "name": "param",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "style": "label",
+            "explode": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/string_matrix_true/{param}": {
+      "get": {
+        "parameters": [
+          {
+            "name": "param",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "style": "matrix",
+            "explode": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/string_matrix_false/{param}": {
+      "get": {
+        "parameters": [
+          {
+            "name": "param",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "style": "matrix",
+            "explode": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/array_integer_simple_true/{param}": {
+      "get": {
+        "parameters": [
+          {
+            "name": "param",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "integer"
+              }
+            },
+            "style": "simple",
+            "explode": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/array_integer_simple_false/{param}": {
+      "get": {
+        "parameters": [
+          {
+            "name": "param",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "integer"
+              }
+            },
+            "style": "simple",
+            "explode": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/array_integer_label_true/{param}": {
+      "get": {
+        "parameters": [
+          {
+            "name": "param",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "integer"
+              }
+            },
+            "style": "label",
+            "explode": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/array_integer_label_false/{param}": {
+      "get": {
+        "parameters": [
+          {
+            "name": "param",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "integer"
+              }
+            },
+            "style": "label",
+            "explode": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/array_string_simple_true/{param}": {
+      "get": {
+        "parameters": [
+          {
+            "name": "param",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "style": "simple",
+            "explode": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/array_string_simple_false/{param}": {
+      "get": {
+        "parameters": [
+          {
+            "name": "param",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "style": "simple",
+            "explode": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/array_string_label_true/{param}": {
+      "get": {
+        "parameters": [
+          {
+            "name": "param",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "style": "label",
+            "explode": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/array_string_label_false/{param}": {
+      "get": {
+        "parameters": [
+          {
+            "name": "param",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "style": "label",
+            "explode": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/array_string_matrix_true/{param}": {
+      "get": {
+        "parameters": [
+          {
+            "name": "param",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "style": "matrix",
+            "explode": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/array_string_matrix_false/{param}": {
+      "get": {
+        "parameters": [
+          {
+            "name": "param",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "style": "matrix",
+            "explode": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/object_simple_true/{param}": {
+      "get": {
+        "parameters": [
+          {
+            "name": "param",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "field1": {
+                  "type": "integer"
+                },
+                "field2": {
+                  "type": "string"
+                }
+              }
+            },
+            "style": "simple",
+            "explode": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/object_simple_false/{param}": {
+      "get": {
+        "parameters": [
+          {
+            "name": "param",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "field1": {
+                  "type": "integer"
+                },
+                "field2": {
+                  "type": "string"
+                }
+              }
+            },
+            "style": "simple",
+            "explode": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/object_label_true/{param}": {
+      "get": {
+        "parameters": [
+          {
+            "name": "param",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "field1": {
+                  "type": "integer"
+                },
+                "field2": {
+                  "type": "string"
+                }
+              }
+            },
+            "style": "label",
+            "explode": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/object_label_false/{param}": {
+      "get": {
+        "parameters": [
+          {
+            "name": "param",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "field1": {
+                  "type": "integer"
+                },
+                "field2": {
+                  "type": "string"
+                }
+              }
+            },
+            "style": "label",
+            "explode": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/object_matrix_true/{param}": {
+      "get": {
+        "parameters": [
+          {
+            "name": "param",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "field1": {
+                  "type": "integer"
+                },
+                "field2": {
+                  "type": "string"
+                }
+              }
+            },
+            "style": "matrix",
+            "explode": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/object_matrix_false/{param}": {
+      "get": {
+        "parameters": [
+          {
+            "name": "param",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "field1": {
+                  "type": "integer"
+                },
+                "field2": {
+                  "type": "string"
+                }
+              }
+            },
+            "style": "matrix",
+            "explode": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/query_integer_form_true": {
+      "get": {
+        "parameters": [
+          {
+            "name": "param",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            },
+            "style": "form",
+            "explode": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/query_integer_form_false": {
+      "get": {
+        "parameters": [
+          {
+            "name": "param",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            },
+            "style": "form",
+            "explode": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/query_string_form_true": {
+      "get": {
+        "parameters": [
+          {
+            "name": "param",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "style": "form",
+            "explode": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/query_string_form_false": {
+      "get": {
+        "parameters": [
+          {
+            "name": "param",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "style": "form",
+            "explode": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/query_array_integer_form_true": {
+      "get": {
+        "parameters": [
+          {
+            "name": "param",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "integer"
+              }
+            },
+            "style": "form",
+            "explode": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/query_array_integer_form_false": {
+      "get": {
+        "parameters": [
+          {
+            "name": "param",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "integer"
+              }
+            },
+            "style": "form",
+            "explode": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/query_array_string_form_true": {
+      "get": {
+        "parameters": [
+          {
+            "name": "param",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "style": "form",
+            "explode": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/query_array_string_form_false": {
+      "get": {
+        "parameters": [
+          {
+            "name": "param",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "style": "form",
+            "explode": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/query_object_form_true": {
+      "get": {
+        "parameters": [
+          {
+            "name": "param",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "field1": {
+                  "type": "integer"
+                },
+                "field2": {
+                  "type": "string"
+                }
+              }
+            },
+            "style": "form",
+            "explode": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/query_object_form_false": {
+      "get": {
+        "parameters": [
+          {
+            "name": "param",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "field1": {
+                  "type": "integer"
+                },
+                "field2": {
+                  "type": "string"
+                }
+              }
+            },
+            "style": "form",
+            "explode": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/query_two_integer_form_true": {
+      "get": {
+        "parameters": [
+          {
+            "name": "param1",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            },
+            "style": "form",
+            "explode": true
+          },
+          {
+            "name": "param2",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            },
+            "style": "form",
+            "explode": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/query_two_integer_form_mixed": {
+      "get": {
+        "parameters": [
+          {
+            "name": "param1",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            },
+            "style": "form",
+            "explode": true
+          },
+          {
+            "name": "param2",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            },
+            "style": "form",
+            "explode": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/query_integer_string_form_true": {
+      "get": {
+        "parameters": [
+          {
+            "name": "param1",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            },
+            "style": "form",
+            "explode": true
+          },
+          {
+            "name": "param2",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "style": "form",
+            "explode": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/query_integer_string_form_mixed": {
+      "get": {
+        "parameters": [
+          {
+            "name": "param1",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            },
+            "style": "form",
+            "explode": true
+          },
+          {
+            "name": "param2",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "style": "form",
+            "explode": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/complex_scenario1": {
+      "get": {
+        "parameters": [
+          {
+            "name": "integer_param",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "style": "form",
+            "explode": true
+          },
+          {
+            "name": "string_param",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "style": "form",
+            "explode": true
+          },
+          {
+            "name": "array_int_param",
+            "in": "query",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "integer"
+              }
+            },
+            "style": "form",
+            "explode": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/complex_scenario2": {
+      "get": {
+        "parameters": [
+          {
+            "name": "integer_param",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "style": "form",
+            "explode": false
+          },
+          {
+            "name": "array_str_param",
+            "in": "query",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "style": "form",
+            "explode": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/complex_scenario3": {
+      "get": {
+        "parameters": [
+          {
+            "name": "object_param",
+            "in": "query",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "field1": {
+                  "type": "integer"
+                },
+                "field2": {
+                  "type": "string"
+                }
+              }
+            },
+            "style": "form",
+            "explode": true
+          },
+          {
+            "name": "integer_param",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "style": "form",
+            "explode": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/complex_scenario4": {
+      "get": {
+        "parameters": [
+          {
+            "name": "integer_param",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "style": "form",
+            "explode": true
+          },
+          {
+            "name": "string_param",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "style": "form",
+            "explode": false
+          },
+          {
+            "name": "array_int_param",
+            "in": "query",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "integer"
+              }
+            },
+            "style": "form",
+            "explode": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/complex_scenario5": {
+      "get": {
+        "parameters": [
+          {
+            "name": "object1_param",
+            "in": "query",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "field1": {
+                  "type": "integer"
+                }
+              }
+            },
+            "style": "form",
+            "explode": false
+          },
+          {
+            "name": "object2_param",
+            "in": "query",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "fieldA": {
+                  "type": "string"
+                }
+              }
+            },
+            "style": "form",
+            "explode": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/body_scenario1": {
+      "post": {
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "integer"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/body_scenario2": {
+      "post": {
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "string",
+                "pattern": "^[a-z]+$"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/body_scenario3": {
+      "post": {
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "integer"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/body_scenario4": {
+      "post": {
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "field1": {
+                    "type": "integer"
+                  },
+                  "field2": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/body_scenario5": {
+      "post": {
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "field1": {
+                    "type": "integer"
+                  },
+                  "field2": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "field1"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/body_scenario6": {
+      "post": {
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "oneOf": [
+                  {
+                    "type": "integer"
+                  },
+                  {
+                    "type": "string"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/body_scenario7": {
+      "post": {
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "anyOf": [
+                  {
+                    "type": "integer"
+                  },
+                  {
+                    "type": "array",
+                    "items": {
+                      "type": "integer"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/body_scenario8": {
+      "post": {
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "integer"
+                },
+                "minItems": 1,
+                "maxItems": 5
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/body_scenario9": {
+      "post": {
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 100
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/body_scenario11": {
+      "post": {
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "string",
+                "enum": [
+                  "option1",
+                  "option2"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/body_scenario12": {
+      "post": {
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "field": {
+                    "oneOf": [
+                      {
+                        "type": "integer"
+                      },
+                      {
+                        "type": "string"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/body_scenario13": {
+      "post": {
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "name"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/body_scenario14": {
+      "post": {
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "basicField": {
+                        "type": "integer"
+                      }
+                    }
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "extraField": {
+                        "type": "integer"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/body_scenario15": {
+      "post": {
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "complexField": {
+                    "anyOf": [
+                      {
+                        "type": "integer"
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "subfield1": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/body_scenario16": {
+      "post": {
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "uniqueItems": true
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/body_scenario17": {
+      "post": {
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/body_scenario18": {
+      "post": {
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "multiLogic": {
+                    "oneOf": [
+                      {
+                        "anyOf": [
+                          {
+                            "type": "string"
+                          },
+                          {
+                            "type": "integer"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/body_scenario19": {
+      "post": {
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "readField": {
+                    "type": "string",
+                    "readOnly": true
+                  },
+                  "writeField": {
+                    "type": "string",
+                    "writeOnly": true
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/body_scenario20": {
+      "post": {
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "level1": {
+                    "type": "object",
+                    "properties": {
+                      "level2": {
+                        "type": "object",
+                        "properties": {
+                          "level3": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/header_single1": {
+      "get": {
+        "parameters": [
+          {
+            "name": "intHeader",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            },
+            "style": "simple",
+            "explode": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/header_single2": {
+      "get": {
+        "parameters": [
+          {
+            "name": "stringHeader",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "style": "simple",
+            "explode": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/header_single3": {
+      "get": {
+        "parameters": [
+          {
+            "name": "intArrayHeader",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "integer"
+              }
+            },
+            "style": "simple",
+            "explode": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/header_single4": {
+      "get": {
+        "parameters": [
+          {
+            "name": "stringArrayHeader",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "style": "simple",
+            "explode": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/header_single5": {
+      "get": {
+        "parameters": [
+          {
+            "name": "objectHeader",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "field1": {
+                  "type": "integer"
+                },
+                "field2": {
+                  "type": "string"
+                }
+              }
+            },
+            "style": "simple",
+            "explode": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/header_double1": {
+      "get": {
+        "parameters": [
+          {
+            "name": "intHeader",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            },
+            "style": "simple",
+            "explode": true
+          },
+          {
+            "name": "stringHeader",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "style": "simple",
+            "explode": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/header_double2": {
+      "get": {
+        "parameters": [
+          {
+            "name": "intHeader",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            },
+            "style": "simple",
+            "explode": false
+          },
+          {
+            "name": "intArrayHeader",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "integer"
+              }
+            },
+            "style": "simple",
+            "explode": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/header_double3": {
+      "get": {
+        "parameters": [
+          {
+            "name": "stringHeader",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "style": "simple",
+            "explode": true
+          },
+          {
+            "name": "stringArrayHeader",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "style": "simple",
+            "explode": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/header_double4": {
+      "get": {
+        "parameters": [
+          {
+            "name": "intArrayHeader",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "integer"
+              }
+            },
+            "style": "simple",
+            "explode": true
+          },
+          {
+            "name": "stringArrayHeader",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "style": "simple",
+            "explode": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/header_double5": {
+      "get": {
+        "parameters": [
+          {
+            "name": "objectHeader",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "field1": {
+                  "type": "integer"
+                },
+                "field2": {
+                  "type": "string"
+                }
+              }
+            },
+            "style": "simple",
+            "explode": true
+          },
+          {
+            "name": "stringHeader",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "style": "simple",
+            "explode": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/header_triple1": {
+      "get": {
+        "parameters": [
+          {
+            "name": "intHeader",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            },
+            "style": "simple",
+            "explode": true
+          },
+          {
+            "name": "stringHeader",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "style": "simple",
+            "explode": true
+          },
+          {
+            "name": "intArrayHeader",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "integer"
+              }
+            },
+            "style": "simple",
+            "explode": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/header_triple2": {
+      "get": {
+        "parameters": [
+          {
+            "name": "intHeader",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            },
+            "style": "simple",
+            "explode": false
+          },
+          {
+            "name": "stringArrayHeader",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "style": "simple",
+            "explode": true
+          },
+          {
+            "name": "objectHeader",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "field1": {
+                  "type": "integer"
+                },
+                "field2": {
+                  "type": "string"
+                }
+              }
+            },
+            "style": "simple",
+            "explode": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/header_triple3": {
+      "get": {
+        "parameters": [
+          {
+            "name": "stringHeader",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "style": "simple",
+            "explode": true
+          },
+          {
+            "name": "intArrayHeader",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "integer"
+              }
+            },
+            "style": "simple",
+            "explode": true
+          },
+          {
+            "name": "stringArrayHeader",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "style": "simple",
+            "explode": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/header_triple4": {
+      "get": {
+        "parameters": [
+          {
+            "name": "intArrayHeader",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "integer"
+              }
+            },
+            "style": "simple",
+            "explode": false
+          },
+          {
+            "name": "stringArrayHeader",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "style": "simple",
+            "explode": true
+          },
+          {
+            "name": "objectHeader",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "field1": {
+                  "type": "integer"
+                },
+                "field2": {
+                  "type": "string"
+                }
+              }
+            },
+            "style": "simple",
+            "explode": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/header_triple5": {
+      "get": {
+        "parameters": [
+          {
+            "name": "objectHeader",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "field1": {
+                  "type": "integer"
+                },
+                "field2": {
+                  "type": "string"
+                }
+              }
+            },
+            "style": "simple",
+            "explode": true
+          },
+          {
+            "name": "stringHeader",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "style": "simple",
+            "explode": false
+          },
+          {
+            "name": "intHeader",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            },
+            "style": "simple",
+            "explode": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/api_key_header": {
+      "get": {
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/test/api_key_query": {
+      "get": {
+        "security": [
+          {
+            "ApiKeyQueryParamAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/test/content/{param1}/abc/{param2}/{param3}": {
+      "get": {
+        "parameters": [
+          {
+            "name": "param1",
+            "in": "path",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer"
+                }
+              }
+            }
+          },
+          {
+            "name": "param2",
+            "in": "path",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "name": "param3",
+            "in": "path",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "field1": {
+                      "type": "integer"
+                    },
+                    "field2": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "name": "param4",
+            "in": "query",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "name": "param5",
+            "in": "query",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "field1": {
+                      "type": "integer"
+                    },
+                    "field2": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "name": "param6",
+            "in": "query",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "field1": {
+                      "type": "integer"
+                    },
+                    "field2": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "name": "param7",
+            "in": "query",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "field1": {
+                      "type": "integer"
+                    },
+                    "field2": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/all/{param1}/abc/{param2}/{param3}": {
+      "post": {
+        "parameters": [
+          {
+            "name": "param1",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            },
+            "style": "simple",
+            "explode": false
+          },
+          {
+            "name": "param2",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "name": "param3",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "field1": {
+                  "type": "integer"
+                },
+                "field2": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          {
+            "name": "param4",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "name": "param5",
+            "in": "query",
+            "required": true,
+            "explode": false,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "field1": {
+                  "type": "integer"
+                },
+                "field2": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          {
+            "name": "param6",
+            "in": "query",
+            "required": true,
+            "explode": false,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "field1": {
+                  "type": "integer"
+                },
+                "field2": {
+                  "type": "string"
+                }
+              }
+            },
+            "style": "form"
+          },
+          {
+            "name": "param7",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "field1": {
+                  "type": "integer"
+                },
+                "field2": {
+                  "type": "string"
+                }
+              }
+            },
+            "style": "form",
+            "explode": false
+          },
+          {
+            "name": "param8",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "field1": {
+                  "type": "integer"
+                },
+                "field2": {
+                  "type": "string"
+                }
+              }
+            },
+            "style": "spaceDelimited",
+            "explode": false
+          },
+          {
+            "name": "param9",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "field1": {
+                  "type": "integer"
+                },
+                "field2": {
+                  "type": "string"
+                }
+              }
+            },
+            "style": "pipeDelimited",
+            "explode": false
+          },
+          {
+            "name": "param10",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "param11",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "param12",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "field1": {
+                  "type": "integer"
+                },
+                "field2": {
+                  "type": "string"
+                }
+              }
+            },
+            "style": "form",
+            "explode": true
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "field1": {
+                    "type": "integer"
+                  },
+                  "field2": {
+                    "type": "string"
+                  },
+                  "field3": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "field4": {
+                    "type": "object",
+                    "properties": {
+                      "subfield1": {
+                        "type": "integer"
+                      },
+                      "subfield2": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "field5": {
+                    "type": "object",
+                    "properties": {
+                      "subfield1": {
+                        "type": "integer"
+                      },
+                      "subfield2": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "subfield1"
+                    ]
+                  },
+                  "field6": {
+                    "oneOf": [
+                      {
+                        "type": "integer"
+                      },
+                      {
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "field7": {
+                    "anyOf": [
+                      {
+                        "type": "integer"
+                      },
+                      {
+                        "type": "array",
+                        "items": {
+                          "type": "integer"
+                        }
+                      }
+                    ]
+                  },
+                  "field8": {
+                    "type": "array",
+                    "items": {
+                      "type": "integer"
+                    },
+                    "minItems": 1,
+                    "maxItems": 5
+                  },
+                  "field9": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 100
+                  },
+                  "field10": {
+                    "type": "string",
+                    "enum": [
+                      "option1",
+                      "option2"
+                    ]
+                  },
+                  "field11": {
+                    "type": "object",
+                    "properties": {
+                      "field": {
+                        "oneOf": [
+                          {
+                            "type": "integer"
+                          },
+                          {
+                            "type": "string"
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "field12": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "name": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
+    "/test/all/{param1}": {
+      "post": {
+        "parameters": [
+          {
+            "name": "param1",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            },
+            "style": "simple",
+            "explode": false
+          },
+          {
+            "name": "param4",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "integer"
+              }
+            }
+          },
+          {
+            "name": "param11",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "field1": {
+                    "type": "integer"
+                  },
+                  "field2": {
+                    "type": "string"
+                  },
+                  "field3": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "field4": {
+                    "type": "object",
+                    "properties": {
+                      "subfield1": {
+                        "type": "integer"
+                      },
+                      "subfield2": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Schema1": {
+        "type": "object",
+        "properties": {
+          "basicField": {
+            "type": "integer"
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "ApiKeyAuth": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "Api-Key"
+      },
+      "ApiKeyQueryParamAuth": {
+        "type": "apiKey",
+        "in": "query",
+        "name": "api_key"
+      }
+    }
+  }
+}

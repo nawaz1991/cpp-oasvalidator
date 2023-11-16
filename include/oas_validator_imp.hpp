@@ -6,27 +6,10 @@
 #ifndef OAS_VALIDATION_HPP
 #define OAS_VALIDATION_HPP
 
-#include "common.hpp"
-#include "method_validator.hpp"
-#include "path_trie.hpp"
-#include "validators_store.hpp"
-
-class OASValidatorException: public std::exception
-{
-private:
-    std::string ex_msg_;
-
-public:
-    explicit OASValidatorException(std::string message)
-        : ex_msg_(std::move(message))
-    {
-    }
-
-    [[nodiscard]] const char* what() const _GLIBCXX_TXN_SAFE_DYN _GLIBCXX_USE_NOEXCEPT override
-    {
-        return ex_msg_.c_str();
-    }
-};
+#include "utils/common.hpp"
+#include "utils/path_trie.hpp"
+#include "validators/method_validator.hpp"
+#include "validators/validators_store.hpp"
 
 class OASValidatorImp
 {
@@ -53,7 +36,7 @@ private:
         PathTrie path_trie;
     };
 
-    std::array<PerMethod, METHOD_COUNT> oas_validators_;
+    std::array<PerMethod, static_cast<size_t>(HttpMethod::COUNT)> oas_validators_;
     MethodValidator method_validator_;
 
     ValidationError GetValidators(const std::string& method, const std::string& http_path, ValidatorsStore*& validators, std::string& error_msg,

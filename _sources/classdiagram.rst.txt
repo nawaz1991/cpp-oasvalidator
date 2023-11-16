@@ -3,4 +3,4 @@
 Class Diagram
 --------------------
 
-.. plantuml:: classdiagram.puml
+.. uml:: classdiagram.puml

@@ -319,8 +319,8 @@ To build and install ``cpp-oasvalidator``, follow the steps below:
        cd build
        sudo make install
 
-6.1.3 Running the Tests
-^^^^^^^^^^^^^^^^^^^^^^^
+6.2 Running the Tests
+~~~~~~~~~~~~~~~~~~~~~
 
 To run the tests, follow the steps below: 1. Navigate to the root
 directory of the project. 2. Run the following commands:
@@ -332,8 +332,8 @@ directory of the project. 2. Run the following commands:
          build/test/unittest/oasvalidator-unittests
 
 
-6.1.4 Generating Code Coverage Report
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+6.3 Generating Code Coverage Report
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To generate the code coverage report, follow the steps below: 1.
 Navigate to the root directory of the project. 2. Run the following
@@ -348,7 +348,7 @@ The coverage report will be generated in the
 ``build/covhtml-cpp-oasvalidator/`` directory. Open ``index.html`` in
 your browser to view the report.
 
-6.1.5 Performance Benchmarking
+6.4 Performance Benchmarking
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To run the performance benchmark, follow the steps below:
@@ -363,8 +363,8 @@ To run the performance benchmark, follow the steps below:
        cmake --build build --target oasvalidator-perftests -j $(nproc)
        build/test/perftest/oasvalidator-perftests
 
-6.1.6 Running the Example
-^^^^^^^^^^^^^^^^^^^^^^^^^
+6.5 Running the Example
+~~~~~~~~~~~~~~~~~~~~~~~
 
 To run the example, follow the steps below:
 
@@ -378,7 +378,7 @@ To run the example, follow the steps below:
        cmake --build build --target example -j $(nproc)
        build/example/example
 
-6.2 Initialization 🎬
+6.6 Initialization 🎬
 ~~~~~~~~~~~~~~~~~~~~~
 
 To utilize ``cpp-oasvalidator``, include the relevant header and

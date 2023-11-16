@@ -553,8 +553,9 @@ sudo<span class="w"> </span>make<span class="w"> </span>install
 </li>
 </ol>
 </section>
+</section>
 <section id="running-the-tests">
-<h4>6.1.3 Running the Tests<a class="headerlink" href="#running-the-tests" title="Permalink to this headline">#</a></h4>
+<h3>6.2 Running the Tests<a class="headerlink" href="#running-the-tests" title="Permalink to this headline">#</a></h3>
 <p>To run the tests, follow the steps below: 1. Navigate to the root
 directory of the project. 2. Run the following commands:</p>
 <blockquote>
@@ -566,7 +567,7 @@ build/test/unittest/oasvalidator-unittests
 </div></blockquote>
 </section>
 <section id="generating-code-coverage-report">
-<h4>6.1.4 Generating Code Coverage Report<a class="headerlink" href="#generating-code-coverage-report" title="Permalink to this headline">#</a></h4>
+<h3>6.3 Generating Code Coverage Report<a class="headerlink" href="#generating-code-coverage-report" title="Permalink to this headline">#</a></h3>
 <p>To generate the code coverage report, follow the steps below: 1.
 Navigate to the root directory of the project. 2. Run the following
 commands:</p>
@@ -578,9 +579,8 @@ cmake<span class="w"> </span>--build<span class="w"> </span>build<span class="w"
 <code class="docutils literal notranslate"><span class="pre">build/covhtml-cpp-oasvalidator/</span></code> directory. Open <code class="docutils literal notranslate"><span class="pre">index.html</span></code> in
 your browser to view the report.</p>
 </section>
-</section>
 <section id="performance-benchmarking">
-<h3>6.1.5 Performance Benchmarking<a class="headerlink" href="#performance-benchmarking" title="Permalink to this headline">#</a></h3>
+<h3>6.4 Performance Benchmarking<a class="headerlink" href="#performance-benchmarking" title="Permalink to this headline">#</a></h3>
 <p>To run the performance benchmark, follow the steps below:</p>
 <ol class="arabic">
 <li><p>Navigate to the root directory of <code class="docutils literal notranslate"><span class="pre">cpp-oasvalidator</span></code>.</p></li>
@@ -592,8 +592,9 @@ build/test/perftest/oasvalidator-perftests
 </div>
 </li>
 </ol>
+</section>
 <section id="running-the-example">
-<h4>6.1.6 Running the Example<a class="headerlink" href="#running-the-example" title="Permalink to this headline">#</a></h4>
+<h3>6.5 Running the Example<a class="headerlink" href="#running-the-example" title="Permalink to this headline">#</a></h3>
 <p>To run the example, follow the steps below:</p>
 <ol class="arabic">
 <li><p>Navigate to the root directory of <code class="docutils literal notranslate"><span class="pre">cpp-oasvalidator</span></code>.</p></li>
@@ -606,9 +607,8 @@ build/example/example
 </li>
 </ol>
 </section>
-</section>
 <section id="initialization">
-<h3>6.2 Initialization 🎬<a class="headerlink" href="#initialization" title="Permalink to this headline">#</a></h3>
+<h3>6.6 Initialization 🎬<a class="headerlink" href="#initialization" title="Permalink to this headline">#</a></h3>
 <p>To utilize <code class="docutils literal notranslate"><span class="pre">cpp-oasvalidator</span></code>, include the relevant header and
 initialize the validator with your OpenAPI specification:</p>
 <div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nb">target_link_libraries</span><span class="p">(</span><span class="s">&lt;your_target&gt;</span><span class="w"> </span><span class="s">PRIVATE</span><span class="w"> </span><span class="s">oasvalidator</span><span class="p">)</span>
@@ -707,15 +707,13 @@ OpenAPI specs.</p>
 <li><a class="reference internal" href="#installation">6.1 Installation 🔧</a><ul>
 <li><a class="reference internal" href="#cloning-the-repository">6.1.1 Cloning the Repository</a></li>
 <li><a class="reference internal" href="#building-and-installing">6.1.2 Building and Installing</a></li>
-<li><a class="reference internal" href="#running-the-tests">6.1.3 Running the Tests</a></li>
-<li><a class="reference internal" href="#generating-code-coverage-report">6.1.4 Generating Code Coverage Report</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#performance-benchmarking">6.1.5 Performance Benchmarking</a><ul>
-<li><a class="reference internal" href="#running-the-example">6.1.6 Running the Example</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#initialization">6.2 Initialization 🎬</a></li>
+<li><a class="reference internal" href="#running-the-tests">6.2 Running the Tests</a></li>
+<li><a class="reference internal" href="#generating-code-coverage-report">6.3 Generating Code Coverage Report</a></li>
+<li><a class="reference internal" href="#performance-benchmarking">6.4 Performance Benchmarking</a></li>
+<li><a class="reference internal" href="#running-the-example">6.5 Running the Example</a></li>
+<li><a class="reference internal" href="#initialization">6.6 Initialization 🎬</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#conclusion">7. Conclusion 📜</a></li>

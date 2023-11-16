@@ -618,10 +618,11 @@ initialize the validator with your OpenAPI specification:</p>
 <span class="n">OASValidator</span><span class="w"> </span><span class="n">validator</span><span class="p">(</span><span class="s">&quot;/path/to/your/spec.json&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">oas_specs</span></code> can be a file path or a JSON string. If you provide a file path, the library will read the file and parse it. If you provide a JSON string, the library will parse it directly.</p>
+</div>
 <p>Then, utilize the various validation methods to inspect your requests.</p>
-<p>For a detailed breakdown of each API, refer to the <a class="reference external" href="API.md">API
-Reference</a> or the <a class="reference external" href="example/example.cpp">example</a> provided
-in the repository.</p>
 </section>
 </section>
 <section id="conclusion">

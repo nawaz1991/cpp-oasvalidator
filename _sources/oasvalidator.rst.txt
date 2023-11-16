@@ -393,11 +393,9 @@ initialize the validator with your OpenAPI specification:
    #include <oas_validator.hpp>
    OASValidator validator("/path/to/your/spec.json");
 
-Then, utilize the various validation methods to inspect your requests.
+.. note:: The ``oas_specs`` can be a file path or a JSON string. If you provide a file path, the library will read the file and parse it. If you provide a JSON string, the library will parse it directly.
 
-For a detailed breakdown of each API, refer to the `API
-Reference <API.md>`__ or the `example <example/example.cpp>`__ provided
-in the repository.
+Then, utilize the various validation methods to inspect your requests.
 
 7. Conclusion 📜
 ----------------

@@ -24,11 +24,9 @@ Detailed Description
 
 Muhammad Nawaz 
 
-2023
+2023 
 
-This file provides API for validating HTTP requests against OAS (OpenAPI Specification).
 
-Licensed under the MIT License. See LICENSE file for more information. 
 
 
 

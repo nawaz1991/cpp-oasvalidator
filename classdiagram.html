@@ -228,7 +228,7 @@
           <section id="class-diagram">
 <span id="id1"></span><h1>Class Diagram<a class="headerlink" href="#class-diagram" title="Permalink to this headline">#</a></h1>
 <p class="plantuml">
-<img src="_images/plantuml-d5e99034e10be7992c162f9ad6423c7522df9c95.png" alt="&#64;startuml
+<img src="_images/plantuml-f08131526dfd5ab0b046b3915105d479025d9787.png" alt="&#64;startuml
 skinparam linetype ortho
 
 ' Classes
@@ -311,7 +311,7 @@ class MethodValidator {
 	-{static} kValidMethods : static const unordered_set&lt;string&gt;
 }
 class OASValidator {
-	+OASValidator(const string&amp; spec_path)
+	+OASValidator(const string&amp; oas_specs)
 	+~OASValidator()
 	-impl_ : OASValidatorImp*
 	+ValidateBody(const string&amp; method, const string&amp; http_path, const string&amp; json_body, string&amp; error_msg) : int
@@ -325,7 +325,7 @@ class OASValidator {
 	+ValidateRoute(const string&amp; method, const string&amp; http_path, string&amp; error_msg) : int
 }
 class OASValidatorImp {
-	+OASValidatorImp(const string&amp; specs_path)
+	+OASValidatorImp(const string&amp; oas_specs)
 	+~OASValidatorImp()
 	-method_validator_ : MethodValidator
 	-GetValidators(const string&amp; method, const string&amp; http_path, ValidatorsStore*&amp; validators, string&amp; error_msg, unordered_map&lt;size_t, ParamRange&gt;* param_idxs, string* query) : ValidationError

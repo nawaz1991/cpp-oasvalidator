@@ -1,0 +1,328 @@
+@startuml
+skinparam linetype ortho
+
+' Classes
+class ArrayDeserializer {
+	+ArrayDeserializer(const string& param_name, char start, bool skip_name, PrimitiveType items_type, char separator, bool has_running_name, bool has_20_separator)
+	+~ArrayDeserializer()
+	-items_type_ : const PrimitiveType
+	-has_20_separator_ : const bool
+	-has_running_name_ : const bool
+	-separator_ : const char
+	+Deserialize(const char* beg, const char* const end) : string
+	-CheckElementData(const char*& cursor, const char* const end) : void {query}
+	-CheckSeparator(const char*& cursor, const char* const end) : void {query}
+	-DeserializeBooleanArray(const char*& cursor, const char* const end, string& ret) : void {query}
+	-DeserializeIntegerArray(const char*& cursor, const char* const end, string& ret) : void {query}
+	-DeserializeNumberArray(const char*& cursor, const char* const end, string& ret) : void {query}
+	-DeserializeStringArray(const char*& cursor, const char* const end, string& ret) : void {query}
+}
+abstract class BaseDeserializer {
+	+BaseDeserializer(const string& param_name, char start, bool skip_name)
+	+~BaseDeserializer()
+	#skip_name_ : const bool
+	#start_ : const char
+	#param_name_ : const string
+	#{static} kHexLookupTable : static const array<char, 256>
+	+{abstract} Deserialize(const char* beg, const char* const end) : string
+	#CheckData(const char*& cursor, const char* const end) : void {query}
+	#CheckEnd(const char*& cursor, const char* const end) : void {query}
+	#CheckNSkipChar(const char*& cursor, const char* const end, const char c) : void {query}
+	#CheckNSkipName(const char*& cursor, const char* const end) : void {query}
+	#CheckNSkipStart(const char*& cursor) : void {query}
+	#DeserializeBoolean(const char*& cursor, const char* const end, string& ret) : void {query}
+	#DeserializeInteger(const char*& cursor, const char* const end, string& ret) : void {query}
+	#DeserializeNumber(const char*& cursor, const char* const end, string& ret) : void {query}
+	#DeserializeString(const char*& cursor, const char* const end, string& ret) : void {query}
+	#DeserializeString(const char*& cursor, const char* const end, const char terminator, string& ret) : void {query}
+}
+abstract class BaseValidator {
+	+BaseValidator(ValidationError err_code)
+	+BaseValidator(const vector<string>& ref_keys, ValidationError err_code)
+	+~BaseValidator()
+	+{abstract} ValidateJson(const string& content, string& err_msg) : ValidationError
+	#code_on_error_ : ValidationError
+	-{static} kErrHeaders : static const unordered_map<ValidationError, string>
+	+GetErrHeader() : string {query}
+	#err_header_ : string
+	#InitErrHeader() : void
+}
+class BodyValidator {
+	+BodyValidator(const Value& schema_val, const vector<string>& ref_keys)
+}
+class ContentDeserializer {
+	+ContentDeserializer(const string& param_name, char start, bool skip_name)
+	+~ContentDeserializer()
+	+Deserialize(const char* beg, const char* const end) : string
+}
+class DeserializationException {
+	+DeserializationException(const string& message)
+	+what() : char* {query}
+	-ex_msg_ : string
+}
+class HeaderParamValidator {
+	+HeaderParamValidator(const Value& param_val, const vector<string>& keys)
+	+~HeaderParamValidator()
+}
+class JsonValidator {
+	+JsonValidator(const Value& schema_val, const vector<string>& ref_keys, ValidationError err_code)
+	+~JsonValidator()
+	+ValidateJson(const string& json_str, string& error_msg) : ValidationError
+	-schema_ : SchemaDocument*
+	-validator_ : SchemaValidator*
+	-mutex_ : mutex
+	-{static} GetString(const GenericValue<UTF8<>, CrtAllocator>& val) : string
+	-CreateErrorMessages(const GenericValue<UTF8<>, CrtAllocator>& errors, const string& context, string& error_msg, bool recursive) : void
+	-HandleError(const char* error_name, const GenericValue<UTF8<>, CrtAllocator>& error, const string& context, string& error_msg, bool recursive) : void
+}
+class MethodValidator {
+	+MethodValidator()
+	+ValidateJson(const string& method, string& err_msg) : ValidationError
+	-{static} kValidMethods : static const unordered_set<string>
+}
+class OASValidator {
+	+OASValidator(const string& oas_specs)
+	+~OASValidator()
+	-impl_ : OASValidatorImp*
+	+ValidateBody(const string& method, const string& http_path, const string& json_body, string& error_msg) : int
+	+ValidateHeaders(const string& method, const string& http_path, const unordered_map<string, string>& headers, string& error_msg) : int
+	+ValidatePathParam(const string& method, const string& http_path, string& error_msg) : int
+	+ValidateQueryParam(const string& method, const string& http_path, string& error_msg) : int
+	+ValidateRequest(const string& method, const string& http_path, string& error_msg) : int
+	+ValidateRequest(const string& method, const string& http_path, const string& json_body, string& error_msg) : int
+	+ValidateRequest(const string& method, const string& http_path, const unordered_map<string, string>& headers, string& error_msg) : int
+	+ValidateRequest(const string& method, const string& http_path, const string& json_body, const unordered_map<string, string>& headers, string& error_msg) : int
+	+ValidateRoute(const string& method, const string& http_path, string& error_msg) : int
+}
+class OASValidatorImp {
+	+OASValidatorImp(const string& oas_specs)
+	+~OASValidatorImp()
+	-method_validator_ : MethodValidator
+	-GetValidators(const string& method, const string& http_path, ValidatorsStore*& validators, string& error_msg, unordered_map<size_t, ParamRange>* param_idxs, string* query) : ValidationError
+	+ValidateBody(const string& method, const string& http_path, const string& json_body, string& error_msg) : ValidationError
+	+ValidateHeaders(const string& method, const string& http_path, const unordered_map<string, string>& headers, string& error_msg) : ValidationError
+	+ValidatePathParam(const string& method, const string& http_path, string& error_msg) : ValidationError
+	+ValidateQueryParam(const string& method, const string& http_path, string& error_msg) : ValidationError
+	+ValidateRequest(const string& method, const string& http_path, string& error_msg) : ValidationError
+	+ValidateRequest(const string& method, const string& http_path, const string& json_body, string& error_msg) : ValidationError
+	+ValidateRequest(const string& method, const string& http_path, const unordered_map<string, string>& headers, string& error_msg) : ValidationError
+	+ValidateRequest(const string& method, const string& http_path, const string& json_body, const unordered_map<string, string>& headers, string& error_msg) : ValidationError
+	+ValidateRoute(const string& method, const string& http_path, string& error_msg) : ValidationError
+	-{static} kStringToMethod : static const unordered_map<string, HttpMethod>
+	->(HttpMethod::COUNT) : array<PerMethod , static_cast<size_t
+}
+class ObjectDeserializer {
+	+ObjectDeserializer(const string& param_name, char start, bool skip_name, char kv_separator, char vk_separator, bool is_deep_obj, unordered_map<string, PrimitiveType> kt_map)
+	+~ObjectDeserializer()
+	-is_deep_obj_ : const bool
+	-kv_separator_ : const char
+	-vk_separator_ : const char
+	+Deserialize(const char* beg, const char* const end) : string
+	-kt_map_ : unordered_map<string, PrimitiveType>
+	-DeserializeKey(const char*& cursor, const char* const end, const char terminator, string& key) : void {query}
+}
+class ParamValidator {
+	+ParamValidator(ParamInfo param_info, const vector<string>& ref_keys, ValidationError err_code)
+	+~ParamValidator()
+	-deserializer_ : BaseDeserializer*
+	#{static} GetParamInfo(const Value& param_val, const string& default_style, bool default_explode, bool default_required, const vector<string>& ref_keys) : ParamInfo
+	+ErrorOnMissing(string& error_msg) : ValidationError {query}
+	+ValidateParam(const char* beg, const char* end, string& error_msg) : ValidationError
+	+IsRequired() : bool {query}
+	-required_ : const bool
+	-name_ : const string
+}
+class PathParamValidator {
+	+PathParamValidator(const Value& param_val, const vector<string>& keys)
+	+~PathParamValidator()
+}
+class PathTrie {
+	+PathTrie()
+	+~PathTrie()
+	-root_ : Node
+	+Search(const char* beg, const char* end, string& oas_path) : bool
+	+Search(const char* beg, const char* end, string& oas_path, unordered_map<size_t, ParamRange>& param_idxs) : bool
+	-DeleteNode(Node node) : void
+	+Insert(const string& path) : void
+}
+class PrimitiveDeserializer {
+	+PrimitiveDeserializer(const string& param_name, char start, bool skip_name, PrimitiveType param_type)
+	+~PrimitiveDeserializer()
+	-param_type_ : const PrimitiveType
+	+Deserialize(const char* beg, const char* const end) : string
+}
+class QueryParamValidator {
+	+QueryParamValidator(const Value& param_val, const vector<string>& keys)
+	+~QueryParamValidator()
+	+IsEmptyAllowed() : bool {query}
+	-empty_allowed_ : bool
+}
+class ValidatorInitExc {
+	+ValidatorInitExc(string message)
+	+what() : char* {query}
+	-ex_msg_ : string
+}
+class ValidatorsStore {
+	+ValidatorsStore()
+	+ValidatorsStore(const Value& schema_val, const vector<string>& ref_keys)
+	+~ValidatorsStore()
+	-body_validator_ : BodyValidator*
+	+ValidateBody(const string& json_body, string& error_msg) : ValidationError
+	+ValidateHeaderParams(const unordered_map<string, string>& headers, string& error_msg) : ValidationError
+	+ValidatePathParams(unordered_map<size_t, ParamRange>& param_idxs, string& error_msg) : ValidationError
+	+ValidateQueryParams(const string& query, string& error_msg) : ValidationError
+	-{static} GetPathParamIndices(const string& path) : unordered_map<string , int>
+	-header_param_validators_ : unordered_map<string, HeaderParamValidator*>
+	-path_param_validators_ : vector<PathParamValidatorInfo>
+	-query_param_validators_ : vector<QueryParamValidatorInfo>
+	+AddParamValidators(const string& path, const Value& params, vector<string>& ref_keys) : void
+}
+enum ExtendedType {
+	ARRAY
+	BOOLEAN
+	INTEGER
+	NUMBER
+	OBJECT
+	STRING
+}
+enum HttpMethod {
+	CONNECT
+	COUNT
+	DELETE
+	GET
+	HEAD
+	OPTIONS
+	PATCH
+	POST
+	PUT
+	TRACE
+}
+enum ParamStyle {
+	CONTENT
+	DEEP_OBJ
+	FORM
+	LABEL
+	MATRIX
+	PIPE_DELIM
+	SIMPLE
+	SPACE_DELIM
+}
+enum PrimitiveType {
+	BOOLEAN
+	INTEGER
+	NUMBER
+	STRING
+}
+enum SecurityType {
+	APIKEY_HEADER
+	APIKEY_QUERY
+	HTTP_BASIC
+	HTTP_BEARER
+	OAUTH2
+	OIDC
+}
+enum ValidationError {
+	INVALID_BODY
+	INVALID_HEADER_PARAM
+	INVALID_METHOD
+	INVALID_PATH_PARAM
+	INVALID_QUERY_PARAM
+	INVALID_ROUTE
+	INVALID_RSP
+	NONE
+}
+enum ValidationError {
+	INVALID_BODY
+	INVALID_HEADER_PARAM
+	INVALID_METHOD
+	INVALID_PATH_PARAM
+	INVALID_QUERY_PARAM
+	INVALID_ROUTE
+	INVALID_RSP
+	NONE
+}
+class OASValidatorImp::PerMethod {
+	+path_trie : PathTrie
+	+per_path_validators : unordered_map<string, ValidatorsStore*>
+}
+class ParamRange {
+	+beg : const char*
+	+end : const char*
+}
+class ParamValidator::ParamInfo {
+	+deserializer : BaseDeserializer*
+	+required : bool
+	+schema : const Value&
+	+name : string
+}
+class PathTrie::Node {
+	+dir : string
+	+children : unordered_map<string, Node*>
+}
+class ValidatorsStore::PathParamValidatorInfo {
+	+validator : PathParamValidator*
+	+idx : int
+}
+class ValidatorsStore::QueryParamValidatorInfo {
+	+validator : QueryParamValidator*
+	+name : string
+}
+
+/' Inheritance relationships '/
+BaseDeserializer <|-- ArrayDeserializer
+BaseDeserializer <|-- ContentDeserializer
+BaseDeserializer <|-- ObjectDeserializer
+BaseDeserializer <|-- PrimitiveDeserializer
+BaseValidator <|-- JsonValidator
+BaseValidator <|-- MethodValidator
+JsonValidator <|-- BodyValidator
+JsonValidator <|-- ParamValidator
+ParamValidator <|-- HeaderParamValidator
+ParamValidator <|-- PathParamValidator
+ParamValidator <|-- QueryParamValidator
+
+/' Aggregation relationships '/
+ArrayDeserializer *-- PrimitiveType
+BaseValidator "4" *-- ValidationError
+OASValidator o-- OASValidatorImp
+OASValidatorImp *-- HttpMethod
+OASValidatorImp *-- MethodValidator
+OASValidatorImp::PerMethod *-- PathTrie
+OASValidatorImp::PerMethod o-- ValidatorsStore
+ObjectDeserializer *-- PrimitiveType
+ParamValidator o-- BaseDeserializer
+ParamValidator::ParamInfo o-- BaseDeserializer
+PrimitiveDeserializer *-- PrimitiveType
+ValidatorsStore o-- BodyValidator
+ValidatorsStore o-- HeaderParamValidator
+ValidatorsStore::PathParamValidatorInfo o-- PathParamValidator
+ValidatorsStore::QueryParamValidatorInfo o-- QueryParamValidator
+
+/' Nested objects '/
+OASValidatorImp +-- OASValidatorImp::PerMethod
+ParamValidator +-- ParamValidator::ParamInfo
+PathTrie +-- PathTrie::Node
+ValidatorsStore +-- ValidatorsStore::PathParamValidatorInfo
+ValidatorsStore +-- ValidatorsStore::QueryParamValidatorInfo
+BaseDeserializer +-- DeserializationException
+ValidatorsStore +-- ParamStyle
+ValidatorsStore +-- ExtendedType
+ValidatorsStore +-- SecurityType
+ValidatorsStore +-- ParamRange
+OASValidatorImp +-- ValidatorInitExc
+
+' Additional hidden lines for layout coherence
+OASValidatorImp -[hidden]right- ValidatorsStore
+BaseValidator -[hidden]- JsonValidator
+BaseValidator -[hidden]- MethodValidator
+JsonValidator -[hidden]- BodyValidator
+JsonValidator -[hidden]- ParamValidator
+ParamValidator -[hidden]- HeaderParamValidator
+ParamValidator -[hidden]- PathParamValidator
+ParamValidator -[hidden]- QueryParamValidator
+ArrayDeserializer -[hidden]- ObjectDeserializer
+ContentDeserializer -[hidden]- PrimitiveDeserializer
+OASValidatorImp -[hidden]- ValidatorsStore
+ValidatorsStore -[hidden]- BaseDeserializer
+ValidatorsStore -[hidden]- BaseValidator
+@enduml

@@ -1,12 +1,15 @@
+/*
+ * Copyright (c) 2023 Muhammad Nawaz
+ * Licensed under the MIT License. See LICENSE file for more information.
+ */
+// [ END OF LICENSE 7982e23aed1dc8eda1fdc979fee617354ae998dc ]
+
 /**
  * @file oas_validator.hpp
  * @author Muhammad Nawaz
  * @date 2023
  * @brief Header file for the OASValidator library.
  *
- * This file provides API for validating HTTP requests against OAS (OpenAPI Specification).
- *
- * Licensed under the MIT License. See LICENSE file for more information.
  */
 
 #ifndef OAS_VALIDATOR_HPP
@@ -16,7 +19,7 @@
 #include <string>
 #include <unordered_map>
 
-class OASValidatorException; ///< Forward declaration for the custom exception class.
+class ValidatorInitExc; ///< Forward declaration for the custom exception class.
 class OASValidatorImp; ///< Forward declaration for the implementation class.
 
 /**
@@ -54,9 +57,11 @@ private:
 public:
     /**
      * @brief Constructor that takes the path to the OAS specification file.
-     * @param spec_path File path to the OAS specification in JSON format.
+     * @param oas_specs File path to the OAS specification in JSON format or JSON string containing the OAS specification.
+     *
+     * @note The OAS specification can be provided as a file path or as a JSON string.
      */
-    explicit OASValidator(const std::string& spec_path);
+    explicit OASValidator(const std::string& oas_specs);
 
     /**
      * @brief Validates the HTTP method and route against the OpenAPI specification.

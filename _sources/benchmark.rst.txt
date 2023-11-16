@@ -1,0 +1,156 @@
+Benchmark Report
+================
+
+Context
+-------
+
+.. list-table::
+   :widths: auto
+   :header-rows: 1
+
+   * - Key
+     - Value
+   * - date
+     - 2023-11-16T09:59:27+00:00
+   * - host_name
+     - fv-az566-171
+   * - executable
+     - build/test/perftest/oasvalidator-perftests
+   * - num_cpus
+     - 4
+   * - mhz_per_cpu
+     - 2580
+   * - cpu_scaling_enabled
+     - False
+   * - caches
+
+     - .. list-table::
+
+        * - Type
+          - Level
+          - Size (Bytes)
+          - Num Sharing
+        * - Data
+          - 1
+          - 32768
+          - 2
+        * - Instruction
+          - 1
+          - 32768
+          - 2
+        * - Unified
+          - 2
+          - 524288
+          - 2
+        * - Unified
+          - 3
+          - 33554432
+          - 4
+   * - load_avg
+     - [2.55225, 0.900879, 0.327637]
+   * - library_build_type
+     - release
+
+Benchmarks
+----------
+
+.. list-table::
+   :widths: auto
+   :header-rows: 1
+
+   * - Index
+     - Benchmark
+     - Iterations
+     - Real Time (µs)
+     - CPU Time (µs)
+   * - 1
+     - InvalidMethod
+     - 38242950
+     - 0.127
+     - 0.127
+   * - 2
+     - ValidRoute
+     - 67786162
+     - 0.072
+     - 0.072
+   * - 3
+     - InvalidRoute
+     - 2137012
+     - 2.306
+     - 2.306
+   * - 4
+     - ValidPathParam
+     - 1698571
+     - 2.921
+     - 2.920
+   * - 5
+     - InvalidPathParam
+     - 952318
+     - 5.169
+     - 5.169
+   * - 6
+     - ValidQueryParam
+     - 12374459
+     - 0.397
+     - 0.397
+   * - 7
+     - InvalidQueryParam
+     - 1757113
+     - 2.792
+     - 2.792
+   * - 8
+     - ValidHeaderParam
+     - 13354686
+     - 0.367
+     - 0.367
+   * - 9
+     - InvalidHeaderParam
+     - 1802453
+     - 2.749
+     - 2.749
+   * - 10
+     - ValidBody
+     - 3288664
+     - 1.486
+     - 1.486
+   * - 11
+     - InvalidBody
+     - 3747199
+     - 1.312
+     - 1.312
+   * - 12
+     - ValidRequest
+     - 723880
+     - 6.797
+     - 6.797
+   * - 13
+     - InvalidRequest1
+     - 29096387
+     - 0.160
+     - 0.160
+   * - 14
+     - InvalidRequest2
+     - 2154005
+     - 2.295
+     - 2.295
+   * - 15
+     - InvalidRequest3
+     - 602772
+     - 8.210
+     - 8.210
+   * - 16
+     - InvalidRequest4
+     - 486661
+     - 10.075
+     - 10.074
+   * - 17
+     - InvalidRequest5
+     - 507741
+     - 9.738
+     - 9.737
+   * - 18
+     - ComplexValidRequest
+     - 170881
+     - 28.669
+     - 28.668
+

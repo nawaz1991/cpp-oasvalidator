@@ -1,0 +1,740 @@
+<!doctype html>
+<html class="no-js">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="API" href="api/library_root.html" /><link rel="prev" title="cpp-oasvalidator" href="index.html" />
+
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.09.29"/>
+        <title>OAS Validator - cpp-oasvalidator</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=d81277517bee4d6b0349d71bb2661d4890b5617c" />
+    <link rel="stylesheet" type="text/css" href="_static/collapsible-lists/css/tree_view.css" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  --color-api-overall: #4A6572;
+  --color-api-keyword: #F9AA33;
+  --color-api-name: #7CB342;
+  --color-brand-content: #5C6BC0;
+  --color-foreground-primary: #344955;
+  --color-foreground-secondary: #607D8B;
+  --color-background-primary: #ECEFF1;
+  --color-background-secondary: #CFD8DC;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  --color-api-overall: #37474F;
+  --color-api-keyword: #FFB74D;
+  --color-api-name: #AED581;
+  --color-brand-content: #7986CB;
+  --color-foreground-primary: #ECEFF1;
+  --color-foreground-secondary: #B0BEC5;
+  --color-background-primary: #263238;
+  --color-background-secondary: #455A64;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  --color-api-overall: #37474F;
+  --color-api-keyword: #FFB74D;
+  --color-api-name: #AED581;
+  --color-brand-content: #7986CB;
+  --color-foreground-primary: #ECEFF1;
+  --color-foreground-secondary: #B0BEC5;
+  --color-background-primary: #263238;
+  --color-background-secondary: #455A64;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="index.html"><div class="brand">cpp-oasvalidator</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
+  
+  
+  <span class="sidebar-brand-text">cpp-oasvalidator</span>
+  
+</a><form class="sidebar-search-container" method="get" action="search.html" role="search">
+  <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <ul class="current">
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">OAS Validator</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="api/library_root.html">API</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/classOASValidator.html">Class OASValidator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/enum_oas__validator_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2b.html">Enum ValidationError</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/define_oas__validator_8hpp_1a838ca36f37b19a874eabd4eeff5be860.html">Define VALIDATION_ERROR</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="codecov.html">Code Coverage Report</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classdiagram.html">Class Diagram</a></li>
+<li class="toctree-l1"><a class="reference internal" href="benchmark.html">Benchmark Report</a></li>
+<li class="toctree-l1"><a class="reference internal" href="genindex.html">Index</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section id="oas-validator">
+<h1>OAS Validator<a class="headerlink" href="#oas-validator" title="Permalink to this headline">#</a></h1>
+<section id="introduction">
+<h2>1. Introduction 📖<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">cpp-oasvalidator</span></code> is a C++ thread-safe library engineered for the
+validation of HTTP requests against OpenAPI 3.x specifications. This
+library can be integrated with REST servers and API gateways to ensure
+only compliant requests reach your backend services.</p>
+<p>With support for OpenAPI 3.x, this library streamlines the process of
+validating various components of an HTTP request, from methods and
+routes to detailed parameters and <code class="docutils literal notranslate"><span class="pre">JSON</span></code> body.</p>
+</section>
+<section id="key-features">
+<h2>2. Key Features 🌟<a class="headerlink" href="#key-features" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><strong>Efficient, Sequential Validation</strong>: Validates requests in a logical
+order, starting from the HTTP method down to the header parameters.
+This means if you validate a later stage, preceding steps are
+validated as well.</p></li>
+<li><p><strong>Thread-Safe</strong>: Utilizes thread-safe data structures and methods to
+ensure concurrent requests are handled without any issues.</p></li>
+<li><p><strong>In-Depth Error Reports</strong>: Returns an insightful error enumeration
+coupled with an extensive error message in JSON format to pinpoint
+inaccuracies.</p></li>
+<li><p><strong>Optimized Performance</strong>: Utilizes lazy deserialization, only
+processing content when all prior checks pass.</p></li>
+<li><p><strong>Broad Parameter Support</strong>: Deserializes parameters across a
+spectrum of styles and data types, ensuring a wide range of OpenAPI
+configurations are supported.</p></li>
+</ul>
+<p>Benchmarking results are available
+<a class="reference external" href="https://nawaz1991.github.io/cpp-oasvalidator/benchmark_report.html">here</a>.</p>
+</section>
+<section id="validation-sequence">
+<h2>3. Validation Sequence 📜<a class="headerlink" href="#validation-sequence" title="Permalink to this headline">#</a></h2>
+<p>The library validates HTTP requests in the following order:</p>
+<ol class="arabic simple">
+<li><p><strong>HTTP Method Validation</strong>: Ensures that the HTTP method (GET, POST,
+PUT, etc.) aligns with the OpenAPI spec.</p></li>
+<li><p><strong>Route Validation</strong>: Checks if the provided route matches the
+specification.</p></li>
+<li><p><strong>Body Validation</strong>: Validates the JSON body structure and data
+against the OpenAPI spec.</p></li>
+<li><p><strong>Path Parameter Validation</strong>: Validates path parameters.</p></li>
+<li><p><strong>Query Parameter Validation</strong>: Ensures query parameters are
+consistent with the OpenAPI spec.</p></li>
+<li><p><strong>Header Parameter Validation</strong>: Confirms headers are in line with
+the OpenAPI specification.</p></li>
+<li><p><strong>Request Validation</strong>: Validates the whole HTTP request starting
+from method, route, body (if provided), path/query params (if
+specified in specs) and/or headers. To address all variations, four
+overloaded methods are provided.</p></li>
+</ol>
+<p>For a comprehensive understanding, refer to <a class="reference external" href="API.md">API Reference</a>.</p>
+</section>
+<section id="parameter-styles-data-types-deserialization">
+<h2>4. Parameter Styles, data types &amp; Deserialization 🛠<a class="headerlink" href="#parameter-styles-data-types-deserialization" title="Permalink to this headline">#</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">cpp-oasvalidator</span></code> can deserialize and parse parameters of all data
+types serialized in various styles provided by Swagger/OpenAPI.
+Following tables provide the details.</p>
+<section id="path-parameters">
+<h3>4.1 Path Parameters<a class="headerlink" href="#path-parameters" title="Permalink to this headline">#</a></h3>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="colwidths-auto docutils align-center">
+<thead>
+<tr class="row-odd"><th class="head"><p>Style</p></th>
+<th class="head"><p>Explode</p></th>
+<th class="head"><p>Primitive</p></th>
+<th class="head"><p>String</p></th>
+<th class="head"><p>Primitive Array</p></th>
+<th class="head"><p>String Array</p></th>
+<th class="head"><p>Object</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>simple</p></td>
+<td><p>false</p></td>
+<td><p>✅</p></td>
+<td><p>✅</p></td>
+<td><p>✅</p></td>
+<td><p>✅</p></td>
+<td><p>✅</p></td>
+</tr>
+<tr class="row-odd"><td><p>simple</p></td>
+<td><p>true</p></td>
+<td><p>✅</p></td>
+<td><p>✅</p></td>
+<td><p>✅</p></td>
+<td><p>✅</p></td>
+<td><p>✅</p></td>
+</tr>
+<tr class="row-even"><td><p>label</p></td>
+<td><p>false</p></td>
+<td><p>✅</p></td>
+<td><p>✅</p></td>
+<td><p>✅</p></td>
+<td><p>✅</p></td>
+<td><p>✅</p></td>
+</tr>
+<tr class="row-odd"><td><p>label</p></td>
+<td><p>true</p></td>
+<td><p>✅</p></td>
+<td><p>✅</p></td>
+<td><p>✅</p></td>
+<td><p>✅</p></td>
+<td><p>✅</p></td>
+</tr>
+<tr class="row-even"><td><p>matrix</p></td>
+<td><p>false</p></td>
+<td><p>✅</p></td>
+<td><p>✅</p></td>
+<td><p>✅</p></td>
+<td><p>✅</p></td>
+<td><p>✅</p></td>
+</tr>
+<tr class="row-odd"><td><p>matrix</p></td>
+<td><p>true</p></td>
+<td><p>✅</p></td>
+<td><p>✅</p></td>
+<td><p>✅</p></td>
+<td><p>✅</p></td>
+<td><p>✅</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>* Default serialization method</p>
+</section>
+<section id="query-parameters">
+<h3>4.2 Query Parameters<a class="headerlink" href="#query-parameters" title="Permalink to this headline">#</a></h3>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="colwidths-auto docutils align-center">
+<thead>
+<tr class="row-odd"><th class="head"><p>Style</p></th>
+<th class="head"><p>Explode</p></th>
+<th class="head"><p>Primitive</p></th>
+<th class="head"><p>String</p></th>
+<th class="head"><p>Primitive Array</p></th>
+<th class="head"><p>String Array</p></th>
+<th class="head"><p>Object</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>form</p></td>
+<td><p>true</p></td>
+<td><p>✅</p></td>
+<td><p>✅</p></td>
+<td><p>✅</p></td>
+<td><p>✅</p></td>
+<td><p>✅</p></td>
+</tr>
+<tr class="row-odd"><td><p>form</p></td>
+<td><p>false</p></td>
+<td><p>✅</p></td>
+<td><p>✅</p></td>
+<td><p>✅</p></td>
+<td><p>✅</p></td>
+<td><p>✅</p></td>
+</tr>
+<tr class="row-even"><td><p>spaceDelimited</p></td>
+<td><p>true</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>✅</p></td>
+<td><p>✅</p></td>
+<td><p>N/A</p></td>
+</tr>
+<tr class="row-odd"><td><p>spaceDelimited</p></td>
+<td><p>false</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>✅</p></td>
+<td><p>✅</p></td>
+<td><p>N/A</p></td>
+</tr>
+<tr class="row-even"><td><p>pipeDelimited</p></td>
+<td><p>true</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>✅</p></td>
+<td><p>✅</p></td>
+<td><p>N/A</p></td>
+</tr>
+<tr class="row-odd"><td><p>pipeDelimited</p></td>
+<td><p>false</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>✅</p></td>
+<td><p>✅</p></td>
+<td><p>N/A</p></td>
+</tr>
+<tr class="row-even"><td><p>deepObject</p></td>
+<td><p>false</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>✅</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>* Default serialization method</p>
+</section>
+<section id="header-parameters">
+<h3>4.3 Header Parameters<a class="headerlink" href="#header-parameters" title="Permalink to this headline">#</a></h3>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="colwidths-auto docutils align-center">
+<thead>
+<tr class="row-odd"><th class="head"><p>Style</p></th>
+<th class="head"><p>Explode</p></th>
+<th class="head"><p>Primitive</p></th>
+<th class="head"><p>String</p></th>
+<th class="head"><p>Primitive Array</p></th>
+<th class="head"><p>String Array</p></th>
+<th class="head"><p>Object</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>simple</p></td>
+<td><p>false</p></td>
+<td><p>✅</p></td>
+<td><p>✅</p></td>
+<td><p>✅</p></td>
+<td><p>✅</p></td>
+<td><p>✅</p></td>
+</tr>
+<tr class="row-odd"><td><p>simple</p></td>
+<td><p>true</p></td>
+<td><p>✅</p></td>
+<td><p>✅</p></td>
+<td><p>✅</p></td>
+<td><p>✅</p></td>
+<td><p>✅</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>* Default serialization method</p>
+</section>
+</section>
+<section id="error-handling">
+<h2>5. Error Handling 🚫<a class="headerlink" href="#error-handling" title="Permalink to this headline">#</a></h2>
+<p>cpp-oasvalidator responds with a specific <code class="docutils literal notranslate"><span class="pre">validationError</span></code> enum
+value, indicating the error type:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">enum</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">validationError</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">NONE</span><span class="w">                 </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">    </span><span class="n">INVALID_METHOD</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="mi">-1</span><span class="p">,</span>
+<span class="w">    </span><span class="n">INVALID_ROUTE</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="mi">-2</span><span class="p">,</span>
+<span class="w">    </span><span class="n">INVALID_PATH_PARAM</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="mi">-3</span><span class="p">,</span>
+<span class="w">    </span><span class="n">INVALID_QUERY_PARAM</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="mi">-4</span><span class="p">,</span>
+<span class="w">    </span><span class="n">INVALID_HEADER_PARAM</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">-5</span><span class="p">,</span>
+<span class="w">    </span><span class="n">INVALID_BODY</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="mi">-6</span><span class="p">,</span>
+<span class="w">    </span><span class="n">INVALID_RSP</span><span class="w">          </span><span class="o">=</span><span class="w"> </span><span class="mi">-7</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>An accompanying detailed error message, structured in JSON, elucidates
+the error:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">   </span><span class="nt">&quot;errorCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;INVALID_BODY&quot;</span><span class="p">,</span>
+<span class="w">   </span><span class="nt">&quot;details&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;specRef&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/paths/%2Ftest%2Fall%2F{param1}%2Fabc%2F{param2}%2F{param3}/post/requestBody/content/application%2Fjson/schema&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;code&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;oneOf&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Property did not match any of the sub-schemas specified by &#39;oneOf&#39;, refer to following errors.&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;instance&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/field6&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;schema&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/properties/field6&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;errors&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">         </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;code&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;type&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Property has a type &#39;boolean&#39; that is not in the following list: &#39;integer&#39;.&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;instance&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/field6&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;schema&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/properties/field6/oneOf/0&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;oneOf&quot;</span>
+<span class="w">         </span><span class="p">},</span>
+<span class="w">         </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;code&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;type&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Property has a type &#39;boolean&#39; that is not in the following list: &#39;string&#39;.&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;instance&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/field6&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;schema&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/properties/field6/oneOf/1&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;oneOf&quot;</span>
+<span class="w">         </span><span class="p">}</span>
+<span class="w">      </span><span class="p">]</span>
+<span class="w">   </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="getting-started">
+<h2>6. Getting Started 🚀<a class="headerlink" href="#getting-started" title="Permalink to this headline">#</a></h2>
+<section id="installation">
+<h3>6.1 Installation 🔧<a class="headerlink" href="#installation" title="Permalink to this headline">#</a></h3>
+<dl class="simple">
+<dt><strong>Prerequisites:</strong></dt><dd><ul class="simple">
+<li><p>A C++11 compatible compiler.</p></li>
+<li><p>CMake 3.10 or higher.</p></li>
+<li><p>GoogleTest (for tests and code coverage)</p></li>
+<li><p>GCOV (for code covarge report)</p></li>
+<li><p>LCOV (for code covarge report)</p></li>
+</ul>
+</dd>
+</dl>
+<p>Although <code class="docutils literal notranslate"><span class="pre">cpp-oasvalidator</span></code> utilizes RapidJSON during its build
+process, the final build is standalone and doesn’t require any
+additional dependencies at runtime.</p>
+<section id="cloning-the-repository">
+<h4>6.1.1 Cloning the Repository<a class="headerlink" href="#cloning-the-repository" title="Permalink to this headline">#</a></h4>
+<p>To clone the repository, run the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>--recursive<span class="w"> </span>https://github.com/nawaz1991/cpp-oasvalidator.git
+</pre></div>
+</div>
+</section>
+<section id="building-and-installing">
+<h4>6.1.2 Building and Installing<a class="headerlink" href="#building-and-installing" title="Permalink to this headline">#</a></h4>
+<p>To build and install <code class="docutils literal notranslate"><span class="pre">cpp-oasvalidator</span></code>, follow the steps below:</p>
+<ol class="arabic">
+<li><p>Navigate to the root directory of the project.</p></li>
+<li><p>Run the following commands:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cmake<span class="w"> </span>-S<span class="w"> </span>.<span class="w"> </span>-B<span class="w"> </span>build
+cmake<span class="w"> </span>--build<span class="w"> </span>build<span class="w"> </span>--target<span class="w"> </span>oasvalidator<span class="w"> </span>-j<span class="w"> </span><span class="k">$(</span>nproc<span class="k">)</span>
+<span class="nb">cd</span><span class="w"> </span>build
+sudo<span class="w"> </span>make<span class="w"> </span>install
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+<section id="running-the-tests">
+<h4>6.1.3 Running the Tests<a class="headerlink" href="#running-the-tests" title="Permalink to this headline">#</a></h4>
+<p>To run the tests, follow the steps below: 1. Navigate to the root
+directory of the project. 2. Run the following commands:</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cmake<span class="w"> </span>-S<span class="w"> </span>.<span class="w"> </span>-B<span class="w"> </span>build<span class="w"> </span>-DBUILD_TESTS<span class="o">=</span>ON
+cmake<span class="w"> </span>--build<span class="w"> </span>build<span class="w"> </span>--target<span class="w"> </span>oasvalidator-unittests<span class="w"> </span>-j<span class="w"> </span><span class="k">$(</span>nproc<span class="k">)</span>
+build/test/unittest/oasvalidator-unittests
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+<section id="generating-code-coverage-report">
+<h4>6.1.4 Generating Code Coverage Report<a class="headerlink" href="#generating-code-coverage-report" title="Permalink to this headline">#</a></h4>
+<p>To generate the code coverage report, follow the steps below: 1.
+Navigate to the root directory of the project. 2. Run the following
+commands:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cmake<span class="w"> </span>-S<span class="w"> </span>.<span class="w"> </span>-B<span class="w"> </span>build<span class="w"> </span>-DBUILD_TESTS<span class="o">=</span>ON<span class="w"> </span>-DBUILD_COVERAGE<span class="o">=</span>ON
+cmake<span class="w"> </span>--build<span class="w"> </span>build<span class="w"> </span>--target<span class="w"> </span>oasvalidator-unittests<span class="w"> </span>-j<span class="w"> </span><span class="k">$(</span>nproc<span class="k">)</span>
+</pre></div>
+</div>
+<p>The coverage report will be generated in the
+<code class="docutils literal notranslate"><span class="pre">build/covhtml-cpp-oasvalidator/</span></code> directory. Open <code class="docutils literal notranslate"><span class="pre">index.html</span></code> in
+your browser to view the report.</p>
+</section>
+</section>
+<section id="performance-benchmarking">
+<h3>6.1.5 Performance Benchmarking<a class="headerlink" href="#performance-benchmarking" title="Permalink to this headline">#</a></h3>
+<p>To run the performance benchmark, follow the steps below:</p>
+<ol class="arabic">
+<li><p>Navigate to the root directory of <code class="docutils literal notranslate"><span class="pre">cpp-oasvalidator</span></code>.</p></li>
+<li><p>Run the following commands:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cmake<span class="w"> </span>-S<span class="w"> </span>.<span class="w"> </span>-B<span class="w"> </span>build<span class="w"> </span>-DBUILD_PERF<span class="o">=</span>ON
+cmake<span class="w"> </span>--build<span class="w"> </span>build<span class="w"> </span>--target<span class="w"> </span>oasvalidator-perftests<span class="w"> </span>-j<span class="w"> </span><span class="k">$(</span>nproc<span class="k">)</span>
+build/test/perftest/oasvalidator-perftests
+</pre></div>
+</div>
+</li>
+</ol>
+<section id="running-the-example">
+<h4>6.1.6 Running the Example<a class="headerlink" href="#running-the-example" title="Permalink to this headline">#</a></h4>
+<p>To run the example, follow the steps below:</p>
+<ol class="arabic">
+<li><p>Navigate to the root directory of <code class="docutils literal notranslate"><span class="pre">cpp-oasvalidator</span></code>.</p></li>
+<li><p>Run the following commands:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cmake<span class="w"> </span>-S<span class="w"> </span>.<span class="w"> </span>-B<span class="w"> </span>build<span class="w"> </span>-DBUILD_EXAMPLE<span class="o">=</span>ON
+cmake<span class="w"> </span>--build<span class="w"> </span>build<span class="w"> </span>--target<span class="w"> </span>example<span class="w"> </span>-j<span class="w"> </span><span class="k">$(</span>nproc<span class="k">)</span>
+build/example/example
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+</section>
+<section id="initialization">
+<h3>6.2 Initialization 🎬<a class="headerlink" href="#initialization" title="Permalink to this headline">#</a></h3>
+<p>To utilize <code class="docutils literal notranslate"><span class="pre">cpp-oasvalidator</span></code>, include the relevant header and
+initialize the validator with your OpenAPI specification:</p>
+<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nb">target_link_libraries</span><span class="p">(</span><span class="s">&lt;your_target&gt;</span><span class="w"> </span><span class="s">PRIVATE</span><span class="w"> </span><span class="s">oasvalidator</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;oas_validator.hpp&gt;</span>
+<span class="n">OASValidator</span><span class="w"> </span><span class="n">validator</span><span class="p">(</span><span class="s">&quot;/path/to/your/spec.json&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Then, utilize the various validation methods to inspect your requests.</p>
+<p>For a detailed breakdown of each API, refer to the <a class="reference external" href="API.md">API
+Reference</a> or the <a class="reference external" href="example/example.cpp">example</a> provided
+in the repository.</p>
+</section>
+</section>
+<section id="conclusion">
+<h2>7. Conclusion 📜<a class="headerlink" href="#conclusion" title="Permalink to this headline">#</a></h2>
+<p>cpp-oasvalidator is your one-stop solution for rigorous REST request
+validation against the OpenAPI specification. With its systematic
+validation order, expansive parameter style support, and meticulous
+error reporting, it ensures your services stay compliant with your
+OpenAPI specs.</p>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="api/library_root.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">API</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="index.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Home</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2023 Muhammad Nawaz
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            <div class="icons">
+              
+            </div>
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">OAS Validator</a><ul>
+<li><a class="reference internal" href="#introduction">1. Introduction 📖</a></li>
+<li><a class="reference internal" href="#key-features">2. Key Features 🌟</a></li>
+<li><a class="reference internal" href="#validation-sequence">3. Validation Sequence 📜</a></li>
+<li><a class="reference internal" href="#parameter-styles-data-types-deserialization">4. Parameter Styles, data types &amp; Deserialization 🛠</a><ul>
+<li><a class="reference internal" href="#path-parameters">4.1 Path Parameters</a></li>
+<li><a class="reference internal" href="#query-parameters">4.2 Query Parameters</a></li>
+<li><a class="reference internal" href="#header-parameters">4.3 Header Parameters</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#error-handling">5. Error Handling 🚫</a></li>
+<li><a class="reference internal" href="#getting-started">6. Getting Started 🚀</a><ul>
+<li><a class="reference internal" href="#installation">6.1 Installation 🔧</a><ul>
+<li><a class="reference internal" href="#cloning-the-repository">6.1.1 Cloning the Repository</a></li>
+<li><a class="reference internal" href="#building-and-installing">6.1.2 Building and Installing</a></li>
+<li><a class="reference internal" href="#running-the-tests">6.1.3 Running the Tests</a></li>
+<li><a class="reference internal" href="#generating-code-coverage-report">6.1.4 Generating Code Coverage Report</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#performance-benchmarking">6.1.5 Performance Benchmarking</a><ul>
+<li><a class="reference internal" href="#running-the-example">6.1.6 Running the Example</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#initialization">6.2 Initialization 🎬</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#conclusion">7. Conclusion 📜</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/scripts/furo.js"></script>
+    <script src="_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+    <script src="_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    </body>
+</html>

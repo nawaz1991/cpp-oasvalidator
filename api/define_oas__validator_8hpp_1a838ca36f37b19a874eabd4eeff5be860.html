@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Code Coverage Report" href="../codecov.html" /><link rel="prev" title="Enum ValidationError" href="enum_oas__validator_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2b.html" />
 
     <meta name="generator" content="sphinx-4.5.0, furo 2022.09.29"/>
-        <title>Define VALIDATION_ERROR - oasvalidator</title>
+        <title>Define VALIDATION_ERROR - cpp-oasvalidator</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=d81277517bee4d6b0349d71bb2661d4890b5617c" />
     <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css" />
@@ -19,22 +19,42 @@
   body {
     --color-code-background: #f8f8f8;
   --color-code-foreground: black;
-  --color-api-overall: #cccccc;
-  --color-api-keyword: #e62569;
-  --color-api-name: #8ee22c;
-  --color-brand-content: #67d8ef;
+  --color-api-overall: #4A6572;
+  --color-api-keyword: #F9AA33;
+  --color-api-name: #7CB342;
+  --color-brand-content: #5C6BC0;
+  --color-foreground-primary: #344955;
+  --color-foreground-secondary: #607D8B;
+  --color-background-primary: #ECEFF1;
+  --color-background-secondary: #CFD8DC;
   
   }
   @media not print {
     body[data-theme="dark"] {
       --color-code-background: #202020;
   --color-code-foreground: #d0d0d0;
+  --color-api-overall: #37474F;
+  --color-api-keyword: #FFB74D;
+  --color-api-name: #AED581;
+  --color-brand-content: #7986CB;
+  --color-foreground-primary: #ECEFF1;
+  --color-foreground-secondary: #B0BEC5;
+  --color-background-primary: #263238;
+  --color-background-secondary: #455A64;
   
     }
     @media (prefers-color-scheme: dark) {
       body:not([data-theme="light"]) {
         --color-code-background: #202020;
   --color-code-foreground: #d0d0d0;
+  --color-api-overall: #37474F;
+  --color-api-keyword: #FFB74D;
+  --color-api-name: #AED581;
+  --color-brand-content: #7986CB;
+  --color-foreground-primary: #ECEFF1;
+  --color-foreground-secondary: #B0BEC5;
+  --color-background-primary: #263238;
+  --color-background-secondary: #455A64;
   
       }
     }
@@ -128,7 +148,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../index.html"><div class="brand">oasvalidator</div></a>
+      <a href="../index.html"><div class="brand">cpp-oasvalidator</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -151,7 +171,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
   
   
-  <span class="sidebar-brand-text">oasvalidator</span>
+  <span class="sidebar-brand-text">cpp-oasvalidator</span>
   
 </a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -159,7 +179,17 @@
   <input type="hidden" name="area" value="default">
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
-  <ul>
+  <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../oasvalidator.html">OAS Validator</a></li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="library_root.html">API</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="classOASValidator.html">Class OASValidator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enum_oas__validator_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2b.html">Enum ValidationError</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Define VALIDATION_ERROR</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../codecov.html">Code Coverage Report</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../classdiagram.html">Class Diagram</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../benchmark.html">Benchmark Report</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
 </ul>
 
@@ -218,13 +248,31 @@
       <footer>
         
         <div class="related-pages">
-          
-          
+          <a class="next-page" href="../codecov.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Code Coverage Report</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="enum_oas__validator_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2b.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Enum ValidationError</div>
+                
+              </div>
+            </a>
         </div>
         <div class="bottom-of-page">
           <div class="left-details">
             <div class="copyright">
-                Copyright &#169; Muhammad Nawaz
+                Copyright &#169; 2023 Muhammad Nawaz
             </div>
             Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
             

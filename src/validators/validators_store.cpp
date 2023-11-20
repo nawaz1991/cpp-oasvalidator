@@ -47,9 +47,7 @@ ValidationError ValidatorsStore::ValidatePathParams(std::unordered_map<size_t, P
         try {
             auto const& range = param_idxs.at(param_validator.idx);
             auto err_code = param_validator.validator->ValidateParam(range.beg, range.end, error_msg);
-            if (ValidationError::NONE != err_code) {
-                return err_code;
-            }
+            CHECK_ERROR(err_code)
         } catch (const std::out_of_range&) {
             return param_validator.validator->ErrorOnMissing(error_msg);
         }
@@ -71,26 +69,32 @@ ValidationError ValidatorsStore::ValidateQueryParams(const std::string& query, s
     std::unordered_map<std::string, size_t> start_map;
     for (const auto& param_validator : query_param_validators_) {
         auto start = query.find(param_validator.name);
-        if (std::string::npos == start && param_validator.validator->IsRequired()) {
-            return param_validator.validator->ErrorOnMissing(error_msg);
-        } else {
-            starts.emplace(start);
-            start_map.emplace(param_validator.name, start);
+        if (std::string::npos == start) {
+            if (param_validator.validator->IsRequired()) {
+                return param_validator.validator->ErrorOnMissing(error_msg);
+            } else {
+                continue;
+            }
         }
+        if (query[start - 1] != '?' && query[start - 1] != '&') {
+            error_msg = param_validator.validator->GetErrHeader() + R"("description": "Query parameter ')" + param_validator.name + R"(' should start with '?' or '&'"}})";
+            return ValidationError::INVALID_QUERY_PARAM;
+        }
+        starts.emplace(start);
+        start_map.emplace(param_validator.name, start);
     }
     starts.emplace(query.length() + 1);
 
     for (auto& param_validator : query_param_validators_) {
-        auto start = start_map.at(param_validator.name);
-        if (query[start - 1] != '?' && query[start - 1] != '&') {
-            printf("%s\n", (query.data() + start - 1));
-            error_msg = param_validator.validator->GetErrHeader() + R"("description": "Query parameter ')" + param_validator.name + R"(' should start with '?' or '&'"}})";
-            return ValidationError::INVALID_QUERY_PARAM;
-        }
-        auto end = (*std::next(starts.find(start))) - 1;
-        auto err_code = param_validator.validator->ValidateParam(query.data() + start, query.data() + end, error_msg);
-        if (ValidationError::NONE != err_code) {
-            return err_code;
+        try {
+            auto start = start_map.at(param_validator.name);
+            auto end = (*std::next(starts.find(start))) - 1;
+            auto err_code = param_validator.validator->ValidateParam(query.data() + start, query.data() + end, error_msg);
+            CHECK_ERROR(err_code)
+        } catch (const std::out_of_range&) {
+            if (param_validator.validator->IsRequired()) {
+                return param_validator.validator->ErrorOnMissing(error_msg);
+            }
         }
     }
     return ValidationError::NONE;
@@ -102,9 +106,7 @@ ValidationError ValidatorsStore::ValidateHeaderParams(const std::unordered_map<s
         try {
             const auto& param = headers.at(header_validator.first);
             auto err_code = header_validator.second->ValidateParam(param.data(), param.data() + param.size(), error_msg);
-            if (ValidationError::NONE != err_code) {
-                return err_code;
-            }
+            CHECK_ERROR(err_code)
         } catch (const std::out_of_range&) {
             if (header_validator.second->IsRequired()) {
                 return header_validator.second->ErrorOnMissing(error_msg);

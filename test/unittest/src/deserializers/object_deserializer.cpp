@@ -60,7 +60,7 @@ TEST_P(ObjectDeserializerTest, Deserialize)
     }
 }
 
-INSTANTIATE_TEST_CASE_P(ObjectDeserializerTests, ObjectDeserializerTest,
+INSTANTIATE_TEST_SUITE_P(ObjectDeserializerTests, ObjectDeserializerTest,
                         ::testing::Values(std::make_tuple("boolTrue,true,boolFalse,false,int,123,number,123.456,string,abc%20xyz", '\0', false, ',', ',', false, false),
                                           std::make_tuple("boolTrue=true,boolFalse=false,int=123,number=123.456,string=abc%20xyz", '\0', false, '=', ',', false, false),
                                           std::make_tuple(".boolTrue,true,boolFalse,false,int,123,number,123.456,string,abc%20xyz", '.', false, ',', ',', false, false),

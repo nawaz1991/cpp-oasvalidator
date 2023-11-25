@@ -3,12 +3,13 @@ cpp-oasvalidator: REST Request Validator
 
 [![Language C++](https://img.shields.io/badge/language-c++-blue.svg?logo=c%2B%2B)](https://isocpp.org)
 [![Github releases](https://img.shields.io/github/release/nawaz1991/cpp-oasvalidator.svg)](https://github.com/nawaz1991/cpp-oasvalidator/releases)
-![Build](https://github.com/nawaz1991/cpp-oasvalidator/actions/workflows/master_build.yml/badge.svg)
+![Mac build](https://img.shields.io/github/actions/workflow/status/nawaz1991/cpp-oasvalidator/mac_build.yml?logo=apple&label=Build)
+![Linux build](https://img.shields.io/github/actions/workflow/status/nawaz1991/cpp-oasvalidator/linux_build.yml?logo=linux&label=Build)
+![Win build](https://img.shields.io/github/actions/workflow/status/nawaz1991/cpp-oasvalidator/win_build.yml?logo=windows&label=Build)
 [![codecov](https://codecov.io/gh/nawaz1991/cpp-oasvalidator/branch/main/graph/badge.svg?token=96b475c2-8dc1-4693-8ce3-84a572720d43)](https://codecov.io/gh/nawaz1991/cpp-oasvalidator)
 [![License](https://img.shields.io/github/license/nawaz1991/cpp-oasvalidator.svg)](./LICENSE)
 [![API Docs](https://img.shields.io/badge/API%20Docs-v1.0.0-brightgreen)](API.md)
 [![Benchmark](https://img.shields.io/badge/Benchmark-brightgreen)](https://nawaz1991.github.io/cpp-oasvalidator/benchmark.html)
-
 
 
 `cpp-oasvalidator` is a C++ thread-safe library engineered for the validation of HTTP requests against OpenAPI 3.x specifications. This library can be integrated with REST servers and API gateways to ensure only compliant requests reach your backend services.

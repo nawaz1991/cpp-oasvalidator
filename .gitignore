@@ -19,3 +19,5 @@ deps/
 .clang-tidy
 lint.py
 /example
+CMakeSettings.json
+.vs

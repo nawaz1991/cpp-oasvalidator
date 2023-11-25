@@ -48,7 +48,7 @@ TEST_P(ContentDeserializerTest, Deserialize)
     }
 }
 
-INSTANTIATE_TEST_CASE_P(
+INSTANTIATE_TEST_SUITE_P(
     ContentDeserializerTests, ContentDeserializerTest,
     ::testing::Values(std::make_tuple("%7B%22boolTrue%22%3Atrue%2C%22boolFalse%22%3Afalse%2C%22int%22%3A123%2C%22number%22%3A123.456%2C%22string%22%3A%22abc%20xyz%22%7D", '\0',
                                       false, false),

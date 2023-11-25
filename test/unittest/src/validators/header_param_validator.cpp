@@ -54,7 +54,7 @@ TEST_P(HeaderParamValidatorTest, ValidateParam)
     ASSERT_EQ(expected_error_, validator_->ValidateParam(input_.data(), input_.data() + input_.size(), error_msg_));
 }
 
-INSTANTIATE_TEST_CASE_P(HeaderParamValidatorTest, HeaderParamValidatorTest,
+INSTANTIATE_TEST_SUITE_P(HeaderParamValidatorTest, HeaderParamValidatorTest,
                         ::testing::Values(std::make_tuple("123", false, "integer", ValidationError::NONE), std::make_tuple("123", true, "integer", ValidationError::NONE),
                                           std::make_tuple("true", false, "boolean", ValidationError::NONE), std::make_tuple("true", true, "boolean", ValidationError::NONE),
                                           std::make_tuple("123.456", false, "number", ValidationError::NONE), std::make_tuple("123.456", true, "number", ValidationError::NONE),

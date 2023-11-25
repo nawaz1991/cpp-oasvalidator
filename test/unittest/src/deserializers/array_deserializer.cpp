@@ -57,7 +57,7 @@ TEST_P(ArrayDeserializerTest, Deserialize)
     }
 }
 
-INSTANTIATE_TEST_CASE_P(
+INSTANTIATE_TEST_SUITE_P(
     ArrayDeserializerTests, ArrayDeserializerTest,
     ::testing::Values(std::make_tuple("true,false", '\0', false, PrimitiveType::BOOLEAN, ',', false, false, "[true,false]", false),
                       std::make_tuple("1,2,3", '\0', false, PrimitiveType::INTEGER, ',', false, false, "[1,2,3]", false),

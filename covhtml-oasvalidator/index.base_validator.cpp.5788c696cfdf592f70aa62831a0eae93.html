@@ -1,19 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html class="theme-green">
 
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <title>GCC Code Coverage Report</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index.css"/>
   </head>
 
   <body>
-    <h1>GCC Code Coverage Report</h1>
+    <header>
+      <h1>GCC Code Coverage Report</h1>
 
-    <hr/>
+      <hr/>
 
-    <div class="summary">
+      <div class="summary">
 <div>
   <table class="legend">
     <tr>
@@ -26,7 +27,7 @@
     </tr>
     <tr>
       <th scope="row">Date:</th>
-      <td>2023-11-25 17:33:19</td>
+      <td>2023-11-25 18:33:50</td>
     </tr>
   </table>
 </div>
@@ -40,22 +41,88 @@
     </tr>
     <tr>
       <th scope="row">Lines:</th>
-      <td>12</td>
-      <td>14</td>
-      <td class="coverage-medium">85.7%</td>
+      <td>22</td>
+      <td>24</td>
+      <td class="coverage-high">91.7%</td>
+    </tr>
+    <tr>
+      <th scope="row">Functions:</th>
+      <td>3</td>
+      <td>4</td>
+      <td class="coverage-medium">75.0%</td>
     </tr>
     <tr>
       <th scope="row">Branches:</th>
-      <td>11</td>
-      <td>30</td>
-      <td class="coverage-low">36.7%</td>
+      <td>15</td>
+      <td>32</td>
+      <td class="coverage-low">46.9%</td>
     </tr>
   </table>
 </div>
-    </div>
+      </div>
 
-    <hr/>
+      <hr/>
+    </header>
 
+    <nav>
+<details>
+  <summary>List of functions</summary>
+  <table class="listOfFunctions">
+    <tr>
+      <th>Function</th>
+      <th>Line</th>
+      <th>Call count</th>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l9">BaseValidator::BaseValidator(ValidationError)</a>
+      </td>
+      <td>
+        <a href="#l9">9</a>
+      </td>
+      <td>
+        <a href="#l9"> called 27 times</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l15">BaseValidator::BaseValidator(std::__1::vector&lt;std::__1::basic_string&lt;char, std::__1::char_traits&lt;char&gt;, std::__1::allocator&lt;char&gt; &gt;, std::__1::allocator&lt;std::__1::basic_string&lt;char, std::__1::char_traits&lt;char&gt;, std::__1::allocator&lt;char&gt; &gt; &gt; &gt; const&amp;, ValidationError)</a>
+      </td>
+      <td>
+        <a href="#l15">15</a>
+      </td>
+      <td>
+        <a href="#l15"> called 3297 times</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l22">BaseValidator::GetErrHeader() const</a>
+      </td>
+      <td>
+        <a href="#l22">22</a>
+      </td>
+      <td>
+        <a href="#l22"> not called</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l27">BaseValidator::InitErrHeader()</a>
+      </td>
+      <td>
+        <a href="#l27">27</a>
+      </td>
+      <td>
+        <a href="#l27"> called 3324 times</a>
+      </td>
+    </tr>
+  </table>
+</details>
+
+    </nav>
+
+    <main>
 <div class="file-source">
   <table>
     <tr>
@@ -64,8 +131,6 @@
       <th align="right">Exec</th>
       <th align="left">Source</th>
     </tr>
-
-
     <tr class="source-line">
       <td class="lineno"><a id="l1" href="#l1">1</a></td>
       <td class="linebranch">
@@ -73,7 +138,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="cm">/*</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l2" href="#l2">2</a></td>
       <td class="linebranch">
@@ -81,7 +145,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="cm"> * Copyright (c) 2023 Muhammad Nawaz</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l3" href="#l3">3</a></td>
       <td class="linebranch">
@@ -89,15 +152,13 @@
       <td class="linecount "></td>
       <td class="src "><span class="cm"> * Licensed under the MIT License. See LICENSE file for more information.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l4" href="#l4">4</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm"> */</span><span class="w"></span></td>
+      <td class="src "><span class="cm"> */</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l5" href="#l5">5</a></td>
       <td class="linebranch">
@@ -105,7 +166,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// [ END OF LICENSE 7982e23aed1dc8eda1fdc979fee617354ae998dc ]</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l6" href="#l6">6</a></td>
       <td class="linebranch">
@@ -113,15 +173,13 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l7" href="#l7">7</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;validators/base_validator.hpp&quot;</span><span class="cp"></span></td>
+      <td class="src "><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;validators/base_validator.hpp&quot;</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l8" href="#l8">8</a></td>
       <td class="linebranch">
@@ -129,68 +187,48 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l9" href="#l9">9</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">27</td>
-      <td class="src coveredLine"><span class="n">BaseValidator</span><span class="o">::</span><span class="n">BaseValidator</span><span class="p">(</span><span class="n">ValidationError</span><span class="w"> </span><span class="n">err_code</span><span class="p">)</span><span class="w"></span></td>
+      <td class="linecount coveredLine">54</td>
+      <td class="src coveredLine"><span class="n">BaseValidator</span><span class="o">::</span><span class="n">BaseValidator</span><span class="p">(</span><span class="n">ValidationError</span><span class="w"> </span><span class="n">err_code</span><span class="p">)</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l10" href="#l10">10</a></td>
       <td class="linebranch">
-        <details class="linebranchDetails">
-        <summary class="linebranchSummary">1/2</summary>
-        <div class="linebranchContents">
-          <div class="takenBranch">&check; Branch 1 taken 27 times.</div>
-          <div class="notTakenBranch">&cross; Branch 2 not taken.</div>
-        </div>
-        </details>
       </td>
       <td class="linecount coveredLine">27</td>
-      <td class="src coveredLine"><span class="w">    </span><span class="o">:</span><span class="w"> </span><span class="n">code_on_error_</span><span class="p">(</span><span class="n">err_code</span><span class="p">)</span><span class="w"></span></td>
+      <td class="src coveredLine"><span class="w">    </span><span class="o">:</span><span class="w"> </span><span class="n">code_on_error_</span><span class="p">(</span><span class="n">err_code</span><span class="p">)</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l11" href="#l11">11</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount "></td>
-      <td class="src "><span class="p">{</span><span class="w"></span></td>
+      <td class="linecount coveredLine">27</td>
+      <td class="src coveredLine"><span class="p">{</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l12" href="#l12">12</a></td>
       <td class="linebranch">
         <details class="linebranchDetails">
         <summary class="linebranchSummary">1/2</summary>
         <div class="linebranchContents">
-          <div class="takenBranch">&check; Branch 1 taken 27 times.</div>
-          <div class="notTakenBranch">&cross; Branch 2 not taken.</div>
-        </div>
-        </details>
-      </td>
-      <td class="linecount coveredLine">27</td>
-      <td class="src coveredLine"><span class="w">    </span><span class="n">InitErrHeader</span><span class="p">();</span><span class="w"></span></td>
-    </tr>
-
-    <tr class="source-line">
-      <td class="lineno"><a id="l13" href="#l13">13</a></td>
-      <td class="linebranch">
-        <details class="linebranchDetails">
-        <summary class="linebranchSummary">0/2</summary>
-        <div class="linebranchContents">
-          <div class="notTakenBranch">&cross; Branch 0 not taken.</div>
+          <div class="takenBranch">&check; Branch 0 taken 27 times.</div>
           <div class="notTakenBranch">&cross; Branch 1 not taken.</div>
         </div>
         </details>
       </td>
       <td class="linecount coveredLine">27</td>
-      <td class="src coveredLine"><span class="p">}</span><span class="w"></span></td>
+      <td class="src coveredLine"><span class="w">    </span><span class="n">InitErrHeader</span><span class="p">();</span></td>
     </tr>
-
+    <tr class="source-line">
+      <td class="lineno"><a id="l13" href="#l13">13</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount coveredLine">27</td>
+      <td class="src coveredLine"><span class="p">}</span></td>
+    </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l14" href="#l14">14</a></td>
       <td class="linebranch">
@@ -198,99 +236,68 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l15" href="#l15">15</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">3297</td>
-      <td class="src coveredLine"><span class="n">BaseValidator</span><span class="o">::</span><span class="n">BaseValidator</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">ref_keys</span><span class="p">,</span><span class="w"> </span><span class="n">ValidationError</span><span class="w"> </span><span class="n">err_code</span><span class="p">)</span><span class="w"></span></td>
+      <td class="linecount coveredLine">6594</td>
+      <td class="src coveredLine"><span class="n">BaseValidator</span><span class="o">::</span><span class="n">BaseValidator</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">ref_keys</span><span class="p">,</span><span class="w"> </span><span class="n">ValidationError</span><span class="w"> </span><span class="n">err_code</span><span class="p">)</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l16" href="#l16">16</a></td>
       <td class="linebranch">
-        <details class="linebranchDetails">
-        <summary class="linebranchSummary">1/2</summary>
-        <div class="linebranchContents">
-          <div class="takenBranch">&check; Branch 1 taken 3297 times.</div>
-          <div class="notTakenBranch">&cross; Branch 2 not taken.</div>
-        </div>
-        </details>
       </td>
       <td class="linecount coveredLine">3297</td>
-      <td class="src coveredLine"><span class="w">    </span><span class="o">:</span><span class="w"> </span><span class="n">code_on_error_</span><span class="p">(</span><span class="n">err_code</span><span class="p">)</span><span class="w"></span></td>
+      <td class="src coveredLine"><span class="w">    </span><span class="o">:</span><span class="w"> </span><span class="n">code_on_error_</span><span class="p">(</span><span class="n">err_code</span><span class="p">)</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l17" href="#l17">17</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount "></td>
-      <td class="src "><span class="p">{</span><span class="w"></span></td>
+      <td class="linecount coveredLine">3297</td>
+      <td class="src coveredLine"><span class="p">{</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l18" href="#l18">18</a></td>
       <td class="linebranch">
         <details class="linebranchDetails">
         <summary class="linebranchSummary">1/2</summary>
         <div class="linebranchContents">
-          <div class="takenBranch">&check; Branch 1 taken 3297 times.</div>
-          <div class="notTakenBranch">&cross; Branch 2 not taken.</div>
-        </div>
-        </details>
-      </td>
-      <td class="linecount coveredLine">3297</td>
-      <td class="src coveredLine"><span class="w">    </span><span class="n">InitErrHeader</span><span class="p">();</span><span class="w"></span></td>
-    </tr>
-
-    <tr class="source-line">
-      <td class="lineno"><a id="l19" href="#l19">19</a></td>
-      <td class="linebranch">
-        <details class="linebranchDetails">
-        <summary class="linebranchSummary">7/18</summary>
-        <div class="linebranchContents">
-          <div class="takenBranch">&check; Branch 1 taken 3297 times.</div>
-          <div class="notTakenBranch">&cross; Branch 2 not taken.</div>
-          <div class="takenBranch">&check; Branch 4 taken 3297 times.</div>
-          <div class="notTakenBranch">&cross; Branch 5 not taken.</div>
-          <div class="takenBranch">&check; Branch 7 taken 3297 times.</div>
-          <div class="notTakenBranch">&cross; Branch 8 not taken.</div>
-          <div class="takenBranch">&check; Branch 10 taken 3297 times.</div>
-          <div class="notTakenBranch">&cross; Branch 11 not taken.</div>
-          <div class="takenBranch">&check; Branch 12 taken 3297 times.</div>
-          <div class="notTakenBranch">&cross; Branch 13 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 14 not taken.</div>
-          <div class="takenBranch">&check; Branch 15 taken 3297 times.</div>
-          <div class="notTakenBranch">&cross; Branch 16 not taken.</div>
-          <div class="takenBranch">&check; Branch 17 taken 3297 times.</div>
-          <div class="notTakenBranch">&cross; Branch 18 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 19 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 20 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 21 not taken.</div>
-        </div>
-        </details>
-      </td>
-      <td class="linecount coveredLine">9891</td>
-      <td class="src coveredLine"><span class="w">    </span><span class="n">err_header_</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="sa">R</span><span class="s">&quot;</span><span class="dl">(</span><span class="s">&quot;specRef&quot;:&quot;</span><span class="dl">)</span><span class="s">&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">JoinReference</span><span class="p">(</span><span class="n">ref_keys</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="sa">R</span><span class="s">&quot;</span><span class="dl">(</span><span class="s">&quot;,</span><span class="dl">)</span><span class="s">&quot;</span><span class="p">;</span><span class="w"></span></td>
-    </tr>
-
-    <tr class="source-line">
-      <td class="lineno"><a id="l20" href="#l20">20</a></td>
-      <td class="linebranch">
-        <details class="linebranchDetails">
-        <summary class="linebranchSummary">0/2</summary>
-        <div class="linebranchContents">
-          <div class="notTakenBranch">&cross; Branch 0 not taken.</div>
+          <div class="takenBranch">&check; Branch 0 taken 3297 times.</div>
           <div class="notTakenBranch">&cross; Branch 1 not taken.</div>
         </div>
         </details>
       </td>
       <td class="linecount coveredLine">3297</td>
-      <td class="src coveredLine"><span class="p">}</span><span class="w"></span></td>
+      <td class="src coveredLine"><span class="w">    </span><span class="n">InitErrHeader</span><span class="p">();</span></td>
     </tr>
-
+    <tr class="source-line">
+      <td class="lineno"><a id="l19" href="#l19">19</a></td>
+      <td class="linebranch">
+        <details class="linebranchDetails">
+        <summary class="linebranchSummary">4/8</summary>
+        <div class="linebranchContents">
+          <div class="takenBranch">&check; Branch 0 taken 3297 times.</div>
+          <div class="notTakenBranch">&cross; Branch 1 not taken.</div>
+          <div class="takenBranch">&check; Branch 2 taken 3297 times.</div>
+          <div class="notTakenBranch">&cross; Branch 3 not taken.</div>
+          <div class="takenBranch">&check; Branch 4 taken 3297 times.</div>
+          <div class="notTakenBranch">&cross; Branch 5 not taken.</div>
+          <div class="notTakenBranch">&cross; Branch 6 not taken.</div>
+          <div class="takenBranch">&check; Branch 7 taken 3297 times.</div>
+        </div>
+        </details>
+      </td>
+      <td class="linecount coveredLine">3297</td>
+      <td class="src coveredLine"><span class="w">    </span><span class="n">err_header_</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="sa">R</span><span class="s">&quot;</span><span class="dl">(</span><span class="s">&quot;specRef&quot;:&quot;</span><span class="dl">)</span><span class="s">&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">JoinReference</span><span class="p">(</span><span class="n">ref_keys</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="sa">R</span><span class="s">&quot;</span><span class="dl">(</span><span class="s">&quot;,</span><span class="dl">)</span><span class="s">&quot;</span><span class="p">;</span></td>
+    </tr>
+    <tr class="source-line">
+      <td class="lineno"><a id="l20" href="#l20">20</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount coveredLine">3297</td>
+      <td class="src coveredLine"><span class="p">}</span></td>
+    </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l21" href="#l21">21</a></td>
       <td class="linebranch">
@@ -298,39 +305,34 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l22" href="#l22">22</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount uncoveredLine">&cross;</td>
-      <td class="src uncoveredLine"><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">BaseValidator</span><span class="o">::</span><span class="n">GetErrHeader</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"></span></td>
+      <td class="src uncoveredLine"><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">BaseValidator</span><span class="o">::</span><span class="n">GetErrHeader</span><span class="p">()</span><span class="w"> </span><span class="k">const</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l23" href="#l23">23</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="p">{</span><span class="w"></span></td>
+      <td class="src "><span class="p">{</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l24" href="#l24">24</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount uncoveredLine">&cross;</td>
-      <td class="src uncoveredLine"><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">err_header_</span><span class="p">;</span><span class="w"></span></td>
+      <td class="src uncoveredLine"><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">err_header_</span><span class="p">;</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l25" href="#l25">25</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="p">}</span><span class="w"></span></td>
+      <td class="src "><span class="p">}</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l26" href="#l26">26</a></td>
       <td class="linebranch">
@@ -338,39 +340,34 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l27" href="#l27">27</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount coveredLine">3324</td>
-      <td class="src coveredLine"><span class="kt">void</span><span class="w"> </span><span class="n">BaseValidator</span><span class="o">::</span><span class="n">InitErrHeader</span><span class="p">()</span><span class="w"></span></td>
+      <td class="src coveredLine"><span class="kt">void</span><span class="w"> </span><span class="n">BaseValidator</span><span class="o">::</span><span class="n">InitErrHeader</span><span class="p">()</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l28" href="#l28">28</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="p">{</span><span class="w"></span></td>
+      <td class="src "><span class="p">{</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l29" href="#l29">29</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount coveredLine">3324</td>
-      <td class="src coveredLine"><span class="w">    </span><span class="n">err_header_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">kErrHeaders</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">code_on_error_</span><span class="p">);</span><span class="w"></span></td>
+      <td class="src coveredLine"><span class="w">    </span><span class="n">err_header_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">kErrHeaders</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">code_on_error_</span><span class="p">);</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l30" href="#l30">30</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount coveredLine">3324</td>
-      <td class="src coveredLine"><span class="p">}</span><span class="w"></span></td>
+      <td class="src coveredLine"><span class="p">}</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l31" href="#l31">31</a></td>
       <td class="linebranch">
@@ -378,71 +375,122 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l32" href="#l32">32</a></td>
       <td class="linebranch">
+        <details class="linebranchDetails">
+        <summary class="linebranchSummary">2/6</summary>
+        <div class="linebranchContents">
+          <div class="takenBranch">&check; Branch 0 taken 2 times.</div>
+          <div class="notTakenBranch">&cross; Branch 1 not taken.</div>
+          <div class="notTakenBranch">&cross; Branch 2 not taken.</div>
+          <div class="takenBranch">&check; Branch 3 taken 2 times.</div>
+          <div class="notTakenBranch">&cross; Branch 4 not taken.</div>
+          <div class="notTakenBranch">&cross; Branch 5 not taken.</div>
+        </div>
+        </details>
       </td>
-      <td class="linecount "></td>
-      <td class="src "><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">unordered_map</span><span class="o">&lt;</span><span class="n">ValidationError</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">BaseValidator</span><span class="o">::</span><span class="n">kErrHeaders</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{{</span><span class="n">ValidationError</span><span class="o">::</span><span class="n">NONE</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;NONE&quot;</span><span class="p">},</span><span class="w"></span></td>
+      <td class="linecount coveredLine">2</td>
+      <td class="src coveredLine"><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">unordered_map</span><span class="o">&lt;</span><span class="n">ValidationError</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">BaseValidator</span><span class="o">::</span><span class="n">kErrHeaders</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{{</span><span class="n">ValidationError</span><span class="o">::</span><span class="n">NONE</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;NONE&quot;</span><span class="p">},</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l33" href="#l33">33</a></td>
       <td class="linebranch">
+        <details class="linebranchDetails">
+        <summary class="linebranchSummary">1/2</summary>
+        <div class="linebranchContents">
+          <div class="takenBranch">&check; Branch 0 taken 2 times.</div>
+          <div class="notTakenBranch">&cross; Branch 1 not taken.</div>
+        </div>
+        </details>
       </td>
-      <td class="linecount "></td>
-      <td class="src "><span class="w">                                                                                     </span><span class="p">{</span><span class="n">ValidationError</span><span class="o">::</span><span class="n">INVALID_METHOD</span><span class="p">,</span><span class="w"> </span><span class="sa">R</span><span class="s">&quot;</span><span class="dl">(</span><span class="s">{&quot;errorCode&quot;:&quot;INVALID_METHOD&quot;,&quot;details&quot;:{</span><span class="dl">)</span><span class="s">&quot;</span><span class="p">},</span><span class="w"></span></td>
+      <td class="linecount coveredLine">2</td>
+      <td class="src coveredLine"><span class="w">                                                                                     </span><span class="p">{</span><span class="n">ValidationError</span><span class="o">::</span><span class="n">INVALID_METHOD</span><span class="p">,</span><span class="w"> </span><span class="sa">R</span><span class="s">&quot;</span><span class="dl">(</span><span class="s">{&quot;errorCode&quot;:&quot;INVALID_METHOD&quot;,&quot;details&quot;:{</span><span class="dl">)</span><span class="s">&quot;</span><span class="p">},</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l34" href="#l34">34</a></td>
       <td class="linebranch">
+        <details class="linebranchDetails">
+        <summary class="linebranchSummary">1/2</summary>
+        <div class="linebranchContents">
+          <div class="takenBranch">&check; Branch 0 taken 2 times.</div>
+          <div class="notTakenBranch">&cross; Branch 1 not taken.</div>
+        </div>
+        </details>
       </td>
-      <td class="linecount "></td>
-      <td class="src "><span class="w">                                                                                     </span><span class="p">{</span><span class="n">ValidationError</span><span class="o">::</span><span class="n">INVALID_ROUTE</span><span class="p">,</span><span class="w"> </span><span class="sa">R</span><span class="s">&quot;</span><span class="dl">(</span><span class="s">{&quot;errorCode&quot;:&quot;INVALID_ROUTE&quot;,&quot;details&quot;:{</span><span class="dl">)</span><span class="s">&quot;</span><span class="p">},</span><span class="w"></span></td>
+      <td class="linecount coveredLine">2</td>
+      <td class="src coveredLine"><span class="w">                                                                                     </span><span class="p">{</span><span class="n">ValidationError</span><span class="o">::</span><span class="n">INVALID_ROUTE</span><span class="p">,</span><span class="w"> </span><span class="sa">R</span><span class="s">&quot;</span><span class="dl">(</span><span class="s">{&quot;errorCode&quot;:&quot;INVALID_ROUTE&quot;,&quot;details&quot;:{</span><span class="dl">)</span><span class="s">&quot;</span><span class="p">},</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l35" href="#l35">35</a></td>
       <td class="linebranch">
+        <details class="linebranchDetails">
+        <summary class="linebranchSummary">1/2</summary>
+        <div class="linebranchContents">
+          <div class="takenBranch">&check; Branch 0 taken 2 times.</div>
+          <div class="notTakenBranch">&cross; Branch 1 not taken.</div>
+        </div>
+        </details>
       </td>
-      <td class="linecount "></td>
-      <td class="src "><span class="w">                                                                                     </span><span class="p">{</span><span class="n">ValidationError</span><span class="o">::</span><span class="n">INVALID_PATH_PARAM</span><span class="p">,</span><span class="w"> </span><span class="sa">R</span><span class="s">&quot;</span><span class="dl">(</span><span class="s">{&quot;errorCode&quot;:&quot;INVALID_PATH_PARAM&quot;,&quot;details&quot;:{</span><span class="dl">)</span><span class="s">&quot;</span><span class="p">},</span><span class="w"></span></td>
+      <td class="linecount coveredLine">2</td>
+      <td class="src coveredLine"><span class="w">                                                                                     </span><span class="p">{</span><span class="n">ValidationError</span><span class="o">::</span><span class="n">INVALID_PATH_PARAM</span><span class="p">,</span><span class="w"> </span><span class="sa">R</span><span class="s">&quot;</span><span class="dl">(</span><span class="s">{&quot;errorCode&quot;:&quot;INVALID_PATH_PARAM&quot;,&quot;details&quot;:{</span><span class="dl">)</span><span class="s">&quot;</span><span class="p">},</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l36" href="#l36">36</a></td>
       <td class="linebranch">
+        <details class="linebranchDetails">
+        <summary class="linebranchSummary">1/2</summary>
+        <div class="linebranchContents">
+          <div class="takenBranch">&check; Branch 0 taken 2 times.</div>
+          <div class="notTakenBranch">&cross; Branch 1 not taken.</div>
+        </div>
+        </details>
       </td>
-      <td class="linecount "></td>
-      <td class="src "><span class="w">                                                                                     </span><span class="p">{</span><span class="n">ValidationError</span><span class="o">::</span><span class="n">INVALID_QUERY_PARAM</span><span class="p">,</span><span class="w"> </span><span class="sa">R</span><span class="s">&quot;</span><span class="dl">(</span><span class="s">{&quot;errorCode&quot;:&quot;INVALID_QUERY_PARAM&quot;,&quot;details&quot;:{</span><span class="dl">)</span><span class="s">&quot;</span><span class="p">},</span><span class="w"></span></td>
+      <td class="linecount coveredLine">2</td>
+      <td class="src coveredLine"><span class="w">                                                                                     </span><span class="p">{</span><span class="n">ValidationError</span><span class="o">::</span><span class="n">INVALID_QUERY_PARAM</span><span class="p">,</span><span class="w"> </span><span class="sa">R</span><span class="s">&quot;</span><span class="dl">(</span><span class="s">{&quot;errorCode&quot;:&quot;INVALID_QUERY_PARAM&quot;,&quot;details&quot;:{</span><span class="dl">)</span><span class="s">&quot;</span><span class="p">},</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l37" href="#l37">37</a></td>
       <td class="linebranch">
+        <details class="linebranchDetails">
+        <summary class="linebranchSummary">1/2</summary>
+        <div class="linebranchContents">
+          <div class="takenBranch">&check; Branch 0 taken 2 times.</div>
+          <div class="notTakenBranch">&cross; Branch 1 not taken.</div>
+        </div>
+        </details>
       </td>
-      <td class="linecount "></td>
-      <td class="src "><span class="w">                                                                                     </span><span class="p">{</span><span class="n">ValidationError</span><span class="o">::</span><span class="n">INVALID_HEADER_PARAM</span><span class="p">,</span><span class="w"> </span><span class="sa">R</span><span class="s">&quot;</span><span class="dl">(</span><span class="s">{&quot;errorCode&quot;:&quot;INVALID_HEADER_PARAM&quot;,&quot;details&quot;:{</span><span class="dl">)</span><span class="s">&quot;</span><span class="p">},</span><span class="w"></span></td>
+      <td class="linecount coveredLine">2</td>
+      <td class="src coveredLine"><span class="w">                                                                                     </span><span class="p">{</span><span class="n">ValidationError</span><span class="o">::</span><span class="n">INVALID_HEADER_PARAM</span><span class="p">,</span><span class="w"> </span><span class="sa">R</span><span class="s">&quot;</span><span class="dl">(</span><span class="s">{&quot;errorCode&quot;:&quot;INVALID_HEADER_PARAM&quot;,&quot;details&quot;:{</span><span class="dl">)</span><span class="s">&quot;</span><span class="p">},</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l38" href="#l38">38</a></td>
       <td class="linebranch">
+        <details class="linebranchDetails">
+        <summary class="linebranchSummary">1/2</summary>
+        <div class="linebranchContents">
+          <div class="takenBranch">&check; Branch 0 taken 2 times.</div>
+          <div class="notTakenBranch">&cross; Branch 1 not taken.</div>
+        </div>
+        </details>
       </td>
-      <td class="linecount "></td>
-      <td class="src "><span class="w">                                                                                     </span><span class="p">{</span><span class="n">ValidationError</span><span class="o">::</span><span class="n">INVALID_BODY</span><span class="p">,</span><span class="w"> </span><span class="sa">R</span><span class="s">&quot;</span><span class="dl">(</span><span class="s">{&quot;errorCode&quot;:&quot;INVALID_BODY&quot;,&quot;details&quot;:{</span><span class="dl">)</span><span class="s">&quot;</span><span class="p">},</span><span class="w"></span></td>
+      <td class="linecount coveredLine">2</td>
+      <td class="src coveredLine"><span class="w">                                                                                     </span><span class="p">{</span><span class="n">ValidationError</span><span class="o">::</span><span class="n">INVALID_BODY</span><span class="p">,</span><span class="w"> </span><span class="sa">R</span><span class="s">&quot;</span><span class="dl">(</span><span class="s">{&quot;errorCode&quot;:&quot;INVALID_BODY&quot;,&quot;details&quot;:{</span><span class="dl">)</span><span class="s">&quot;</span><span class="p">},</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l39" href="#l39">39</a></td>
       <td class="linebranch">
+        <details class="linebranchDetails">
+        <summary class="linebranchSummary">1/2</summary>
+        <div class="linebranchContents">
+          <div class="takenBranch">&check; Branch 0 taken 2 times.</div>
+          <div class="notTakenBranch">&cross; Branch 1 not taken.</div>
+        </div>
+        </details>
       </td>
-      <td class="linecount "></td>
-      <td class="src "><span class="w">                                                                                     </span><span class="p">{</span><span class="n">ValidationError</span><span class="o">::</span><span class="n">INVALID_RSP</span><span class="p">,</span><span class="w"> </span><span class="sa">R</span><span class="s">&quot;</span><span class="dl">(</span><span class="s">{&quot;errorCode&quot;:&quot;INVALID_RSP&quot;,&quot;details&quot;:{</span><span class="dl">)</span><span class="s">&quot;</span><span class="p">}};</span><span class="w"></span></td>
+      <td class="linecount coveredLine">2</td>
+      <td class="src coveredLine"><span class="w">                                                                                     </span><span class="p">{</span><span class="n">ValidationError</span><span class="o">::</span><span class="n">INVALID_RSP</span><span class="p">,</span><span class="w"> </span><span class="sa">R</span><span class="s">&quot;</span><span class="dl">(</span><span class="s">{&quot;errorCode&quot;:&quot;INVALID_RSP&quot;,&quot;details&quot;:{</span><span class="dl">)</span><span class="s">&quot;</span><span class="p">}};</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l40" href="#l40">40</a></td>
       <td class="linebranch">
@@ -450,14 +498,13 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
   </table>
 </div>
-
-    <hr/>
+      <hr/>
+    </main>
 
     <footer>
-      Generated by: <a href="http://gcovr.com">GCOVR (Version 5.0)</a>
+      Generated by: <a href="http://gcovr.com/en/6.0">GCOVR (Version 6.0)</a>
     </footer>
   </body>
 </html>

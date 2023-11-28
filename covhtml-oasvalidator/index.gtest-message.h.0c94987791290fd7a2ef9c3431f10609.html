@@ -1,19 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html class="theme-green">
 
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <title>GCC Code Coverage Report</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index.css"/>
   </head>
 
   <body>
-    <h1>GCC Code Coverage Report</h1>
+    <header>
+      <h1>GCC Code Coverage Report</h1>
 
-    <hr/>
+      <hr/>
 
-    <div class="summary">
+      <div class="summary">
 <div>
   <table class="legend">
     <tr>
@@ -26,7 +27,7 @@
     </tr>
     <tr>
       <th scope="row">Date:</th>
-      <td>2023-11-28 13:29:10</td>
+      <td>2023-11-28 13:32:33</td>
     </tr>
   </table>
 </div>
@@ -40,22 +41,781 @@
     </tr>
     <tr>
       <th scope="row">Lines:</th>
-      <td>10</td>
-      <td>15</td>
-      <td class="coverage-low">66.7%</td>
+      <td>9</td>
+      <td>18</td>
+      <td class="coverage-low">50.0%</td>
+    </tr>
+    <tr>
+      <th scope="row">Functions:</th>
+      <td>13</td>
+      <td>67</td>
+      <td class="coverage-low">19.4%</td>
     </tr>
     <tr>
       <th scope="row">Branches:</th>
-      <td>34</td>
-      <td>854</td>
-      <td class="coverage-low">4.0%</td>
+      <td>2</td>
+      <td>12</td>
+      <td class="coverage-low">16.7%</td>
     </tr>
   </table>
 </div>
-    </div>
+      </div>
 
-    <hr/>
+      <hr/>
+    </header>
 
+    <nav>
+<details>
+  <summary>List of functions</summary>
+  <table class="listOfFunctions">
+    <tr>
+      <th>Function</th>
+      <th>Line</th>
+      <th>Call count</th>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l242">std::__1::basic_string&lt;char, std::__1::char_traits&lt;char&gt;, std::__1::allocator&lt;char&gt; &gt; testing::internal::StreamableToString&lt;char*&gt;(char* const&amp;)</a>
+      </td>
+      <td>
+        <a href="#l242">242</a>
+      </td>
+      <td>
+        <a href="#l242"> called 1 time</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l242">std::__1::basic_string&lt;char, std::__1::char_traits&lt;char&gt;, std::__1::allocator&lt;char&gt; &gt; testing::internal::StreamableToString&lt;int&gt;(int const&amp;)</a>
+      </td>
+      <td>
+        <a href="#l242">242</a>
+      </td>
+      <td>
+        <a href="#l242"> called 37 times</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l242">std::__1::basic_string&lt;char, std::__1::char_traits&lt;char&gt;, std::__1::allocator&lt;char&gt; &gt; testing::internal::StreamableToString&lt;long long&gt;(long long const&amp;)</a>
+      </td>
+      <td>
+        <a href="#l242">242</a>
+      </td>
+      <td>
+        <a href="#l242"> called 257 times</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l242">std::__1::basic_string&lt;char, std::__1::char_traits&lt;char&gt;, std::__1::allocator&lt;char&gt; &gt; testing::internal::StreamableToString&lt;wchar_t*&gt;(wchar_t* const&amp;)</a>
+      </td>
+      <td>
+        <a href="#l242">242</a>
+      </td>
+      <td>
+        <a href="#l242"> not called</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l132">testing::Message&amp; testing::Message::operator&lt;&lt;&lt;char [100]&gt;(char const (&amp;) [100])</a>
+      </td>
+      <td>
+        <a href="#l132">132</a>
+      </td>
+      <td>
+        <a href="#l132"> not called</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l132">testing::Message&amp; testing::Message::operator&lt;&lt;&lt;char [106]&gt;(char const (&amp;) [106])</a>
+      </td>
+      <td>
+        <a href="#l132">132</a>
+      </td>
+      <td>
+        <a href="#l132"> not called</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l132">testing::Message&amp; testing::Message::operator&lt;&lt;&lt;char [10]&gt;(char const (&amp;) [10])</a>
+      </td>
+      <td>
+        <a href="#l132">132</a>
+      </td>
+      <td>
+        <a href="#l132"> not called</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l132">testing::Message&amp; testing::Message::operator&lt;&lt;&lt;char [11]&gt;(char const (&amp;) [11])</a>
+      </td>
+      <td>
+        <a href="#l132">132</a>
+      </td>
+      <td>
+        <a href="#l132"> not called</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l132">testing::Message&amp; testing::Message::operator&lt;&lt;&lt;char [12]&gt;(char const (&amp;) [12])</a>
+      </td>
+      <td>
+        <a href="#l132">132</a>
+      </td>
+      <td>
+        <a href="#l132"> not called</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l132">testing::Message&amp; testing::Message::operator&lt;&lt;&lt;char [13]&gt;(char const (&amp;) [13])</a>
+      </td>
+      <td>
+        <a href="#l132">132</a>
+      </td>
+      <td>
+        <a href="#l132"> not called</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l132">testing::Message&amp; testing::Message::operator&lt;&lt;&lt;char [14]&gt;(char const (&amp;) [14])</a>
+      </td>
+      <td>
+        <a href="#l132">132</a>
+      </td>
+      <td>
+        <a href="#l132"> not called</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l132">testing::Message&amp; testing::Message::operator&lt;&lt;&lt;char [15]&gt;(char const (&amp;) [15])</a>
+      </td>
+      <td>
+        <a href="#l132">132</a>
+      </td>
+      <td>
+        <a href="#l132"> not called</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l132">testing::Message&amp; testing::Message::operator&lt;&lt;&lt;char [16]&gt;(char const (&amp;) [16])</a>
+      </td>
+      <td>
+        <a href="#l132">132</a>
+      </td>
+      <td>
+        <a href="#l132"> not called</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l132">testing::Message&amp; testing::Message::operator&lt;&lt;&lt;char [17]&gt;(char const (&amp;) [17])</a>
+      </td>
+      <td>
+        <a href="#l132">132</a>
+      </td>
+      <td>
+        <a href="#l132"> not called</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l132">testing::Message&amp; testing::Message::operator&lt;&lt;&lt;char [18]&gt;(char const (&amp;) [18])</a>
+      </td>
+      <td>
+        <a href="#l132">132</a>
+      </td>
+      <td>
+        <a href="#l132"> not called</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l132">testing::Message&amp; testing::Message::operator&lt;&lt;&lt;char [19]&gt;(char const (&amp;) [19])</a>
+      </td>
+      <td>
+        <a href="#l132">132</a>
+      </td>
+      <td>
+        <a href="#l132"> not called</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l132">testing::Message&amp; testing::Message::operator&lt;&lt;&lt;char [20]&gt;(char const (&amp;) [20])</a>
+      </td>
+      <td>
+        <a href="#l132">132</a>
+      </td>
+      <td>
+        <a href="#l132"> not called</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l132">testing::Message&amp; testing::Message::operator&lt;&lt;&lt;char [21]&gt;(char const (&amp;) [21])</a>
+      </td>
+      <td>
+        <a href="#l132">132</a>
+      </td>
+      <td>
+        <a href="#l132"> not called</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l132">testing::Message&amp; testing::Message::operator&lt;&lt;&lt;char [22]&gt;(char const (&amp;) [22])</a>
+      </td>
+      <td>
+        <a href="#l132">132</a>
+      </td>
+      <td>
+        <a href="#l132"> not called</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l132">testing::Message&amp; testing::Message::operator&lt;&lt;&lt;char [24]&gt;(char const (&amp;) [24])</a>
+      </td>
+      <td>
+        <a href="#l132">132</a>
+      </td>
+      <td>
+        <a href="#l132"> not called</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l132">testing::Message&amp; testing::Message::operator&lt;&lt;&lt;char [256]&gt;(char const (&amp;) [256])</a>
+      </td>
+      <td>
+        <a href="#l132">132</a>
+      </td>
+      <td>
+        <a href="#l132"> not called</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l132">testing::Message&amp; testing::Message::operator&lt;&lt;&lt;char [25]&gt;(char const (&amp;) [25])</a>
+      </td>
+      <td>
+        <a href="#l132">132</a>
+      </td>
+      <td>
+        <a href="#l132"> not called</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l132">testing::Message&amp; testing::Message::operator&lt;&lt;&lt;char [27]&gt;(char const (&amp;) [27])</a>
+      </td>
+      <td>
+        <a href="#l132">132</a>
+      </td>
+      <td>
+        <a href="#l132"> not called</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l132">testing::Message&amp; testing::Message::operator&lt;&lt;&lt;char [28]&gt;(char const (&amp;) [28])</a>
+      </td>
+      <td>
+        <a href="#l132">132</a>
+      </td>
+      <td>
+        <a href="#l132"> not called</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l132">testing::Message&amp; testing::Message::operator&lt;&lt;&lt;char [29]&gt;(char const (&amp;) [29])</a>
+      </td>
+      <td>
+        <a href="#l132">132</a>
+      </td>
+      <td>
+        <a href="#l132"> not called</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l132">testing::Message&amp; testing::Message::operator&lt;&lt;&lt;char [2]&gt;(char const (&amp;) [2])</a>
+      </td>
+      <td>
+        <a href="#l132">132</a>
+      </td>
+      <td>
+        <a href="#l132"> called 217 times</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l132">testing::Message&amp; testing::Message::operator&lt;&lt;&lt;char [30]&gt;(char const (&amp;) [30])</a>
+      </td>
+      <td>
+        <a href="#l132">132</a>
+      </td>
+      <td>
+        <a href="#l132"> not called</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l132">testing::Message&amp; testing::Message::operator&lt;&lt;&lt;char [32]&gt;(char const (&amp;) [32])</a>
+      </td>
+      <td>
+        <a href="#l132">132</a>
+      </td>
+      <td>
+        <a href="#l132"> not called</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l132">testing::Message&amp; testing::Message::operator&lt;&lt;&lt;char [33]&gt;(char const (&amp;) [33])</a>
+      </td>
+      <td>
+        <a href="#l132">132</a>
+      </td>
+      <td>
+        <a href="#l132"> not called</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l132">testing::Message&amp; testing::Message::operator&lt;&lt;&lt;char [35]&gt;(char const (&amp;) [35])</a>
+      </td>
+      <td>
+        <a href="#l132">132</a>
+      </td>
+      <td>
+        <a href="#l132"> not called</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l132">testing::Message&amp; testing::Message::operator&lt;&lt;&lt;char [38]&gt;(char const (&amp;) [38])</a>
+      </td>
+      <td>
+        <a href="#l132">132</a>
+      </td>
+      <td>
+        <a href="#l132"> not called</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l132">testing::Message&amp; testing::Message::operator&lt;&lt;&lt;char [39]&gt;(char const (&amp;) [39])</a>
+      </td>
+      <td>
+        <a href="#l132">132</a>
+      </td>
+      <td>
+        <a href="#l132"> not called</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l132">testing::Message&amp; testing::Message::operator&lt;&lt;&lt;char [3]&gt;(char const (&amp;) [3])</a>
+      </td>
+      <td>
+        <a href="#l132">132</a>
+      </td>
+      <td>
+        <a href="#l132"> not called</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l132">testing::Message&amp; testing::Message::operator&lt;&lt;&lt;char [40]&gt;(char const (&amp;) [40])</a>
+      </td>
+      <td>
+        <a href="#l132">132</a>
+      </td>
+      <td>
+        <a href="#l132"> not called</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l132">testing::Message&amp; testing::Message::operator&lt;&lt;&lt;char [41]&gt;(char const (&amp;) [41])</a>
+      </td>
+      <td>
+        <a href="#l132">132</a>
+      </td>
+      <td>
+        <a href="#l132"> not called</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l132">testing::Message&amp; testing::Message::operator&lt;&lt;&lt;char [47]&gt;(char const (&amp;) [47])</a>
+      </td>
+      <td>
+        <a href="#l132">132</a>
+      </td>
+      <td>
+        <a href="#l132"> not called</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l132">testing::Message&amp; testing::Message::operator&lt;&lt;&lt;char [48]&gt;(char const (&amp;) [48])</a>
+      </td>
+      <td>
+        <a href="#l132">132</a>
+      </td>
+      <td>
+        <a href="#l132"> not called</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l132">testing::Message&amp; testing::Message::operator&lt;&lt;&lt;char [4]&gt;(char const (&amp;) [4])</a>
+      </td>
+      <td>
+        <a href="#l132">132</a>
+      </td>
+      <td>
+        <a href="#l132"> not called</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l132">testing::Message&amp; testing::Message::operator&lt;&lt;&lt;char [50]&gt;(char const (&amp;) [50])</a>
+      </td>
+      <td>
+        <a href="#l132">132</a>
+      </td>
+      <td>
+        <a href="#l132"> not called</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l132">testing::Message&amp; testing::Message::operator&lt;&lt;&lt;char [51]&gt;(char const (&amp;) [51])</a>
+      </td>
+      <td>
+        <a href="#l132">132</a>
+      </td>
+      <td>
+        <a href="#l132"> not called</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l132">testing::Message&amp; testing::Message::operator&lt;&lt;&lt;char [52]&gt;(char const (&amp;) [52])</a>
+      </td>
+      <td>
+        <a href="#l132">132</a>
+      </td>
+      <td>
+        <a href="#l132"> not called</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l132">testing::Message&amp; testing::Message::operator&lt;&lt;&lt;char [53]&gt;(char const (&amp;) [53])</a>
+      </td>
+      <td>
+        <a href="#l132">132</a>
+      </td>
+      <td>
+        <a href="#l132"> not called</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l132">testing::Message&amp; testing::Message::operator&lt;&lt;&lt;char [5]&gt;(char const (&amp;) [5])</a>
+      </td>
+      <td>
+        <a href="#l132">132</a>
+      </td>
+      <td>
+        <a href="#l132"> not called</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l132">testing::Message&amp; testing::Message::operator&lt;&lt;&lt;char [60]&gt;(char const (&amp;) [60])</a>
+      </td>
+      <td>
+        <a href="#l132">132</a>
+      </td>
+      <td>
+        <a href="#l132"> not called</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l132">testing::Message&amp; testing::Message::operator&lt;&lt;&lt;char [61]&gt;(char const (&amp;) [61])</a>
+      </td>
+      <td>
+        <a href="#l132">132</a>
+      </td>
+      <td>
+        <a href="#l132"> not called</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l132">testing::Message&amp; testing::Message::operator&lt;&lt;&lt;char [62]&gt;(char const (&amp;) [62])</a>
+      </td>
+      <td>
+        <a href="#l132">132</a>
+      </td>
+      <td>
+        <a href="#l132"> not called</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l132">testing::Message&amp; testing::Message::operator&lt;&lt;&lt;char [63]&gt;(char const (&amp;) [63])</a>
+      </td>
+      <td>
+        <a href="#l132">132</a>
+      </td>
+      <td>
+        <a href="#l132"> not called</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l132">testing::Message&amp; testing::Message::operator&lt;&lt;&lt;char [65]&gt;(char const (&amp;) [65])</a>
+      </td>
+      <td>
+        <a href="#l132">132</a>
+      </td>
+      <td>
+        <a href="#l132"> not called</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l132">testing::Message&amp; testing::Message::operator&lt;&lt;&lt;char [68]&gt;(char const (&amp;) [68])</a>
+      </td>
+      <td>
+        <a href="#l132">132</a>
+      </td>
+      <td>
+        <a href="#l132"> not called</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l132">testing::Message&amp; testing::Message::operator&lt;&lt;&lt;char [6]&gt;(char const (&amp;) [6])</a>
+      </td>
+      <td>
+        <a href="#l132">132</a>
+      </td>
+      <td>
+        <a href="#l132"> not called</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l132">testing::Message&amp; testing::Message::operator&lt;&lt;&lt;char [7]&gt;(char const (&amp;) [7])</a>
+      </td>
+      <td>
+        <a href="#l132">132</a>
+      </td>
+      <td>
+        <a href="#l132"> called 21 times</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l132">testing::Message&amp; testing::Message::operator&lt;&lt;&lt;char [8]&gt;(char const (&amp;) [8])</a>
+      </td>
+      <td>
+        <a href="#l132">132</a>
+      </td>
+      <td>
+        <a href="#l132"> not called</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l132">testing::Message&amp; testing::Message::operator&lt;&lt;&lt;char [93]&gt;(char const (&amp;) [93])</a>
+      </td>
+      <td>
+        <a href="#l132">132</a>
+      </td>
+      <td>
+        <a href="#l132"> not called</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l132">testing::Message&amp; testing::Message::operator&lt;&lt;&lt;char [9]&gt;(char const (&amp;) [9])</a>
+      </td>
+      <td>
+        <a href="#l132">132</a>
+      </td>
+      <td>
+        <a href="#l132"> not called</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l181">testing::Message&amp; testing::Message::operator&lt;&lt;&lt;char const&gt;(char const* const&amp;)</a>
+      </td>
+      <td>
+        <a href="#l181">181</a>
+      </td>
+      <td>
+        <a href="#l181"> called 21 times</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l132">testing::Message&amp; testing::Message::operator&lt;&lt;&lt;char&gt;(char const&amp;)</a>
+      </td>
+      <td>
+        <a href="#l132">132</a>
+      </td>
+      <td>
+        <a href="#l132"> called 414 times</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l181">testing::Message&amp; testing::Message::operator&lt;&lt;&lt;char&gt;(char* const&amp;)</a>
+      </td>
+      <td>
+        <a href="#l181">181</a>
+      </td>
+      <td>
+        <a href="#l181"> called 1 time</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l132">testing::Message&amp; testing::Message::operator&lt;&lt;&lt;double&gt;(double const&amp;)</a>
+      </td>
+      <td>
+        <a href="#l132">132</a>
+      </td>
+      <td>
+        <a href="#l132"> not called</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l132">testing::Message&amp; testing::Message::operator&lt;&lt;&lt;int&gt;(int const&amp;)</a>
+      </td>
+      <td>
+        <a href="#l132">132</a>
+      </td>
+      <td>
+        <a href="#l132"> called 37 times</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l132">testing::Message&amp; testing::Message::operator&lt;&lt;&lt;long long&gt;(long long const&amp;)</a>
+      </td>
+      <td>
+        <a href="#l132">132</a>
+      </td>
+      <td>
+        <a href="#l132"> called 257 times</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l132">testing::Message&amp; testing::Message::operator&lt;&lt;&lt;std::__1::basic_string&lt;char, std::__1::char_traits&lt;char&gt;, std::__1::allocator&lt;char&gt; &gt; &gt;(std::__1::basic_string&lt;char, std::__1::char_traits&lt;char&gt;, std::__1::allocator&lt;char&gt; &gt; const&amp;)</a>
+      </td>
+      <td>
+        <a href="#l132">132</a>
+      </td>
+      <td>
+        <a href="#l132"> called 434 times</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l132">testing::Message&amp; testing::Message::operator&lt;&lt;&lt;testing::Message&gt;(testing::Message const&amp;)</a>
+      </td>
+      <td>
+        <a href="#l132">132</a>
+      </td>
+      <td>
+        <a href="#l132"> not called</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l132">testing::Message&amp; testing::Message::operator&lt;&lt;&lt;testing::TestPartResult&gt;(testing::TestPartResult const&amp;)</a>
+      </td>
+      <td>
+        <a href="#l132">132</a>
+      </td>
+      <td>
+        <a href="#l132"> not called</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l132">testing::Message&amp; testing::Message::operator&lt;&lt;&lt;unsigned long&gt;(unsigned long const&amp;)</a>
+      </td>
+      <td>
+        <a href="#l132">132</a>
+      </td>
+      <td>
+        <a href="#l132"> called 217 times</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l112">testing::Message::Message(testing::Message const&amp;)</a>
+      </td>
+      <td>
+        <a href="#l112">112</a>
+      </td>
+      <td>
+        <a href="#l112"> not called</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l101">testing::Message::~Message()</a>
+      </td>
+      <td>
+        <a href="#l101">101</a>
+      </td>
+      <td>
+        <a href="#l101"> called 1542 times</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l231">testing::operator&lt;&lt;(std::__1::basic_ostream&lt;char, std::__1::char_traits&lt;char&gt; &gt;&amp;, testing::Message const&amp;)</a>
+      </td>
+      <td>
+        <a href="#l231">231</a>
+      </td>
+      <td>
+        <a href="#l231"> not called</a>
+      </td>
+    </tr>
+  </table>
+</details>
+
+    </nav>
+
+    <main>
 <div class="file-source">
   <table>
     <tr>
@@ -64,8 +824,6 @@
       <th align="right">Exec</th>
       <th align="left">Source</th>
     </tr>
-
-
     <tr class="source-line">
       <td class="lineno"><a id="l1" href="#l1">1</a></td>
       <td class="linebranch">
@@ -73,7 +831,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// Copyright 2005, Google Inc.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l2" href="#l2">2</a></td>
       <td class="linebranch">
@@ -81,7 +838,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// All rights reserved.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l3" href="#l3">3</a></td>
       <td class="linebranch">
@@ -89,7 +845,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">//</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l4" href="#l4">4</a></td>
       <td class="linebranch">
@@ -97,7 +852,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// Redistribution and use in source and binary forms, with or without</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l5" href="#l5">5</a></td>
       <td class="linebranch">
@@ -105,7 +859,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// modification, are permitted provided that the following conditions are</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l6" href="#l6">6</a></td>
       <td class="linebranch">
@@ -113,7 +866,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// met:</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l7" href="#l7">7</a></td>
       <td class="linebranch">
@@ -121,7 +873,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">//</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l8" href="#l8">8</a></td>
       <td class="linebranch">
@@ -129,7 +880,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">//     * Redistributions of source code must retain the above copyright</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l9" href="#l9">9</a></td>
       <td class="linebranch">
@@ -137,7 +887,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// notice, this list of conditions and the following disclaimer.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l10" href="#l10">10</a></td>
       <td class="linebranch">
@@ -145,7 +894,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">//     * Redistributions in binary form must reproduce the above</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l11" href="#l11">11</a></td>
       <td class="linebranch">
@@ -153,7 +901,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// copyright notice, this list of conditions and the following disclaimer</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l12" href="#l12">12</a></td>
       <td class="linebranch">
@@ -161,7 +908,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// in the documentation and/or other materials provided with the</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l13" href="#l13">13</a></td>
       <td class="linebranch">
@@ -169,7 +915,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// distribution.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l14" href="#l14">14</a></td>
       <td class="linebranch">
@@ -177,7 +922,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">//     * Neither the name of Google Inc. nor the names of its</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l15" href="#l15">15</a></td>
       <td class="linebranch">
@@ -185,7 +929,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// contributors may be used to endorse or promote products derived from</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l16" href="#l16">16</a></td>
       <td class="linebranch">
@@ -193,7 +936,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// this software without specific prior written permission.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l17" href="#l17">17</a></td>
       <td class="linebranch">
@@ -201,7 +943,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">//</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l18" href="#l18">18</a></td>
       <td class="linebranch">
@@ -209,7 +950,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l19" href="#l19">19</a></td>
       <td class="linebranch">
@@ -217,7 +957,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l20" href="#l20">20</a></td>
       <td class="linebranch">
@@ -225,7 +964,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l21" href="#l21">21</a></td>
       <td class="linebranch">
@@ -233,7 +971,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l22" href="#l22">22</a></td>
       <td class="linebranch">
@@ -241,7 +978,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l23" href="#l23">23</a></td>
       <td class="linebranch">
@@ -249,7 +985,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l24" href="#l24">24</a></td>
       <td class="linebranch">
@@ -257,7 +992,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l25" href="#l25">25</a></td>
       <td class="linebranch">
@@ -265,7 +999,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l26" href="#l26">26</a></td>
       <td class="linebranch">
@@ -273,7 +1006,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l27" href="#l27">27</a></td>
       <td class="linebranch">
@@ -281,7 +1013,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l28" href="#l28">28</a></td>
       <td class="linebranch">
@@ -289,7 +1020,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l29" href="#l29">29</a></td>
       <td class="linebranch">
@@ -297,7 +1027,6 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l30" href="#l30">30</a></td>
       <td class="linebranch">
@@ -305,7 +1034,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// The Google C++ Testing and Mocking Framework (Google Test)</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l31" href="#l31">31</a></td>
       <td class="linebranch">
@@ -313,7 +1041,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">//</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l32" href="#l32">32</a></td>
       <td class="linebranch">
@@ -321,7 +1048,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// This header file defines the Message class.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l33" href="#l33">33</a></td>
       <td class="linebranch">
@@ -329,7 +1055,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">//</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l34" href="#l34">34</a></td>
       <td class="linebranch">
@@ -337,7 +1062,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// IMPORTANT NOTE: Due to limitation of the C++ language, we have to</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l35" href="#l35">35</a></td>
       <td class="linebranch">
@@ -345,7 +1069,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// leave some internal implementation details in this header file.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l36" href="#l36">36</a></td>
       <td class="linebranch">
@@ -353,7 +1076,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// They are clearly marked by comments like this:</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l37" href="#l37">37</a></td>
       <td class="linebranch">
@@ -361,7 +1083,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">//</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l38" href="#l38">38</a></td>
       <td class="linebranch">
@@ -369,7 +1090,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">//   // INTERNAL IMPLEMENTATION - DO NOT USE IN A USER PROGRAM.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l39" href="#l39">39</a></td>
       <td class="linebranch">
@@ -377,7 +1097,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">//</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l40" href="#l40">40</a></td>
       <td class="linebranch">
@@ -385,7 +1104,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// Such code is NOT meant to be used by a user directly, and is subject</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l41" href="#l41">41</a></td>
       <td class="linebranch">
@@ -393,7 +1111,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// to CHANGE WITHOUT NOTICE.  Therefore DO NOT DEPEND ON IT in a user</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l42" href="#l42">42</a></td>
       <td class="linebranch">
@@ -401,7 +1118,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// program!</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l43" href="#l43">43</a></td>
       <td class="linebranch">
@@ -409,7 +1125,6 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l44" href="#l44">44</a></td>
       <td class="linebranch">
@@ -417,7 +1132,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// IWYU pragma: private, include &quot;gtest/gtest.h&quot;</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l45" href="#l45">45</a></td>
       <td class="linebranch">
@@ -425,7 +1139,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// IWYU pragma: friend gtest/.*</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l46" href="#l46">46</a></td>
       <td class="linebranch">
@@ -433,7 +1146,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// IWYU pragma: friend gmock/.*</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l47" href="#l47">47</a></td>
       <td class="linebranch">
@@ -441,7 +1153,6 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l48" href="#l48">48</a></td>
       <td class="linebranch">
@@ -449,7 +1160,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="cp">#ifndef GOOGLETEST_INCLUDE_GTEST_GTEST_MESSAGE_H_</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l49" href="#l49">49</a></td>
       <td class="linebranch">
@@ -457,7 +1167,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="cp">#define GOOGLETEST_INCLUDE_GTEST_GTEST_MESSAGE_H_</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l50" href="#l50">50</a></td>
       <td class="linebranch">
@@ -465,47 +1174,41 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l51" href="#l51">51</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;limits&gt;</span><span class="cp"></span></td>
+      <td class="src "><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;limits&gt;</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l52" href="#l52">52</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;memory&gt;</span><span class="cp"></span></td>
+      <td class="src "><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;memory&gt;</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l53" href="#l53">53</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;ostream&gt;</span><span class="cp"></span></td>
+      <td class="src "><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;ostream&gt;</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l54" href="#l54">54</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;sstream&gt;</span><span class="cp"></span></td>
+      <td class="src "><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;sstream&gt;</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l55" href="#l55">55</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span><span class="cp"></span></td>
+      <td class="src "><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l56" href="#l56">56</a></td>
       <td class="linebranch">
@@ -513,15 +1216,13 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l57" href="#l57">57</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;gtest/internal/gtest-port.h&quot;</span><span class="cp"></span></td>
+      <td class="src "><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;gtest/internal/gtest-port.h&quot;</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l58" href="#l58">58</a></td>
       <td class="linebranch">
@@ -529,7 +1230,6 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l59" href="#l59">59</a></td>
       <td class="linebranch">
@@ -537,15 +1237,13 @@
       <td class="linecount "></td>
       <td class="src "><span class="cp">#ifdef GTEST_HAS_ABSL</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l60" href="#l60">60</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;type_traits&gt;</span><span class="cp"></span></td>
+      <td class="src "><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;type_traits&gt;</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l61" href="#l61">61</a></td>
       <td class="linebranch">
@@ -553,23 +1251,20 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l62" href="#l62">62</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;absl/strings/has_absl_stringify.h&quot;</span><span class="cp"></span></td>
+      <td class="src "><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;absl/strings/has_absl_stringify.h&quot;</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l63" href="#l63">63</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;absl/strings/str_cat.h&quot;</span><span class="cp"></span></td>
+      <td class="src "><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;absl/strings/str_cat.h&quot;</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l64" href="#l64">64</a></td>
       <td class="linebranch">
@@ -577,7 +1272,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="cp">#endif  </span><span class="c1">// GTEST_HAS_ABSL</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l65" href="#l65">65</a></td>
       <td class="linebranch">
@@ -585,7 +1279,6 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l66" href="#l66">66</a></td>
       <td class="linebranch">
@@ -593,15 +1286,13 @@
       <td class="linecount "></td>
       <td class="src "><span class="n">GTEST_DISABLE_MSC_WARNINGS_PUSH_</span><span class="p">(</span><span class="mi">4251</span><span class="w"> </span>\</td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l67" href="#l67">67</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">/* class A needs to have dll-interface to be used by clients of class B */</span><span class="p">)</span><span class="w"></span></td>
+      <td class="src "><span class="cm">/* class A needs to have dll-interface to be used by clients of class B */</span><span class="p">)</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l68" href="#l68">68</a></td>
       <td class="linebranch">
@@ -609,7 +1300,6 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l69" href="#l69">69</a></td>
       <td class="linebranch">
@@ -617,7 +1307,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// Ensures that there is at least one operator&lt;&lt; in the global namespace.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l70" href="#l70">70</a></td>
       <td class="linebranch">
@@ -625,15 +1314,13 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// See Message&amp; operator&lt;&lt;(...) below for why.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l71" href="#l71">71</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="kt">void</span><span class="w"> </span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">testing</span><span class="o">::</span><span class="n">internal</span><span class="o">::</span><span class="n">Secret</span><span class="o">&amp;</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="p">);</span><span class="w"></span></td>
+      <td class="src "><span class="kt">void</span><span class="w"> </span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">testing</span><span class="o">::</span><span class="n">internal</span><span class="o">::</span><span class="n">Secret</span><span class="o">&amp;</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="p">);</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l72" href="#l72">72</a></td>
       <td class="linebranch">
@@ -641,15 +1328,13 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l73" href="#l73">73</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="n">namespace</span><span class="w"> </span><span class="n">testing</span><span class="w"> </span><span class="p">{</span><span class="w"></span></td>
+      <td class="src "><span class="n">namespace</span><span class="w"> </span><span class="n">testing</span><span class="w"> </span><span class="p">{</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l74" href="#l74">74</a></td>
       <td class="linebranch">
@@ -657,7 +1342,6 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l75" href="#l75">75</a></td>
       <td class="linebranch">
@@ -665,7 +1349,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// The Message class works like an ostream repeater.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l76" href="#l76">76</a></td>
       <td class="linebranch">
@@ -673,7 +1356,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">//</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l77" href="#l77">77</a></td>
       <td class="linebranch">
@@ -681,7 +1363,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// Typical usage:</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l78" href="#l78">78</a></td>
       <td class="linebranch">
@@ -689,7 +1370,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">//</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l79" href="#l79">79</a></td>
       <td class="linebranch">
@@ -697,7 +1377,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">//   1. You stream a bunch of values to a Message object.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l80" href="#l80">80</a></td>
       <td class="linebranch">
@@ -705,7 +1384,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">//      It will remember the text in a stringstream.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l81" href="#l81">81</a></td>
       <td class="linebranch">
@@ -713,7 +1391,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">//   2. Then you stream the Message object to an ostream.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l82" href="#l82">82</a></td>
       <td class="linebranch">
@@ -721,7 +1398,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">//      This causes the text in the Message to be streamed</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l83" href="#l83">83</a></td>
       <td class="linebranch">
@@ -729,7 +1405,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">//      to the ostream.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l84" href="#l84">84</a></td>
       <td class="linebranch">
@@ -737,7 +1412,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">//</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l85" href="#l85">85</a></td>
       <td class="linebranch">
@@ -745,7 +1419,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// For example;</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l86" href="#l86">86</a></td>
       <td class="linebranch">
@@ -753,7 +1426,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">//</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l87" href="#l87">87</a></td>
       <td class="linebranch">
@@ -761,7 +1433,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">//   testing::Message foo;</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l88" href="#l88">88</a></td>
       <td class="linebranch">
@@ -769,7 +1440,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">//   foo &lt;&lt; 1 &lt;&lt; &quot; != &quot; &lt;&lt; 2;</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l89" href="#l89">89</a></td>
       <td class="linebranch">
@@ -777,7 +1447,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">//   std::cout &lt;&lt; foo;</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l90" href="#l90">90</a></td>
       <td class="linebranch">
@@ -785,7 +1454,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">//</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l91" href="#l91">91</a></td>
       <td class="linebranch">
@@ -793,7 +1461,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// will print &quot;1 != 2&quot;.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l92" href="#l92">92</a></td>
       <td class="linebranch">
@@ -801,7 +1468,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">//</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l93" href="#l93">93</a></td>
       <td class="linebranch">
@@ -809,7 +1475,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// Message is not intended to be inherited from.  In particular, its</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l94" href="#l94">94</a></td>
       <td class="linebranch">
@@ -817,7 +1482,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// destructor is not virtual.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l95" href="#l95">95</a></td>
       <td class="linebranch">
@@ -825,7 +1489,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">//</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l96" href="#l96">96</a></td>
       <td class="linebranch">
@@ -833,7 +1496,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// Note that stringstream behaves differently in gcc and in MSVC.  You</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l97" href="#l97">97</a></td>
       <td class="linebranch">
@@ -841,7 +1503,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// can stream a NULL char pointer to it in the former, but not in the</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l98" href="#l98">98</a></td>
       <td class="linebranch">
@@ -849,7 +1510,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// latter (it causes an access violation if you do).  The Message</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l99" href="#l99">99</a></td>
       <td class="linebranch">
@@ -857,7 +1517,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// class hides this difference by treating a NULL char pointer as</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l100" href="#l100">100</a></td>
       <td class="linebranch">
@@ -865,314 +1524,20 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// &quot;(null)&quot;.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l101" href="#l101">101</a></td>
       <td class="linebranch">
-        <details class="linebranchDetails">
-        <summary class="linebranchSummary">12/286</summary>
-        <div class="linebranchContents">
-          <div class="takenBranch">&check; Branch 0 taken 137 times.</div>
-          <div class="notTakenBranch">&cross; Branch 1 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 2 not taken.</div>
-          <div class="takenBranch">&check; Branch 3 taken 137 times.</div>
-          <div class="notTakenBranch">&cross; Branch 4 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 5 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 6 not taken.</div>
-          <div class="takenBranch">&check; Branch 7 taken 150 times.</div>
-          <div class="notTakenBranch">&cross; Branch 8 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 9 not taken.</div>
-          <div class="takenBranch">&check; Branch 10 taken 68 times.</div>
-          <div class="notTakenBranch">&cross; Branch 11 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 12 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 13 not taken.</div>
-          <div class="takenBranch">&check; Branch 14 taken 12 times.</div>
-          <div class="notTakenBranch">&cross; Branch 15 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 16 not taken.</div>
-          <div class="takenBranch">&check; Branch 17 taken 12 times.</div>
-          <div class="notTakenBranch">&cross; Branch 18 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 19 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 20 not taken.</div>
-          <div class="takenBranch">&check; Branch 21 taken 12 times.</div>
-          <div class="notTakenBranch">&cross; Branch 22 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 23 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 24 not taken.</div>
-          <div class="takenBranch">&check; Branch 25 taken 123 times.</div>
-          <div class="notTakenBranch">&cross; Branch 26 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 27 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 28 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 29 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 30 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 31 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 32 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 33 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 34 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 35 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 36 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 37 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 38 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 39 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 40 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 41 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 42 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 43 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 44 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 45 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 46 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 47 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 48 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 49 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 50 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 51 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 52 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 53 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 54 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 55 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 56 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 57 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 58 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 59 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 60 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 61 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 62 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 63 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 64 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 65 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 66 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 67 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 68 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 69 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 70 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 71 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 72 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 73 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 74 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 75 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 76 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 77 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 78 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 79 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 80 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 81 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 82 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 83 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 84 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 85 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 86 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 87 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 88 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 89 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 90 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 91 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 92 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 93 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 94 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 95 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 96 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 97 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 98 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 99 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 100 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 101 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 102 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 103 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 104 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 105 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 106 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 107 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 108 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 109 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 110 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 111 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 112 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 113 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 114 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 115 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 116 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 117 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 118 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 119 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 120 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 121 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 122 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 123 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 124 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 125 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 126 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 127 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 128 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 129 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 130 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 131 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 132 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 133 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 134 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 135 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 136 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 137 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 138 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 139 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 140 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 141 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 142 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 143 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 144 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 145 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 146 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 147 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 148 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 149 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 150 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 151 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 152 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 153 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 154 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 155 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 156 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 157 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 158 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 159 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 160 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 161 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 162 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 163 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 164 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 165 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 166 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 167 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 168 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 169 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 170 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 171 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 172 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 173 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 174 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 175 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 176 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 177 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 178 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 179 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 180 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 181 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 182 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 183 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 184 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 185 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 186 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 187 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 188 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 189 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 190 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 191 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 192 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 193 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 194 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 195 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 196 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 197 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 198 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 199 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 200 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 201 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 202 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 203 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 204 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 205 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 206 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 207 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 208 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 209 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 210 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 211 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 212 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 213 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 214 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 215 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 216 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 217 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 218 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 219 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 220 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 221 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 222 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 223 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 224 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 225 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 226 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 227 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 228 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 229 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 230 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 231 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 232 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 233 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 234 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 235 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 236 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 237 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 238 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 239 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 240 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 241 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 242 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 243 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 244 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 245 not taken.</div>
-          <div class="takenBranch">&check; Branch 246 taken 21 times.</div>
-          <div class="notTakenBranch">&cross; Branch 247 not taken.</div>
-          <div class="takenBranch">&check; Branch 249 taken 21 times.</div>
-          <div class="notTakenBranch">&cross; Branch 250 not taken.</div>
-          <div class="takenBranch">&check; Branch 251 taken 21 times.</div>
-          <div class="notTakenBranch">&cross; Branch 252 not taken.</div>
-          <div class="takenBranch">&check; Branch 253 taken 21 times.</div>
-          <div class="notTakenBranch">&cross; Branch 254 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 255 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 256 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 258 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 259 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 260 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 261 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 262 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 263 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 264 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 265 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 267 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 268 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 269 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 270 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 272 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 273 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 274 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 275 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 276 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 277 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 278 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 279 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 280 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 281 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 282 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 283 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 284 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 285 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 286 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 287 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 288 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 289 not taken.</div>
-        </div>
-        </details>
       </td>
-      <td class="linecount coveredLine">952</td>
-      <td class="src coveredLine"><span class="n">class</span><span class="w"> </span><span class="n">GTEST_API_</span><span class="w"> </span><span class="n">Message</span><span class="w"> </span><span class="p">{</span><span class="w"></span></td>
+      <td class="linecount "></td>
+      <td class="src "><span class="n">class</span><span class="w"> </span><span class="n">GTEST_API_</span><span class="w"> </span><span class="n">Message</span><span class="w"> </span><span class="p">{</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l102" href="#l102">102</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w"> </span><span class="n">private</span><span class="o">:</span><span class="w"></span></td>
+      <td class="src "><span class="w"> </span><span class="n">private</span><span class="o">:</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l103" href="#l103">103</a></td>
       <td class="linebranch">
@@ -1180,7 +1545,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// The type of basic IO manipulators (endl, ends, and flush) for</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l104" href="#l104">104</a></td>
       <td class="linebranch">
@@ -1188,15 +1552,13 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// narrow streams.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l105" href="#l105">105</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">  </span><span class="k">typedef</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">ostream</span><span class="o">&amp;</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">BasicNarrowIoManip</span><span class="p">)(</span><span class="n">std</span><span class="o">::</span><span class="n">ostream</span><span class="o">&amp;</span><span class="p">);</span><span class="w"></span></td>
+      <td class="src "><span class="w">  </span><span class="k">typedef</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">ostream</span><span class="o">&amp;</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">BasicNarrowIoManip</span><span class="p">)(</span><span class="n">std</span><span class="o">::</span><span class="n">ostream</span><span class="o">&amp;</span><span class="p">);</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l106" href="#l106">106</a></td>
       <td class="linebranch">
@@ -1204,15 +1566,13 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l107" href="#l107">107</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w"> </span><span class="n">public</span><span class="o">:</span><span class="w"></span></td>
+      <td class="src "><span class="w"> </span><span class="n">public</span><span class="o">:</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l108" href="#l108">108</a></td>
       <td class="linebranch">
@@ -1220,15 +1580,13 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// Constructs an empty Message.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l109" href="#l109">109</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">  </span><span class="n">Message</span><span class="p">();</span><span class="w"></span></td>
+      <td class="src "><span class="w">  </span><span class="n">Message</span><span class="p">();</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l110" href="#l110">110</a></td>
       <td class="linebranch">
@@ -1236,7 +1594,6 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l111" href="#l111">111</a></td>
       <td class="linebranch">
@@ -1244,7 +1601,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// Copy constructor.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l112" href="#l112">112</a></td>
       <td class="linebranch">
@@ -1252,23 +1608,20 @@
       <td class="linecount uncoveredLine">&cross;</td>
       <td class="src uncoveredLine"><span class="w">  </span><span class="n">Message</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Message</span><span class="o">&amp;</span><span class="w"> </span><span class="n">msg</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">ss_</span><span class="p">(</span><span class="n">new</span><span class="w"> </span><span class="o">::</span><span class="n">std</span><span class="o">::</span><span class="n">stringstream</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// NOLINT</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l113" href="#l113">113</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount uncoveredLine">&cross;</td>
-      <td class="src uncoveredLine"><span class="w">    </span><span class="o">*</span><span class="n">ss_</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">msg</span><span class="p">.</span><span class="n">GetString</span><span class="p">();</span><span class="w"></span></td>
+      <td class="src uncoveredLine"><span class="w">    </span><span class="o">*</span><span class="n">ss_</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">msg</span><span class="p">.</span><span class="n">GetString</span><span class="p">();</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l114" href="#l114">114</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount "></td>
-      <td class="src "><span class="w">  </span><span class="p">}</span><span class="w"></span></td>
+      <td class="linecount uncoveredLine">&cross;</td>
+      <td class="src uncoveredLine"><span class="w">  </span><span class="p">}</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l115" href="#l115">115</a></td>
       <td class="linebranch">
@@ -1276,7 +1629,6 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l116" href="#l116">116</a></td>
       <td class="linebranch">
@@ -1284,31 +1636,27 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// Constructs a Message from a C-string.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l117" href="#l117">117</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">  </span><span class="n">explicit</span><span class="w"> </span><span class="n">Message</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">str</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">ss_</span><span class="p">(</span><span class="n">new</span><span class="w"> </span><span class="o">::</span><span class="n">std</span><span class="o">::</span><span class="n">stringstream</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span></td>
+      <td class="src "><span class="w">  </span><span class="n">explicit</span><span class="w"> </span><span class="n">Message</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">str</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">ss_</span><span class="p">(</span><span class="n">new</span><span class="w"> </span><span class="o">::</span><span class="n">std</span><span class="o">::</span><span class="n">stringstream</span><span class="p">)</span><span class="w"> </span><span class="p">{</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l118" href="#l118">118</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">    </span><span class="o">*</span><span class="n">ss_</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">str</span><span class="p">;</span><span class="w"></span></td>
+      <td class="src "><span class="w">    </span><span class="o">*</span><span class="n">ss_</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">str</span><span class="p">;</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l119" href="#l119">119</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">  </span><span class="p">}</span><span class="w"></span></td>
+      <td class="src "><span class="w">  </span><span class="p">}</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l120" href="#l120">120</a></td>
       <td class="linebranch">
@@ -1316,7 +1664,6 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l121" href="#l121">121</a></td>
       <td class="linebranch">
@@ -1324,7 +1671,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// Streams a non-pointer value to this object. If building a version of</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l122" href="#l122">122</a></td>
       <td class="linebranch">
@@ -1332,7 +1678,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// GoogleTest with ABSL, this overload is only enabled if the value does not</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l123" href="#l123">123</a></td>
       <td class="linebranch">
@@ -1340,23 +1685,20 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// have an AbslStringify definition.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l124" href="#l124">124</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">  </span><span class="n">template</span><span class="w"> </span><span class="o">&lt;</span><span class="w"></span></td>
+      <td class="src "><span class="w">  </span><span class="n">template</span><span class="w"> </span><span class="o">&lt;</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l125" href="#l125">125</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">      </span><span class="n">typename</span><span class="w"> </span><span class="n">T</span><span class="w"></span></td>
+      <td class="src "><span class="w">      </span><span class="n">typename</span><span class="w"> </span><span class="n">T</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l126" href="#l126">126</a></td>
       <td class="linebranch">
@@ -1364,15 +1706,13 @@
       <td class="linecount "></td>
       <td class="src "><span class="cp">#ifdef GTEST_HAS_ABSL</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l127" href="#l127">127</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">      </span><span class="p">,</span><span class="w"></span></td>
+      <td class="src "><span class="w">      </span><span class="p">,</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l128" href="#l128">128</a></td>
       <td class="linebranch">
@@ -1380,15 +1720,13 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">      </span><span class="n">typename</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">enable_if</span><span class="o">&lt;!</span><span class="n">absl</span><span class="o">::</span><span class="n">HasAbslStringify</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;::</span><span class="n">value</span><span class="p">,</span><span class="w">  </span><span class="c1">// NOLINT</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l129" href="#l129">129</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">                              </span><span class="kt">int</span><span class="o">&gt;::</span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"></span></td>
+      <td class="src "><span class="w">                              </span><span class="kt">int</span><span class="o">&gt;::</span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l130" href="#l130">130</a></td>
       <td class="linebranch">
@@ -1396,64 +1734,20 @@
       <td class="linecount "></td>
       <td class="src "><span class="cp">#endif  </span><span class="c1">// GTEST_HAS_ABSL</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l131" href="#l131">131</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">      </span><span class="o">&gt;</span><span class="w"></span></td>
+      <td class="src "><span class="w">      </span><span class="o">&gt;</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l132" href="#l132">132</a></td>
       <td class="linebranch">
-        <details class="linebranchDetails">
-        <summary class="linebranchSummary">3/36</summary>
-        <div class="linebranchContents">
-          <div class="takenBranch">&check; Branch 1 taken 137 times.</div>
-          <div class="notTakenBranch">&cross; Branch 2 not taken.</div>
-          <div class="takenBranch">&check; Branch 4 taken 68 times.</div>
-          <div class="notTakenBranch">&cross; Branch 5 not taken.</div>
-          <div class="takenBranch">&check; Branch 7 taken 12 times.</div>
-          <div class="notTakenBranch">&cross; Branch 8 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 10 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 11 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 13 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 14 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 16 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 17 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 19 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 20 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 22 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 23 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 25 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 26 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 28 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 29 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 31 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 32 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 34 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 35 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 37 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 38 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 40 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 41 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 43 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 44 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 46 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 47 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 49 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 50 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 52 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 53 not taken.</div>
-        </div>
-        </details>
       </td>
-      <td class="linecount coveredLine">217</td>
-      <td class="src coveredLine"><span class="w">  </span><span class="kr">inline</span><span class="w"> </span><span class="n">Message</span><span class="o">&amp;</span><span class="w"> </span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">T</span><span class="o">&amp;</span><span class="w"> </span><span class="n">val</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span></td>
+      <td class="linecount coveredLine">1597</td>
+      <td class="src coveredLine"><span class="w">  </span><span class="kr">inline</span><span class="w"> </span><span class="n">Message</span><span class="o">&amp;</span><span class="w"> </span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">T</span><span class="o">&amp;</span><span class="w"> </span><span class="n">val</span><span class="p">)</span><span class="w"> </span><span class="p">{</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l133" href="#l133">133</a></td>
       <td class="linebranch">
@@ -1461,7 +1755,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">        </span><span class="c1">// Some libraries overload &lt;&lt; for STL containers.  These</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l134" href="#l134">134</a></td>
       <td class="linebranch">
@@ -1469,7 +1762,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">    </span><span class="c1">// overloads are defined in the global namespace instead of ::std.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l135" href="#l135">135</a></td>
       <td class="linebranch">
@@ -1477,7 +1769,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">    </span><span class="c1">//</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l136" href="#l136">136</a></td>
       <td class="linebranch">
@@ -1485,7 +1776,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">    </span><span class="c1">// C++&#39;s symbol lookup rule (i.e. Koenig lookup) says that these</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l137" href="#l137">137</a></td>
       <td class="linebranch">
@@ -1493,7 +1783,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">    </span><span class="c1">// overloads are visible in either the std namespace or the global</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l138" href="#l138">138</a></td>
       <td class="linebranch">
@@ -1501,7 +1790,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">    </span><span class="c1">// namespace, but not other namespaces, including the testing</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l139" href="#l139">139</a></td>
       <td class="linebranch">
@@ -1509,7 +1797,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">    </span><span class="c1">// namespace which Google Test&#39;s Message class is in.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l140" href="#l140">140</a></td>
       <td class="linebranch">
@@ -1517,7 +1804,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">    </span><span class="c1">//</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l141" href="#l141">141</a></td>
       <td class="linebranch">
@@ -1525,7 +1811,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">    </span><span class="c1">// To allow STL containers (and other types that has a &lt;&lt; operator</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l142" href="#l142">142</a></td>
       <td class="linebranch">
@@ -1533,7 +1818,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">    </span><span class="c1">// defined in the global namespace) to be used in Google Test</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l143" href="#l143">143</a></td>
       <td class="linebranch">
@@ -1541,7 +1825,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">    </span><span class="c1">// assertions, testing::Message must access the custom &lt;&lt; operator</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l144" href="#l144">144</a></td>
       <td class="linebranch">
@@ -1549,7 +1832,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">    </span><span class="c1">// from the global namespace.  With this using declaration,</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l145" href="#l145">145</a></td>
       <td class="linebranch">
@@ -1557,7 +1839,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">    </span><span class="c1">// overloads of &lt;&lt; defined in the global namespace and those</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l146" href="#l146">146</a></td>
       <td class="linebranch">
@@ -1565,560 +1846,34 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">    </span><span class="c1">// visible via Koenig lookup are both exposed in this function.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l147" href="#l147">147</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">    </span><span class="n">using</span><span class="w"> </span><span class="o">::</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">;</span><span class="w"></span></td>
+      <td class="src "><span class="w">    </span><span class="n">using</span><span class="w"> </span><span class="o">::</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">;</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l148" href="#l148">148</a></td>
       <td class="linebranch">
-        <details class="linebranchDetails">
-        <summary class="linebranchSummary">18/516</summary>
-        <div class="linebranchContents">
-          <div class="takenBranch">&check; Branch 1 taken 137 times.</div>
-          <div class="notTakenBranch">&cross; Branch 2 not taken.</div>
-          <div class="takenBranch">&check; Branch 4 taken 137 times.</div>
-          <div class="notTakenBranch">&cross; Branch 5 not taken.</div>
-          <div class="takenBranch">&check; Branch 7 taken 137 times.</div>
-          <div class="notTakenBranch">&cross; Branch 8 not taken.</div>
-          <div class="takenBranch">&check; Branch 10 taken 137 times.</div>
-          <div class="notTakenBranch">&cross; Branch 11 not taken.</div>
-          <div class="takenBranch">&check; Branch 13 taken 150 times.</div>
-          <div class="notTakenBranch">&cross; Branch 14 not taken.</div>
-          <div class="takenBranch">&check; Branch 16 taken 150 times.</div>
-          <div class="notTakenBranch">&cross; Branch 17 not taken.</div>
-          <div class="takenBranch">&check; Branch 19 taken 68 times.</div>
-          <div class="notTakenBranch">&cross; Branch 20 not taken.</div>
-          <div class="takenBranch">&check; Branch 22 taken 68 times.</div>
-          <div class="notTakenBranch">&cross; Branch 23 not taken.</div>
-          <div class="takenBranch">&check; Branch 25 taken 12 times.</div>
-          <div class="notTakenBranch">&cross; Branch 26 not taken.</div>
-          <div class="takenBranch">&check; Branch 28 taken 12 times.</div>
-          <div class="notTakenBranch">&cross; Branch 29 not taken.</div>
-          <div class="takenBranch">&check; Branch 31 taken 12 times.</div>
-          <div class="notTakenBranch">&cross; Branch 32 not taken.</div>
-          <div class="takenBranch">&check; Branch 34 taken 12 times.</div>
-          <div class="notTakenBranch">&cross; Branch 35 not taken.</div>
-          <div class="takenBranch">&check; Branch 37 taken 12 times.</div>
-          <div class="notTakenBranch">&cross; Branch 38 not taken.</div>
-          <div class="takenBranch">&check; Branch 40 taken 12 times.</div>
-          <div class="notTakenBranch">&cross; Branch 41 not taken.</div>
-          <div class="takenBranch">&check; Branch 43 taken 123 times.</div>
-          <div class="notTakenBranch">&cross; Branch 44 not taken.</div>
-          <div class="takenBranch">&check; Branch 46 taken 123 times.</div>
-          <div class="notTakenBranch">&cross; Branch 47 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 49 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 50 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 52 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 53 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 55 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 56 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 58 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 59 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 61 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 62 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 64 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 65 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 67 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 68 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 70 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 71 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 73 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 74 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 76 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 77 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 79 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 80 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 82 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 83 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 85 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 86 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 88 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 89 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 91 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 92 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 94 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 95 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 97 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 98 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 100 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 101 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 103 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 104 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 106 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 107 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 109 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 110 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 112 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 113 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 115 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 116 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 118 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 119 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 121 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 122 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 124 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 125 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 127 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 128 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 130 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 131 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 133 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 134 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 136 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 137 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 139 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 140 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 142 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 143 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 145 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 146 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 148 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 149 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 151 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 152 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 154 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 155 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 157 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 158 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 160 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 161 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 163 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 164 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 166 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 167 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 169 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 170 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 172 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 173 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 175 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 176 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 178 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 179 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 181 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 182 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 184 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 185 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 186 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 187 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 189 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 190 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 192 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 193 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 195 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 196 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 198 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 199 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 201 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 202 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 204 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 205 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 207 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 208 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 210 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 211 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 213 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 214 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 216 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 217 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 219 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 220 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 222 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 223 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 225 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 226 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 228 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 229 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 231 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 232 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 234 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 235 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 237 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 238 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 240 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 241 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 243 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 244 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 246 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 247 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 248 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 249 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 251 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 252 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 254 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 255 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 257 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 258 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 260 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 261 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 263 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 264 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 266 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 267 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 269 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 270 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 272 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 273 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 275 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 276 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 278 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 279 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 281 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 282 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 284 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 285 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 287 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 288 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 290 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 291 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 293 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 294 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 296 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 297 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 299 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 300 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 302 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 303 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 305 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 306 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 308 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 309 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 311 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 312 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 314 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 315 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 317 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 318 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 320 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 321 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 323 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 324 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 326 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 327 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 329 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 330 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 332 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 333 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 335 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 336 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 338 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 339 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 341 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 342 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 344 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 345 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 347 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 348 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 350 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 351 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 353 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 354 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 356 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 357 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 359 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 360 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 362 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 363 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 365 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 366 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 368 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 369 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 371 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 372 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 374 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 375 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 377 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 378 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 380 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 381 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 383 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 384 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 386 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 387 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 389 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 390 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 392 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 393 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 395 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 396 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 398 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 399 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 401 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 402 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 404 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 405 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 407 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 408 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 410 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 411 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 413 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 414 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 416 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 417 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 419 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 420 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 422 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 423 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 425 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 426 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 428 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 429 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 431 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 432 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 434 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 435 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 437 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 438 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 440 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 441 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 443 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 444 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 446 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 447 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 449 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 450 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 452 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 453 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 455 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 456 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 458 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 459 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 461 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 462 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 464 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 465 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 467 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 468 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 470 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 471 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 473 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 474 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 476 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 477 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 479 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 480 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 482 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 483 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 484 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 485 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 487 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 488 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 490 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 491 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 493 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 494 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 495 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 496 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 498 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 499 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 500 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 501 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 503 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 504 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 505 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 506 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 508 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 509 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 510 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 511 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 514 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 515 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 517 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 518 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 520 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 521 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 523 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 524 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 526 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 527 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 529 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 530 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 532 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 533 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 535 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 536 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 538 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 539 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 541 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 542 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 544 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 545 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 547 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 548 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 550 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 551 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 553 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 554 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 556 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 557 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 559 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 560 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 562 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 563 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 565 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 566 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 568 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 569 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 571 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 572 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 574 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 575 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 577 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 578 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 580 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 581 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 583 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 584 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 586 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 587 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 589 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 590 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 592 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 593 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 595 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 596 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 598 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 599 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 601 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 602 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 604 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 605 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 607 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 608 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 610 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 611 not taken.</div>
-          <div class="takenBranch">&check; Branch 613 taken 21 times.</div>
-          <div class="notTakenBranch">&cross; Branch 614 not taken.</div>
-          <div class="takenBranch">&check; Branch 616 taken 414 times.</div>
-          <div class="notTakenBranch">&cross; Branch 617 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 619 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 620 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 622 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 623 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 625 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 626 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 628 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 629 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 631 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 632 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 634 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 635 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 637 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 638 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 640 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 641 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 643 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 644 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 646 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 647 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 648 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 649 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 651 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 652 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 654 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 655 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 657 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 658 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 659 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 660 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 662 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 663 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 665 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 666 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 668 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 669 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 670 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 671 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 673 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 674 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 676 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 677 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 679 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 680 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 682 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 683 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 685 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 686 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 688 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 689 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 690 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 691 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 693 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 694 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 696 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 697 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 699 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 700 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 702 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 703 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 705 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 706 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 708 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 709 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 710 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 711 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 713 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 714 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 716 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 717 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 719 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 720 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 722 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 723 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 725 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 726 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 728 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 729 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 731 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 732 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 734 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 735 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 737 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 738 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 740 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 741 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 743 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 744 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 746 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 747 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 749 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 750 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 752 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 753 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 755 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 756 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 758 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 759 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 761 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 762 not taken.</div>
-        </div>
-        </details>
       </td>
-      <td class="linecount coveredLine">1520</td>
-      <td class="src coveredLine"><span class="w">    </span><span class="o">*</span><span class="n">ss_</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">val</span><span class="p">;</span><span class="w"></span></td>
+      <td class="linecount coveredLine">1597</td>
+      <td class="src coveredLine"><span class="w">    </span><span class="o">*</span><span class="n">ss_</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">val</span><span class="p">;</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l149" href="#l149">149</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">651</td>
-      <td class="src coveredLine"><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="o">*</span><span class="n">this</span><span class="p">;</span><span class="w"></span></td>
+      <td class="linecount coveredLine">1597</td>
+      <td class="src coveredLine"><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="o">*</span><span class="n">this</span><span class="p">;</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l150" href="#l150">150</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">  </span><span class="p">}</span><span class="w"></span></td>
+      <td class="src "><span class="w">  </span><span class="p">}</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l151" href="#l151">151</a></td>
       <td class="linebranch">
@@ -2126,7 +1881,6 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l152" href="#l152">152</a></td>
       <td class="linebranch">
@@ -2134,7 +1888,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="cp">#ifdef GTEST_HAS_ABSL</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l153" href="#l153">153</a></td>
       <td class="linebranch">
@@ -2142,7 +1895,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// Streams a non-pointer value with an AbslStringify definition to this</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l154" href="#l154">154</a></td>
       <td class="linebranch">
@@ -2150,15 +1902,13 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// object.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l155" href="#l155">155</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">  </span><span class="n">template</span><span class="w"> </span><span class="o">&lt;</span><span class="n">typename</span><span class="w"> </span><span class="n">T</span><span class="p">,</span><span class="w"></span></td>
+      <td class="src "><span class="w">  </span><span class="n">template</span><span class="w"> </span><span class="o">&lt;</span><span class="n">typename</span><span class="w"> </span><span class="n">T</span><span class="p">,</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l156" href="#l156">156</a></td>
       <td class="linebranch">
@@ -2166,23 +1916,20 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">            </span><span class="n">typename</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">enable_if</span><span class="o">&lt;</span><span class="n">absl</span><span class="o">::</span><span class="n">HasAbslStringify</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;::</span><span class="n">value</span><span class="p">,</span><span class="w">  </span><span class="c1">// NOLINT</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l157" href="#l157">157</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">                                    </span><span class="kt">int</span><span class="o">&gt;::</span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="o">&gt;</span><span class="w"></span></td>
+      <td class="src "><span class="w">                                    </span><span class="kt">int</span><span class="o">&gt;::</span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="o">&gt;</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l158" href="#l158">158</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">  </span><span class="kr">inline</span><span class="w"> </span><span class="n">Message</span><span class="o">&amp;</span><span class="w"> </span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">T</span><span class="o">&amp;</span><span class="w"> </span><span class="n">val</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span></td>
+      <td class="src "><span class="w">  </span><span class="kr">inline</span><span class="w"> </span><span class="n">Message</span><span class="o">&amp;</span><span class="w"> </span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">T</span><span class="o">&amp;</span><span class="w"> </span><span class="n">val</span><span class="p">)</span><span class="w"> </span><span class="p">{</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l159" href="#l159">159</a></td>
       <td class="linebranch">
@@ -2190,7 +1937,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">    </span><span class="c1">// ::operator&lt;&lt; is needed here for a similar reason as with the non-Abseil</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l160" href="#l160">160</a></td>
       <td class="linebranch">
@@ -2198,39 +1944,34 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">    </span><span class="c1">// version above</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l161" href="#l161">161</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">    </span><span class="n">using</span><span class="w"> </span><span class="o">::</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">;</span><span class="w"></span></td>
+      <td class="src "><span class="w">    </span><span class="n">using</span><span class="w"> </span><span class="o">::</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">;</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l162" href="#l162">162</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">    </span><span class="o">*</span><span class="n">ss_</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">absl</span><span class="o">::</span><span class="n">StrCat</span><span class="p">(</span><span class="n">val</span><span class="p">);</span><span class="w"></span></td>
+      <td class="src "><span class="w">    </span><span class="o">*</span><span class="n">ss_</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">absl</span><span class="o">::</span><span class="n">StrCat</span><span class="p">(</span><span class="n">val</span><span class="p">);</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l163" href="#l163">163</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="o">*</span><span class="n">this</span><span class="p">;</span><span class="w"></span></td>
+      <td class="src "><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="o">*</span><span class="n">this</span><span class="p">;</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l164" href="#l164">164</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">  </span><span class="p">}</span><span class="w"></span></td>
+      <td class="src "><span class="w">  </span><span class="p">}</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l165" href="#l165">165</a></td>
       <td class="linebranch">
@@ -2238,7 +1979,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="cp">#endif  </span><span class="c1">// GTEST_HAS_ABSL</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l166" href="#l166">166</a></td>
       <td class="linebranch">
@@ -2246,7 +1986,6 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l167" href="#l167">167</a></td>
       <td class="linebranch">
@@ -2254,7 +1993,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// Streams a pointer value to this object.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l168" href="#l168">168</a></td>
       <td class="linebranch">
@@ -2262,7 +2000,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">//</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l169" href="#l169">169</a></td>
       <td class="linebranch">
@@ -2270,7 +2007,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// This function is an overload of the previous one.  When you</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l170" href="#l170">170</a></td>
       <td class="linebranch">
@@ -2278,7 +2014,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// stream a pointer to a Message, this definition will be used as it</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l171" href="#l171">171</a></td>
       <td class="linebranch">
@@ -2286,7 +2021,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// is more specialized.  (The C++ Standard, section</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l172" href="#l172">172</a></td>
       <td class="linebranch">
@@ -2294,7 +2028,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// [temp.func.order].)  If you stream a non-pointer, then the</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l173" href="#l173">173</a></td>
       <td class="linebranch">
@@ -2302,7 +2035,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// previous definition will be used.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l174" href="#l174">174</a></td>
       <td class="linebranch">
@@ -2310,7 +2042,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">//</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l175" href="#l175">175</a></td>
       <td class="linebranch">
@@ -2318,7 +2049,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// The reason for this overload is that streaming a NULL pointer to</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l176" href="#l176">176</a></td>
       <td class="linebranch">
@@ -2326,7 +2056,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// ostream is undefined behavior.  Depending on the compiler, you</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l177" href="#l177">177</a></td>
       <td class="linebranch">
@@ -2334,7 +2063,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// may get &quot;0&quot;, &quot;(nil)&quot;, &quot;(null)&quot;, or an access violation.  To</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l178" href="#l178">178</a></td>
       <td class="linebranch">
@@ -2342,7 +2070,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// ensure consistent result across compilers, we always treat NULL</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l179" href="#l179">179</a></td>
       <td class="linebranch">
@@ -2350,86 +2077,78 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// as &quot;(null)&quot;.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l180" href="#l180">180</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">  </span><span class="n">template</span><span class="w"> </span><span class="o">&lt;</span><span class="n">typename</span><span class="w"> </span><span class="n">T</span><span class="o">&gt;</span><span class="w"></span></td>
+      <td class="src "><span class="w">  </span><span class="n">template</span><span class="w"> </span><span class="o">&lt;</span><span class="n">typename</span><span class="w"> </span><span class="n">T</span><span class="o">&gt;</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l181" href="#l181">181</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">44</td>
+      <td class="linecount coveredLine">22</td>
       <td class="src coveredLine"><span class="w">  </span><span class="kr">inline</span><span class="w"> </span><span class="n">Message</span><span class="o">&amp;</span><span class="w"> </span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">T</span><span class="o">*</span><span class="w"> </span><span class="k">const</span><span class="o">&amp;</span><span class="w"> </span><span class="n">pointer</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// NOLINT</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l182" href="#l182">182</a></td>
       <td class="linebranch">
         <details class="linebranchDetails">
-        <summary class="linebranchSummary">1/2</summary>
+        <summary class="linebranchSummary">2/4</summary>
         <div class="linebranchContents">
           <div class="notTakenBranch">&cross; Branch 0 not taken.</div>
-          <div class="takenBranch">&check; Branch 1 taken 22 times.</div>
+          <div class="takenBranch">&check; Branch 1 taken 21 times.</div>
+          <div class="notTakenBranch">&cross; Branch 2 not taken.</div>
+          <div class="takenBranch">&check; Branch 3 taken 1 times.</div>
         </div>
         </details>
       </td>
-      <td class="linecount coveredLine">44</td>
-      <td class="src coveredLine"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">pointer</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">nullptr</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span></td>
+      <td class="linecount coveredLine">22</td>
+      <td class="src coveredLine"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">pointer</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">nullptr</span><span class="p">)</span><span class="w"> </span><span class="p">{</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l183" href="#l183">183</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount uncoveredLine">&cross;</td>
-      <td class="src uncoveredLine"><span class="w">      </span><span class="o">*</span><span class="n">ss_</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;(null)&quot;</span><span class="p">;</span><span class="w"></span></td>
+      <td class="src uncoveredLine"><span class="w">      </span><span class="o">*</span><span class="n">ss_</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;(null)&quot;</span><span class="p">;</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l184" href="#l184">184</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount "></td>
-      <td class="src "><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span></td>
+      <td class="linecount uncoveredLine">&cross;</td>
+      <td class="src uncoveredLine"><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l185" href="#l185">185</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">44</td>
-      <td class="src coveredLine"><span class="w">      </span><span class="o">*</span><span class="n">ss_</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">pointer</span><span class="p">;</span><span class="w"></span></td>
+      <td class="linecount coveredLine">22</td>
+      <td class="src coveredLine"><span class="w">      </span><span class="o">*</span><span class="n">ss_</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">pointer</span><span class="p">;</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l186" href="#l186">186</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">    </span><span class="p">}</span><span class="w"></span></td>
+      <td class="src "><span class="w">    </span><span class="p">}</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l187" href="#l187">187</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">44</td>
-      <td class="src coveredLine"><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="o">*</span><span class="n">this</span><span class="p">;</span><span class="w"></span></td>
+      <td class="linecount coveredLine">22</td>
+      <td class="src coveredLine"><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="o">*</span><span class="n">this</span><span class="p">;</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l188" href="#l188">188</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">  </span><span class="p">}</span><span class="w"></span></td>
+      <td class="src "><span class="w">  </span><span class="p">}</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l189" href="#l189">189</a></td>
       <td class="linebranch">
@@ -2437,7 +2156,6 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l190" href="#l190">190</a></td>
       <td class="linebranch">
@@ -2445,7 +2163,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// Since the basic IO manipulators are overloaded for both narrow</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l191" href="#l191">191</a></td>
       <td class="linebranch">
@@ -2453,7 +2170,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// and wide streams, we have to provide this specialized definition</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l192" href="#l192">192</a></td>
       <td class="linebranch">
@@ -2461,7 +2177,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// of operator &lt;&lt;, even though its body is the same as the</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l193" href="#l193">193</a></td>
       <td class="linebranch">
@@ -2469,7 +2184,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// templatized version above.  Without this definition, streaming</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l194" href="#l194">194</a></td>
       <td class="linebranch">
@@ -2477,7 +2191,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// endl or other basic IO manipulators to Message will confuse the</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l195" href="#l195">195</a></td>
       <td class="linebranch">
@@ -2485,39 +2198,34 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// compiler.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l196" href="#l196">196</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">  </span><span class="n">Message</span><span class="o">&amp;</span><span class="w"> </span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">BasicNarrowIoManip</span><span class="w"> </span><span class="n">val</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span></td>
+      <td class="src "><span class="w">  </span><span class="n">Message</span><span class="o">&amp;</span><span class="w"> </span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">BasicNarrowIoManip</span><span class="w"> </span><span class="n">val</span><span class="p">)</span><span class="w"> </span><span class="p">{</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l197" href="#l197">197</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">    </span><span class="o">*</span><span class="n">ss_</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">val</span><span class="p">;</span><span class="w"></span></td>
+      <td class="src "><span class="w">    </span><span class="o">*</span><span class="n">ss_</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">val</span><span class="p">;</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l198" href="#l198">198</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="o">*</span><span class="n">this</span><span class="p">;</span><span class="w"></span></td>
+      <td class="src "><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="o">*</span><span class="n">this</span><span class="p">;</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l199" href="#l199">199</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">  </span><span class="p">}</span><span class="w"></span></td>
+      <td class="src "><span class="w">  </span><span class="p">}</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l200" href="#l200">200</a></td>
       <td class="linebranch">
@@ -2525,7 +2233,6 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l201" href="#l201">201</a></td>
       <td class="linebranch">
@@ -2533,15 +2240,13 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// Instead of 1/0, we want to see true/false for bool values.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l202" href="#l202">202</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">  </span><span class="n">Message</span><span class="o">&amp;</span><span class="w"> </span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="kt">bool</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="o">*</span><span class="n">this</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="p">(</span><span class="n">b</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s">&quot;true&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s">&quot;false&quot;</span><span class="p">);</span><span class="w"> </span><span class="p">}</span><span class="w"></span></td>
+      <td class="src "><span class="w">  </span><span class="n">Message</span><span class="o">&amp;</span><span class="w"> </span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="kt">bool</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="o">*</span><span class="n">this</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="p">(</span><span class="n">b</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s">&quot;true&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s">&quot;false&quot;</span><span class="p">);</span><span class="w"> </span><span class="p">}</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l203" href="#l203">203</a></td>
       <td class="linebranch">
@@ -2549,7 +2254,6 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l204" href="#l204">204</a></td>
       <td class="linebranch">
@@ -2557,7 +2261,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// These two overloads allow streaming a wide C string to a Message</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l205" href="#l205">205</a></td>
       <td class="linebranch">
@@ -2565,23 +2268,20 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// using the UTF-8 encoding.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l206" href="#l206">206</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">  </span><span class="n">Message</span><span class="o">&amp;</span><span class="w"> </span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">wchar_t</span><span class="o">*</span><span class="w"> </span><span class="n">wide_c_str</span><span class="p">);</span><span class="w"></span></td>
+      <td class="src "><span class="w">  </span><span class="n">Message</span><span class="o">&amp;</span><span class="w"> </span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">wchar_t</span><span class="o">*</span><span class="w"> </span><span class="n">wide_c_str</span><span class="p">);</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l207" href="#l207">207</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">  </span><span class="n">Message</span><span class="o">&amp;</span><span class="w"> </span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="kt">wchar_t</span><span class="o">*</span><span class="w"> </span><span class="n">wide_c_str</span><span class="p">);</span><span class="w"></span></td>
+      <td class="src "><span class="w">  </span><span class="n">Message</span><span class="o">&amp;</span><span class="w"> </span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="kt">wchar_t</span><span class="o">*</span><span class="w"> </span><span class="n">wide_c_str</span><span class="p">);</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l208" href="#l208">208</a></td>
       <td class="linebranch">
@@ -2589,7 +2289,6 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l209" href="#l209">209</a></td>
       <td class="linebranch">
@@ -2597,7 +2296,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="cp">#if GTEST_HAS_STD_WSTRING</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l210" href="#l210">210</a></td>
       <td class="linebranch">
@@ -2605,7 +2303,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// Converts the given wide string to a narrow string using the UTF-8</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l211" href="#l211">211</a></td>
       <td class="linebranch">
@@ -2613,15 +2310,13 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// encoding, and streams the result to this Message object.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l212" href="#l212">212</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">  </span><span class="n">Message</span><span class="o">&amp;</span><span class="w"> </span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="o">::</span><span class="n">std</span><span class="o">::</span><span class="n">wstring</span><span class="o">&amp;</span><span class="w"> </span><span class="n">wstr</span><span class="p">);</span><span class="w"></span></td>
+      <td class="src "><span class="w">  </span><span class="n">Message</span><span class="o">&amp;</span><span class="w"> </span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="o">::</span><span class="n">std</span><span class="o">::</span><span class="n">wstring</span><span class="o">&amp;</span><span class="w"> </span><span class="n">wstr</span><span class="p">);</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l213" href="#l213">213</a></td>
       <td class="linebranch">
@@ -2629,7 +2324,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="cp">#endif  </span><span class="c1">// GTEST_HAS_STD_WSTRING</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l214" href="#l214">214</a></td>
       <td class="linebranch">
@@ -2637,7 +2331,6 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l215" href="#l215">215</a></td>
       <td class="linebranch">
@@ -2645,7 +2338,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// Gets the text streamed to this object so far as an std::string.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l216" href="#l216">216</a></td>
       <td class="linebranch">
@@ -2653,7 +2345,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// Each &#39;\0&#39; character in the buffer is replaced with &quot;\\0&quot;.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l217" href="#l217">217</a></td>
       <td class="linebranch">
@@ -2661,7 +2352,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">//</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l218" href="#l218">218</a></td>
       <td class="linebranch">
@@ -2669,15 +2359,13 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// INTERNAL IMPLEMENTATION - DO NOT USE IN A USER PROGRAM.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l219" href="#l219">219</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="nf">GetString</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span><span class="w"></span></td>
+      <td class="src "><span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="nf">GetString</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l220" href="#l220">220</a></td>
       <td class="linebranch">
@@ -2685,15 +2373,13 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l221" href="#l221">221</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w"> </span><span class="n">private</span><span class="o">:</span><span class="w"></span></td>
+      <td class="src "><span class="w"> </span><span class="n">private</span><span class="o">:</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l222" href="#l222">222</a></td>
       <td class="linebranch">
@@ -2701,15 +2387,13 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// We&#39;ll hold the text streamed to this object here.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l223" href="#l223">223</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="w"> </span><span class="o">::</span><span class="n">std</span><span class="o">::</span><span class="n">stringstream</span><span class="o">&gt;</span><span class="w"> </span><span class="n">ss_</span><span class="p">;</span><span class="w"></span></td>
+      <td class="src "><span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="w"> </span><span class="o">::</span><span class="n">std</span><span class="o">::</span><span class="n">stringstream</span><span class="o">&gt;</span><span class="w"> </span><span class="n">ss_</span><span class="p">;</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l224" href="#l224">224</a></td>
       <td class="linebranch">
@@ -2717,7 +2401,6 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l225" href="#l225">225</a></td>
       <td class="linebranch">
@@ -2725,7 +2408,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// We declare (but don&#39;t implement) this to prevent the compiler</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l226" href="#l226">226</a></td>
       <td class="linebranch">
@@ -2733,23 +2415,20 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// from implementing the assignment operator.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l227" href="#l227">227</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="n">operator</span><span class="o">=</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Message</span><span class="o">&amp;</span><span class="p">);</span><span class="w"></span></td>
+      <td class="src "><span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="n">operator</span><span class="o">=</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Message</span><span class="o">&amp;</span><span class="p">);</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l228" href="#l228">228</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="p">};</span><span class="w"></span></td>
+      <td class="src "><span class="p">};</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l229" href="#l229">229</a></td>
       <td class="linebranch">
@@ -2757,7 +2436,6 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l230" href="#l230">230</a></td>
       <td class="linebranch">
@@ -2765,31 +2443,27 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// Streams a Message to an ostream.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l231" href="#l231">231</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount uncoveredLine">&cross;</td>
-      <td class="src uncoveredLine"><span class="kr">inline</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">ostream</span><span class="o">&amp;</span><span class="w"> </span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">ostream</span><span class="o">&amp;</span><span class="w"> </span><span class="n">os</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Message</span><span class="o">&amp;</span><span class="w"> </span><span class="n">sb</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span></td>
+      <td class="src uncoveredLine"><span class="kr">inline</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">ostream</span><span class="o">&amp;</span><span class="w"> </span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">ostream</span><span class="o">&amp;</span><span class="w"> </span><span class="n">os</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Message</span><span class="o">&amp;</span><span class="w"> </span><span class="n">sb</span><span class="p">)</span><span class="w"> </span><span class="p">{</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l232" href="#l232">232</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount uncoveredLine">&cross;</td>
-      <td class="src uncoveredLine"><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">os</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">sb</span><span class="p">.</span><span class="n">GetString</span><span class="p">();</span><span class="w"></span></td>
+      <td class="src uncoveredLine"><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">os</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">sb</span><span class="p">.</span><span class="n">GetString</span><span class="p">();</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l233" href="#l233">233</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount "></td>
-      <td class="src "><span class="p">}</span><span class="w"></span></td>
+      <td class="linecount uncoveredLine">&cross;</td>
+      <td class="src uncoveredLine"><span class="p">}</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l234" href="#l234">234</a></td>
       <td class="linebranch">
@@ -2797,15 +2471,13 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l235" href="#l235">235</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="n">namespace</span><span class="w"> </span><span class="n">internal</span><span class="w"> </span><span class="p">{</span><span class="w"></span></td>
+      <td class="src "><span class="n">namespace</span><span class="w"> </span><span class="n">internal</span><span class="w"> </span><span class="p">{</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l236" href="#l236">236</a></td>
       <td class="linebranch">
@@ -2813,7 +2485,6 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l237" href="#l237">237</a></td>
       <td class="linebranch">
@@ -2821,7 +2492,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// Converts a streamable value to an std::string.  A NULL pointer is</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l238" href="#l238">238</a></td>
       <td class="linebranch">
@@ -2829,7 +2499,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// converted to &quot;(null)&quot;.  When the input value is a ::string,</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l239" href="#l239">239</a></td>
       <td class="linebranch">
@@ -2837,7 +2506,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// ::std::string, ::wstring, or ::std::wstring object, each NUL</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l240" href="#l240">240</a></td>
       <td class="linebranch">
@@ -2845,39 +2513,34 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// character in it is replaced with &quot;\\0&quot;.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l241" href="#l241">241</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="n">template</span><span class="w"> </span><span class="o">&lt;</span><span class="n">typename</span><span class="w"> </span><span class="n">T</span><span class="o">&gt;</span><span class="w"></span></td>
+      <td class="src "><span class="n">template</span><span class="w"> </span><span class="o">&lt;</span><span class="n">typename</span><span class="w"> </span><span class="n">T</span><span class="o">&gt;</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l242" href="#l242">242</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount coveredLine">295</td>
-      <td class="src coveredLine"><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">StreamableToString</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">T</span><span class="o">&amp;</span><span class="w"> </span><span class="n">streamable</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span></td>
+      <td class="src coveredLine"><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">StreamableToString</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">T</span><span class="o">&amp;</span><span class="w"> </span><span class="n">streamable</span><span class="p">)</span><span class="w"> </span><span class="p">{</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l243" href="#l243">243</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">590</td>
-      <td class="src coveredLine"><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="n">Message</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">streamable</span><span class="p">).</span><span class="n">GetString</span><span class="p">();</span><span class="w"></span></td>
+      <td class="linecount coveredLine">295</td>
+      <td class="src coveredLine"><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="n">Message</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">streamable</span><span class="p">).</span><span class="n">GetString</span><span class="p">();</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l244" href="#l244">244</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount "></td>
-      <td class="src "><span class="p">}</span><span class="w"></span></td>
+      <td class="linecount uncoveredLine">&cross;</td>
+      <td class="src uncoveredLine"><span class="p">}</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l245" href="#l245">245</a></td>
       <td class="linebranch">
@@ -2885,7 +2548,6 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l246" href="#l246">246</a></td>
       <td class="linebranch">
@@ -2893,7 +2555,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="p">}</span><span class="w">  </span><span class="c1">// namespace internal</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l247" href="#l247">247</a></td>
       <td class="linebranch">
@@ -2901,7 +2562,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="p">}</span><span class="w">  </span><span class="c1">// namespace testing</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l248" href="#l248">248</a></td>
       <td class="linebranch">
@@ -2909,7 +2569,6 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l249" href="#l249">249</a></td>
       <td class="linebranch">
@@ -2917,7 +2576,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="n">GTEST_DISABLE_MSC_WARNINGS_POP_</span><span class="p">()</span><span class="w">  </span><span class="c1">//  4251</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l250" href="#l250">250</a></td>
       <td class="linebranch">
@@ -2925,7 +2583,6 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l251" href="#l251">251</a></td>
       <td class="linebranch">
@@ -2933,7 +2590,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="cp">#endif  </span><span class="c1">// GOOGLETEST_INCLUDE_GTEST_GTEST_MESSAGE_H_</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l252" href="#l252">252</a></td>
       <td class="linebranch">
@@ -2941,14 +2597,13 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
   </table>
 </div>
-
-    <hr/>
+      <hr/>
+    </main>
 
     <footer>
-      Generated by: <a href="http://gcovr.com">GCOVR (Version 5.0)</a>
+      Generated by: <a href="http://gcovr.com/en/6.0">GCOVR (Version 6.0)</a>
     </footer>
   </body>
 </html>

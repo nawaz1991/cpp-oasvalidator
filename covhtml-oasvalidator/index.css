@@ -1,30 +1,13 @@
 :root {
     font-family: sans-serif;
-    --tab_size: 4;
-}
-
-.theme-green, .theme-blue {
-    --unknown_color: lightgray;
+    --unknown_color: LightGray;
     --low_color: #FF6666;
     --medium_color: #F9FD63;
     --high_color: #85E485;
     --covered_color: #85E485;
     --uncovered_color: #FF8C8C;
-    --excluded_color: #53BFFD;
-    --warning_color: orangered;
-    --takenBranch_color: green;
-    --notTakenBranch_color: red;
-    --takenDecision_color: green;
-    --uncheckedDecision_color: darkorange;
-    --notTakenDecision_color: red;
-    --invokedCall_color: green;
-    --notInvokedCall_color: red;
-}
-
-.theme-blue {
-    --high_color: #66B4FF;
-    --covered_color: #66B4Ff;
-    --takenBranch_color: blue;
+    --takenBranch_color: Green;
+    --notTakenBranch_color: Red;
 }
 
 body
@@ -110,11 +93,6 @@ table.legend td.legend
     font-size: 80%;
 }
 
-table.legend td.warning_text
-{
-    color: var(--warning_color);
-}
-
 table.coverage td,
 table.coverage th
 {
@@ -162,8 +140,7 @@ table.legend span.coverage-high
 }
 
 table.legend span.coverage-unknown,
-table.coverage td.coverage-unknown,
-table.file-list td.coverage-unknow
+table.coverage td.coverage-unknown
 {
     background-color: var(--unknown_color) !important;
 }
@@ -171,26 +148,24 @@ table.file-list td.coverage-unknow
 table.legend span.coverage-none,
 table.legend span.coverage-low,
 table.coverage td.coverage-none,
-table.coverage td.coverage-low,
-table.file-list td.coverage-none,
-table.file-list td.coverage-low
+table.coverage td.coverage-low
 {
     background-color: var(--low_color) !important;
 }
 
 table.legend span.coverage-medium,
-table.coverage td.coverage-medium,
-table.file-list td.coverage-medium
+table.coverage td.coverage-medium
 {
     background-color: var(--medium_color) !important;
 }
 
 table.legend span.coverage-high,
-table.coverage td.coverage-high,
-table.file-list td.coverage-high
+table.coverage td.coverage-high
 {
     background-color: var(--high_color) !important;
 }
+
+
 /*** End of Summary formats ***/
 /*** Meter formats ***/
 
@@ -331,13 +306,7 @@ span.uncoveredLine
     background-color: var(--uncovered_color) !important;
 }
 
-td.excludedLine,
-span.excludedLine
-{
-    background-color: var(--excluded_color) !important;
-}
-
-.linebranch, .linedecision, .linecall, .linecount
+.linebranch, .linecount
 {
     font-family: monospace;
     border-right: 1px gray solid;
@@ -345,16 +314,15 @@ span.excludedLine
     text-align: right;
 }
 
-
-.linebranchDetails, .linedecisionDetails, .linecallDetails
+.linebranchDetails
 {
     position: relative;
 }
-.linebranchSummary, .linedecisionSummary, .linecallSummary
+.linebranchSummary
 {
     cursor: help;
 }
-.linebranchContents, .linedecisionContents, .linecallContents
+.linebranchContents
 {
     font-family: sans-serif;
     font-size: small;
@@ -378,31 +346,6 @@ span.excludedLine
     color: var(--notTakenBranch_color) !important;
 }
 
-.takenDecision
-{
-    color: var(--takenDecision_color) !important;
-}
-
-.notTakenDecision
-{
-    color: var(--notTakenDecision_color) !important;
-}
-
-.uncheckedDecision
-{
-    color: var(--uncheckedDecision_color) !important;
-}
-
-.invokedCall
-{
-    color: var(--invokedCall_color) !important;
-}
-
-.notInvokedCall
-{
-    color: var(--notInvokedCall_color) !important;
-}
-
 .src
 {
     padding-left: 12px;
@@ -416,10 +359,7 @@ span.excludedLine
 }
 
 span.takenBranch,
-span.notTakenBranch,
-span.takenDecision,
-span.notTakenDecision,
-span.uncheckedDecision
+span.notTakenBranch
 {
     font-family: monospace;
     font-weight: bold;
@@ -430,31 +370,6 @@ pre
     height : 15px;
     margin-top: 0;
     margin-bottom: 0;
-}
-
-.listOfFunctions td, .listOfFunctions th {
-    padding: 0 10px;
-}
-.listOfFunctions th
-{
-    text-align: center;
-    color: white;
-    background-color: SteelBlue;
-}
-.listOfFunctions tr > td {
-    background: aliceblue;
-}
-.listOfFunctions tr:nth-child(even) > td {
-    background: LightSteelBlue
-}
-.listOfFunctions tr:hover > td
-{
-    background-color: #ddd;
-}
-.listOfFunctions tr > td > a
-{
-    text-decoration: none;
-    color: inherit;
 }
 
 .source-line
@@ -533,7 +448,6 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 .cs { color: #3D7B7B; font-style: italic } /* Comment.Special */
 .gd { color: #A00000 } /* Generic.Deleted */
 .ge { font-style: italic } /* Generic.Emph */
-.ges { font-weight: bold; font-style: italic } /* Generic.EmphStrong */
 .gr { color: #E40000 } /* Generic.Error */
 .gh { color: #000080; font-weight: bold } /* Generic.Heading */
 .gi { color: #008400 } /* Generic.Inserted */

@@ -1,13 +1,11 @@
-project(${PROJECT_NAME}-perftests)
-
-find_package(benchmark REQUIRED)
+project(${PROJECT_NAME}-perftests LANGUAGES CXX)
 
 file(GLOB_RECURSE SOURCES "src/*.cpp")
 include_directories(${CMAKE_SOURCE_DIR}/include)
 add_executable(${PROJECT_NAME} ${SOURCES})
 
 target_link_libraries(${PROJECT_NAME}
-        benchmark::benchmark
+        benchmark
         oasvalidator
 )
 

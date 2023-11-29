@@ -1,19 +1,21 @@
-name: Build
+name: Mac Build
 
 on:
   push:
-    branches: [ main ]
+    branches:
+    - main
+    #- '**'
   pull_request:
     branches: [ main ]
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
 
     steps:
       - uses: actions/checkout@v4
         with:
-          submodules: 'recursive'
+          submodules: 'true'
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -22,47 +24,27 @@ jobs:
 
       - name: Install dependencies
         run: |
-          sudo apt-get update
-          sudo apt-get install -y gcc g++ cmake  lcov gcovr 
-          sudo apt-get install -yq doxygen
+          brew install cmake
+          brew install ccache
+          brew install doxygen
+          brew install lcov
+          brew install gcovr
 
       - name: Install python dependencies
         run: |
-          pip3 install sphinx breathe exhale furo sphinxcontrib-plantuml
-
-      - name: Install google test
-        run: |          
-          sudo apt-get install -y libgtest-dev
-          cd /usr/src/gtest
-          sudo cmake CMakeLists.txt
-          sudo make
-          sudo cp ./lib/libgtest*.a /usr/lib
-
-      - name: Clone libbenchmark
-        run: git clone https://github.com/google/benchmark.git
-
-      - name: Build libbenchmark
-        run: |
-          cd benchmark
-          cmake -E make_directory "build"
-          cmake -E chdir "build" cmake -DBENCHMARK_DOWNLOAD_DEPENDENCIES=on -DCMAKE_BUILD_TYPE=Release ../
-          cmake --build "build" --config Release -- -j $(nproc)
-
-      - name: Install libbenchmark
-        run: sudo cmake --build "build" --target install --config Release
-        working-directory: ./benchmark
+          pip install sphinx breathe exhale furo sphinxcontrib-plantuml
 
       - name: Configure CMake
         run: cmake -S . -B build -DBUILD_TESTS=ON -DBUILD_COVERAGE=ON -DBUILD_PERF=ON -DBUILD_DOCS=ON -DBUILD_EXAMPLE=ON
 
       - name: Build oasvalidator
-        run: cmake --build build --target oasvalidator --config Release -j $(nproc)
+        run: cmake --build build --target oasvalidator --config Release
 
       - name: Build oasvalidator-unittests
-        run: cmake --build build --target oasvalidator-unittests --config Release -j $(nproc)
+        run: cmake --build build --target oasvalidator-unittests --config Release
 
       - name: Build oasvalidator-perftests
-        run: cmake --build build --target oasvalidator-perftests --config Release -j $(nproc)
+        run: cmake --build build --target oasvalidator-perftests --config Release
 
       - name: Run oasvalidator-perftests
         run: build/test/perftest/oasvalidator-perftests --benchmark_format=json > build/test/perftest/benchmark.json
@@ -71,7 +53,7 @@ jobs:
         run: python .github/workflows/convert_json_to_rst.py build/test/perftest/benchmark.json build/docs/benchmark.rst
 
       - name: Build covhtml-oasvalidator
-        run: cmake --build build --target covhtml-oasvalidator --config Release -j $(nproc)
+        run: cmake --build build --target covhtml-oasvalidator --config Release
 
       - name: Set up JDK 21
         uses: actions/setup-java@v3
@@ -81,11 +63,10 @@ jobs:
 
       - name: Install PlantUML
         run: |
-          sudo apt-get update
-          sudo apt-get install -y plantuml
+          brew install plantuml
 
       - name: Build docs
-        run: cmake --build build --target docs --config Release -j $(nproc)
+        run: cmake --build build --target docs --config Release
 
       - name: Copy covhtml-oasvalidator to docs
         run: cp -r build/covhtml-oasvalidator build/docs/html

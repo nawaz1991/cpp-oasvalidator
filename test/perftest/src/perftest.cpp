@@ -13,15 +13,25 @@
 class OASValidatorPerf: public ::benchmark::Fixture
 {
 public:
-    OASValidatorPerf()
+    void SetUp(benchmark::State&) override
     {
         validator = std::make_unique<OASValidator>(SPEC_PATH);
+    }
+
+    OASValidatorPerf()
+        : ::benchmark::Fixture()
+    {
         constexpr static double K_MIN_WARM_UP_TIME = 5.0;
         constexpr static double K_MIN_TIME = 3.50;
         SetDefaultTimeUnit(::benchmark::kMicrosecond);
         MinWarmUpTime(K_MIN_WARM_UP_TIME);
         MinTime(K_MIN_TIME);
-    }
+	}
+
+    void TearDown(benchmark::State&) override
+    {
+		validator.reset();
+	}
 
     std::unique_ptr<OASValidator> validator;
 };

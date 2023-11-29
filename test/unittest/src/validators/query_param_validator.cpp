@@ -68,7 +68,7 @@ TEST_P(QueryPrimitiveParam, ValidateParam)
     }
 }
 
-INSTANTIATE_TEST_CASE_P(QueryPrimitiveParamTests, QueryPrimitiveParam,
+INSTANTIATE_TEST_SUITE_P(QueryPrimitiveParamTests, QueryPrimitiveParam,
                         ::testing::Values(std::make_tuple("param=123", "form", false, "integer", ValidationError::NONE),
                                           std::make_tuple("param=123", "form", true, "integer", ValidationError::NONE),
                                           std::make_tuple("param=123.123", "form", false, "number", ValidationError::NONE),
@@ -144,7 +144,7 @@ TEST_P(QueryArrayParam, ValidateParam)
     }
 }
 
-INSTANTIATE_TEST_CASE_P(QueryArrayParamTests, QueryArrayParam,
+INSTANTIATE_TEST_SUITE_P(QueryArrayParamTests, QueryArrayParam,
                         ::testing::Values(std::make_tuple("param=3,4,5", "form", false, "integer", ValidationError::NONE),
                                           std::make_tuple("param=3&param=4&param=5", "form", true, "integer", ValidationError::NONE),
                                           std::make_tuple("param=3.3,4.4,5.5", "form", false, "number", ValidationError::NONE),
@@ -247,7 +247,7 @@ TEST_P(QueryObjectParam, ValidateParam)
     }
 }
 
-INSTANTIATE_TEST_CASE_P(QueryObjectParamTests, QueryObjectParam,
+INSTANTIATE_TEST_SUITE_P(QueryObjectParamTests, QueryObjectParam,
                         ::testing::Values(std::make_tuple("param=boolTrue,true,boolFalse,false,int,123,number,123.456,string,abc%20xyz", "form", false, ValidationError::NONE),
                                           std::make_tuple("boolTrue=true&boolFalse=false&int=123&number=123.456&string=abc%20xyz", "form", true, ValidationError::NONE),
                                           std::make_tuple("param[boolTrue]=true&param[boolFalse]=false&param[int]=123&param[number]=123.456&param[string]=abc%20xyz", "deepObject",

@@ -5,7 +5,7 @@ set(HTML_DOCS_TARGET docs)
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR})
 
 find_package(Doxygen REQUIRED)
-find_package(Sphinx REQUIRED breathe exhale)
+find_package(Sphinx REQUIRED)
 
 string(REPLACE "-" "--" PROJECT_BADGE_NAME ${PROJECT_NAME})
 set(PROJECT_BADGE_COLOR "fedd2d")

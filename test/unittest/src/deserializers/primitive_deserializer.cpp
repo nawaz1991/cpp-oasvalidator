@@ -55,7 +55,7 @@ TEST_P(PrimitiveDeserializerTest, Deserialize)
     }
 }
 
-INSTANTIATE_TEST_CASE_P(
+INSTANTIATE_TEST_SUITE_P(
     PrimitiveDeserializerTests, PrimitiveDeserializerTest,
     ::testing::Values(
         std::make_tuple("true", PrimitiveType::BOOLEAN, "true", '\0', false, false), std::make_tuple("123", PrimitiveType::INTEGER, "123", '\0', false, false),

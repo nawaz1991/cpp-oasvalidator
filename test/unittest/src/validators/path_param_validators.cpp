@@ -70,7 +70,7 @@ TEST_P(PathPrimitiveParam, ValidateParam)
     }
 }
 
-INSTANTIATE_TEST_CASE_P(
+INSTANTIATE_TEST_SUITE_P(
     PathParamValidatorTests, PathPrimitiveParam,
     ::testing::Values(
         std::make_tuple("true", "simple", false, "boolean", ValidationError::NONE), std::make_tuple("true", "simple", true, "boolean", ValidationError::NONE),
@@ -150,7 +150,7 @@ TEST_P(PathArrayParam, ValidateParam)
     }
 }
 
-INSTANTIATE_TEST_CASE_P(
+INSTANTIATE_TEST_SUITE_P(
     PathParamValidatorTests, PathArrayParam,
     ::testing::Values(
         std::make_tuple("true,false", "simple", false, "boolean", ValidationError::NONE), std::make_tuple("true,false", "simple", true, "boolean", ValidationError::NONE),
@@ -250,7 +250,7 @@ TEST_P(PathObjectParam, ValidateParam)
     }
 }
 
-INSTANTIATE_TEST_CASE_P(
+INSTANTIATE_TEST_SUITE_P(
     PathParamValidatorTests, PathObjectParam,
     ::testing::Values(std::make_tuple("boolTrue,true,boolFalse,false,int,123,number,123.456,string,abc%20xyz", "simple", false, ValidationError::NONE),
                       std::make_tuple("boolTrue=true,boolFalse=false,int=123,number=123.456,string=abc%20xyz", "simple", true, ValidationError::NONE),

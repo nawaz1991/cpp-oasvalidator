@@ -1,19 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html class="theme-green">
 
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <title>GCC Code Coverage Report</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index.css"/>
   </head>
 
   <body>
-    <h1>GCC Code Coverage Report</h1>
+    <header>
+      <h1>GCC Code Coverage Report</h1>
 
-    <hr/>
+      <hr/>
 
-    <div class="summary">
+      <div class="summary">
 <div>
   <table class="legend">
     <tr>
@@ -26,7 +27,7 @@
     </tr>
     <tr>
       <th scope="row">Date:</th>
-      <td>2023-11-29 07:16:40</td>
+      <td>2023-11-29 07:16:05</td>
     </tr>
   </table>
 </div>
@@ -40,9 +41,15 @@
     </tr>
     <tr>
       <th scope="row">Lines:</th>
-      <td>16</td>
-      <td>51</td>
-      <td class="coverage-low">31.4%</td>
+      <td>18</td>
+      <td>55</td>
+      <td class="coverage-low">32.7%</td>
+    </tr>
+    <tr>
+      <th scope="row">Functions:</th>
+      <td>2</td>
+      <td>2</td>
+      <td class="coverage-high">100.0%</td>
     </tr>
     <tr>
       <th scope="row">Branches:</th>
@@ -52,10 +59,48 @@
     </tr>
   </table>
 </div>
-    </div>
+      </div>
 
-    <hr/>
+      <hr/>
+    </header>
 
+    <nav>
+<details>
+  <summary>List of functions</summary>
+  <table class="listOfFunctions">
+    <tr>
+      <th>Function</th>
+      <th>Line</th>
+      <th>Call count</th>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l36">rapidjson::GetParseError_En(rapidjson::ParseErrorCode)</a>
+      </td>
+      <td>
+        <a href="#l36">36</a>
+      </td>
+      <td>
+        <a href="#l36"> called 3 times</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l76">rapidjson::GetValidateError_En(rapidjson::ValidateErrorCode)</a>
+      </td>
+      <td>
+        <a href="#l76">76</a>
+      </td>
+      <td>
+        <a href="#l76"> called 14 times</a>
+      </td>
+    </tr>
+  </table>
+</details>
+
+    </nav>
+
+    <main>
 <div class="file-source">
   <table>
     <tr>
@@ -64,8 +109,6 @@
       <th align="right">Exec</th>
       <th align="left">Source</th>
     </tr>
-
-
     <tr class="source-line">
       <td class="lineno"><a id="l1" href="#l1">1</a></td>
       <td class="linebranch">
@@ -73,7 +116,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// Tencent is pleased to support the open source community by making RapidJSON available.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l2" href="#l2">2</a></td>
       <td class="linebranch">
@@ -81,7 +123,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">//</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l3" href="#l3">3</a></td>
       <td class="linebranch">
@@ -89,7 +130,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// Copyright (C) 2015 THL A29 Limited, a Tencent company, and Milo Yip.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l4" href="#l4">4</a></td>
       <td class="linebranch">
@@ -97,7 +137,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">//</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l5" href="#l5">5</a></td>
       <td class="linebranch">
@@ -105,7 +144,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// Licensed under the MIT License (the &quot;License&quot;); you may not use this file except</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l6" href="#l6">6</a></td>
       <td class="linebranch">
@@ -113,7 +151,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// in compliance with the License. You may obtain a copy of the License at</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l7" href="#l7">7</a></td>
       <td class="linebranch">
@@ -121,7 +158,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">//</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l8" href="#l8">8</a></td>
       <td class="linebranch">
@@ -129,7 +165,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// http://opensource.org/licenses/MIT</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l9" href="#l9">9</a></td>
       <td class="linebranch">
@@ -137,7 +172,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">//</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l10" href="#l10">10</a></td>
       <td class="linebranch">
@@ -145,7 +179,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// Unless required by applicable law or agreed to in writing, software distributed</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l11" href="#l11">11</a></td>
       <td class="linebranch">
@@ -153,7 +186,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l12" href="#l12">12</a></td>
       <td class="linebranch">
@@ -161,7 +193,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// CONDITIONS OF ANY KIND, either express or implied. See the License for the</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l13" href="#l13">13</a></td>
       <td class="linebranch">
@@ -169,7 +200,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// specific language governing permissions and limitations under the License.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l14" href="#l14">14</a></td>
       <td class="linebranch">
@@ -177,7 +207,6 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l15" href="#l15">15</a></td>
       <td class="linebranch">
@@ -185,7 +214,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="cp">#ifndef RAPIDJSON_ERROR_EN_H_</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l16" href="#l16">16</a></td>
       <td class="linebranch">
@@ -193,7 +221,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="cp">#define RAPIDJSON_ERROR_EN_H_</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l17" href="#l17">17</a></td>
       <td class="linebranch">
@@ -201,15 +228,13 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l18" href="#l18">18</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;error.h&quot;</span><span class="cp"></span></td>
+      <td class="src "><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;error.h&quot;</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l19" href="#l19">19</a></td>
       <td class="linebranch">
@@ -217,7 +242,6 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l20" href="#l20">20</a></td>
       <td class="linebranch">
@@ -225,31 +249,27 @@
       <td class="linecount "></td>
       <td class="src "><span class="cp">#ifdef __clang__</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l21" href="#l21">21</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="n">RAPIDJSON_DIAG_PUSH</span><span class="w"></span></td>
+      <td class="src "><span class="n">RAPIDJSON_DIAG_PUSH</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l22" href="#l22">22</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="nf">RAPIDJSON_DIAG_OFF</span><span class="p">(</span><span class="k">switch</span><span class="o">-</span><span class="k">enum</span><span class="p">)</span><span class="w"></span></td>
+      <td class="src "><span class="n">RAPIDJSON_DIAG_OFF</span><span class="p">(</span><span class="k">switch</span><span class="o">-</span><span class="k">enum</span><span class="p">)</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l23" href="#l23">23</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="n">RAPIDJSON_DIAG_OFF</span><span class="p">(</span><span class="n">covered</span><span class="o">-</span><span class="k">switch</span><span class="o">-</span><span class="k">default</span><span class="p">)</span><span class="w"></span></td>
+      <td class="src "><span class="n">RAPIDJSON_DIAG_OFF</span><span class="p">(</span><span class="n">covered</span><span class="o">-</span><span class="k">switch</span><span class="o">-</span><span class="k">default</span><span class="p">)</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l24" href="#l24">24</a></td>
       <td class="linebranch">
@@ -257,7 +277,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="cp">#endif</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l25" href="#l25">25</a></td>
       <td class="linebranch">
@@ -265,15 +284,13 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l26" href="#l26">26</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="n">RAPIDJSON_NAMESPACE_BEGIN</span><span class="w"></span></td>
+      <td class="src "><span class="n">RAPIDJSON_NAMESPACE_BEGIN</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l27" href="#l27">27</a></td>
       <td class="linebranch">
@@ -281,7 +298,6 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l28" href="#l28">28</a></td>
       <td class="linebranch">
@@ -289,7 +305,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">//! Maps error code of parsing into error message.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l29" href="#l29">29</a></td>
       <td class="linebranch">
@@ -297,7 +312,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="cm">/*!</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l30" href="#l30">30</a></td>
       <td class="linebranch">
@@ -305,7 +319,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="cm">    \ingroup RAPIDJSON_ERRORS</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l31" href="#l31">31</a></td>
       <td class="linebranch">
@@ -313,7 +326,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="cm">    \param parseErrorCode Error code obtained in parsing.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l32" href="#l32">32</a></td>
       <td class="linebranch">
@@ -321,7 +333,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="cm">    \return the error message.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l33" href="#l33">33</a></td>
       <td class="linebranch">
@@ -329,7 +340,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="cm">    \note User can make a copy of this function for localization.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l34" href="#l34">34</a></td>
       <td class="linebranch">
@@ -337,23 +347,20 @@
       <td class="linecount "></td>
       <td class="src "><span class="cm">        Using switch-case is safer for future modification of error codes.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l35" href="#l35">35</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">*/</span><span class="w"></span></td>
+      <td class="src "><span class="cm">*/</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l36" href="#l36">36</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount coveredLine">3</td>
-      <td class="src coveredLine"><span class="kr">inline</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_CHARTYPE</span><span class="o">*</span><span class="w"> </span><span class="n">GetParseError_En</span><span class="p">(</span><span class="n">ParseErrorCode</span><span class="w"> </span><span class="n">parseErrorCode</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span></td>
+      <td class="src coveredLine"><span class="kr">inline</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_CHARTYPE</span><span class="o">*</span><span class="w"> </span><span class="n">GetParseError_En</span><span class="p">(</span><span class="n">ParseErrorCode</span><span class="w"> </span><span class="n">parseErrorCode</span><span class="p">)</span><span class="w"> </span><span class="p">{</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l37" href="#l37">37</a></td>
       <td class="linebranch">
@@ -361,12 +368,12 @@
         <summary class="linebranchSummary">3/19</summary>
         <div class="linebranchContents">
           <div class="notTakenBranch">&cross; Branch 0 not taken.</div>
-          <div class="takenBranch">&check; Branch 1 taken 1 times.</div>
+          <div class="notTakenBranch">&cross; Branch 1 not taken.</div>
           <div class="takenBranch">&check; Branch 2 taken 1 times.</div>
-          <div class="notTakenBranch">&cross; Branch 3 not taken.</div>
+          <div class="takenBranch">&check; Branch 3 taken 1 times.</div>
           <div class="notTakenBranch">&cross; Branch 4 not taken.</div>
-          <div class="takenBranch">&check; Branch 5 taken 1 times.</div>
-          <div class="notTakenBranch">&cross; Branch 6 not taken.</div>
+          <div class="notTakenBranch">&cross; Branch 5 not taken.</div>
+          <div class="takenBranch">&check; Branch 6 taken 1 times.</div>
           <div class="notTakenBranch">&cross; Branch 7 not taken.</div>
           <div class="notTakenBranch">&cross; Branch 8 not taken.</div>
           <div class="notTakenBranch">&cross; Branch 9 not taken.</div>
@@ -383,17 +390,15 @@
         </details>
       </td>
       <td class="linecount coveredLine">3</td>
-      <td class="src coveredLine"><span class="w">    </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">parseErrorCode</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span></td>
+      <td class="src coveredLine"><span class="w">    </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">parseErrorCode</span><span class="p">)</span><span class="w"> </span><span class="p">{</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l38" href="#l38">38</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount "></td>
-      <td class="src "><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nl">kParseErrorNone</span><span class="p">:</span><span class="w">                           </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;No error.&quot;</span><span class="p">);</span><span class="w"></span></td>
+      <td class="linecount uncoveredLine">&cross;</td>
+      <td class="src uncoveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">kParseErrorNone</span><span class="p">:</span><span class="w">                           </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;No error.&quot;</span><span class="p">);</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l39" href="#l39">39</a></td>
       <td class="linebranch">
@@ -401,23 +406,20 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l40" href="#l40">40</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount uncoveredLine">&cross;</td>
-      <td class="src uncoveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nl">kParseErrorDocumentEmpty</span><span class="p">:</span><span class="w">                  </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;The document is empty.&quot;</span><span class="p">);</span><span class="w"></span></td>
+      <td class="src uncoveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">kParseErrorDocumentEmpty</span><span class="p">:</span><span class="w">                  </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;The document is empty.&quot;</span><span class="p">);</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l41" href="#l41">41</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount coveredLine">1</td>
-      <td class="src coveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nl">kParseErrorDocumentRootNotSingular</span><span class="p">:</span><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;The document root must not be followed by other values.&quot;</span><span class="p">);</span><span class="w"></span></td>
+      <td class="src coveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">kParseErrorDocumentRootNotSingular</span><span class="p">:</span><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;The document root must not be followed by other values.&quot;</span><span class="p">);</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l42" href="#l42">42</a></td>
       <td class="linebranch">
@@ -425,15 +427,13 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l43" href="#l43">43</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount coveredLine">1</td>
-      <td class="src coveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nl">kParseErrorValueInvalid</span><span class="p">:</span><span class="w">                   </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Invalid value.&quot;</span><span class="p">);</span><span class="w"></span></td>
+      <td class="src coveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">kParseErrorValueInvalid</span><span class="p">:</span><span class="w">                   </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Invalid value.&quot;</span><span class="p">);</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l44" href="#l44">44</a></td>
       <td class="linebranch">
@@ -441,31 +441,27 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l45" href="#l45">45</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount uncoveredLine">&cross;</td>
-      <td class="src uncoveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nl">kParseErrorObjectMissName</span><span class="p">:</span><span class="w">                 </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Missing a name for object member.&quot;</span><span class="p">);</span><span class="w"></span></td>
+      <td class="src uncoveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">kParseErrorObjectMissName</span><span class="p">:</span><span class="w">                 </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Missing a name for object member.&quot;</span><span class="p">);</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l46" href="#l46">46</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount uncoveredLine">&cross;</td>
-      <td class="src uncoveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nl">kParseErrorObjectMissColon</span><span class="p">:</span><span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Missing a colon after a name of object member.&quot;</span><span class="p">);</span><span class="w"></span></td>
+      <td class="src uncoveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">kParseErrorObjectMissColon</span><span class="p">:</span><span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Missing a colon after a name of object member.&quot;</span><span class="p">);</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l47" href="#l47">47</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount coveredLine">1</td>
-      <td class="src coveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nl">kParseErrorObjectMissCommaOrCurlyBracket</span><span class="p">:</span><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Missing a comma or &#39;}&#39; after an object member.&quot;</span><span class="p">);</span><span class="w"></span></td>
+      <td class="src coveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">kParseErrorObjectMissCommaOrCurlyBracket</span><span class="p">:</span><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Missing a comma or &#39;}&#39; after an object member.&quot;</span><span class="p">);</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l48" href="#l48">48</a></td>
       <td class="linebranch">
@@ -473,15 +469,13 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l49" href="#l49">49</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount uncoveredLine">&cross;</td>
-      <td class="src uncoveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nl">kParseErrorArrayMissCommaOrSquareBracket</span><span class="p">:</span><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Missing a comma or &#39;]&#39; after an array element.&quot;</span><span class="p">);</span><span class="w"></span></td>
+      <td class="src uncoveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">kParseErrorArrayMissCommaOrSquareBracket</span><span class="p">:</span><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Missing a comma or &#39;]&#39; after an array element.&quot;</span><span class="p">);</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l50" href="#l50">50</a></td>
       <td class="linebranch">
@@ -489,47 +483,41 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l51" href="#l51">51</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount uncoveredLine">&cross;</td>
-      <td class="src uncoveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nl">kParseErrorStringUnicodeEscapeInvalidHex</span><span class="p">:</span><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Incorrect hex digit after </span><span class="se">\\</span><span class="s">u escape in string.&quot;</span><span class="p">);</span><span class="w"></span></td>
+      <td class="src uncoveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">kParseErrorStringUnicodeEscapeInvalidHex</span><span class="p">:</span><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Incorrect hex digit after </span><span class="se">\\</span><span class="s">u escape in string.&quot;</span><span class="p">);</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l52" href="#l52">52</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount uncoveredLine">&cross;</td>
-      <td class="src uncoveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nl">kParseErrorStringUnicodeSurrogateInvalid</span><span class="p">:</span><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;The surrogate pair in string is invalid.&quot;</span><span class="p">);</span><span class="w"></span></td>
+      <td class="src uncoveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">kParseErrorStringUnicodeSurrogateInvalid</span><span class="p">:</span><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;The surrogate pair in string is invalid.&quot;</span><span class="p">);</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l53" href="#l53">53</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount uncoveredLine">&cross;</td>
-      <td class="src uncoveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nl">kParseErrorStringEscapeInvalid</span><span class="p">:</span><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Invalid escape character in string.&quot;</span><span class="p">);</span><span class="w"></span></td>
+      <td class="src uncoveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">kParseErrorStringEscapeInvalid</span><span class="p">:</span><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Invalid escape character in string.&quot;</span><span class="p">);</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l54" href="#l54">54</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount uncoveredLine">&cross;</td>
-      <td class="src uncoveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nl">kParseErrorStringMissQuotationMark</span><span class="p">:</span><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Missing a closing quotation mark in string.&quot;</span><span class="p">);</span><span class="w"></span></td>
+      <td class="src uncoveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">kParseErrorStringMissQuotationMark</span><span class="p">:</span><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Missing a closing quotation mark in string.&quot;</span><span class="p">);</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l55" href="#l55">55</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount uncoveredLine">&cross;</td>
-      <td class="src uncoveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nl">kParseErrorStringInvalidEncoding</span><span class="p">:</span><span class="w">          </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Invalid encoding in string.&quot;</span><span class="p">);</span><span class="w"></span></td>
+      <td class="src uncoveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">kParseErrorStringInvalidEncoding</span><span class="p">:</span><span class="w">          </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Invalid encoding in string.&quot;</span><span class="p">);</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l56" href="#l56">56</a></td>
       <td class="linebranch">
@@ -537,31 +525,27 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l57" href="#l57">57</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount uncoveredLine">&cross;</td>
-      <td class="src uncoveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nl">kParseErrorNumberTooBig</span><span class="p">:</span><span class="w">                   </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Number too big to be stored in double.&quot;</span><span class="p">);</span><span class="w"></span></td>
+      <td class="src uncoveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">kParseErrorNumberTooBig</span><span class="p">:</span><span class="w">                   </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Number too big to be stored in double.&quot;</span><span class="p">);</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l58" href="#l58">58</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount uncoveredLine">&cross;</td>
-      <td class="src uncoveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nl">kParseErrorNumberMissFraction</span><span class="p">:</span><span class="w">             </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Miss fraction part in number.&quot;</span><span class="p">);</span><span class="w"></span></td>
+      <td class="src uncoveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">kParseErrorNumberMissFraction</span><span class="p">:</span><span class="w">             </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Miss fraction part in number.&quot;</span><span class="p">);</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l59" href="#l59">59</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount uncoveredLine">&cross;</td>
-      <td class="src uncoveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nl">kParseErrorNumberMissExponent</span><span class="p">:</span><span class="w">             </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Miss exponent in number.&quot;</span><span class="p">);</span><span class="w"></span></td>
+      <td class="src uncoveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">kParseErrorNumberMissExponent</span><span class="p">:</span><span class="w">             </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Miss exponent in number.&quot;</span><span class="p">);</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l60" href="#l60">60</a></td>
       <td class="linebranch">
@@ -569,23 +553,20 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l61" href="#l61">61</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount uncoveredLine">&cross;</td>
-      <td class="src uncoveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nl">kParseErrorTermination</span><span class="p">:</span><span class="w">                    </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Terminate parsing due to Handler error.&quot;</span><span class="p">);</span><span class="w"></span></td>
+      <td class="src uncoveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">kParseErrorTermination</span><span class="p">:</span><span class="w">                    </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Terminate parsing due to Handler error.&quot;</span><span class="p">);</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l62" href="#l62">62</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount uncoveredLine">&cross;</td>
-      <td class="src uncoveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nl">kParseErrorUnspecificSyntaxError</span><span class="p">:</span><span class="w">          </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Unspecific syntax error.&quot;</span><span class="p">);</span><span class="w"></span></td>
+      <td class="src uncoveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">kParseErrorUnspecificSyntaxError</span><span class="p">:</span><span class="w">          </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Unspecific syntax error.&quot;</span><span class="p">);</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l63" href="#l63">63</a></td>
       <td class="linebranch">
@@ -593,31 +574,27 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l64" href="#l64">64</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount uncoveredLine">&cross;</td>
-      <td class="src uncoveredLine"><span class="w">        </span><span class="k">default</span><span class="o">:</span><span class="w">                                        </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Unknown error.&quot;</span><span class="p">);</span><span class="w"></span></td>
+      <td class="src uncoveredLine"><span class="w">        </span><span class="k">default</span><span class="o">:</span><span class="w">                                        </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Unknown error.&quot;</span><span class="p">);</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l65" href="#l65">65</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">    </span><span class="p">}</span><span class="w"></span></td>
+      <td class="src "><span class="w">    </span><span class="p">}</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l66" href="#l66">66</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount "></td>
-      <td class="src "><span class="p">}</span><span class="w"></span></td>
+      <td class="linecount coveredLine">3</td>
+      <td class="src coveredLine"><span class="p">}</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l67" href="#l67">67</a></td>
       <td class="linebranch">
@@ -625,7 +602,6 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l68" href="#l68">68</a></td>
       <td class="linebranch">
@@ -633,7 +609,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">//! Maps error code of validation into error message.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l69" href="#l69">69</a></td>
       <td class="linebranch">
@@ -641,7 +616,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="cm">/*!</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l70" href="#l70">70</a></td>
       <td class="linebranch">
@@ -649,7 +623,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="cm">    \ingroup RAPIDJSON_ERRORS</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l71" href="#l71">71</a></td>
       <td class="linebranch">
@@ -657,7 +630,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="cm">    \param validateErrorCode Error code obtained from validator.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l72" href="#l72">72</a></td>
       <td class="linebranch">
@@ -665,7 +637,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="cm">    \return the error message.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l73" href="#l73">73</a></td>
       <td class="linebranch">
@@ -673,7 +644,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="cm">    \note User can make a copy of this function for localization.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l74" href="#l74">74</a></td>
       <td class="linebranch">
@@ -681,23 +651,20 @@
       <td class="linecount "></td>
       <td class="src "><span class="cm">        Using switch-case is safer for future modification of error codes.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l75" href="#l75">75</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">*/</span><span class="w"></span></td>
+      <td class="src "><span class="cm">*/</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l76" href="#l76">76</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount coveredLine">14</td>
-      <td class="src coveredLine"><span class="kr">inline</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_CHARTYPE</span><span class="o">*</span><span class="w"> </span><span class="nf">GetValidateError_En</span><span class="p">(</span><span class="n">ValidateErrorCode</span><span class="w"> </span><span class="n">validateErrorCode</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span></td>
+      <td class="src coveredLine"><span class="kr">inline</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_CHARTYPE</span><span class="o">*</span><span class="w"> </span><span class="n">GetValidateError_En</span><span class="p">(</span><span class="n">ValidateErrorCode</span><span class="w"> </span><span class="n">validateErrorCode</span><span class="p">)</span><span class="w"> </span><span class="p">{</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l77" href="#l77">77</a></td>
       <td class="linebranch">
@@ -706,27 +673,27 @@
         <div class="linebranchContents">
           <div class="notTakenBranch">&cross; Branch 0 not taken.</div>
           <div class="notTakenBranch">&cross; Branch 1 not taken.</div>
-          <div class="takenBranch">&check; Branch 2 taken 1 times.</div>
-          <div class="notTakenBranch">&cross; Branch 3 not taken.</div>
-          <div class="takenBranch">&check; Branch 4 taken 1 times.</div>
-          <div class="notTakenBranch">&cross; Branch 5 not taken.</div>
-          <div class="takenBranch">&check; Branch 6 taken 2 times.</div>
-          <div class="notTakenBranch">&cross; Branch 7 not taken.</div>
+          <div class="notTakenBranch">&cross; Branch 2 not taken.</div>
+          <div class="takenBranch">&check; Branch 3 taken 1 times.</div>
+          <div class="notTakenBranch">&cross; Branch 4 not taken.</div>
+          <div class="takenBranch">&check; Branch 5 taken 1 times.</div>
+          <div class="notTakenBranch">&cross; Branch 6 not taken.</div>
+          <div class="takenBranch">&check; Branch 7 taken 2 times.</div>
           <div class="notTakenBranch">&cross; Branch 8 not taken.</div>
           <div class="notTakenBranch">&cross; Branch 9 not taken.</div>
           <div class="notTakenBranch">&cross; Branch 10 not taken.</div>
-          <div class="takenBranch">&check; Branch 11 taken 1 times.</div>
-          <div class="notTakenBranch">&cross; Branch 12 not taken.</div>
+          <div class="notTakenBranch">&cross; Branch 11 not taken.</div>
+          <div class="takenBranch">&check; Branch 12 taken 1 times.</div>
           <div class="notTakenBranch">&cross; Branch 13 not taken.</div>
           <div class="notTakenBranch">&cross; Branch 14 not taken.</div>
-          <div class="takenBranch">&check; Branch 15 taken 1 times.</div>
+          <div class="notTakenBranch">&cross; Branch 15 not taken.</div>
           <div class="takenBranch">&check; Branch 16 taken 1 times.</div>
-          <div class="notTakenBranch">&cross; Branch 17 not taken.</div>
+          <div class="takenBranch">&check; Branch 17 taken 1 times.</div>
           <div class="notTakenBranch">&cross; Branch 18 not taken.</div>
-          <div class="takenBranch">&check; Branch 19 taken 1 times.</div>
-          <div class="takenBranch">&check; Branch 20 taken 5 times.</div>
-          <div class="takenBranch">&check; Branch 21 taken 1 times.</div>
-          <div class="notTakenBranch">&cross; Branch 22 not taken.</div>
+          <div class="notTakenBranch">&cross; Branch 19 not taken.</div>
+          <div class="takenBranch">&check; Branch 20 taken 1 times.</div>
+          <div class="takenBranch">&check; Branch 21 taken 5 times.</div>
+          <div class="takenBranch">&check; Branch 22 taken 1 times.</div>
           <div class="notTakenBranch">&cross; Branch 23 not taken.</div>
           <div class="notTakenBranch">&cross; Branch 24 not taken.</div>
           <div class="notTakenBranch">&cross; Branch 25 not taken.</div>
@@ -738,25 +705,22 @@
         </details>
       </td>
       <td class="linecount coveredLine">14</td>
-      <td class="src coveredLine"><span class="w">    </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">validateErrorCode</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span></td>
+      <td class="src coveredLine"><span class="w">    </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">validateErrorCode</span><span class="p">)</span><span class="w"> </span><span class="p">{</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l78" href="#l78">78</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount "></td>
-      <td class="src "><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nl">kValidateErrors</span><span class="p">:</span><span class="w">                           </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;One or more validation errors have occurred&quot;</span><span class="p">);</span><span class="w"></span></td>
+      <td class="linecount uncoveredLine">&cross;</td>
+      <td class="src uncoveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">kValidateErrors</span><span class="p">:</span><span class="w">                           </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;One or more validation errors have occurred&quot;</span><span class="p">);</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l79" href="#l79">79</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount uncoveredLine">&cross;</td>
-      <td class="src uncoveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nl">kValidateErrorNone</span><span class="p">:</span><span class="w">                        </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;No error.&quot;</span><span class="p">);</span><span class="w"></span></td>
+      <td class="src uncoveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">kValidateErrorNone</span><span class="p">:</span><span class="w">                        </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;No error.&quot;</span><span class="p">);</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l80" href="#l80">80</a></td>
       <td class="linebranch">
@@ -764,47 +728,41 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l81" href="#l81">81</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount uncoveredLine">&cross;</td>
-      <td class="src uncoveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nl">kValidateErrorMultipleOf</span><span class="p">:</span><span class="w">                  </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Number &#39;%actual&#39; is not a multiple of the &#39;multipleOf&#39; value &#39;%expected&#39;.&quot;</span><span class="p">);</span><span class="w"></span></td>
+      <td class="src uncoveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">kValidateErrorMultipleOf</span><span class="p">:</span><span class="w">                  </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Number &#39;%actual&#39; is not a multiple of the &#39;multipleOf&#39; value &#39;%expected&#39;.&quot;</span><span class="p">);</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l82" href="#l82">82</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount coveredLine">1</td>
-      <td class="src coveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nl">kValidateErrorMaximum</span><span class="p">:</span><span class="w">                     </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Number &#39;%actual&#39; is greater than the &#39;maximum&#39; value &#39;%expected&#39;.&quot;</span><span class="p">);</span><span class="w"></span></td>
+      <td class="src coveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">kValidateErrorMaximum</span><span class="p">:</span><span class="w">                     </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Number &#39;%actual&#39; is greater than the &#39;maximum&#39; value &#39;%expected&#39;.&quot;</span><span class="p">);</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l83" href="#l83">83</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount uncoveredLine">&cross;</td>
-      <td class="src uncoveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nl">kValidateErrorExclusiveMaximum</span><span class="p">:</span><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Number &#39;%actual&#39; is greater than or equal to the &#39;exclusiveMaximum&#39; value &#39;%expected&#39;.&quot;</span><span class="p">);</span><span class="w"></span></td>
+      <td class="src uncoveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">kValidateErrorExclusiveMaximum</span><span class="p">:</span><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Number &#39;%actual&#39; is greater than or equal to the &#39;exclusiveMaximum&#39; value &#39;%expected&#39;.&quot;</span><span class="p">);</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l84" href="#l84">84</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount coveredLine">1</td>
-      <td class="src coveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nl">kValidateErrorMinimum</span><span class="p">:</span><span class="w">                     </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Number &#39;%actual&#39; is less than the &#39;minimum&#39; value &#39;%expected&#39;.&quot;</span><span class="p">);</span><span class="w"></span></td>
+      <td class="src coveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">kValidateErrorMinimum</span><span class="p">:</span><span class="w">                     </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Number &#39;%actual&#39; is less than the &#39;minimum&#39; value &#39;%expected&#39;.&quot;</span><span class="p">);</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l85" href="#l85">85</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount uncoveredLine">&cross;</td>
-      <td class="src uncoveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nl">kValidateErrorExclusiveMinimum</span><span class="p">:</span><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Number &#39;%actual&#39; is less than or equal to the &#39;exclusiveMinimum&#39; value &#39;%expected&#39;.&quot;</span><span class="p">);</span><span class="w"></span></td>
+      <td class="src uncoveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">kValidateErrorExclusiveMinimum</span><span class="p">:</span><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Number &#39;%actual&#39; is less than or equal to the &#39;exclusiveMinimum&#39; value &#39;%expected&#39;.&quot;</span><span class="p">);</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l86" href="#l86">86</a></td>
       <td class="linebranch">
@@ -812,31 +770,27 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l87" href="#l87">87</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount coveredLine">2</td>
-      <td class="src coveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nl">kValidateErrorMaxLength</span><span class="p">:</span><span class="w">                   </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;String &#39;%actual&#39; is longer than the &#39;maxLength&#39; value &#39;%expected&#39;.&quot;</span><span class="p">);</span><span class="w"></span></td>
+      <td class="src coveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">kValidateErrorMaxLength</span><span class="p">:</span><span class="w">                   </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;String &#39;%actual&#39; is longer than the &#39;maxLength&#39; value &#39;%expected&#39;.&quot;</span><span class="p">);</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l88" href="#l88">88</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount uncoveredLine">&cross;</td>
-      <td class="src uncoveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nl">kValidateErrorMinLength</span><span class="p">:</span><span class="w">                   </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;String &#39;%actual&#39; is shorter than the &#39;minLength&#39; value &#39;%expected&#39;.&quot;</span><span class="p">);</span><span class="w"></span></td>
+      <td class="src uncoveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">kValidateErrorMinLength</span><span class="p">:</span><span class="w">                   </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;String &#39;%actual&#39; is shorter than the &#39;minLength&#39; value &#39;%expected&#39;.&quot;</span><span class="p">);</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l89" href="#l89">89</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount uncoveredLine">&cross;</td>
-      <td class="src uncoveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nl">kValidateErrorPattern</span><span class="p">:</span><span class="w">                     </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;String &#39;%actual&#39; does not match the &#39;pattern&#39; regular expression.&quot;</span><span class="p">);</span><span class="w"></span></td>
+      <td class="src uncoveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">kValidateErrorPattern</span><span class="p">:</span><span class="w">                     </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;String &#39;%actual&#39; does not match the &#39;pattern&#39; regular expression.&quot;</span><span class="p">);</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l90" href="#l90">90</a></td>
       <td class="linebranch">
@@ -844,39 +798,34 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l91" href="#l91">91</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount uncoveredLine">&cross;</td>
-      <td class="src uncoveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nl">kValidateErrorMaxItems</span><span class="p">:</span><span class="w">                    </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Array of length &#39;%actual&#39; is longer than the &#39;maxItems&#39; value &#39;%expected&#39;.&quot;</span><span class="p">);</span><span class="w"></span></td>
+      <td class="src uncoveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">kValidateErrorMaxItems</span><span class="p">:</span><span class="w">                    </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Array of length &#39;%actual&#39; is longer than the &#39;maxItems&#39; value &#39;%expected&#39;.&quot;</span><span class="p">);</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l92" href="#l92">92</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount uncoveredLine">&cross;</td>
-      <td class="src uncoveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nl">kValidateErrorMinItems</span><span class="p">:</span><span class="w">                    </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Array of length &#39;%actual&#39; is shorter than the &#39;minItems&#39; value &#39;%expected&#39;.&quot;</span><span class="p">);</span><span class="w"></span></td>
+      <td class="src uncoveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">kValidateErrorMinItems</span><span class="p">:</span><span class="w">                    </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Array of length &#39;%actual&#39; is shorter than the &#39;minItems&#39; value &#39;%expected&#39;.&quot;</span><span class="p">);</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l93" href="#l93">93</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount coveredLine">1</td>
-      <td class="src coveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nl">kValidateErrorUniqueItems</span><span class="p">:</span><span class="w">                 </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Array has duplicate items at indices &#39;%duplicates&#39; but &#39;uniqueItems&#39; is true.&quot;</span><span class="p">);</span><span class="w"></span></td>
+      <td class="src coveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">kValidateErrorUniqueItems</span><span class="p">:</span><span class="w">                 </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Array has duplicate items at indices &#39;%duplicates&#39; but &#39;uniqueItems&#39; is true.&quot;</span><span class="p">);</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l94" href="#l94">94</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount uncoveredLine">&cross;</td>
-      <td class="src uncoveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nl">kValidateErrorAdditionalItems</span><span class="p">:</span><span class="w">             </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Array has an additional item at index &#39;%disallowed&#39; that is not allowed by the schema.&quot;</span><span class="p">);</span><span class="w"></span></td>
+      <td class="src uncoveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">kValidateErrorAdditionalItems</span><span class="p">:</span><span class="w">             </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Array has an additional item at index &#39;%disallowed&#39; that is not allowed by the schema.&quot;</span><span class="p">);</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l95" href="#l95">95</a></td>
       <td class="linebranch">
@@ -884,55 +833,48 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l96" href="#l96">96</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount uncoveredLine">&cross;</td>
-      <td class="src uncoveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nl">kValidateErrorMaxProperties</span><span class="p">:</span><span class="w">               </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Object has &#39;%actual&#39; members which is more than &#39;maxProperties&#39; value &#39;%expected&#39;.&quot;</span><span class="p">);</span><span class="w"></span></td>
+      <td class="src uncoveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">kValidateErrorMaxProperties</span><span class="p">:</span><span class="w">               </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Object has &#39;%actual&#39; members which is more than &#39;maxProperties&#39; value &#39;%expected&#39;.&quot;</span><span class="p">);</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l97" href="#l97">97</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount uncoveredLine">&cross;</td>
-      <td class="src uncoveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nl">kValidateErrorMinProperties</span><span class="p">:</span><span class="w">               </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Object has &#39;%actual&#39; members which is less than &#39;minProperties&#39; value &#39;%expected&#39;.&quot;</span><span class="p">);</span><span class="w"></span></td>
+      <td class="src uncoveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">kValidateErrorMinProperties</span><span class="p">:</span><span class="w">               </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Object has &#39;%actual&#39; members which is less than &#39;minProperties&#39; value &#39;%expected&#39;.&quot;</span><span class="p">);</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l98" href="#l98">98</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount coveredLine">1</td>
-      <td class="src coveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nl">kValidateErrorRequired</span><span class="p">:</span><span class="w">                    </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Object is missing the following members required by the schema: &#39;%missing&#39;.&quot;</span><span class="p">);</span><span class="w"></span></td>
+      <td class="src coveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">kValidateErrorRequired</span><span class="p">:</span><span class="w">                    </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Object is missing the following members required by the schema: &#39;%missing&#39;.&quot;</span><span class="p">);</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l99" href="#l99">99</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount coveredLine">1</td>
-      <td class="src coveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nl">kValidateErrorAdditionalProperties</span><span class="p">:</span><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Object has an additional member &#39;%disallowed&#39; that is not allowed by the schema.&quot;</span><span class="p">);</span><span class="w"></span></td>
+      <td class="src coveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">kValidateErrorAdditionalProperties</span><span class="p">:</span><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Object has an additional member &#39;%disallowed&#39; that is not allowed by the schema.&quot;</span><span class="p">);</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l100" href="#l100">100</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount uncoveredLine">&cross;</td>
-      <td class="src uncoveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nl">kValidateErrorPatternProperties</span><span class="p">:</span><span class="w">           </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Object has &#39;patternProperties&#39; that are not allowed by the schema.&quot;</span><span class="p">);</span><span class="w"></span></td>
+      <td class="src uncoveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">kValidateErrorPatternProperties</span><span class="p">:</span><span class="w">           </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Object has &#39;patternProperties&#39; that are not allowed by the schema.&quot;</span><span class="p">);</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l101" href="#l101">101</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount uncoveredLine">&cross;</td>
-      <td class="src uncoveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nl">kValidateErrorDependencies</span><span class="p">:</span><span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Object has missing property or schema dependencies, refer to following errors.&quot;</span><span class="p">);</span><span class="w"></span></td>
+      <td class="src uncoveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">kValidateErrorDependencies</span><span class="p">:</span><span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Object has missing property or schema dependencies, refer to following errors.&quot;</span><span class="p">);</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l102" href="#l102">102</a></td>
       <td class="linebranch">
@@ -940,23 +882,20 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l103" href="#l103">103</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount coveredLine">1</td>
-      <td class="src coveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nl">kValidateErrorEnum</span><span class="p">:</span><span class="w">                        </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Property has a value that is not one of its allowed enumerated values.&quot;</span><span class="p">);</span><span class="w"></span></td>
+      <td class="src coveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">kValidateErrorEnum</span><span class="p">:</span><span class="w">                        </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Property has a value that is not one of its allowed enumerated values.&quot;</span><span class="p">);</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l104" href="#l104">104</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount coveredLine">5</td>
-      <td class="src coveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nl">kValidateErrorType</span><span class="p">:</span><span class="w">                        </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Property has a type &#39;%actual&#39; that is not in the following list: &#39;%expected&#39;.&quot;</span><span class="p">);</span><span class="w"></span></td>
+      <td class="src coveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">kValidateErrorType</span><span class="p">:</span><span class="w">                        </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Property has a type &#39;%actual&#39; that is not in the following list: &#39;%expected&#39;.&quot;</span><span class="p">);</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l105" href="#l105">105</a></td>
       <td class="linebranch">
@@ -964,47 +903,41 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l106" href="#l106">106</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount coveredLine">1</td>
-      <td class="src coveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nl">kValidateErrorOneOf</span><span class="p">:</span><span class="w">                       </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Property did not match any of the sub-schemas specified by &#39;oneOf&#39;, refer to following errors.&quot;</span><span class="p">);</span><span class="w"></span></td>
+      <td class="src coveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">kValidateErrorOneOf</span><span class="p">:</span><span class="w">                       </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Property did not match any of the sub-schemas specified by &#39;oneOf&#39;, refer to following errors.&quot;</span><span class="p">);</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l107" href="#l107">107</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount uncoveredLine">&cross;</td>
-      <td class="src uncoveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nl">kValidateErrorOneOfMatch</span><span class="p">:</span><span class="w">                  </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Property matched more than one of the sub-schemas specified by &#39;oneOf&#39;, indices &#39;%matches&#39;.&quot;</span><span class="p">);</span><span class="w"></span></td>
+      <td class="src uncoveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">kValidateErrorOneOfMatch</span><span class="p">:</span><span class="w">                  </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Property matched more than one of the sub-schemas specified by &#39;oneOf&#39;, indices &#39;%matches&#39;.&quot;</span><span class="p">);</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l108" href="#l108">108</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount uncoveredLine">&cross;</td>
-      <td class="src uncoveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nl">kValidateErrorAllOf</span><span class="p">:</span><span class="w">                       </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Property did not match all of the sub-schemas specified by &#39;allOf&#39;, refer to following errors.&quot;</span><span class="p">);</span><span class="w"></span></td>
+      <td class="src uncoveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">kValidateErrorAllOf</span><span class="p">:</span><span class="w">                       </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Property did not match all of the sub-schemas specified by &#39;allOf&#39;, refer to following errors.&quot;</span><span class="p">);</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l109" href="#l109">109</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount uncoveredLine">&cross;</td>
-      <td class="src uncoveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nl">kValidateErrorAnyOf</span><span class="p">:</span><span class="w">                       </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Property did not match any of the sub-schemas specified by &#39;anyOf&#39;, refer to following errors.&quot;</span><span class="p">);</span><span class="w"></span></td>
+      <td class="src uncoveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">kValidateErrorAnyOf</span><span class="p">:</span><span class="w">                       </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Property did not match any of the sub-schemas specified by &#39;anyOf&#39;, refer to following errors.&quot;</span><span class="p">);</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l110" href="#l110">110</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount uncoveredLine">&cross;</td>
-      <td class="src uncoveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nl">kValidateErrorNot</span><span class="p">:</span><span class="w">                         </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Property matched the sub-schema specified by &#39;not&#39;.&quot;</span><span class="p">);</span><span class="w"></span></td>
+      <td class="src uncoveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">kValidateErrorNot</span><span class="p">:</span><span class="w">                         </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Property matched the sub-schema specified by &#39;not&#39;.&quot;</span><span class="p">);</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l111" href="#l111">111</a></td>
       <td class="linebranch">
@@ -1012,23 +945,20 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l112" href="#l112">112</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount uncoveredLine">&cross;</td>
-      <td class="src uncoveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nl">kValidateErrorReadOnly</span><span class="p">:</span><span class="w">                    </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Property is read-only but has been provided when validation is for writing.&quot;</span><span class="p">);</span><span class="w"></span></td>
+      <td class="src uncoveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">kValidateErrorReadOnly</span><span class="p">:</span><span class="w">                    </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Property is read-only but has been provided when validation is for writing.&quot;</span><span class="p">);</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l113" href="#l113">113</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount uncoveredLine">&cross;</td>
-      <td class="src uncoveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nl">kValidateErrorWriteOnly</span><span class="p">:</span><span class="w">                   </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Property is write-only but has been provided when validation is for reading.&quot;</span><span class="p">);</span><span class="w"></span></td>
+      <td class="src uncoveredLine"><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">kValidateErrorWriteOnly</span><span class="p">:</span><span class="w">                   </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Property is write-only but has been provided when validation is for reading.&quot;</span><span class="p">);</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l114" href="#l114">114</a></td>
       <td class="linebranch">
@@ -1036,31 +966,27 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l115" href="#l115">115</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount uncoveredLine">&cross;</td>
-      <td class="src uncoveredLine"><span class="w">        </span><span class="k">default</span><span class="o">:</span><span class="w">                                        </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Unknown error.&quot;</span><span class="p">);</span><span class="w"></span></td>
+      <td class="src uncoveredLine"><span class="w">        </span><span class="k">default</span><span class="o">:</span><span class="w">                                        </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Unknown error.&quot;</span><span class="p">);</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l116" href="#l116">116</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">    </span><span class="p">}</span><span class="w"></span></td>
+      <td class="src "><span class="w">    </span><span class="p">}</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l117" href="#l117">117</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount "></td>
-      <td class="src "><span class="p">}</span><span class="w"></span></td>
+      <td class="linecount coveredLine">14</td>
+      <td class="src coveredLine"><span class="p">}</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l118" href="#l118">118</a></td>
       <td class="linebranch">
@@ -1068,7 +994,6 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l119" href="#l119">119</a></td>
       <td class="linebranch">
@@ -1076,7 +1001,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">//! Maps error code of schema document compilation into error message.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l120" href="#l120">120</a></td>
       <td class="linebranch">
@@ -1084,7 +1008,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="cm">/*!</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l121" href="#l121">121</a></td>
       <td class="linebranch">
@@ -1092,7 +1015,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="cm">    \ingroup RAPIDJSON_ERRORS</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l122" href="#l122">122</a></td>
       <td class="linebranch">
@@ -1100,7 +1022,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="cm">    \param schemaErrorCode Error code obtained from compiling the schema document.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l123" href="#l123">123</a></td>
       <td class="linebranch">
@@ -1108,7 +1029,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="cm">    \return the error message.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l124" href="#l124">124</a></td>
       <td class="linebranch">
@@ -1116,7 +1036,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="cm">    \note User can make a copy of this function for localization.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l125" href="#l125">125</a></td>
       <td class="linebranch">
@@ -1124,39 +1043,34 @@
       <td class="linecount "></td>
       <td class="src "><span class="cm">        Using switch-case is safer for future modification of error codes.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l126" href="#l126">126</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">*/</span><span class="w"></span></td>
+      <td class="src "><span class="cm">*/</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l127" href="#l127">127</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">  </span><span class="kr">inline</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_CHARTYPE</span><span class="o">*</span><span class="w"> </span><span class="nf">GetSchemaError_En</span><span class="p">(</span><span class="n">SchemaErrorCode</span><span class="w"> </span><span class="n">schemaErrorCode</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span></td>
+      <td class="src "><span class="w">  </span><span class="kr">inline</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_CHARTYPE</span><span class="o">*</span><span class="w"> </span><span class="n">GetSchemaError_En</span><span class="p">(</span><span class="n">SchemaErrorCode</span><span class="w"> </span><span class="n">schemaErrorCode</span><span class="p">)</span><span class="w"> </span><span class="p">{</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l128" href="#l128">128</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">      </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">schemaErrorCode</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span></td>
+      <td class="src "><span class="w">      </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">schemaErrorCode</span><span class="p">)</span><span class="w"> </span><span class="p">{</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l129" href="#l129">129</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">          </span><span class="k">case</span><span class="w"> </span><span class="nl">kSchemaErrorNone</span><span class="p">:</span><span class="w">                        </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;No error.&quot;</span><span class="p">);</span><span class="w"></span></td>
+      <td class="src "><span class="w">          </span><span class="k">case</span><span class="w"> </span><span class="no">kSchemaErrorNone</span><span class="p">:</span><span class="w">                        </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;No error.&quot;</span><span class="p">);</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l130" href="#l130">130</a></td>
       <td class="linebranch">
@@ -1164,111 +1078,97 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l131" href="#l131">131</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">          </span><span class="k">case</span><span class="w"> </span><span class="nl">kSchemaErrorStartUnknown</span><span class="p">:</span><span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Pointer &#39;%value&#39; to start of schema does not resolve to a location in the document.&quot;</span><span class="p">);</span><span class="w"></span></td>
+      <td class="src "><span class="w">          </span><span class="k">case</span><span class="w"> </span><span class="no">kSchemaErrorStartUnknown</span><span class="p">:</span><span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Pointer &#39;%value&#39; to start of schema does not resolve to a location in the document.&quot;</span><span class="p">);</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l132" href="#l132">132</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">          </span><span class="k">case</span><span class="w"> </span><span class="nl">kSchemaErrorRefPlainName</span><span class="p">:</span><span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;$ref fragment &#39;%value&#39; must be a JSON pointer.&quot;</span><span class="p">);</span><span class="w"></span></td>
+      <td class="src "><span class="w">          </span><span class="k">case</span><span class="w"> </span><span class="no">kSchemaErrorRefPlainName</span><span class="p">:</span><span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;$ref fragment &#39;%value&#39; must be a JSON pointer.&quot;</span><span class="p">);</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l133" href="#l133">133</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">          </span><span class="k">case</span><span class="w"> </span><span class="nl">kSchemaErrorRefInvalid</span><span class="p">:</span><span class="w">                  </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;$ref must not be an empty string.&quot;</span><span class="p">);</span><span class="w"></span></td>
+      <td class="src "><span class="w">          </span><span class="k">case</span><span class="w"> </span><span class="no">kSchemaErrorRefInvalid</span><span class="p">:</span><span class="w">                  </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;$ref must not be an empty string.&quot;</span><span class="p">);</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l134" href="#l134">134</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">          </span><span class="k">case</span><span class="w"> </span><span class="nl">kSchemaErrorRefPointerInvalid</span><span class="p">:</span><span class="w">           </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;$ref fragment &#39;%value&#39; is not a valid JSON pointer at offset &#39;%offset&#39;.&quot;</span><span class="p">);</span><span class="w"></span></td>
+      <td class="src "><span class="w">          </span><span class="k">case</span><span class="w"> </span><span class="no">kSchemaErrorRefPointerInvalid</span><span class="p">:</span><span class="w">           </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;$ref fragment &#39;%value&#39; is not a valid JSON pointer at offset &#39;%offset&#39;.&quot;</span><span class="p">);</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l135" href="#l135">135</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">          </span><span class="k">case</span><span class="w"> </span><span class="nl">kSchemaErrorRefUnknown</span><span class="p">:</span><span class="w">                  </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;$ref &#39;%value&#39; does not resolve to a location in the target document.&quot;</span><span class="p">);</span><span class="w"></span></td>
+      <td class="src "><span class="w">          </span><span class="k">case</span><span class="w"> </span><span class="no">kSchemaErrorRefUnknown</span><span class="p">:</span><span class="w">                  </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;$ref &#39;%value&#39; does not resolve to a location in the target document.&quot;</span><span class="p">);</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l136" href="#l136">136</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">          </span><span class="k">case</span><span class="w"> </span><span class="nl">kSchemaErrorRefCyclical</span><span class="p">:</span><span class="w">                 </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;$ref &#39;%value&#39; is cyclical.&quot;</span><span class="p">);</span><span class="w"></span></td>
+      <td class="src "><span class="w">          </span><span class="k">case</span><span class="w"> </span><span class="no">kSchemaErrorRefCyclical</span><span class="p">:</span><span class="w">                 </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;$ref &#39;%value&#39; is cyclical.&quot;</span><span class="p">);</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l137" href="#l137">137</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">          </span><span class="k">case</span><span class="w"> </span><span class="nl">kSchemaErrorRefNoRemoteProvider</span><span class="p">:</span><span class="w">         </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;$ref is remote but there is no remote provider.&quot;</span><span class="p">);</span><span class="w"></span></td>
+      <td class="src "><span class="w">          </span><span class="k">case</span><span class="w"> </span><span class="no">kSchemaErrorRefNoRemoteProvider</span><span class="p">:</span><span class="w">         </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;$ref is remote but there is no remote provider.&quot;</span><span class="p">);</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l138" href="#l138">138</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">          </span><span class="k">case</span><span class="w"> </span><span class="nl">kSchemaErrorRefNoRemoteSchema</span><span class="p">:</span><span class="w">           </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;$ref &#39;%value&#39; is remote but the remote provider did not return a schema.&quot;</span><span class="p">);</span><span class="w"></span></td>
+      <td class="src "><span class="w">          </span><span class="k">case</span><span class="w"> </span><span class="no">kSchemaErrorRefNoRemoteSchema</span><span class="p">:</span><span class="w">           </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;$ref &#39;%value&#39; is remote but the remote provider did not return a schema.&quot;</span><span class="p">);</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l139" href="#l139">139</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">          </span><span class="k">case</span><span class="w"> </span><span class="nl">kSchemaErrorRegexInvalid</span><span class="p">:</span><span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Invalid regular expression &#39;%value&#39; in &#39;pattern&#39; or &#39;patternProperties&#39;.&quot;</span><span class="p">);</span><span class="w"></span></td>
+      <td class="src "><span class="w">          </span><span class="k">case</span><span class="w"> </span><span class="no">kSchemaErrorRegexInvalid</span><span class="p">:</span><span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Invalid regular expression &#39;%value&#39; in &#39;pattern&#39; or &#39;patternProperties&#39;.&quot;</span><span class="p">);</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l140" href="#l140">140</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">          </span><span class="k">case</span><span class="w"> </span><span class="nl">kSchemaErrorSpecUnknown</span><span class="p">:</span><span class="w">                 </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;JSON schema draft or OpenAPI version is not recognized.&quot;</span><span class="p">);</span><span class="w"></span></td>
+      <td class="src "><span class="w">          </span><span class="k">case</span><span class="w"> </span><span class="no">kSchemaErrorSpecUnknown</span><span class="p">:</span><span class="w">                 </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;JSON schema draft or OpenAPI version is not recognized.&quot;</span><span class="p">);</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l141" href="#l141">141</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">          </span><span class="k">case</span><span class="w"> </span><span class="nl">kSchemaErrorSpecUnsupported</span><span class="p">:</span><span class="w">             </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;JSON schema draft or OpenAPI version is not supported.&quot;</span><span class="p">);</span><span class="w"></span></td>
+      <td class="src "><span class="w">          </span><span class="k">case</span><span class="w"> </span><span class="no">kSchemaErrorSpecUnsupported</span><span class="p">:</span><span class="w">             </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;JSON schema draft or OpenAPI version is not supported.&quot;</span><span class="p">);</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l142" href="#l142">142</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">          </span><span class="k">case</span><span class="w"> </span><span class="nl">kSchemaErrorSpecIllegal</span><span class="p">:</span><span class="w">                 </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Both JSON schema draft and OpenAPI version found in document.&quot;</span><span class="p">);</span><span class="w"></span></td>
+      <td class="src "><span class="w">          </span><span class="k">case</span><span class="w"> </span><span class="no">kSchemaErrorSpecIllegal</span><span class="p">:</span><span class="w">                 </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Both JSON schema draft and OpenAPI version found in document.&quot;</span><span class="p">);</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l143" href="#l143">143</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">          </span><span class="k">case</span><span class="w"> </span><span class="nl">kSchemaErrorReadOnlyAndWriteOnly</span><span class="p">:</span><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Property must not be both &#39;readOnly&#39; and &#39;writeOnly&#39;.&quot;</span><span class="p">);</span><span class="w"></span></td>
+      <td class="src "><span class="w">          </span><span class="k">case</span><span class="w"> </span><span class="no">kSchemaErrorReadOnlyAndWriteOnly</span><span class="p">:</span><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Property must not be both &#39;readOnly&#39; and &#39;writeOnly&#39;.&quot;</span><span class="p">);</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l144" href="#l144">144</a></td>
       <td class="linebranch">
@@ -1276,31 +1176,27 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l145" href="#l145">145</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">          </span><span class="k">default</span><span class="o">:</span><span class="w">                                      </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Unknown error.&quot;</span><span class="p">);</span><span class="w"></span></td>
+      <td class="src "><span class="w">          </span><span class="k">default</span><span class="o">:</span><span class="w">                                      </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Unknown error.&quot;</span><span class="p">);</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l146" href="#l146">146</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">    </span><span class="p">}</span><span class="w"></span></td>
+      <td class="src "><span class="w">    </span><span class="p">}</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l147" href="#l147">147</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">  </span><span class="p">}</span><span class="w"></span></td>
+      <td class="src "><span class="w">  </span><span class="p">}</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l148" href="#l148">148</a></td>
       <td class="linebranch">
@@ -1308,7 +1204,6 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l149" href="#l149">149</a></td>
       <td class="linebranch">
@@ -1316,7 +1211,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">//! Maps error code of pointer parse into error message.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l150" href="#l150">150</a></td>
       <td class="linebranch">
@@ -1324,7 +1218,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="cm">/*!</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l151" href="#l151">151</a></td>
       <td class="linebranch">
@@ -1332,7 +1225,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="cm">    \ingroup RAPIDJSON_ERRORS</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l152" href="#l152">152</a></td>
       <td class="linebranch">
@@ -1340,7 +1232,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="cm">    \param pointerParseErrorCode Error code obtained from pointer parse.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l153" href="#l153">153</a></td>
       <td class="linebranch">
@@ -1348,7 +1239,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="cm">    \return the error message.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l154" href="#l154">154</a></td>
       <td class="linebranch">
@@ -1356,7 +1246,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="cm">    \note User can make a copy of this function for localization.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l155" href="#l155">155</a></td>
       <td class="linebranch">
@@ -1364,39 +1253,34 @@
       <td class="linecount "></td>
       <td class="src "><span class="cm">        Using switch-case is safer for future modification of error codes.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l156" href="#l156">156</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">*/</span><span class="w"></span></td>
+      <td class="src "><span class="cm">*/</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l157" href="#l157">157</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="kr">inline</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_CHARTYPE</span><span class="o">*</span><span class="w"> </span><span class="nf">GetPointerParseError_En</span><span class="p">(</span><span class="n">PointerParseErrorCode</span><span class="w"> </span><span class="n">pointerParseErrorCode</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span></td>
+      <td class="src "><span class="kr">inline</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_CHARTYPE</span><span class="o">*</span><span class="w"> </span><span class="n">GetPointerParseError_En</span><span class="p">(</span><span class="n">PointerParseErrorCode</span><span class="w"> </span><span class="n">pointerParseErrorCode</span><span class="p">)</span><span class="w"> </span><span class="p">{</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l158" href="#l158">158</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">    </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">pointerParseErrorCode</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span></td>
+      <td class="src "><span class="w">    </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">pointerParseErrorCode</span><span class="p">)</span><span class="w"> </span><span class="p">{</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l159" href="#l159">159</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nl">kPointerParseErrorNone</span><span class="p">:</span><span class="w">                       </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;No error.&quot;</span><span class="p">);</span><span class="w"></span></td>
+      <td class="src "><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">kPointerParseErrorNone</span><span class="p">:</span><span class="w">                       </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;No error.&quot;</span><span class="p">);</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l160" href="#l160">160</a></td>
       <td class="linebranch">
@@ -1404,39 +1288,34 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l161" href="#l161">161</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nl">kPointerParseErrorTokenMustBeginWithSolidus</span><span class="p">:</span><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;A token must begin with a &#39;/&#39;.&quot;</span><span class="p">);</span><span class="w"></span></td>
+      <td class="src "><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">kPointerParseErrorTokenMustBeginWithSolidus</span><span class="p">:</span><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;A token must begin with a &#39;/&#39;.&quot;</span><span class="p">);</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l162" href="#l162">162</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nl">kPointerParseErrorInvalidEscape</span><span class="p">:</span><span class="w">              </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Invalid escape.&quot;</span><span class="p">);</span><span class="w"></span></td>
+      <td class="src "><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">kPointerParseErrorInvalidEscape</span><span class="p">:</span><span class="w">              </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Invalid escape.&quot;</span><span class="p">);</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l163" href="#l163">163</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nl">kPointerParseErrorInvalidPercentEncoding</span><span class="p">:</span><span class="w">     </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Invalid percent encoding in URI fragment.&quot;</span><span class="p">);</span><span class="w"></span></td>
+      <td class="src "><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">kPointerParseErrorInvalidPercentEncoding</span><span class="p">:</span><span class="w">     </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Invalid percent encoding in URI fragment.&quot;</span><span class="p">);</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l164" href="#l164">164</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nl">kPointerParseErrorCharacterMustPercentEncode</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;A character must be percent encoded in a URI fragment.&quot;</span><span class="p">);</span><span class="w"></span></td>
+      <td class="src "><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">kPointerParseErrorCharacterMustPercentEncode</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;A character must be percent encoded in a URI fragment.&quot;</span><span class="p">);</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l165" href="#l165">165</a></td>
       <td class="linebranch">
@@ -1444,31 +1323,27 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l166" href="#l166">166</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">        </span><span class="k">default</span><span class="o">:</span><span class="w">                                           </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Unknown error.&quot;</span><span class="p">);</span><span class="w"></span></td>
+      <td class="src "><span class="w">        </span><span class="k">default</span><span class="o">:</span><span class="w">                                           </span><span class="k">return</span><span class="w"> </span><span class="n">RAPIDJSON_ERROR_STRING</span><span class="p">(</span><span class="s">&quot;Unknown error.&quot;</span><span class="p">);</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l167" href="#l167">167</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">    </span><span class="p">}</span><span class="w"></span></td>
+      <td class="src "><span class="w">    </span><span class="p">}</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l168" href="#l168">168</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="p">}</span><span class="w"></span></td>
+      <td class="src "><span class="p">}</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l169" href="#l169">169</a></td>
       <td class="linebranch">
@@ -1476,15 +1351,13 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l170" href="#l170">170</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="n">RAPIDJSON_NAMESPACE_END</span><span class="w"></span></td>
+      <td class="src "><span class="n">RAPIDJSON_NAMESPACE_END</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l171" href="#l171">171</a></td>
       <td class="linebranch">
@@ -1492,7 +1365,6 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l172" href="#l172">172</a></td>
       <td class="linebranch">
@@ -1500,15 +1372,13 @@
       <td class="linecount "></td>
       <td class="src "><span class="cp">#ifdef __clang__</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l173" href="#l173">173</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="n">RAPIDJSON_DIAG_POP</span><span class="w"></span></td>
+      <td class="src "><span class="n">RAPIDJSON_DIAG_POP</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l174" href="#l174">174</a></td>
       <td class="linebranch">
@@ -1516,7 +1386,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="cp">#endif</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l175" href="#l175">175</a></td>
       <td class="linebranch">
@@ -1524,7 +1393,6 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l176" href="#l176">176</a></td>
       <td class="linebranch">
@@ -1532,7 +1400,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="cp">#endif </span><span class="c1">// RAPIDJSON_ERROR_EN_H_</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l177" href="#l177">177</a></td>
       <td class="linebranch">
@@ -1540,14 +1407,13 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
   </table>
 </div>
-
-    <hr/>
+      <hr/>
+    </main>
 
     <footer>
-      Generated by: <a href="http://gcovr.com">GCOVR (Version 5.0)</a>
+      Generated by: <a href="http://gcovr.com/en/6.0">GCOVR (Version 6.0)</a>
     </footer>
   </body>
 </html>

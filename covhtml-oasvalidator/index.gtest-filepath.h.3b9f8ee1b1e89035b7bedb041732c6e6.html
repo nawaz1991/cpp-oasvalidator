@@ -1,19 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html class="theme-green">
 
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <title>GCC Code Coverage Report</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index.css"/>
   </head>
 
   <body>
-    <h1>GCC Code Coverage Report</h1>
+    <header>
+      <h1>GCC Code Coverage Report</h1>
 
-    <hr/>
+      <hr/>
 
-    <div class="summary">
+      <div class="summary">
 <div>
   <table class="legend">
     <tr>
@@ -26,7 +27,7 @@
     </tr>
     <tr>
       <th scope="row">Date:</th>
-      <td>2023-11-29 07:16:40</td>
+      <td>2023-11-29 07:16:05</td>
     </tr>
   </table>
 </div>
@@ -40,22 +41,143 @@
     </tr>
     <tr>
       <th scope="row">Lines:</th>
-      <td>7</td>
-      <td>13</td>
-      <td class="coverage-low">53.8%</td>
+      <td>6</td>
+      <td>12</td>
+      <td class="coverage-low">50.0%</td>
+    </tr>
+    <tr>
+      <th scope="row">Functions:</th>
+      <td>5</td>
+      <td>9</td>
+      <td class="coverage-low">55.6%</td>
     </tr>
     <tr>
       <th scope="row">Branches:</th>
-      <td>10</td>
-      <td>164</td>
-      <td class="coverage-low">6.1%</td>
+      <td>1</td>
+      <td>2</td>
+      <td class="coverage-low">50.0%</td>
     </tr>
   </table>
 </div>
-    </div>
+      </div>
 
-    <hr/>
+      <hr/>
+    </header>
 
+    <nav>
+<details>
+  <summary>List of functions</summary>
+  <table class="listOfFunctions">
+    <tr>
+      <th>Function</th>
+      <th>Line</th>
+      <th>Call count</th>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l71">testing::internal::FilePath::FilePath()</a>
+      </td>
+      <td>
+        <a href="#l71">71</a>
+      </td>
+      <td>
+        <a href="#l71"> called 2 times</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l74">testing::internal::FilePath::FilePath(std::__1::basic_string&lt;char, std::__1::char_traits&lt;char&gt;, std::__1::allocator&lt;char&gt; &gt; const&amp;)</a>
+      </td>
+      <td>
+        <a href="#l74">74</a>
+      </td>
+      <td>
+        <a href="#l74"> called 2 times</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l72">testing::internal::FilePath::FilePath(testing::internal::FilePath const&amp;)</a>
+      </td>
+      <td>
+        <a href="#l72">72</a>
+      </td>
+      <td>
+        <a href="#l72"> not called</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l118">testing::internal::FilePath::IsEmpty() const</a>
+      </td>
+      <td>
+        <a href="#l118">118</a>
+      </td>
+      <td>
+        <a href="#l118"> called 241 times</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l83">testing::internal::FilePath::Set(testing::internal::FilePath const&amp;)</a>
+      </td>
+      <td>
+        <a href="#l83">83</a>
+      </td>
+      <td>
+        <a href="#l83"> called 1 time</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l86">testing::internal::FilePath::c_str() const</a>
+      </td>
+      <td>
+        <a href="#l86">86</a>
+      </td>
+      <td>
+        <a href="#l86"> not called</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l78">testing::internal::FilePath::operator=(testing::internal::FilePath const&amp;)</a>
+      </td>
+      <td>
+        <a href="#l78">78</a>
+      </td>
+      <td>
+        <a href="#l78"> not called</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l85">testing::internal::FilePath::string() const</a>
+      </td>
+      <td>
+        <a href="#l85">85</a>
+      </td>
+      <td>
+        <a href="#l85"> not called</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l69">testing::internal::FilePath::~FilePath()</a>
+      </td>
+      <td>
+        <a href="#l69">69</a>
+      </td>
+      <td>
+        <a href="#l69"> called 2 times</a>
+      </td>
+    </tr>
+  </table>
+</details>
+
+    </nav>
+
+    <main>
 <div class="file-source">
   <table>
     <tr>
@@ -64,8 +186,6 @@
       <th align="right">Exec</th>
       <th align="left">Source</th>
     </tr>
-
-
     <tr class="source-line">
       <td class="lineno"><a id="l1" href="#l1">1</a></td>
       <td class="linebranch">
@@ -73,7 +193,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// Copyright 2008, Google Inc.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l2" href="#l2">2</a></td>
       <td class="linebranch">
@@ -81,7 +200,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// All rights reserved.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l3" href="#l3">3</a></td>
       <td class="linebranch">
@@ -89,7 +207,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">//</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l4" href="#l4">4</a></td>
       <td class="linebranch">
@@ -97,7 +214,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// Redistribution and use in source and binary forms, with or without</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l5" href="#l5">5</a></td>
       <td class="linebranch">
@@ -105,7 +221,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// modification, are permitted provided that the following conditions are</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l6" href="#l6">6</a></td>
       <td class="linebranch">
@@ -113,7 +228,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// met:</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l7" href="#l7">7</a></td>
       <td class="linebranch">
@@ -121,7 +235,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">//</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l8" href="#l8">8</a></td>
       <td class="linebranch">
@@ -129,7 +242,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">//     * Redistributions of source code must retain the above copyright</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l9" href="#l9">9</a></td>
       <td class="linebranch">
@@ -137,7 +249,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// notice, this list of conditions and the following disclaimer.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l10" href="#l10">10</a></td>
       <td class="linebranch">
@@ -145,7 +256,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">//     * Redistributions in binary form must reproduce the above</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l11" href="#l11">11</a></td>
       <td class="linebranch">
@@ -153,7 +263,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// copyright notice, this list of conditions and the following disclaimer</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l12" href="#l12">12</a></td>
       <td class="linebranch">
@@ -161,7 +270,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// in the documentation and/or other materials provided with the</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l13" href="#l13">13</a></td>
       <td class="linebranch">
@@ -169,7 +277,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// distribution.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l14" href="#l14">14</a></td>
       <td class="linebranch">
@@ -177,7 +284,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">//     * Neither the name of Google Inc. nor the names of its</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l15" href="#l15">15</a></td>
       <td class="linebranch">
@@ -185,7 +291,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// contributors may be used to endorse or promote products derived from</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l16" href="#l16">16</a></td>
       <td class="linebranch">
@@ -193,7 +298,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// this software without specific prior written permission.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l17" href="#l17">17</a></td>
       <td class="linebranch">
@@ -201,7 +305,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">//</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l18" href="#l18">18</a></td>
       <td class="linebranch">
@@ -209,7 +312,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l19" href="#l19">19</a></td>
       <td class="linebranch">
@@ -217,7 +319,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l20" href="#l20">20</a></td>
       <td class="linebranch">
@@ -225,7 +326,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l21" href="#l21">21</a></td>
       <td class="linebranch">
@@ -233,7 +333,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l22" href="#l22">22</a></td>
       <td class="linebranch">
@@ -241,7 +340,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l23" href="#l23">23</a></td>
       <td class="linebranch">
@@ -249,7 +347,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l24" href="#l24">24</a></td>
       <td class="linebranch">
@@ -257,7 +354,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l25" href="#l25">25</a></td>
       <td class="linebranch">
@@ -265,7 +361,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l26" href="#l26">26</a></td>
       <td class="linebranch">
@@ -273,7 +368,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l27" href="#l27">27</a></td>
       <td class="linebranch">
@@ -281,7 +375,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l28" href="#l28">28</a></td>
       <td class="linebranch">
@@ -289,7 +382,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l29" href="#l29">29</a></td>
       <td class="linebranch">
@@ -297,7 +389,6 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l30" href="#l30">30</a></td>
       <td class="linebranch">
@@ -305,7 +396,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// Google Test filepath utilities</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l31" href="#l31">31</a></td>
       <td class="linebranch">
@@ -313,7 +403,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">//</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l32" href="#l32">32</a></td>
       <td class="linebranch">
@@ -321,7 +410,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// This header file declares classes and functions used internally by</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l33" href="#l33">33</a></td>
       <td class="linebranch">
@@ -329,7 +417,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// Google Test.  They are subject to change without notice.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l34" href="#l34">34</a></td>
       <td class="linebranch">
@@ -337,7 +424,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">//</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l35" href="#l35">35</a></td>
       <td class="linebranch">
@@ -345,7 +431,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// This file is #included in gtest/internal/gtest-internal.h.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l36" href="#l36">36</a></td>
       <td class="linebranch">
@@ -353,7 +438,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// Do not include this header file separately!</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l37" href="#l37">37</a></td>
       <td class="linebranch">
@@ -361,7 +445,6 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l38" href="#l38">38</a></td>
       <td class="linebranch">
@@ -369,7 +452,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// IWYU pragma: private, include &quot;gtest/gtest.h&quot;</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l39" href="#l39">39</a></td>
       <td class="linebranch">
@@ -377,7 +459,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// IWYU pragma: friend gtest/.*</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l40" href="#l40">40</a></td>
       <td class="linebranch">
@@ -385,7 +466,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// IWYU pragma: friend gmock/.*</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l41" href="#l41">41</a></td>
       <td class="linebranch">
@@ -393,7 +473,6 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l42" href="#l42">42</a></td>
       <td class="linebranch">
@@ -401,7 +480,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="cp">#ifndef GOOGLETEST_INCLUDE_GTEST_INTERNAL_GTEST_FILEPATH_H_</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l43" href="#l43">43</a></td>
       <td class="linebranch">
@@ -409,7 +487,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="cp">#define GOOGLETEST_INCLUDE_GTEST_INTERNAL_GTEST_FILEPATH_H_</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l44" href="#l44">44</a></td>
       <td class="linebranch">
@@ -417,15 +494,13 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l45" href="#l45">45</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span><span class="cp"></span></td>
+      <td class="src "><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l46" href="#l46">46</a></td>
       <td class="linebranch">
@@ -433,23 +508,20 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l47" href="#l47">47</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;gtest/internal/gtest-port.h&quot;</span><span class="cp"></span></td>
+      <td class="src "><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;gtest/internal/gtest-port.h&quot;</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l48" href="#l48">48</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;gtest/internal/gtest-string.h&quot;</span><span class="cp"></span></td>
+      <td class="src "><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;gtest/internal/gtest-string.h&quot;</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l49" href="#l49">49</a></td>
       <td class="linebranch">
@@ -457,7 +529,6 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l50" href="#l50">50</a></td>
       <td class="linebranch">
@@ -465,15 +536,13 @@
       <td class="linecount "></td>
       <td class="src "><span class="n">GTEST_DISABLE_MSC_WARNINGS_PUSH_</span><span class="p">(</span><span class="mi">4251</span><span class="w"> </span>\</td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l51" href="#l51">51</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">/* class A needs to have dll-interface to be used by clients of class B */</span><span class="p">)</span><span class="w"></span></td>
+      <td class="src "><span class="cm">/* class A needs to have dll-interface to be used by clients of class B */</span><span class="p">)</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l52" href="#l52">52</a></td>
       <td class="linebranch">
@@ -481,7 +550,6 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l53" href="#l53">53</a></td>
       <td class="linebranch">
@@ -489,7 +557,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="cp">#if GTEST_HAS_FILE_SYSTEM</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l54" href="#l54">54</a></td>
       <td class="linebranch">
@@ -497,23 +564,20 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l55" href="#l55">55</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="n">namespace</span><span class="w"> </span><span class="n">testing</span><span class="w"> </span><span class="p">{</span><span class="w"></span></td>
+      <td class="src "><span class="n">namespace</span><span class="w"> </span><span class="n">testing</span><span class="w"> </span><span class="p">{</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l56" href="#l56">56</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="n">namespace</span><span class="w"> </span><span class="n">internal</span><span class="w"> </span><span class="p">{</span><span class="w"></span></td>
+      <td class="src "><span class="n">namespace</span><span class="w"> </span><span class="n">internal</span><span class="w"> </span><span class="p">{</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l57" href="#l57">57</a></td>
       <td class="linebranch">
@@ -521,7 +585,6 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l58" href="#l58">58</a></td>
       <td class="linebranch">
@@ -529,7 +592,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// FilePath - a class for file and directory pathname manipulation which</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l59" href="#l59">59</a></td>
       <td class="linebranch">
@@ -537,7 +599,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// handles platform-specific conventions (like the pathname separator).</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l60" href="#l60">60</a></td>
       <td class="linebranch">
@@ -545,7 +606,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// Used for helper functions for naming files in a directory for xml output.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l61" href="#l61">61</a></td>
       <td class="linebranch">
@@ -553,7 +613,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// Except for Set methods, all methods are const or static, which provides an</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l62" href="#l62">62</a></td>
       <td class="linebranch">
@@ -561,7 +620,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// &quot;immutable value object&quot; -- useful for peace of mind.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l63" href="#l63">63</a></td>
       <td class="linebranch">
@@ -569,7 +627,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// A FilePath with a value ending in a path separator (&quot;like/this/&quot;) represents</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l64" href="#l64">64</a></td>
       <td class="linebranch">
@@ -577,7 +634,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// a directory, otherwise it is assumed to represent a file. In either case,</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l65" href="#l65">65</a></td>
       <td class="linebranch">
@@ -585,7 +641,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// it may or may not represent an actual file or directory in the file system.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l66" href="#l66">66</a></td>
       <td class="linebranch">
@@ -593,7 +648,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// Names are NOT checked for syntax correctness -- no checking for illegal</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l67" href="#l67">67</a></td>
       <td class="linebranch">
@@ -601,7 +655,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="c1">// characters, malformed paths, etc.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l68" href="#l68">68</a></td>
       <td class="linebranch">
@@ -609,157 +662,34 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l69" href="#l69">69</a></td>
       <td class="linebranch">
-        <details class="linebranchDetails">
-        <summary class="linebranchSummary">3/104</summary>
-        <div class="linebranchContents">
-          <div class="notTakenBranch">&cross; Branch 0 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 1 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 2 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 3 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 4 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 5 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 6 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 7 not taken.</div>
-          <div class="takenBranch">&check; Branch 8 taken 1 times.</div>
-          <div class="notTakenBranch">&cross; Branch 9 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 10 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 11 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 12 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 13 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 14 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 15 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 16 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 17 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 18 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 19 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 20 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 21 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 22 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 23 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 24 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 25 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 26 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 27 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 28 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 29 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 30 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 31 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 32 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 33 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 34 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 35 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 36 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 37 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 38 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 39 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 40 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 41 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 42 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 43 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 44 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 45 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 46 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 47 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 48 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 49 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 50 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 51 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 52 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 53 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 54 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 55 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 56 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 57 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 59 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 60 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 61 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 62 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 63 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 64 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 65 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 66 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 67 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 68 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 69 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 70 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 71 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 72 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 73 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 74 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 76 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 77 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 78 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 79 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 80 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 81 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 83 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 84 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 85 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 86 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 88 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 89 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 90 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 91 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 92 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 93 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 94 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 95 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 96 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 97 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 98 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 99 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 100 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 101 not taken.</div>
-          <div class="takenBranch">&check; Branch 102 taken 1 times.</div>
-          <div class="notTakenBranch">&cross; Branch 103 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 104 not taken.</div>
-          <div class="takenBranch">&check; Branch 105 taken 1 times.</div>
-          <div class="notTakenBranch">&cross; Branch 106 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 107 not taken.</div>
-        </div>
-        </details>
       </td>
-      <td class="linecount coveredLine">3</td>
-      <td class="src coveredLine"><span class="n">class</span><span class="w"> </span><span class="n">GTEST_API_</span><span class="w"> </span><span class="n">FilePath</span><span class="w"> </span><span class="p">{</span><span class="w"></span></td>
+      <td class="linecount "></td>
+      <td class="src "><span class="n">class</span><span class="w"> </span><span class="n">GTEST_API_</span><span class="w"> </span><span class="n">FilePath</span><span class="w"> </span><span class="p">{</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l70" href="#l70">70</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w"> </span><span class="n">public</span><span class="o">:</span><span class="w"></span></td>
+      <td class="src "><span class="w"> </span><span class="n">public</span><span class="o">:</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l71" href="#l71">71</a></td>
       <td class="linebranch">
-        <details class="linebranchDetails">
-        <summary class="linebranchSummary">1/4</summary>
-        <div class="linebranchContents">
-          <div class="takenBranch">&check; Branch 2 taken 1 times.</div>
-          <div class="notTakenBranch">&cross; Branch 3 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 6 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 7 not taken.</div>
-        </div>
-        </details>
       </td>
-      <td class="linecount coveredLine">1</td>
-      <td class="src coveredLine"><span class="w">  </span><span class="n">FilePath</span><span class="p">()</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">pathname_</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span><span class="w"></span></td>
+      <td class="linecount coveredLine">2</td>
+      <td class="src coveredLine"><span class="w">  </span><span class="n">FilePath</span><span class="p">()</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">pathname_</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l72" href="#l72">72</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount uncoveredLine">&cross;</td>
-      <td class="src uncoveredLine"><span class="w">  </span><span class="n">FilePath</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">FilePath</span><span class="o">&amp;</span><span class="w"> </span><span class="n">rhs</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">pathname_</span><span class="p">(</span><span class="n">rhs</span><span class="p">.</span><span class="n">pathname_</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span><span class="w"></span></td>
+      <td class="src uncoveredLine"><span class="w">  </span><span class="n">FilePath</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">FilePath</span><span class="o">&amp;</span><span class="w"> </span><span class="n">rhs</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">pathname_</span><span class="p">(</span><span class="n">rhs</span><span class="p">.</span><span class="n">pathname_</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l73" href="#l73">73</a></td>
       <td class="linebranch">
@@ -767,45 +697,34 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l74" href="#l74">74</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">1</td>
-      <td class="src coveredLine"><span class="w">  </span><span class="n">explicit</span><span class="w"> </span><span class="n">FilePath</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">pathname</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">pathname_</span><span class="p">(</span><span class="n">pathname</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span></td>
+      <td class="linecount coveredLine">2</td>
+      <td class="src coveredLine"><span class="w">  </span><span class="n">explicit</span><span class="w"> </span><span class="n">FilePath</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">pathname</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">pathname_</span><span class="p">(</span><span class="n">pathname</span><span class="p">)</span><span class="w"> </span><span class="p">{</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l75" href="#l75">75</a></td>
       <td class="linebranch">
         <details class="linebranchDetails">
         <summary class="linebranchSummary">1/2</summary>
         <div class="linebranchContents">
-          <div class="takenBranch">&check; Branch 1 taken 1 times.</div>
-          <div class="notTakenBranch">&cross; Branch 2 not taken.</div>
-        </div>
-        </details>
-      </td>
-      <td class="linecount coveredLine">1</td>
-      <td class="src coveredLine"><span class="w">    </span><span class="n">Normalize</span><span class="p">();</span><span class="w"></span></td>
-    </tr>
-
-    <tr class="source-line">
-      <td class="lineno"><a id="l76" href="#l76">76</a></td>
-      <td class="linebranch">
-        <details class="linebranchDetails">
-        <summary class="linebranchSummary">0/2</summary>
-        <div class="linebranchContents">
-          <div class="notTakenBranch">&cross; Branch 0 not taken.</div>
+          <div class="takenBranch">&check; Branch 0 taken 1 times.</div>
           <div class="notTakenBranch">&cross; Branch 1 not taken.</div>
         </div>
         </details>
       </td>
       <td class="linecount coveredLine">1</td>
-      <td class="src coveredLine"><span class="w">  </span><span class="p">}</span><span class="w"></span></td>
+      <td class="src coveredLine"><span class="w">    </span><span class="n">Normalize</span><span class="p">();</span></td>
     </tr>
-
+    <tr class="source-line">
+      <td class="lineno"><a id="l76" href="#l76">76</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount coveredLine">2</td>
+      <td class="src coveredLine"><span class="w">  </span><span class="p">}</span></td>
+    </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l77" href="#l77">77</a></td>
       <td class="linebranch">
@@ -813,39 +732,34 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l78" href="#l78">78</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount uncoveredLine">&cross;</td>
-      <td class="src uncoveredLine"><span class="w">  </span><span class="n">FilePath</span><span class="o">&amp;</span><span class="w"> </span><span class="n">operator</span><span class="o">=</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">FilePath</span><span class="o">&amp;</span><span class="w"> </span><span class="n">rhs</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span></td>
+      <td class="src uncoveredLine"><span class="w">  </span><span class="n">FilePath</span><span class="o">&amp;</span><span class="w"> </span><span class="n">operator</span><span class="o">=</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">FilePath</span><span class="o">&amp;</span><span class="w"> </span><span class="n">rhs</span><span class="p">)</span><span class="w"> </span><span class="p">{</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l79" href="#l79">79</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount uncoveredLine">&cross;</td>
-      <td class="src uncoveredLine"><span class="w">    </span><span class="n">Set</span><span class="p">(</span><span class="n">rhs</span><span class="p">);</span><span class="w"></span></td>
+      <td class="src uncoveredLine"><span class="w">    </span><span class="n">Set</span><span class="p">(</span><span class="n">rhs</span><span class="p">);</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l80" href="#l80">80</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount uncoveredLine">&cross;</td>
-      <td class="src uncoveredLine"><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="o">*</span><span class="n">this</span><span class="p">;</span><span class="w"></span></td>
+      <td class="src uncoveredLine"><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="o">*</span><span class="n">this</span><span class="p">;</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l81" href="#l81">81</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">  </span><span class="p">}</span><span class="w"></span></td>
+      <td class="src "><span class="w">  </span><span class="p">}</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l82" href="#l82">82</a></td>
       <td class="linebranch">
@@ -853,36 +767,13 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l83" href="#l83">83</a></td>
       <td class="linebranch">
-        <details class="linebranchDetails">
-        <summary class="linebranchSummary">2/16</summary>
-        <div class="linebranchContents">
-          <div class="notTakenBranch">&cross; Branch 1 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 2 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 3 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 4 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 6 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 7 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 8 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 9 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 11 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 12 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 13 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 14 not taken.</div>
-          <div class="takenBranch">&check; Branch 16 taken 1 times.</div>
-          <div class="notTakenBranch">&cross; Branch 17 not taken.</div>
-          <div class="takenBranch">&check; Branch 18 taken 1 times.</div>
-          <div class="notTakenBranch">&cross; Branch 19 not taken.</div>
-        </div>
-        </details>
       </td>
       <td class="linecount coveredLine">1</td>
-      <td class="src coveredLine"><span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="n">Set</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">FilePath</span><span class="o">&amp;</span><span class="w"> </span><span class="n">rhs</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">pathname_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rhs</span><span class="p">.</span><span class="n">pathname_</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"></span></td>
+      <td class="src coveredLine"><span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="n">Set</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">FilePath</span><span class="o">&amp;</span><span class="w"> </span><span class="n">rhs</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">pathname_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rhs</span><span class="p">.</span><span class="n">pathname_</span><span class="p">;</span><span class="w"> </span><span class="p">}</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l84" href="#l84">84</a></td>
       <td class="linebranch">
@@ -890,23 +781,20 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l85" href="#l85">85</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount uncoveredLine">&cross;</td>
-      <td class="src uncoveredLine"><span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">string</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">pathname_</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"></span></td>
+      <td class="src uncoveredLine"><span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">string</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">pathname_</span><span class="p">;</span><span class="w"> </span><span class="p">}</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l86" href="#l86">86</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount uncoveredLine">&cross;</td>
-      <td class="src uncoveredLine"><span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">c_str</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">pathname_</span><span class="p">.</span><span class="n">c_str</span><span class="p">();</span><span class="w"> </span><span class="p">}</span><span class="w"></span></td>
+      <td class="src uncoveredLine"><span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">c_str</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">pathname_</span><span class="p">.</span><span class="n">c_str</span><span class="p">();</span><span class="w"> </span><span class="p">}</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l87" href="#l87">87</a></td>
       <td class="linebranch">
@@ -914,7 +802,6 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l88" href="#l88">88</a></td>
       <td class="linebranch">
@@ -922,15 +809,13 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// Returns the current working directory, or &quot;&quot; if unsuccessful.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l89" href="#l89">89</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">  </span><span class="k">static</span><span class="w"> </span><span class="n">FilePath</span><span class="w"> </span><span class="n">GetCurrentDir</span><span class="p">();</span><span class="w"></span></td>
+      <td class="src "><span class="w">  </span><span class="k">static</span><span class="w"> </span><span class="n">FilePath</span><span class="w"> </span><span class="n">GetCurrentDir</span><span class="p">();</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l90" href="#l90">90</a></td>
       <td class="linebranch">
@@ -938,7 +823,6 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l91" href="#l91">91</a></td>
       <td class="linebranch">
@@ -946,7 +830,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// Given directory = &quot;dir&quot;, base_name = &quot;test&quot;, number = 0,</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l92" href="#l92">92</a></td>
       <td class="linebranch">
@@ -954,7 +837,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// extension = &quot;xml&quot;, returns &quot;dir/test.xml&quot;. If number is greater</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l93" href="#l93">93</a></td>
       <td class="linebranch">
@@ -962,7 +844,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// than zero (e.g., 12), returns &quot;dir/test_12.xml&quot;.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l94" href="#l94">94</a></td>
       <td class="linebranch">
@@ -970,31 +851,27 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// On Windows platform, uses \ as the separator rather than /.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l95" href="#l95">95</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">  </span><span class="k">static</span><span class="w"> </span><span class="n">FilePath</span><span class="w"> </span><span class="nf">MakeFileName</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">FilePath</span><span class="o">&amp;</span><span class="w"> </span><span class="n">directory</span><span class="p">,</span><span class="w"></span></td>
+      <td class="src "><span class="w">  </span><span class="k">static</span><span class="w"> </span><span class="n">FilePath</span><span class="w"> </span><span class="nf">MakeFileName</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">FilePath</span><span class="o">&amp;</span><span class="w"> </span><span class="n">directory</span><span class="p">,</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l96" href="#l96">96</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">                               </span><span class="k">const</span><span class="w"> </span><span class="n">FilePath</span><span class="o">&amp;</span><span class="w"> </span><span class="n">base_name</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">number</span><span class="p">,</span><span class="w"></span></td>
+      <td class="src "><span class="w">                               </span><span class="k">const</span><span class="w"> </span><span class="n">FilePath</span><span class="o">&amp;</span><span class="w"> </span><span class="n">base_name</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">number</span><span class="p">,</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l97" href="#l97">97</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">                               </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">extension</span><span class="p">);</span><span class="w"></span></td>
+      <td class="src "><span class="w">                               </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">extension</span><span class="p">);</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l98" href="#l98">98</a></td>
       <td class="linebranch">
@@ -1002,7 +879,6 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l99" href="#l99">99</a></td>
       <td class="linebranch">
@@ -1010,7 +886,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// Given directory = &quot;dir&quot;, relative_path = &quot;test.xml&quot;,</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l100" href="#l100">100</a></td>
       <td class="linebranch">
@@ -1018,7 +893,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// returns &quot;dir/test.xml&quot;.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l101" href="#l101">101</a></td>
       <td class="linebranch">
@@ -1026,23 +900,20 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// On Windows, uses \ as the separator rather than /.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l102" href="#l102">102</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">  </span><span class="k">static</span><span class="w"> </span><span class="n">FilePath</span><span class="w"> </span><span class="nf">ConcatPaths</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">FilePath</span><span class="o">&amp;</span><span class="w"> </span><span class="n">directory</span><span class="p">,</span><span class="w"></span></td>
+      <td class="src "><span class="w">  </span><span class="k">static</span><span class="w"> </span><span class="n">FilePath</span><span class="w"> </span><span class="nf">ConcatPaths</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">FilePath</span><span class="o">&amp;</span><span class="w"> </span><span class="n">directory</span><span class="p">,</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l103" href="#l103">103</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">                              </span><span class="k">const</span><span class="w"> </span><span class="n">FilePath</span><span class="o">&amp;</span><span class="w"> </span><span class="n">relative_path</span><span class="p">);</span><span class="w"></span></td>
+      <td class="src "><span class="w">                              </span><span class="k">const</span><span class="w"> </span><span class="n">FilePath</span><span class="o">&amp;</span><span class="w"> </span><span class="n">relative_path</span><span class="p">);</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l104" href="#l104">104</a></td>
       <td class="linebranch">
@@ -1050,7 +921,6 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l105" href="#l105">105</a></td>
       <td class="linebranch">
@@ -1058,7 +928,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// Returns a pathname for a file that does not currently exist. The pathname</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l106" href="#l106">106</a></td>
       <td class="linebranch">
@@ -1066,7 +935,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// will be directory/base_name.extension or</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l107" href="#l107">107</a></td>
       <td class="linebranch">
@@ -1074,7 +942,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// directory/base_name_&lt;number&gt;.extension if directory/base_name.extension</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l108" href="#l108">108</a></td>
       <td class="linebranch">
@@ -1082,7 +949,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// already exists. The number will be incremented until a pathname is found</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l109" href="#l109">109</a></td>
       <td class="linebranch">
@@ -1090,7 +956,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// that does not already exist.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l110" href="#l110">110</a></td>
       <td class="linebranch">
@@ -1098,7 +963,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// Examples: &#39;dir/foo_test.xml&#39; or &#39;dir/foo_test_1.xml&#39;.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l111" href="#l111">111</a></td>
       <td class="linebranch">
@@ -1106,7 +970,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// There could be a race condition if two or more processes are calling this</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l112" href="#l112">112</a></td>
       <td class="linebranch">
@@ -1114,31 +977,27 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// function at the same time -- they could both pick the same filename.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l113" href="#l113">113</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">  </span><span class="k">static</span><span class="w"> </span><span class="n">FilePath</span><span class="w"> </span><span class="nf">GenerateUniqueFileName</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">FilePath</span><span class="o">&amp;</span><span class="w"> </span><span class="n">directory</span><span class="p">,</span><span class="w"></span></td>
+      <td class="src "><span class="w">  </span><span class="k">static</span><span class="w"> </span><span class="n">FilePath</span><span class="w"> </span><span class="nf">GenerateUniqueFileName</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">FilePath</span><span class="o">&amp;</span><span class="w"> </span><span class="n">directory</span><span class="p">,</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l114" href="#l114">114</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">                                         </span><span class="k">const</span><span class="w"> </span><span class="n">FilePath</span><span class="o">&amp;</span><span class="w"> </span><span class="n">base_name</span><span class="p">,</span><span class="w"></span></td>
+      <td class="src "><span class="w">                                         </span><span class="k">const</span><span class="w"> </span><span class="n">FilePath</span><span class="o">&amp;</span><span class="w"> </span><span class="n">base_name</span><span class="p">,</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l115" href="#l115">115</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">                                         </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">extension</span><span class="p">);</span><span class="w"></span></td>
+      <td class="src "><span class="w">                                         </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">extension</span><span class="p">);</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l116" href="#l116">116</a></td>
       <td class="linebranch">
@@ -1146,7 +1005,6 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l117" href="#l117">117</a></td>
       <td class="linebranch">
@@ -1154,26 +1012,13 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// Returns true if and only if the path is &quot;&quot;.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l118" href="#l118">118</a></td>
       <td class="linebranch">
-        <details class="linebranchDetails">
-        <summary class="linebranchSummary">3/6</summary>
-        <div class="linebranchContents">
-          <div class="notTakenBranch">&cross; Branch 0 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 1 not taken.</div>
-          <div class="takenBranch">&check; Branch 2 taken 1 times.</div>
-          <div class="takenBranch">&check; Branch 3 taken 239 times.</div>
-          <div class="notTakenBranch">&cross; Branch 4 not taken.</div>
-          <div class="takenBranch">&check; Branch 5 taken 1 times.</div>
-        </div>
-        </details>
       </td>
       <td class="linecount coveredLine">241</td>
-      <td class="src coveredLine"><span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="nf">IsEmpty</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">pathname_</span><span class="p">.</span><span class="n">empty</span><span class="p">();</span><span class="w"> </span><span class="p">}</span><span class="w"></span></td>
+      <td class="src coveredLine"><span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="nf">IsEmpty</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">pathname_</span><span class="p">.</span><span class="n">empty</span><span class="p">();</span><span class="w"> </span><span class="p">}</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l119" href="#l119">119</a></td>
       <td class="linebranch">
@@ -1181,7 +1026,6 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l120" href="#l120">120</a></td>
       <td class="linebranch">
@@ -1189,7 +1033,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// If input name has a trailing separator character, removes it and returns</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l121" href="#l121">121</a></td>
       <td class="linebranch">
@@ -1197,7 +1040,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// the name, otherwise return the name string unmodified.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l122" href="#l122">122</a></td>
       <td class="linebranch">
@@ -1205,15 +1047,13 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// On Windows platform, uses \ as the separator, other platforms use /.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l123" href="#l123">123</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">  </span><span class="n">FilePath</span><span class="w"> </span><span class="nf">RemoveTrailingPathSeparator</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span><span class="w"></span></td>
+      <td class="src "><span class="w">  </span><span class="n">FilePath</span><span class="w"> </span><span class="nf">RemoveTrailingPathSeparator</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l124" href="#l124">124</a></td>
       <td class="linebranch">
@@ -1221,7 +1061,6 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l125" href="#l125">125</a></td>
       <td class="linebranch">
@@ -1229,7 +1068,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// Returns a copy of the FilePath with the directory part removed.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l126" href="#l126">126</a></td>
       <td class="linebranch">
@@ -1237,7 +1075,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// Example: FilePath(&quot;path/to/file&quot;).RemoveDirectoryName() returns</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l127" href="#l127">127</a></td>
       <td class="linebranch">
@@ -1245,7 +1082,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// FilePath(&quot;file&quot;). If there is no directory part (&quot;just_a_file&quot;), it returns</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l128" href="#l128">128</a></td>
       <td class="linebranch">
@@ -1253,7 +1089,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// the FilePath unmodified. If there is no file part (&quot;just_a_dir/&quot;) it</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l129" href="#l129">129</a></td>
       <td class="linebranch">
@@ -1261,7 +1096,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// returns an empty FilePath (&quot;&quot;).</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l130" href="#l130">130</a></td>
       <td class="linebranch">
@@ -1269,15 +1103,13 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// On Windows platform, &#39;\&#39; is the path separator, otherwise it is &#39;/&#39;.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l131" href="#l131">131</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">  </span><span class="n">FilePath</span><span class="w"> </span><span class="nf">RemoveDirectoryName</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span><span class="w"></span></td>
+      <td class="src "><span class="w">  </span><span class="n">FilePath</span><span class="w"> </span><span class="nf">RemoveDirectoryName</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l132" href="#l132">132</a></td>
       <td class="linebranch">
@@ -1285,7 +1117,6 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l133" href="#l133">133</a></td>
       <td class="linebranch">
@@ -1293,7 +1124,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// RemoveFileName returns the directory path with the filename removed.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l134" href="#l134">134</a></td>
       <td class="linebranch">
@@ -1301,7 +1131,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// Example: FilePath(&quot;path/to/file&quot;).RemoveFileName() returns &quot;path/to/&quot;.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l135" href="#l135">135</a></td>
       <td class="linebranch">
@@ -1309,7 +1138,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// If the FilePath is &quot;a_file&quot; or &quot;/a_file&quot;, RemoveFileName returns</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l136" href="#l136">136</a></td>
       <td class="linebranch">
@@ -1317,7 +1145,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// FilePath(&quot;./&quot;) or, on Windows, FilePath(&quot;.\\&quot;). If the filepath does</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l137" href="#l137">137</a></td>
       <td class="linebranch">
@@ -1325,7 +1152,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// not have a file, like &quot;just/a/dir/&quot;, it returns the FilePath unmodified.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l138" href="#l138">138</a></td>
       <td class="linebranch">
@@ -1333,15 +1159,13 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// On Windows platform, &#39;\&#39; is the path separator, otherwise it is &#39;/&#39;.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l139" href="#l139">139</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">  </span><span class="n">FilePath</span><span class="w"> </span><span class="nf">RemoveFileName</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span><span class="w"></span></td>
+      <td class="src "><span class="w">  </span><span class="n">FilePath</span><span class="w"> </span><span class="nf">RemoveFileName</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l140" href="#l140">140</a></td>
       <td class="linebranch">
@@ -1349,7 +1173,6 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l141" href="#l141">141</a></td>
       <td class="linebranch">
@@ -1357,7 +1180,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// Returns a copy of the FilePath with the case-insensitive extension removed.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l142" href="#l142">142</a></td>
       <td class="linebranch">
@@ -1365,7 +1187,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// Example: FilePath(&quot;dir/file.exe&quot;).RemoveExtension(&quot;EXE&quot;) returns</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l143" href="#l143">143</a></td>
       <td class="linebranch">
@@ -1373,7 +1194,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// FilePath(&quot;dir/file&quot;). If a case-insensitive extension is not</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l144" href="#l144">144</a></td>
       <td class="linebranch">
@@ -1381,15 +1201,13 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// found, returns a copy of the original FilePath.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l145" href="#l145">145</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">  </span><span class="n">FilePath</span><span class="w"> </span><span class="nf">RemoveExtension</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">extension</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span><span class="w"></span></td>
+      <td class="src "><span class="w">  </span><span class="n">FilePath</span><span class="w"> </span><span class="nf">RemoveExtension</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">extension</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l146" href="#l146">146</a></td>
       <td class="linebranch">
@@ -1397,7 +1215,6 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l147" href="#l147">147</a></td>
       <td class="linebranch">
@@ -1405,7 +1222,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// Creates directories so that path exists. Returns true if successful or if</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l148" href="#l148">148</a></td>
       <td class="linebranch">
@@ -1413,7 +1229,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// the directories already exist; returns false if unable to create</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l149" href="#l149">149</a></td>
       <td class="linebranch">
@@ -1421,7 +1236,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// directories for any reason. Will also return false if the FilePath does</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l150" href="#l150">150</a></td>
       <td class="linebranch">
@@ -1429,15 +1243,13 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// not represent a directory (that is, it doesn&#39;t end with a path separator).</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l151" href="#l151">151</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="nf">CreateDirectoriesRecursively</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span><span class="w"></span></td>
+      <td class="src "><span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="nf">CreateDirectoriesRecursively</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l152" href="#l152">152</a></td>
       <td class="linebranch">
@@ -1445,7 +1257,6 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l153" href="#l153">153</a></td>
       <td class="linebranch">
@@ -1453,7 +1264,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// Create the directory so that path exists. Returns true if successful or</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l154" href="#l154">154</a></td>
       <td class="linebranch">
@@ -1461,7 +1271,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// if the directory already exists; returns false if unable to create the</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l155" href="#l155">155</a></td>
       <td class="linebranch">
@@ -1469,7 +1278,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// directory for any reason, including if the parent directory does not</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l156" href="#l156">156</a></td>
       <td class="linebranch">
@@ -1477,15 +1285,13 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// exist. Not named &quot;CreateDirectory&quot; because that&#39;s a macro on Windows.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l157" href="#l157">157</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="nf">CreateFolder</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span><span class="w"></span></td>
+      <td class="src "><span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="nf">CreateFolder</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l158" href="#l158">158</a></td>
       <td class="linebranch">
@@ -1493,7 +1299,6 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l159" href="#l159">159</a></td>
       <td class="linebranch">
@@ -1501,7 +1306,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// Returns true if FilePath describes something in the file-system,</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l160" href="#l160">160</a></td>
       <td class="linebranch">
@@ -1509,15 +1313,13 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// either a file, directory, or whatever, and that something exists.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l161" href="#l161">161</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="nf">FileOrDirectoryExists</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span><span class="w"></span></td>
+      <td class="src "><span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="nf">FileOrDirectoryExists</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l162" href="#l162">162</a></td>
       <td class="linebranch">
@@ -1525,7 +1327,6 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l163" href="#l163">163</a></td>
       <td class="linebranch">
@@ -1533,7 +1334,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// Returns true if pathname describes a directory in the file-system</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l164" href="#l164">164</a></td>
       <td class="linebranch">
@@ -1541,15 +1341,13 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// that exists.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l165" href="#l165">165</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="nf">DirectoryExists</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span><span class="w"></span></td>
+      <td class="src "><span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="nf">DirectoryExists</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l166" href="#l166">166</a></td>
       <td class="linebranch">
@@ -1557,7 +1355,6 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l167" href="#l167">167</a></td>
       <td class="linebranch">
@@ -1565,7 +1362,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// Returns true if FilePath ends with a path separator, which indicates that</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l168" href="#l168">168</a></td>
       <td class="linebranch">
@@ -1573,7 +1369,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// it is intended to represent a directory. Returns false otherwise.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l169" href="#l169">169</a></td>
       <td class="linebranch">
@@ -1581,15 +1376,13 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// This does NOT check that a directory (or file) actually exists.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l170" href="#l170">170</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="nf">IsDirectory</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span><span class="w"></span></td>
+      <td class="src "><span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="nf">IsDirectory</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l171" href="#l171">171</a></td>
       <td class="linebranch">
@@ -1597,7 +1390,6 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l172" href="#l172">172</a></td>
       <td class="linebranch">
@@ -1605,7 +1397,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// Returns true if pathname describes a root directory. (Windows has one</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l173" href="#l173">173</a></td>
       <td class="linebranch">
@@ -1613,15 +1404,13 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// root directory per disk drive.)</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l174" href="#l174">174</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="nf">IsRootDirectory</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span><span class="w"></span></td>
+      <td class="src "><span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="nf">IsRootDirectory</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l175" href="#l175">175</a></td>
       <td class="linebranch">
@@ -1629,7 +1418,6 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l176" href="#l176">176</a></td>
       <td class="linebranch">
@@ -1637,15 +1425,13 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// Returns true if pathname describes an absolute path.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l177" href="#l177">177</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="nf">IsAbsolutePath</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span><span class="w"></span></td>
+      <td class="src "><span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="nf">IsAbsolutePath</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l178" href="#l178">178</a></td>
       <td class="linebranch">
@@ -1653,15 +1439,13 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l179" href="#l179">179</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w"> </span><span class="n">private</span><span class="o">:</span><span class="w"></span></td>
+      <td class="src "><span class="w"> </span><span class="n">private</span><span class="o">:</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l180" href="#l180">180</a></td>
       <td class="linebranch">
@@ -1669,7 +1453,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// Replaces multiple consecutive separators with a single separator.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l181" href="#l181">181</a></td>
       <td class="linebranch">
@@ -1677,7 +1460,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// For example, &quot;bar///foo&quot; becomes &quot;bar/foo&quot;. Does not eliminate other</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l182" href="#l182">182</a></td>
       <td class="linebranch">
@@ -1685,7 +1467,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// redundancies that might be in a pathname involving &quot;.&quot; or &quot;..&quot;.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l183" href="#l183">183</a></td>
       <td class="linebranch">
@@ -1693,7 +1474,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">//</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l184" href="#l184">184</a></td>
       <td class="linebranch">
@@ -1701,7 +1481,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// A pathname with multiple consecutive separators may occur either through</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l185" href="#l185">185</a></td>
       <td class="linebranch">
@@ -1709,7 +1488,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// user error or as a result of some scripts or APIs that generate a pathname</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l186" href="#l186">186</a></td>
       <td class="linebranch">
@@ -1717,7 +1495,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// with a trailing separator. On other platforms the same API or script</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l187" href="#l187">187</a></td>
       <td class="linebranch">
@@ -1725,7 +1502,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// may NOT generate a pathname with a trailing &quot;/&quot;. Then elsewhere that</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l188" href="#l188">188</a></td>
       <td class="linebranch">
@@ -1733,7 +1509,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// pathname may have another &quot;/&quot; and pathname components added to it,</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l189" href="#l189">189</a></td>
       <td class="linebranch">
@@ -1741,7 +1516,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// without checking for the separator already being there.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l190" href="#l190">190</a></td>
       <td class="linebranch">
@@ -1749,7 +1523,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// The script language and operating system may allow paths like &quot;foo//bar&quot;</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l191" href="#l191">191</a></td>
       <td class="linebranch">
@@ -1757,7 +1530,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// but some of the functions in FilePath will not handle that correctly. In</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l192" href="#l192">192</a></td>
       <td class="linebranch">
@@ -1765,7 +1537,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// particular, RemoveTrailingPathSeparator() only removes one separator, and</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l193" href="#l193">193</a></td>
       <td class="linebranch">
@@ -1773,7 +1544,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// it is called in CreateDirectoriesRecursively() assuming that it will change</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l194" href="#l194">194</a></td>
       <td class="linebranch">
@@ -1781,7 +1551,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// a pathname from directory syntax (trailing separator) to filename syntax.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l195" href="#l195">195</a></td>
       <td class="linebranch">
@@ -1789,7 +1558,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">//</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l196" href="#l196">196</a></td>
       <td class="linebranch">
@@ -1797,7 +1565,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// On Windows this method also replaces the alternate path separator &#39;/&#39; with</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l197" href="#l197">197</a></td>
       <td class="linebranch">
@@ -1805,7 +1572,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// the primary path separator &#39;\\&#39;, so that for example &quot;bar\\/\\foo&quot; becomes</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l198" href="#l198">198</a></td>
       <td class="linebranch">
@@ -1813,7 +1579,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// &quot;bar\\foo&quot;.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l199" href="#l199">199</a></td>
       <td class="linebranch">
@@ -1821,15 +1586,13 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l200" href="#l200">200</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="n">Normalize</span><span class="p">();</span><span class="w"></span></td>
+      <td class="src "><span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="n">Normalize</span><span class="p">();</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l201" href="#l201">201</a></td>
       <td class="linebranch">
@@ -1837,7 +1600,6 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l202" href="#l202">202</a></td>
       <td class="linebranch">
@@ -1845,7 +1607,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// Returns a pointer to the last occurrence of a valid path separator in</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l203" href="#l203">203</a></td>
       <td class="linebranch">
@@ -1853,7 +1614,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// the FilePath. On Windows, for example, both &#39;/&#39; and &#39;\&#39; are valid path</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l204" href="#l204">204</a></td>
       <td class="linebranch">
@@ -1861,15 +1621,13 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// separators. Returns NULL if no path separator was found.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l205" href="#l205">205</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="nf">FindLastPathSeparator</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span><span class="w"></span></td>
+      <td class="src "><span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="nf">FindLastPathSeparator</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l206" href="#l206">206</a></td>
       <td class="linebranch">
@@ -1877,7 +1635,6 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l207" href="#l207">207</a></td>
       <td class="linebranch">
@@ -1885,7 +1642,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// Returns the length of the path root, including the directory separator at</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l208" href="#l208">208</a></td>
       <td class="linebranch">
@@ -1893,7 +1649,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// the end of the prefix. Returns zero by definition if the path is relative.</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l209" href="#l209">209</a></td>
       <td class="linebranch">
@@ -1901,7 +1656,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// Examples:</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l210" href="#l210">210</a></td>
       <td class="linebranch">
@@ -1909,7 +1663,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// - [Windows] &quot;..\Sibling&quot; =&gt; 0</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l211" href="#l211">211</a></td>
       <td class="linebranch">
@@ -1917,7 +1670,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// - [Windows] &quot;\Windows&quot; =&gt; 1</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l212" href="#l212">212</a></td>
       <td class="linebranch">
@@ -1925,7 +1677,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// - [Windows] &quot;C:/Windows\Notepad.exe&quot; =&gt; 3</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l213" href="#l213">213</a></td>
       <td class="linebranch">
@@ -1933,7 +1684,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// - [Windows] &quot;\\Host\Share\C$/Windows&quot; =&gt; 13</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l214" href="#l214">214</a></td>
       <td class="linebranch">
@@ -1941,15 +1691,13 @@
       <td class="linecount "></td>
       <td class="src "><span class="w">  </span><span class="c1">// - [UNIX] &quot;/bin&quot; =&gt; 1</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l215" href="#l215">215</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">  </span><span class="kt">size_t</span><span class="w"> </span><span class="nf">CalculateRootLength</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span><span class="w"></span></td>
+      <td class="src "><span class="w">  </span><span class="kt">size_t</span><span class="w"> </span><span class="nf">CalculateRootLength</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l216" href="#l216">216</a></td>
       <td class="linebranch">
@@ -1957,15 +1705,13 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l217" href="#l217">217</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">pathname_</span><span class="p">;</span><span class="w"></span></td>
+      <td class="src "><span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">pathname_</span><span class="p">;</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l218" href="#l218">218</a></td>
       <td class="linebranch">
@@ -1973,7 +1719,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="p">};</span><span class="w">  </span><span class="c1">// class FilePath</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l219" href="#l219">219</a></td>
       <td class="linebranch">
@@ -1981,7 +1726,6 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l220" href="#l220">220</a></td>
       <td class="linebranch">
@@ -1989,7 +1733,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="p">}</span><span class="w">  </span><span class="c1">// namespace internal</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l221" href="#l221">221</a></td>
       <td class="linebranch">
@@ -1997,7 +1740,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="p">}</span><span class="w">  </span><span class="c1">// namespace testing</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l222" href="#l222">222</a></td>
       <td class="linebranch">
@@ -2005,7 +1747,6 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l223" href="#l223">223</a></td>
       <td class="linebranch">
@@ -2013,7 +1754,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="n">GTEST_DISABLE_MSC_WARNINGS_POP_</span><span class="p">()</span><span class="w">  </span><span class="c1">//  4251</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l224" href="#l224">224</a></td>
       <td class="linebranch">
@@ -2021,7 +1761,6 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l225" href="#l225">225</a></td>
       <td class="linebranch">
@@ -2029,7 +1768,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="cp">#endif  </span><span class="c1">// GTEST_HAS_FILE_SYSTEM</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l226" href="#l226">226</a></td>
       <td class="linebranch">
@@ -2037,7 +1775,6 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l227" href="#l227">227</a></td>
       <td class="linebranch">
@@ -2045,7 +1782,6 @@
       <td class="linecount "></td>
       <td class="src "><span class="cp">#endif  </span><span class="c1">// GOOGLETEST_INCLUDE_GTEST_INTERNAL_GTEST_FILEPATH_H_</span></td>
     </tr>
-
     <tr class="source-line">
       <td class="lineno"><a id="l228" href="#l228">228</a></td>
       <td class="linebranch">
@@ -2053,14 +1789,13 @@
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
-
   </table>
 </div>
-
-    <hr/>
+      <hr/>
+    </main>
 
     <footer>
-      Generated by: <a href="http://gcovr.com">GCOVR (Version 5.0)</a>
+      Generated by: <a href="http://gcovr.com/en/6.0">GCOVR (Version 6.0)</a>
     </footer>
   </body>
 </html>

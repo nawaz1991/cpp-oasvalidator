@@ -11,17 +11,15 @@ Context
    * - Key
      - Value
    * - date
-     - 2023-11-29T07:26:18+00:00
+     - 2023-11-29T07:28:50+00:00
    * - host_name
-     - fv-az1205-219
+     - fv-az1489-696
    * - executable
-     - build/test/perftest/oasvalidator-perftests
+     - D:\a\cpp-oasvalidator\cpp-oasvalidator\build\test\perftest\Release\oasvalidator-perftests.exe
    * - num_cpus
      - 4
    * - mhz_per_cpu
-     - 3242
-   * - cpu_scaling_enabled
-     - False
+     - 2445
    * - caches
 
      - .. list-table::
@@ -47,7 +45,7 @@ Context
           - 33554432
           - 4
    * - load_avg
-     - [2.03564, 0.783691, 0.293457]
+     - []
    * - library_build_type
      - release
 
@@ -61,96 +59,96 @@ Benchmarks
    * - Index
      - Benchmark
      - Iterations
-     - Real Time (Âµs)
-     - CPU Time (Âµs)
+     - Real Time (µs)
+     - CPU Time (µs)
    * - 1
      - InvalidMethod
-     - 38712630
-     - 0.140
-     - 0.140
+     - 23282425
+     - 0.207
+     - 0.206
    * - 2
      - ValidRoute
-     - 67878967
-     - 0.072
-     - 0.072
+     - 80410256
+     - 0.060
+     - 0.060
    * - 3
      - InvalidRoute
-     - 2176458
-     - 2.293
-     - 2.292
+     - 1254400
+     - 3.980
+     - 3.986
    * - 4
      - ValidPathParam
-     - 1729855
-     - 2.870
-     - 2.870
+     - 980000
+     - 5.051
+     - 5.054
    * - 5
      - InvalidPathParam
-     - 964722
-     - 5.097
-     - 5.097
+     - 540690
+     - 9.161
+     - 9.161
    * - 6
      - ValidQueryParam
-     - 12914231
-     - 0.379
-     - 0.379
+     - 6968889
+     - 0.682
+     - 0.682
    * - 7
      - InvalidQueryParam
-     - 1807525
-     - 2.727
-     - 2.727
+     - 1011613
+     - 4.891
+     - 4.896
    * - 8
      - ValidHeaderParam
-     - 13414911
-     - 0.366
-     - 0.366
+     - 7466667
+     - 0.671
+     - 0.672
    * - 9
      - InvalidHeaderParam
-     - 1840653
-     - 2.671
-     - 2.671
+     - 1011613
+     - 4.837
+     - 4.834
    * - 10
      - ValidBody
-     - 3886376
-     - 1.262
-     - 1.262
+     - 2076821
+     - 2.387
+     - 2.385
    * - 11
      - InvalidBody
-     - 4442511
-     - 1.102
-     - 1.102
+     - 2289051
+     - 2.196
+     - 2.198
    * - 12
      - ValidRequest
-     - 788673
-     - 6.167
-     - 6.167
+     - 435556
+     - 11.279
+     - 11.264
    * - 13
      - InvalidRequest1
-     - 28088925
-     - 0.169
-     - 0.169
+     - 12544000
+     - 0.397
+     - 0.399
    * - 14
      - InvalidRequest2
-     - 2194136
-     - 2.254
-     - 2.254
+     - 1206154
+     - 4.149
+     - 4.158
    * - 15
      - InvalidRequest3
-     - 646735
-     - 7.573
-     - 7.573
+     - 360460
+     - 13.719
+     - 13.741
    * - 16
      - InvalidRequest4
-     - 521850
-     - 9.405
-     - 9.404
+     - 337204
+     - 14.337
+     - 14.318
    * - 17
      - InvalidRequest5
-     - 539990
-     - 9.001
-     - 9.000
+     - 307451
+     - 15.951
+     - 15.958
    * - 18
      - ComplexValidRequest
-     - 196344
-     - 25.519
-     - 25.517
+     - 108138
+     - 44.211
+     - 44.214
 

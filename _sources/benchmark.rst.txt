@@ -11,9 +11,9 @@ Context
    * - Key
      - Value
    * - date
-     - 2023-11-29T07:13:57+00:00
+     - 2023-11-29T07:15:50+00:00
    * - host_name
-     - fv-az1258-105
+     - fv-az1388-555
    * - executable
      - D:\a\cpp-oasvalidator\cpp-oasvalidator\build\test\perftest\Release\oasvalidator-perftests.exe
    * - num_cpus
@@ -63,9 +63,9 @@ Benchmarks
      - CPU Time (µs)
    * - 1
      - InvalidMethod
-     - 23963198
-     - 0.206
-     - 0.205
+     - 23823875
+     - 0.207
+     - 0.207
    * - 2
      - ValidRoute
      - 80410256
@@ -73,82 +73,82 @@ Benchmarks
      - 0.060
    * - 3
      - InvalidRoute
-     - 1254400
+     - 1206154
      - 3.995
-     - 3.998
+     - 3.990
    * - 4
      - ValidPathParam
-     - 922353
-     - 4.995
-     - 4.997
+     - 950303
+     - 5.163
+     - 5.146
    * - 5
      - InvalidPathParam
      - 540690
-     - 9.095
-     - 9.074
+     - 9.184
+     - 9.190
    * - 6
      - ValidQueryParam
-     - 7293023
-     - 0.692
-     - 0.690
+     - 7127273
+     - 0.694
+     - 0.693
    * - 7
      - InvalidQueryParam
      - 1011613
-     - 4.917
-     - 4.912
+     - 4.866
+     - 4.865
    * - 8
      - ValidHeaderParam
-     - 7293023
-     - 0.667
-     - 0.666
+     - 7127273
+     - 0.680
+     - 0.680
    * - 9
      - InvalidHeaderParam
      - 1011613
-     - 4.828
-     - 4.819
+     - 4.833
+     - 4.834
    * - 10
      - ValidBody
      - 2049673
-     - 2.383
-     - 2.378
+     - 2.361
+     - 2.363
    * - 11
      - InvalidBody
-     - 2272464
-     - 2.145
-     - 2.145
+     - 2240000
+     - 2.193
+     - 2.190
    * - 12
      - ValidRequest
-     - 407273
-     - 12.015
-     - 12.008
+     - 423784
+     - 11.615
+     - 11.614
    * - 13
      - InvalidRequest1
-     - 11614815
-     - 0.422
-     - 0.421
+     - 12061538
+     - 0.393
+     - 0.394
    * - 14
      - InvalidRequest2
      - 1161481
-     - 4.166
+     - 4.160
      - 4.157
    * - 15
      - InvalidRequest3
      - 356364
-     - 13.666
-     - 13.636
+     - 13.792
+     - 13.811
    * - 16
      - InvalidRequest4
      - 340870
-     - 14.316
-     - 14.302
+     - 14.407
+     - 14.393
    * - 17
      - InvalidRequest5
-     - 310495
-     - 15.903
-     - 15.902
+     - 307451
+     - 16.019
+     - 16.009
    * - 18
      - ComplexValidRequest
-     - 112000
-     - 43.758
-     - 43.945
+     - 108138
+     - 45.615
+     - 45.659
 

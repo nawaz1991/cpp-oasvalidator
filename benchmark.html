@@ -9,7 +9,7 @@
         <title>Benchmark Report - cpp-oasvalidator</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=d81277517bee4d6b0349d71bb2661d4890b5617c" />
-    <link rel="stylesheet" type="text/css" href="_static/collapsible-lists\css\tree_view.css" />
+    <link rel="stylesheet" type="text/css" href="_static/collapsible-lists/css/tree_view.css" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -238,21 +238,24 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>date</p></td>
-<td><p>2023-11-29T07:28:50+00:00</p></td>
+<td><p>2023-11-29T07:29:23+00:00</p></td>
 </tr>
 <tr class="row-odd"><td><p>host_name</p></td>
-<td><p>fv-az1489-696</p></td>
+<td><p>Mac-1701242583308.local</p></td>
 </tr>
 <tr class="row-even"><td><p>executable</p></td>
-<td><p>D:acpp-oasvalidatorcpp-oasvalidatorbuildtestperftestReleaseoasvalidator-perftests.exe</p></td>
+<td><p>build/test/perftest/oasvalidator-perftests</p></td>
 </tr>
 <tr class="row-odd"><td><p>num_cpus</p></td>
-<td><p>4</p></td>
+<td><p>3</p></td>
 </tr>
 <tr class="row-even"><td><p>mhz_per_cpu</p></td>
-<td><p>2445</p></td>
+<td><p>3337</p></td>
 </tr>
-<tr class="row-odd"><td><p>caches</p></td>
+<tr class="row-odd"><td><p>cpu_scaling_enabled</p></td>
+<td><p>False</p></td>
+</tr>
+<tr class="row-even"><td><p>caches</p></td>
 <td><div class="table-wrapper docutils container">
 <table class="docutils align-default">
 <colgroup>
@@ -270,32 +273,32 @@
 <tr class="row-even"><td><p>Data</p></td>
 <td><p>1</p></td>
 <td><p>32768</p></td>
-<td><p>2</p></td>
+<td><p>0</p></td>
 </tr>
 <tr class="row-odd"><td><p>Instruction</p></td>
 <td><p>1</p></td>
 <td><p>32768</p></td>
-<td><p>2</p></td>
+<td><p>0</p></td>
 </tr>
 <tr class="row-even"><td><p>Unified</p></td>
 <td><p>2</p></td>
-<td><p>524288</p></td>
-<td><p>2</p></td>
+<td><p>262144</p></td>
+<td><p>1</p></td>
 </tr>
 <tr class="row-odd"><td><p>Unified</p></td>
 <td><p>3</p></td>
-<td><p>33554432</p></td>
-<td><p>4</p></td>
+<td><p>12582912</p></td>
+<td><p>0</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>load_avg</p></td>
-<td><p>[]</p></td>
+<tr class="row-odd"><td><p>load_avg</p></td>
+<td><p>[3.64697, 5.9375, 3.83643]</p></td>
 </tr>
-<tr class="row-odd"><td><p>library_build_type</p></td>
+<tr class="row-even"><td><p>library_build_type</p></td>
 <td><p>release</p></td>
 </tr>
 </tbody>
@@ -310,118 +313,118 @@
 <tr class="row-odd"><th class="head"><p>Index</p></th>
 <th class="head"><p>Benchmark</p></th>
 <th class="head"><p>Iterations</p></th>
-<th class="head"><p>Real Time (?s)</p></th>
-<th class="head"><p>CPU Time (?s)</p></th>
+<th class="head"><p>Real Time (µs)</p></th>
+<th class="head"><p>CPU Time (µs)</p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="row-even"><td><p>1</p></td>
 <td><p>InvalidMethod</p></td>
-<td><p>23282425</p></td>
-<td><p>0.207</p></td>
-<td><p>0.206</p></td>
+<td><p>13048990</p></td>
+<td><p>0.455</p></td>
+<td><p>0.451</p></td>
 </tr>
 <tr class="row-odd"><td><p>2</p></td>
 <td><p>ValidRoute</p></td>
-<td><p>80410256</p></td>
-<td><p>0.060</p></td>
-<td><p>0.060</p></td>
+<td><p>23632829</p></td>
+<td><p>0.209</p></td>
+<td><p>0.209</p></td>
 </tr>
 <tr class="row-even"><td><p>3</p></td>
 <td><p>InvalidRoute</p></td>
-<td><p>1254400</p></td>
-<td><p>3.980</p></td>
-<td><p>3.986</p></td>
+<td><p>655851</p></td>
+<td><p>8.036</p></td>
+<td><p>7.917</p></td>
 </tr>
 <tr class="row-odd"><td><p>4</p></td>
 <td><p>ValidPathParam</p></td>
-<td><p>980000</p></td>
-<td><p>5.051</p></td>
-<td><p>5.054</p></td>
+<td><p>474956</p></td>
+<td><p>10.724</p></td>
+<td><p>10.631</p></td>
 </tr>
 <tr class="row-even"><td><p>5</p></td>
 <td><p>InvalidPathParam</p></td>
-<td><p>540690</p></td>
-<td><p>9.161</p></td>
-<td><p>9.161</p></td>
+<td><p>242395</p></td>
+<td><p>20.771</p></td>
+<td><p>20.482</p></td>
 </tr>
 <tr class="row-odd"><td><p>6</p></td>
 <td><p>ValidQueryParam</p></td>
-<td><p>6968889</p></td>
-<td><p>0.682</p></td>
-<td><p>0.682</p></td>
+<td><p>3022542</p></td>
+<td><p>1.605</p></td>
+<td><p>1.581</p></td>
 </tr>
 <tr class="row-even"><td><p>7</p></td>
 <td><p>InvalidQueryParam</p></td>
-<td><p>1011613</p></td>
-<td><p>4.891</p></td>
-<td><p>4.896</p></td>
+<td><p>401978</p></td>
+<td><p>12.614</p></td>
+<td><p>12.490</p></td>
 </tr>
 <tr class="row-odd"><td><p>8</p></td>
 <td><p>ValidHeaderParam</p></td>
-<td><p>7466667</p></td>
-<td><p>0.671</p></td>
-<td><p>0.672</p></td>
+<td><p>3459426</p></td>
+<td><p>1.714</p></td>
+<td><p>1.463</p></td>
 </tr>
 <tr class="row-even"><td><p>9</p></td>
 <td><p>InvalidHeaderParam</p></td>
-<td><p>1011613</p></td>
-<td><p>4.837</p></td>
-<td><p>4.834</p></td>
+<td><p>409268</p></td>
+<td><p>11.885</p></td>
+<td><p>11.807</p></td>
 </tr>
 <tr class="row-odd"><td><p>10</p></td>
 <td><p>ValidBody</p></td>
-<td><p>2076821</p></td>
-<td><p>2.387</p></td>
-<td><p>2.385</p></td>
+<td><p>914039</p></td>
+<td><p>5.210</p></td>
+<td><p>5.171</p></td>
 </tr>
 <tr class="row-even"><td><p>11</p></td>
 <td><p>InvalidBody</p></td>
-<td><p>2289051</p></td>
-<td><p>2.196</p></td>
-<td><p>2.198</p></td>
+<td><p>1043526</p></td>
+<td><p>4.657</p></td>
+<td><p>4.620</p></td>
 </tr>
 <tr class="row-odd"><td><p>12</p></td>
 <td><p>ValidRequest</p></td>
-<td><p>435556</p></td>
-<td><p>11.279</p></td>
-<td><p>11.264</p></td>
+<td><p>176953</p></td>
+<td><p>28.081</p></td>
+<td><p>27.915</p></td>
 </tr>
 <tr class="row-even"><td><p>13</p></td>
 <td><p>InvalidRequest1</p></td>
-<td><p>12544000</p></td>
-<td><p>0.397</p></td>
-<td><p>0.399</p></td>
+<td><p>7780964</p></td>
+<td><p>0.701</p></td>
+<td><p>0.689</p></td>
 </tr>
 <tr class="row-odd"><td><p>14</p></td>
 <td><p>InvalidRequest2</p></td>
-<td><p>1206154</p></td>
-<td><p>4.149</p></td>
-<td><p>4.158</p></td>
+<td><p>646326</p></td>
+<td><p>7.821</p></td>
+<td><p>7.677</p></td>
 </tr>
 <tr class="row-even"><td><p>15</p></td>
 <td><p>InvalidRequest3</p></td>
-<td><p>360460</p></td>
-<td><p>13.719</p></td>
-<td><p>13.741</p></td>
+<td><p>155779</p></td>
+<td><p>32.611</p></td>
+<td><p>32.477</p></td>
 </tr>
 <tr class="row-odd"><td><p>16</p></td>
 <td><p>InvalidRequest4</p></td>
-<td><p>337204</p></td>
-<td><p>14.337</p></td>
-<td><p>14.318</p></td>
+<td><p>143754</p></td>
+<td><p>33.691</p></td>
+<td><p>33.633</p></td>
 </tr>
 <tr class="row-even"><td><p>17</p></td>
 <td><p>InvalidRequest5</p></td>
-<td><p>307451</p></td>
-<td><p>15.951</p></td>
-<td><p>15.958</p></td>
+<td><p>132316</p></td>
+<td><p>37.397</p></td>
+<td><p>37.262</p></td>
 </tr>
 <tr class="row-odd"><td><p>18</p></td>
 <td><p>ComplexValidRequest</p></td>
-<td><p>108138</p></td>
-<td><p>44.211</p></td>
-<td><p>44.214</p></td>
+<td><p>48284</p></td>
+<td><p>103.116</p></td>
+<td><p>102.693</p></td>
 </tr>
 </tbody>
 </table>
@@ -505,7 +508,7 @@
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/scripts/furo.js"></script>
-    <script src="_static/collapsible-lists\js\CollapsibleLists.compressed.js"></script>
-    <script src="_static/collapsible-lists\js\apply-collapsible-lists.js"></script>
+    <script src="_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+    <script src="_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
     </body>
 </html>

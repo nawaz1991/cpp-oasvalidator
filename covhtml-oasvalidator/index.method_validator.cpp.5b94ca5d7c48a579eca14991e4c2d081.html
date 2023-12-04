@@ -27,7 +27,7 @@
     </tr>
     <tr>
       <th scope="row">Date:</th>
-      <td>2023-12-01 15:43:29</td>
+      <td>2023-12-04 18:07:57</td>
     </tr>
   </table>
 </div>
@@ -41,8 +41,8 @@
     </tr>
     <tr>
       <th scope="row">Lines:</th>
-      <td>12</td>
-      <td>12</td>
+      <td>8</td>
+      <td>8</td>
       <td class="coverage-high">100.0%</td>
     </tr>
     <tr>
@@ -53,9 +53,9 @@
     </tr>
     <tr>
       <th scope="row">Branches:</th>
-      <td>25</td>
-      <td>48</td>
-      <td class="coverage-low">52.1%</td>
+      <td>7</td>
+      <td>12</td>
+      <td class="coverage-low">58.3%</td>
     </tr>
   </table>
 </div>
@@ -81,18 +81,18 @@
         <a href="#l9">9</a>
       </td>
       <td>
-        <a href="#l9"> called 542 times</a>
+        <a href="#l9"> called 9 times</a>
       </td>
     </tr>
     <tr>
       <td>
-        <a href="#l14">MethodValidator::ValidateJson(std::__1::basic_string&lt;char, std::__1::char_traits&lt;char&gt;, std::__1::allocator&lt;char&gt; &gt; const&amp;, std::__1::basic_string&lt;char, std::__1::char_traits&lt;char&gt;, std::__1::allocator&lt;char&gt; &gt;&amp;)</a>
+        <a href="#l14">MethodValidator::ValidateJson(std::__cxx11::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const&amp;, std::__cxx11::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;&amp;)</a>
       </td>
       <td>
         <a href="#l14">14</a>
       </td>
       <td>
-        <a href="#l14"> called 162193733 times</a>
+        <a href="#l14"> called 88 times</a>
       </td>
     </tr>
   </table>
@@ -169,28 +169,28 @@
       <td class="lineno"><a id="l9" href="#l9">9</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">542</td>
+      <td class="linecount coveredLine">9</td>
       <td class="src coveredLine"><span class="n">MethodValidator</span><span class="o">::</span><span class="n">MethodValidator</span><span class="p">()</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l10" href="#l10">10</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">271</td>
+      <td class="linecount coveredLine">9</td>
       <td class="src coveredLine"><span class="w">    </span><span class="o">:</span><span class="w"> </span><span class="n">BaseValidator</span><span class="p">(</span><span class="n">ValidationError</span><span class="o">::</span><span class="n">INVALID_METHOD</span><span class="p">)</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l11" href="#l11">11</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">813</td>
-      <td class="src coveredLine"><span class="p">{</span></td>
+      <td class="linecount "></td>
+      <td class="src "><span class="p">{</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l12" href="#l12">12</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">542</td>
+      <td class="linecount coveredLine">9</td>
       <td class="src coveredLine"><span class="p">}</span></td>
     </tr>
     <tr class="source-line">
@@ -204,7 +204,7 @@
       <td class="lineno"><a id="l14" href="#l14">14</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">162193733</td>
+      <td class="linecount coveredLine">88</td>
       <td class="src coveredLine"><span class="n">ValidationError</span><span class="w"> </span><span class="n">MethodValidator</span><span class="o">::</span><span class="n">ValidateJson</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">method</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">err_msg</span><span class="p">)</span></td>
     </tr>
     <tr class="source-line">
@@ -218,14 +218,16 @@
       <td class="lineno"><a id="l16" href="#l16">16</a></td>
       <td class="linebranch">
         <details class="linebranchDetails">
-        <summary class="linebranchSummary">2/2</summary>
+        <summary class="linebranchSummary">3/4</summary>
         <div class="linebranchContents">
-          <div class="takenBranch">&check; Branch 0 taken 117258879 times.</div>
-          <div class="takenBranch">&check; Branch 1 taken 44934854 times.</div>
+          <div class="takenBranch">&check; Branch 2 taken 88 times.</div>
+          <div class="notTakenBranch">&cross; Branch 3 not taken.</div>
+          <div class="takenBranch">&check; Branch 5 taken 10 times.</div>
+          <div class="takenBranch">&check; Branch 6 taken 78 times.</div>
         </div>
         </details>
       </td>
-      <td class="linecount coveredLine">162193733</td>
+      <td class="linecount coveredLine">88</td>
       <td class="src coveredLine"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">kValidMethods</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="n">method</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">kValidMethods</span><span class="p">.</span><span class="n">end</span><span class="p">())</span><span class="w"> </span><span class="p">{</span></td>
     </tr>
     <tr class="source-line">
@@ -234,25 +236,25 @@
         <details class="linebranchDetails">
         <summary class="linebranchSummary">4/8</summary>
         <div class="linebranchContents">
-          <div class="takenBranch">&check; Branch 0 taken 44934854 times.</div>
-          <div class="notTakenBranch">&cross; Branch 1 not taken.</div>
-          <div class="takenBranch">&check; Branch 2 taken 44934854 times.</div>
+          <div class="takenBranch">&check; Branch 2 taken 10 times.</div>
           <div class="notTakenBranch">&cross; Branch 3 not taken.</div>
-          <div class="takenBranch">&check; Branch 4 taken 44934854 times.</div>
-          <div class="notTakenBranch">&cross; Branch 5 not taken.</div>
+          <div class="takenBranch">&check; Branch 5 taken 10 times.</div>
           <div class="notTakenBranch">&cross; Branch 6 not taken.</div>
-          <div class="takenBranch">&check; Branch 7 taken 44934854 times.</div>
+          <div class="takenBranch">&check; Branch 8 taken 10 times.</div>
+          <div class="notTakenBranch">&cross; Branch 9 not taken.</div>
+          <div class="takenBranch">&check; Branch 11 taken 10 times.</div>
+          <div class="notTakenBranch">&cross; Branch 12 not taken.</div>
         </div>
         </details>
       </td>
-      <td class="linecount coveredLine">44934854</td>
+      <td class="linecount coveredLine">10</td>
       <td class="src coveredLine"><span class="w">        </span><span class="n">err_msg</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">err_header_</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="sa">R</span><span class="s">&quot;</span><span class="dl">(</span><span class="s">&quot;description&quot;: &quot;Invalid HTTP method &#39;</span><span class="dl">)</span><span class="s">&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">method</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;&#39;&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="sa">R</span><span class="s">&quot;</span><span class="dl">(</span><span class="s">&quot;}}</span><span class="dl">)</span><span class="s">&quot;</span><span class="p">;</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l18" href="#l18">18</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">44934854</td>
+      <td class="linecount coveredLine">10</td>
       <td class="src coveredLine"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">ValidationError</span><span class="o">::</span><span class="n">INVALID_METHOD</span><span class="p">;</span></td>
     </tr>
     <tr class="source-line">
@@ -266,15 +268,15 @@
       <td class="lineno"><a id="l20" href="#l20">20</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">117258879</td>
+      <td class="linecount coveredLine">78</td>
       <td class="src coveredLine"><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">ValidationError</span><span class="o">::</span><span class="n">NONE</span><span class="p">;</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l21" href="#l21">21</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">162193733</td>
-      <td class="src coveredLine"><span class="p">}</span></td>
+      <td class="linecount "></td>
+      <td class="src "><span class="p">}</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l22" href="#l22">22</a></td>
@@ -286,64 +288,16 @@
     <tr class="source-line">
       <td class="lineno"><a id="l23" href="#l23">23</a></td>
       <td class="linebranch">
-        <details class="linebranchDetails">
-        <summary class="linebranchSummary">10/20</summary>
-        <div class="linebranchContents">
-          <div class="takenBranch">&check; Branch 0 taken 2 times.</div>
-          <div class="notTakenBranch">&cross; Branch 1 not taken.</div>
-          <div class="takenBranch">&check; Branch 2 taken 2 times.</div>
-          <div class="notTakenBranch">&cross; Branch 3 not taken.</div>
-          <div class="takenBranch">&check; Branch 4 taken 2 times.</div>
-          <div class="notTakenBranch">&cross; Branch 5 not taken.</div>
-          <div class="takenBranch">&check; Branch 6 taken 2 times.</div>
-          <div class="notTakenBranch">&cross; Branch 7 not taken.</div>
-          <div class="takenBranch">&check; Branch 8 taken 2 times.</div>
-          <div class="notTakenBranch">&cross; Branch 9 not taken.</div>
-          <div class="takenBranch">&check; Branch 10 taken 2 times.</div>
-          <div class="notTakenBranch">&cross; Branch 11 not taken.</div>
-          <div class="takenBranch">&check; Branch 12 taken 2 times.</div>
-          <div class="notTakenBranch">&cross; Branch 13 not taken.</div>
-          <div class="takenBranch">&check; Branch 14 taken 2 times.</div>
-          <div class="notTakenBranch">&cross; Branch 15 not taken.</div>
-          <div class="takenBranch">&check; Branch 16 taken 2 times.</div>
-          <div class="notTakenBranch">&cross; Branch 17 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 18 not taken.</div>
-          <div class="takenBranch">&check; Branch 19 taken 2 times.</div>
-        </div>
-        </details>
       </td>
-      <td class="linecount coveredLine">2</td>
-      <td class="src coveredLine"><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">unordered_set</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">MethodValidator</span><span class="o">::</span><span class="n">kValidMethods</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;GET&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;POST&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;PUT&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;DELETE&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;HEAD&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;OPTIONS&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;PATCH&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;CONNECT&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;TRACE&quot;</span><span class="p">,</span></td>
+      <td class="linecount "></td>
+      <td class="src "><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">unordered_set</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">MethodValidator</span><span class="o">::</span><span class="n">kValidMethods</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;GET&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;POST&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;PUT&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;DELETE&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;HEAD&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;OPTIONS&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;PATCH&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;CONNECT&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;TRACE&quot;</span><span class="p">,</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l24" href="#l24">24</a></td>
       <td class="linebranch">
-        <details class="linebranchDetails">
-        <summary class="linebranchSummary">9/18</summary>
-        <div class="linebranchContents">
-          <div class="takenBranch">&check; Branch 0 taken 2 times.</div>
-          <div class="notTakenBranch">&cross; Branch 1 not taken.</div>
-          <div class="takenBranch">&check; Branch 2 taken 2 times.</div>
-          <div class="notTakenBranch">&cross; Branch 3 not taken.</div>
-          <div class="takenBranch">&check; Branch 4 taken 2 times.</div>
-          <div class="notTakenBranch">&cross; Branch 5 not taken.</div>
-          <div class="takenBranch">&check; Branch 6 taken 2 times.</div>
-          <div class="notTakenBranch">&cross; Branch 7 not taken.</div>
-          <div class="takenBranch">&check; Branch 8 taken 2 times.</div>
-          <div class="notTakenBranch">&cross; Branch 9 not taken.</div>
-          <div class="takenBranch">&check; Branch 10 taken 2 times.</div>
-          <div class="notTakenBranch">&cross; Branch 11 not taken.</div>
-          <div class="takenBranch">&check; Branch 12 taken 2 times.</div>
-          <div class="notTakenBranch">&cross; Branch 13 not taken.</div>
-          <div class="takenBranch">&check; Branch 14 taken 2 times.</div>
-          <div class="notTakenBranch">&cross; Branch 15 not taken.</div>
-          <div class="takenBranch">&check; Branch 16 taken 2 times.</div>
-          <div class="notTakenBranch">&cross; Branch 17 not taken.</div>
-        </div>
-        </details>
       </td>
-      <td class="linecount coveredLine">2</td>
-      <td class="src coveredLine"><span class="w">                                                                        </span><span class="s">&quot;get&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;post&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;put&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;delete&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;head&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;options&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;patch&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;connect&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;trace&quot;</span><span class="p">};</span></td>
+      <td class="linecount "></td>
+      <td class="src "><span class="w">                                                                        </span><span class="s">&quot;get&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;post&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;put&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;delete&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;head&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;options&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;patch&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;connect&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;trace&quot;</span><span class="p">};</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l25" href="#l25">25</a></td>

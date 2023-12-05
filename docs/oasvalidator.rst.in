@@ -375,8 +375,8 @@ To run the example, follow the steps below:
    .. code:: bash
 
        cmake -S . -B build -DBUILD_EXAMPLE=ON
-       cmake --build build --target example -j $(nproc)
-       build/example/example
+       cmake --build build --target oasvalidator-example -j $(nproc)
+       build/example/oasvalidator-example
 
 6.6 Initialization 🎬
 ~~~~~~~~~~~~~~~~~~~~~

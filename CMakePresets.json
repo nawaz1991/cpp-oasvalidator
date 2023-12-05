@@ -1,0 +1,141 @@
+{
+  "version": 6,
+  "configurePresets": [
+    {
+      "name": "debug",
+      "displayName": "Debug configuration for code coverage and docs",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/${presetName}",
+      "cacheVariables": {
+        "BUILD_COVERAGE": "ON",
+        "BUILD_DOCS": "ON",
+        "CMAKE_BUILD_TYPE": "Debug"
+      }
+    },
+    {
+      "name": "release",
+      "displayName": "Release configuration for oasvalidator, tests and example",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/${presetName}",
+      "cacheVariables": {
+        "BUILD_SHARED_LIB": "OFF",
+        "BUILD_TESTS": "ON",
+        "BUILD_PERF": "ON",
+        "BUILD_EXAMPLE": "ON",
+        "CMAKE_BUILD_TYPE": "Release"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "oasvalidator-build",
+      "displayName": "Build oasvalidator Release",
+      "configurePreset": "release",
+      "targets": [
+        "oasvalidator"
+      ]
+    },
+    {
+      "name": "tests-build",
+      "displayName": "Build oasvalidator tests Release",
+      "configurePreset": "release",
+      "targets": [
+        "oasvalidator-unittests",
+        "oasvalidator-perftests"
+      ]
+    },
+    {
+      "name": "perftests-build",
+      "displayName": "Build oasvalidator tests Release",
+      "configurePreset": "release",
+      "targets": [
+        "oasvalidator-perftests"
+      ]
+    },
+    {
+      "name": "example-build",
+      "displayName": "Build oasvalidator example",
+      "configurePreset": "release",
+      "targets": [
+        "oasvalidator-example"
+      ]
+    },
+    {
+      "name": "docs-build",
+      "displayName": "Build oasvalidator docs",
+      "configurePreset": "debug",
+      "targets": [
+        "docs"
+      ]
+    },
+    {
+      "name": "codecov-build",
+      "displayName": "Build oasvalidator codecov",
+      "configurePreset": "debug",
+      "targets": [
+        "covhtml-oasvalidator"
+      ]
+    }
+  ],
+  "testPresets": [
+    {
+      "name": "run-oasvalidator-unittests",
+      "displayName": "Test oasvalidator",
+      "configurePreset": "release",
+      "output": {
+        "shortProgress": true,
+        "verbosity": "extra"
+      },
+      "execution": {
+        "noTestsAction": "error",
+        "testMode": "exclusive"
+      }
+    }
+  ],
+  "workflowPresets": [
+    {
+      "name": "build-docs-and-codecov",
+      "displayName": "Build oasvalidator, docs and code coverage in Debug mode",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "debug"
+        },
+        {
+          "type": "build",
+          "name": "docs-build"
+        },
+        {
+          "type": "build",
+          "name": "codecov-build"
+        }
+      ]
+    },
+    {
+      "name": "build-example-and-run-unittests",
+      "displayName": "Build oasvalidator, unittest, perftests and example in Release mode and run unittests",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "release"
+        },
+        {
+          "type": "build",
+          "name": "oasvalidator-build"
+        },
+        {
+          "type": "build",
+          "name": "example-build"
+        },
+        {
+          "type": "build",
+          "name": "tests-build"
+        },
+        {
+          "type": "test",
+          "name": "run-oasvalidator-unittests"
+        }
+      ]
+    }
+  ]
+}

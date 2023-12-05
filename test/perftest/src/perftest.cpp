@@ -26,12 +26,12 @@ public:
         SetDefaultTimeUnit(::benchmark::kMicrosecond);
         MinWarmUpTime(K_MIN_WARM_UP_TIME);
         MinTime(K_MIN_TIME);
-	}
+    }
 
     void TearDown(benchmark::State&) override
     {
-		validator.reset();
-	}
+        validator.reset();
+    }
 
     std::unique_ptr<OASValidator> validator;
 };
@@ -138,7 +138,7 @@ BENCHMARK_F(OASValidatorPerf, ValidRequest)(benchmark::State& state)
     }
 }
 
-BENCHMARK_F(OASValidatorPerf, InvalidRequest1)(benchmark::State& state)  // Check 1: Invalid method
+BENCHMARK_F(OASValidatorPerf, InvalidRequest1)(benchmark::State& state) // Check 1: Invalid method
 {
     std::string err_msg;
     std::unordered_map<std::string, std::string> headers;
@@ -149,7 +149,7 @@ BENCHMARK_F(OASValidatorPerf, InvalidRequest1)(benchmark::State& state)  // Chec
     }
 }
 
-BENCHMARK_F(OASValidatorPerf, InvalidRequest2)(benchmark::State& state)// Check 2: Invalid Path
+BENCHMARK_F(OASValidatorPerf, InvalidRequest2)(benchmark::State& state) // Check 2: Invalid Path
 {
     std::string err_msg;
     std::unordered_map<std::string, std::string> headers;
@@ -159,7 +159,7 @@ BENCHMARK_F(OASValidatorPerf, InvalidRequest2)(benchmark::State& state)// Check 
                                    err_msg);
     }
 }
-BENCHMARK_F(OASValidatorPerf, InvalidRequest3)(benchmark::State& state)  // Check 3: Invalid Path param
+BENCHMARK_F(OASValidatorPerf, InvalidRequest3)(benchmark::State& state) // Check 3: Invalid Path param
 {
     std::string err_msg;
     std::unordered_map<std::string, std::string> headers;
@@ -170,7 +170,7 @@ BENCHMARK_F(OASValidatorPerf, InvalidRequest3)(benchmark::State& state)  // Chec
     }
 }
 
-BENCHMARK_F(OASValidatorPerf, InvalidRequest4)(benchmark::State& state)// Check 4: Invalid Query param
+BENCHMARK_F(OASValidatorPerf, InvalidRequest4)(benchmark::State& state) // Check 4: Invalid Query param
 {
     std::string err_msg;
     std::unordered_map<std::string, std::string> headers;
@@ -181,7 +181,7 @@ BENCHMARK_F(OASValidatorPerf, InvalidRequest4)(benchmark::State& state)// Check 
     }
 }
 
-BENCHMARK_F(OASValidatorPerf, InvalidRequest5)(benchmark::State& state)// Check 5: Invalid Header param
+BENCHMARK_F(OASValidatorPerf, InvalidRequest5)(benchmark::State& state) // Check 5: Invalid Header param
 {
     std::string err_msg;
     std::unordered_map<std::string, std::string> headers;

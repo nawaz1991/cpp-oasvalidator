@@ -1,0 +1,82 @@
+name: Deploy docs and code coverage
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-deploy-docs-and-codecov:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout cpp-oasvalidator
+        uses: actions/checkout@v4
+        with:
+          submodules: true
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Set up latest Oracle JDK 21
+        uses: oracle-actions/setup-java@v1
+        with:
+          website: oracle.com
+          release: 21
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install doxygen graphviz plantuml lcov -y
+
+      - name: Install python dependencies
+        run: |
+          pip3 install gcovr sphinx breathe exhale furo sphinx-plantuml
+
+      - uses: lukka/get-cmake@latest
+
+      - name: Configure code coverage code coverage and docs
+        uses: lukka/run-cmake@v10
+        with:
+          configurePreset: 'debug'
+
+      - name: Build performance tests in release mode
+        uses: lukka/run-cmake@v10
+        with:
+          configurePreset: 'release'
+          buildPreset: 'perftests-build'
+
+      - name: Run performance tests
+        run: build/release/test/perftest/oasvalidator-perftests --benchmark_format=json > build/debug/docs/benchmark.json
+
+      - name: Convert benchmark.json to benchmark.rst
+        run: python .github/workflows/convert_json_to_rst.py build/debug/docs/benchmark.json build/debug/docs/benchmark.rst
+
+      - name: Build docs and code coverage
+        uses: lukka/run-cmake@v10
+        with:
+          workflowPreset: 'build-docs-and-codecov'
+
+      - name: Copy code coverage to docs
+        run: cp -r build/debug/covhtml-oasvalidator build/debug/docs/html
+
+      - name: Deploy docs
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.MY_PAT }}
+          publish_dir: build/debug/docs/html
+
+      - name: Generate Coverage Report
+        if: github.ref == 'refs/heads/main'
+        run: |
+          lcov --capture --directory . --output-file coverage.info
+          lcov --remove coverage.info '/usr/*' --output-file coverage.info
+          lcov --list coverage.info
+
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v3
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}

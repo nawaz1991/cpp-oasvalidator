@@ -1,0 +1,8 @@
+name: Ubuntu build and test
+on: [push, workflow_dispatch]
+
+jobs:
+  linux-build-and-test:
+    uses: ./.github/workflows/common-build.yml
+    with:
+      os: ubuntu-latest

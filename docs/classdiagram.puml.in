@@ -1,5 +1,7 @@
 @startuml
 skinparam linetype ortho
+skinparam backgroundColor transparent
+
 
 ' Classes
 class ArrayDeserializer {

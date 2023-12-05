@@ -1,0 +1,8 @@
+name: Windows build and test
+on: [push, workflow_dispatch]
+
+jobs:
+  windows-build-and-test:
+    uses: ./.github/workflows/common-build.yml
+    with:
+      os: windows-latest

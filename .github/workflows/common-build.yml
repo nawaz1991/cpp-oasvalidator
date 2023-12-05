@@ -1,0 +1,43 @@
+name: Common build and test steps
+on:
+  workflow_call:
+    inputs:
+      os:
+        required: true
+        type: string
+
+jobs:
+  build-and-test:
+    runs-on: ${{ inputs.os }}
+    steps:
+      - name: Set EXT variable
+        shell: bash
+        run: |
+          if [[ "${{ runner.os }}" == "Windows" ]]; then
+            echo "EXT=.exe" >> $GITHUB_ENV
+          else
+            echo "EXT=" >> $GITHUB_ENV
+          fi
+
+      - name: Checkout cpp-oasvalidator
+        uses: actions/checkout@v4
+        with:
+          submodules: true
+          fetch-depth: 0
+
+      - uses: lukka/get-cmake@latest
+
+      - name: Run CMake Ninja build all release preset including example, unittests, perftests
+        uses: lukka/run-cmake@v10
+        id: runcmake
+        with:
+          workflowPreset: 'build-example-and-run-unittests'
+
+      - name: Run Example
+        run: ./build/release/example/oasvalidator-example${{ env.EXT }}
+
+      - name: Run Unit Tests
+        run: ./build/release/test/unittest/oasvalidator-unittests${{ env.EXT }}
+
+      - name: Run Performance Tests
+        run: ./build/release/test/perftest/oasvalidator-perftests${{ env.EXT }}

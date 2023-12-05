@@ -3,9 +3,9 @@ cpp-oasvalidator: REST Request Validator
 
 [![Language C++](https://img.shields.io/badge/language-c++-blue.svg?logo=c%2B%2B)](https://isocpp.org)
 [![Github releases](https://img.shields.io/github/release/nawaz1991/cpp-oasvalidator.svg)](https://github.com/nawaz1991/cpp-oasvalidator/releases)
-![Mac build](https://img.shields.io/github/actions/workflow/status/nawaz1991/cpp-oasvalidator/mac_build.yml?logo=apple&label=Build)
-![Linux build](https://img.shields.io/github/actions/workflow/status/nawaz1991/cpp-oasvalidator/linux_build.yml?logo=linux&label=Build)
-![Win build](https://img.shields.io/github/actions/workflow/status/nawaz1991/cpp-oasvalidator/win_build.yml?logo=windows&label=Build)
+![Mac build](https://img.shields.io/github/actions/workflow/status/nawaz1991/cpp-oasvalidator/mac-build.yml?logo=apple&label=Tests)
+![Linux build](https://img.shields.io/github/actions/workflow/status/nawaz1991/cpp-oasvalidator/linux-build.yml?logo=linux&label=Tests)
+![Win build](https://img.shields.io/github/actions/workflow/status/nawaz1991/cpp-oasvalidator/windows-build.yml?logo=windows&label=Tests)
 [![codecov](https://codecov.io/gh/nawaz1991/cpp-oasvalidator/branch/main/graph/badge.svg?token=96b475c2-8dc1-4693-8ce3-84a572720d43)](https://codecov.io/gh/nawaz1991/cpp-oasvalidator)
 [![License](https://img.shields.io/github/license/nawaz1991/cpp-oasvalidator.svg)](./LICENSE)
 [![API Docs](https://img.shields.io/badge/API%20Docs-v1.0.0-brightgreen)](API.md)
@@ -195,7 +195,7 @@ To generate the code coverage report, follow the steps below:
 1. Navigate to the root directory of the project.
 2. Run the following commands:
    ```bash
-    cmake -S . -B build -DBUILD_COVERAGE=ON
+    cmake -S . -B build -DCMAKE_BUILD_TYPE=Debug -DBUILD_COVERAGE=ON
     cmake --build build --target covhtml-oasvalidator -j $(nproc)
     ```
     The coverage report will be generated in the `build/covhtml-cpp-oasvalidator/` directory. Open `index.html` in your browser to view the report.
@@ -220,8 +220,8 @@ To run the example, follow the steps below:
 2. Run the following commands:
    ```bash
     cmake -S . -B build -DBUILD_EXAMPLE=ON
-    cmake --build build --target example -j $(nproc)
-    build/example/example
+    cmake --build build --target oasvalidator-example -j $(nproc)
+    build/example/oasvalidator-example
     ```
 
 ### 5.1.7 Generating API Documentation

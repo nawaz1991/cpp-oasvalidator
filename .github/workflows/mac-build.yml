@@ -1,0 +1,8 @@
+name: Mac build and test
+on: [push, workflow_dispatch]
+
+jobs:
+  macos-build-and-test:
+    uses: ./.github/workflows/common-build.yml
+    with:
+      os: macos-latest

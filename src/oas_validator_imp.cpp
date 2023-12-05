@@ -5,8 +5,8 @@
 // [ END OF LICENSE 7982e23aed1dc8eda1fdc979fee617354ae998dc ]
 
 #include "oas_validator_imp.hpp"
-#include <rapidjson/istreamwrapper.h>
 #include <fstream>
+#include <rapidjson/istreamwrapper.h>
 
 OASValidatorImp::OASValidatorImp(const std::string& oas_specs)
 {
@@ -23,8 +23,8 @@ OASValidatorImp::OASValidatorImp(const std::string& oas_specs)
     }
 
     if (doc.HasParseError()) {
-        throw ValidatorInitExc("Unable to parse specs: " + oas_specs + " \nError code: " + std::to_string(doc.GetParseError()) + " at offset: " +
-                               std::to_string(doc.GetErrorOffset()) + " Error message: " + rapidjson::GetParseError_En(doc.GetParseError()));
+        throw ValidatorInitExc("Unable to parse specs: " + oas_specs + " \nError code: " + std::to_string(doc.GetParseError()) +
+                               " at offset: " + std::to_string(doc.GetErrorOffset()) + " Error message: " + rapidjson::GetParseError_En(doc.GetParseError()));
     }
 
     const rapidjson::Value& paths = doc["paths"];

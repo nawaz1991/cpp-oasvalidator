@@ -6,9 +6,9 @@ endif ()
 if (POLICY CMP0054)
     cmake_policy(SET CMP0054 NEW)
 endif ()
-if(POLICY CMP0091)
-  cmake_policy(SET CMP0091 NEW) 
-endif()
+if (POLICY CMP0091)
+    cmake_policy(SET CMP0091 NEW)
+endif ()
 
 SET(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 
@@ -22,9 +22,11 @@ set(OASVALIDATOR_LICENSE "${CMAKE_CURRENT_SOURCE_DIR}/LICENSE")
 set(OASVALIDATOR_README "${CMAKE_CURRENT_SOURCE_DIR}/README.md")
 message(STATUS "Building oasvalidator version ${OASVALIDATOR_VERSION_STRING}")
 
-project(oasvalidator LANGUAGES CXX
+project(cpp-oasvalidator LANGUAGES CXX
         VERSION "${OASVALIDATOR_VERSION_STRING}"
         DESCRIPTION "A FAST C++ library to validate the HTTP requests against the OpenAPI specifications of the REST server")
+
+set(OASVALIDATOR oasvalidator)
 
 # Default to release build type with specific optimization flags
 if (NOT CMAKE_BUILD_TYPE)
@@ -47,9 +49,7 @@ if (OASVALIDATOR_BUILD_CXX11)
 elseif (OASVALIDATOR_BUILD_CXX17)
     set(CMAKE_CXX_STANDARD 17)
     set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
-endif()
-
-message(STATUS "EXTRA_CXX_FLAGS: ${EXTRA_CXX_FLAGS}")
+endif ()
 
 find_program(CCACHE_FOUND ccache)
 if (CCACHE_FOUND)
@@ -59,7 +59,7 @@ if (CCACHE_FOUND)
     if (CMAKE_CXX_COMPILER_ID MATCHES "Clang")
         set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Qunused-arguments -fcolor-diagnostics")
     endif ()
-endif()
+endif ()
 
 ############################# Compiler-specific settings #############################
 if (CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
@@ -81,7 +81,7 @@ if (CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
     elseif (OASVALIDATOR_BUILD_CXX17 AND NOT CMAKE_CXX_COMPILER_VERSION VERSION_LESS "5.0")
         message(STATUS "Building with C++17")
         set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17")
-    endif()
+    endif ()
 elseif (CMAKE_CXX_COMPILER_ID MATCHES "Clang")
     message(STATUS "Using Clang compiler")
     if (NOT CMAKE_CROSSCOMPILING)
@@ -127,20 +127,20 @@ endif ()
 # if release build, add extra optimization flags
 if (CMAKE_BUILD_TYPE STREQUAL "Release")
     message(STATUS "Adding extra optimization flags for release build")
-    if(CMAKE_CXX_COMPILER_ID STREQUAL "GNU" OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
+    if (CMAKE_CXX_COMPILER_ID STREQUAL "GNU" OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
         set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O3 -ffast-math -funroll-loops -fomit-frame-pointer -DNDEBUG -fno-strict-aliasing -fvisibility-inlines-hidden")
-    elseif(CMAKE_CXX_COMPILER_ID STREQUAL "MSVC")
+    elseif (CMAKE_CXX_COMPILER_ID STREQUAL "MSVC")
         set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /Ox /Ob2 /Oi /Ot /Oy /GL /fp:fast /GS- /Gy /DNDEBUG")
-    endif()
-endif()
+    endif ()
+endif ()
 
 #add extra search paths for libraries and includes
 SET(INCLUDE_INSTALL_DIR "${CMAKE_INSTALL_PREFIX}/include" CACHE PATH "The directory the headers are installed in")
 SET(LIB_INSTALL_DIR "${CMAKE_INSTALL_PREFIX}/lib" CACHE STRING "Directory where lib will install")
-SET(DOC_INSTALL_DIR "${CMAKE_INSTALL_PREFIX}/share/doc/${PROJECT_NAME}" CACHE PATH "Path to the documentation")
+SET(DOC_INSTALL_DIR "${CMAKE_INSTALL_PREFIX}/share/doc/${OASVALIDATOR}" CACHE PATH "Path to the documentation")
 
 if (UNIX OR CYGWIN)
-    SET(_CMAKE_INSTALL_DIR "${LIB_INSTALL_DIR}/cmake/${PROJECT_NAME}")
+    SET(_CMAKE_INSTALL_DIR "${LIB_INSTALL_DIR}/cmake/${OASVALIDATOR}")
 elseif (WIN32)
     SET(_CMAKE_INSTALL_DIR "${CMAKE_INSTALL_PREFIX}/cmake")
 endif ()
@@ -149,7 +149,7 @@ SET(CMAKE_INSTALL_DIR "${_CMAKE_INSTALL_DIR}" CACHE PATH "The directory cmake fi
 # Specify RapidJSON directories or fallback to default
 if (NOT RAPIDJSON_INCLUDE_DIRS)
     set(RAPIDJSON_INCLUDE_DIRS "${CMAKE_CURRENT_SOURCE_DIR}/thirdparty/rapidjson/include")
-endif()
+endif ()
 
 file(GLOB_RECURSE SOURCES "src/*.cpp")
 
@@ -161,21 +161,21 @@ endif ()
 
 set(OAS_INCLUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/include")
 
-target_include_directories(${PROJECT_NAME}
+target_include_directories(${OASVALIDATOR}
         PRIVATE
         ${RAPIDJSON_INCLUDE_DIRS}
         ${OAS_INCLUDE_DIR}
 )
 
-set_target_properties(${PROJECT_NAME} PROPERTIES
+set_target_properties(${OASVALIDATOR} PROPERTIES
         SOVERSION "${OASVALIDATOR_VERSION_STRING}"
         VERSION "${OASVALIDATOR_VERSION_STRING}"
         LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib
 )
 
 ############################# Installation #############################
-install(TARGETS ${PROJECT_NAME}
-        EXPORT ${PROJECT_NAME}-targets
+install(TARGETS ${OASVALIDATOR}
+        EXPORT ${OASVALIDATOR}-targets
         LIBRARY DESTINATION lib
         ARCHIVE DESTINATION lib
 )
@@ -191,26 +191,33 @@ install(FILES LICENSE
 
 ############################# Subprojects #############################
 # Export package for use from the build tree
-EXPORT(PACKAGE ${PROJECT_NAME})
+EXPORT(PACKAGE ${OASVALIDATOR})
 if (BUILD_COVERAGE)
-    set(PROJECT_TEST_NAME ${PROJECT_NAME}-unittests)
-    include(cmake/CodeCoverage.cmake)
+    set(TEST_TARGET ${OASVALIDATOR}-unittests)
+    set(DOWNLOADED_CMAKE_MODULES "${CMAKE_BINARY_DIR}/downloaded_cmake_modules")
+    file(MAKE_DIRECTORY ${DOWNLOADED_CMAKE_MODULES})
+    set(CODE_COVERAGE_SCRIPT "https://raw.githubusercontent.com/bilke/cmake-modules/70a0b5209a2a7cbea181b148ca645e4181f394bc/CodeCoverage.cmake")
+    file(DOWNLOAD ${CODE_COVERAGE_SCRIPT} "${DOWNLOADED_CMAKE_MODULES}/CodeCoverage.cmake")
+    include("${DOWNLOADED_CMAKE_MODULES}/CodeCoverage.cmake")
     enable_testing()
     append_coverage_compiler_flags()
     setup_target_for_coverage_gcovr_html(
-            NAME covhtml-${PROJECT_NAME}
-            EXECUTABLE ${PROJECT_NAME}-unittests
+            NAME covhtml-${OASVALIDATOR}
+            EXECUTABLE ${TEST_TARGET}
             BASE_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
-            EXCLUDE ${CMAKE_CURRENT_SOURCE_DIR}/rapidjson/*
+            EXCLUDE ${CMAKE_CURRENT_SOURCE_DIR}/thirdparty/*
+            EXCLUDE ${CMAKE_CURRENT_SOURCE_DIR}/build/*
     )
 endif ()
 
+
 if (BUILD_TESTS OR BUILD_COVERAGE)
     add_subdirectory(test/unittest)
+    include(CTest)
 endif ()
 
-if(BUILD_PERF)
-    # Use thidpart/benchmark as a subproject
+if (BUILD_PERF)
+    # Use thirdparty/benchmark as a subproject
     set(BENCHMARK_ENABLE_INSTALL OFF CACHE BOOL "Disable benchmark install")
     set(BENCHMARK_INSTALL_DOCS OFF CACHE BOOL "Disable benchmark docs install")
     set(BENCHMARK_ENABLE_TESTING OFF CACHE BOOL "Disable benchmark tests")

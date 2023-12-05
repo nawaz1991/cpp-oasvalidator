@@ -1,4 +1,4 @@
-project(${PROJECT_NAME}-perftests LANGUAGES CXX)
+project(${OASVALIDATOR}-perftests LANGUAGES CXX)
 
 file(GLOB_RECURSE SOURCES "src/*.cpp")
 include_directories(${CMAKE_SOURCE_DIR}/include)

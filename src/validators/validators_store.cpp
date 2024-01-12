@@ -121,6 +121,7 @@ ValidatorsStore::~ValidatorsStore()
     for (auto& param_validator : query_param_validators_) {
         delete param_validator.validator;
     }
+    delete body_validator_;
 #endif
 }
 

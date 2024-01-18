@@ -41,6 +41,7 @@ ValidationError JsonValidator::ValidateJson(const std::string& json_str, std::st
     error_msg = err_header_;
     CreateErrorMessages(validator_->GetError(), std::string(), error_msg);
     error_msg.append("}}");
+    validator_->Reset();
 
     return code_on_error_;
 }

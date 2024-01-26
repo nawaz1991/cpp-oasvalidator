@@ -58,13 +58,6 @@ ValidationError ValidatorsStore::ValidatePathParams(std::unordered_map<size_t, P
 
 ValidationError ValidatorsStore::ValidateQueryParams(const std::string& query, std::string& error_msg)
 {
-    if (1 == query_param_validators_.size()) {
-        if (query.at(0) != '?') {
-            error_msg = query_param_validators_.front().validator->GetErrHeader() + R"("description": "Query string should start with '?'"}})";
-            return ValidationError::INVALID_QUERY_PARAM;
-        }
-        return query_param_validators_.front().validator->ValidateParam(query.data() + 1, query.data() + query.size(), error_msg);
-    }
     std::set<size_t> starts;
     std::unordered_map<std::string, size_t> start_map;
     for (const auto& param_validator : query_param_validators_) {

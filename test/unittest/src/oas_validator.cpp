@@ -63,6 +63,9 @@ TEST_F(OASValidatorTest, ValidateQueryParam)
     EXPECT_EQ(ValidationError::NONE, validator_->ValidateQueryParam("GET", "/test/query_integer_form_true?param=123", err_msg));
     EXPECT_EQ(ValidationError::INVALID_QUERY_PARAM, validator_->ValidateQueryParam("GET", "/test/query_integer_form_true?param=123str", err_msg));
     EXPECT_EQ(ValidationError::NONE, validator_->ValidateQueryParam("GET", "/test/query_two_integer_form_mixed?param1=123&param2=456", err_msg));
+    EXPECT_EQ(ValidationError::NONE, validator_->ValidateQueryParam("GET", "/test/query_optional", err_msg));
+    EXPECT_EQ(ValidationError::NONE, validator_->ValidateQueryParam("GET", "/test/query_optional?", err_msg));
+    EXPECT_EQ(ValidationError::NONE, validator_->ValidateQueryParam("GET", "/test/query_optional?param=10", err_msg));
 }
 
 TEST_F(OASValidatorTest, ValidateHeaders)

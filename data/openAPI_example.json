@@ -1051,6 +1051,25 @@
         }
       }
     },
+    "/test/query_optional": {
+      "get": {
+        "parameters": [
+          {
+            "name": "param",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully received data."
+          }
+        }
+      }
+    },
     "/test/complex_scenario1": {
       "get": {
         "parameters": [

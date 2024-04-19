@@ -42,6 +42,9 @@ private:
 
     ValidationError GetValidators(const std::string& method, const std::string& http_path, ValidatorsStore*& validators, std::string& error_msg,
                                   std::unordered_map<size_t, ParamRange>* param_idxs = nullptr, std::string* query = nullptr);
+    static std::vector<std::string> Split(const std::string& str, char delimiter);
+    static rapidjson::Value* ResolvePath(rapidjson::Document& doc, const std::string& path);
+    void ResolveReferences(rapidjson::Value& value, rapidjson::Document& doc, rapidjson::Document::AllocatorType& allocator);
 };
 
 #endif // OAS_VALIDATION_HPP

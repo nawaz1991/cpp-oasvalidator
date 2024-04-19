@@ -7,6 +7,7 @@
 #include "oas_validator_imp.hpp"
 #include <fstream>
 #include <rapidjson/istreamwrapper.h>
+#include <sstream>
 
 OASValidatorImp::OASValidatorImp(const std::string& oas_specs)
 {
@@ -26,6 +27,8 @@ OASValidatorImp::OASValidatorImp(const std::string& oas_specs)
         throw ValidatorInitExc("Unable to parse specs: " + oas_specs + " \nError code: " + std::to_string(doc.GetParseError()) +
                                " at offset: " + std::to_string(doc.GetErrorOffset()) + " Error message: " + rapidjson::GetParseError_En(doc.GetParseError()));
     }
+
+    ResolveReferences(doc, doc, doc.GetAllocator());
 
     const rapidjson::Value& paths = doc["paths"];
     std::vector<std::string> ref_keys;
@@ -236,6 +239,58 @@ ValidationError OASValidatorImp::GetValidators(const std::string& method, const 
         }
     }
     return ValidationError::NONE;
+}
+
+std::vector<std::string> OASValidatorImp::Split(const std::string& str, char delimiter) {
+    std::vector<std::string> tokens;
+    std::string token;
+    std::istringstream tokenStream(str);
+    while (getline(tokenStream, token, delimiter)) {
+        tokens.push_back(token);
+    }
+    return tokens;
+}
+
+rapidjson::Value* OASValidatorImp::ResolvePath(rapidjson::Document& doc, const std::string& path) {
+    std::vector<std::string> parts = Split(path, '/');
+    rapidjson::Value* current = &doc;
+    for (const std::string& part : parts) {
+        if (!current->IsObject() || !current->HasMember(part.c_str())) {
+            throw ValidatorInitExc("Invalid path or missing member:" + part);
+        }
+        current = &(*current)[part.c_str()];
+    }
+    return current;
+}
+
+void OASValidatorImp::ResolveReferences(rapidjson::Value& value, rapidjson::Document& doc, rapidjson::Document::AllocatorType& allocator) {
+    if (value.IsObject()) {
+        bool shouldReiterate;
+        do {
+            shouldReiterate = false;
+            for (auto itr = value.MemberBegin(); itr != value.MemberEnd();) {
+                if (strcmp(itr->name.GetString(), "$ref") == 0 && itr->value.IsString()) {
+                    std::string ref = itr->value.GetString();
+                    if (ref.rfind("#/", 0) == 0) {
+                        ref.erase(0, 2); // Remove '#/'
+                        rapidjson::Value const* refValue = ResolvePath(doc, ref);
+                        if (refValue) {
+                            value.CopyFrom(*refValue, allocator);
+                            shouldReiterate = true; // Signal to reiterate due to structural changes
+                            break; // Exit the loop to avoid invalid iterator use
+                        }
+                    }
+                } else {
+                    ResolveReferences(itr->value, doc, allocator);
+                }
+                ++itr;
+            }
+        } while (shouldReiterate); // Keep resolving until no more references are found
+    } else if (value.IsArray()) {
+        for (rapidjson::SizeType i = 0; i < value.Size(); i++) {
+            ResolveReferences(value[i], doc, allocator);
+        }
+    }
 }
 
 const std::unordered_map<std::string, HttpMethod> OASValidatorImp::kStringToMethod = {

@@ -57,7 +57,8 @@ private:
 public:
     /**
      * @brief Constructor that takes the path to the OAS specification file.
-     * @param oas_specs File path to the OAS specification in JSON format or JSON string containing the OAS specification.
+     * @param oas_specs File path to the OAS specification in JSON format or JSON string containing the OAS
+     * specification.
      *
      * @note The OAS specification can be provided as a file path or as a JSON string.
      */
@@ -106,7 +107,8 @@ public:
      *
      * @note The error_msg argument will be populated with a JSON string in case of a validation error.
      */
-    ValidationError ValidateBody(const std::string& method, const std::string& http_path, const std::string& json_body, std::string& error_msg);
+    ValidationError ValidateBody(const std::string& method, const std::string& http_path, const std::string& json_body,
+                                 std::string& error_msg);
 
     /**
      * @brief Validates the path parameters of the HTTP request against the OpenAPI specification.
@@ -177,7 +179,9 @@ public:
      * @note The error_msg argument will be populated with a JSON string in case of a validation error.
      */
 
-    ValidationError ValidateHeaders(const std::string& method, const std::string& http_path, const std::unordered_map<std::string, std::string>& headers, std::string& error_msg);
+    ValidationError ValidateHeaders(const std::string& method, const std::string& http_path,
+                                    const std::unordered_map<std::string, std::string>& headers,
+                                    std::string& error_msg);
 
     /**
      * @brief Validates the entire HTTP request against the OpenAPI specification.
@@ -232,7 +236,8 @@ public:
      *
      * @note The error_msg argument will be populated with a JSON string in case of a validation error.
      */
-    ValidationError ValidateRequest(const std::string& method, const std::string& http_path, const std::string& json_body, std::string& error_msg);
+    ValidationError ValidateRequest(const std::string& method, const std::string& http_path,
+                                    const std::string& json_body, std::string& error_msg);
 
     /**
      * @brief Validates the entire HTTP request, including headers, against the OpenAPI specification.
@@ -261,7 +266,9 @@ public:
      *
      * @note The error_msg argument will be populated with a JSON string in case of a validation error.
      */
-    ValidationError ValidateRequest(const std::string& method, const std::string& http_path, const std::unordered_map<std::string, std::string>& headers, std::string& error_msg);
+    ValidationError ValidateRequest(const std::string& method, const std::string& http_path,
+                                    const std::unordered_map<std::string, std::string>& headers,
+                                    std::string& error_msg);
 
     /**
      * @brief Validates the entire HTTP request, including JSON body and headers, against the OpenAPI specification.
@@ -293,8 +300,10 @@ public:
      *
      * @note The error_msg argument will be populated with a JSON string in case of a validation error.
      */
-    ValidationError ValidateRequest(const std::string& method, const std::string& http_path, const std::string& json_body,
-                                    const std::unordered_map<std::string, std::string>& headers, std::string& error_msg);
+    ValidationError ValidateRequest(const std::string& method, const std::string& http_path,
+                                    const std::string& json_body,
+                                    const std::unordered_map<std::string, std::string>& headers,
+                                    std::string& error_msg);
 
     ~OASValidator();
 };

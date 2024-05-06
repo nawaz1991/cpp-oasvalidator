@@ -28,7 +28,7 @@ public:
 };
 
 #define CHECK_ERROR(err)                \
-    if (ValidationError::NONE != err) { \
+    if (ValidationError::NONE != (err)) { \
         return err;                     \
     }
 

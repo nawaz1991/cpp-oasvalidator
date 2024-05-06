@@ -15,7 +15,8 @@ enum : size_t
     SHOULD_THROW
 };
 
-static const std::string EXPECTED = R"({"boolTrue":true,"boolFalse":false,"int":123,"number":123.456,"string":"abc xyz"})";
+static const std::string EXPECTED =
+    R"({"boolTrue":true,"boolFalse":false,"int":123,"number":123.456,"string":"abc xyz"})";
 
 class ContentDeserializerTest: public ::testing::TestWithParam<std::tuple<std::string, char, bool, bool>>
 {
@@ -41,7 +42,8 @@ protected:
 TEST_P(ContentDeserializerTest, Deserialize)
 {
     if (expect_throw_) {
-        EXPECT_THROW({ deserializer_->Deserialize(input_.c_str(), input_.c_str() + input_.size()); }, DeserializationException);
+        EXPECT_THROW({ deserializer_->Deserialize(input_.c_str(), input_.c_str() + input_.size()); },
+                     DeserializationException);
     } else {
         std::string result = deserializer_->Deserialize(input_.c_str(), input_.c_str() + input_.size());
         EXPECT_EQ(result, EXPECTED);
@@ -50,8 +52,9 @@ TEST_P(ContentDeserializerTest, Deserialize)
 
 INSTANTIATE_TEST_SUITE_P(
     ContentDeserializerTests, ContentDeserializerTest,
-    ::testing::Values(std::make_tuple("%7B%22boolTrue%22%3Atrue%2C%22boolFalse%22%3Afalse%2C%22int%22%3A123%2C%22number%22%3A123.456%2C%22string%22%3A%22abc%20xyz%22%7D", '\0',
-                                      false, false),
+    ::testing::Values(std::make_tuple("%7B%22boolTrue%22%3Atrue%2C%22boolFalse%22%3Afalse%2C%22int%22%3A123%2C%"
+                                      "22number%22%3A123.456%2C%22string%22%3A%22abc%20xyz%22%7D",
+                                      '\0', false, false),
                       std::make_tuple("test=%7B%22boolTrue%22%3Atrue%2C%22boolFalse%22%3Afalse%2C%22int%22%3A123%2C%"
                                       "22number%22%3A123.456%2C%22string%22%3A%22abc%20xyz%22%7D",
                                       '\0', true, false),

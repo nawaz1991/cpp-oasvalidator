@@ -33,7 +33,8 @@ public:
     ~ParamValidator() override = default;
 
 protected:
-    static ParamInfo GetParamInfo(const rapidjson::Value& param_val, const std::string& default_style, bool default_explode, bool default_required,
+    static ParamInfo GetParamInfo(const rapidjson::Value& param_val, const std::string& default_style,
+                                  bool default_explode, bool default_required,
                                   const std::vector<std::string>& ref_keys);
 
 private:

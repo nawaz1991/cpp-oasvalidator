@@ -20,7 +20,8 @@ enum : size_t
     SHOULD_THROW
 };
 
-class PrimitiveDeserializerTest: public ::testing::TestWithParam<std::tuple<std::string, PrimitiveType, std::string, char, bool, bool>>
+class PrimitiveDeserializerTest
+    : public ::testing::TestWithParam<std::tuple<std::string, PrimitiveType, std::string, char, bool, bool>>
 {
 protected:
     void SetUp() override
@@ -48,7 +49,8 @@ protected:
 TEST_P(PrimitiveDeserializerTest, Deserialize)
 {
     if (expect_throw_) {
-        EXPECT_THROW({ deserializer_->Deserialize(input_.c_str(), input_.c_str() + input_.size()); }, DeserializationException);
+        EXPECT_THROW({ deserializer_->Deserialize(input_.c_str(), input_.c_str() + input_.size()); },
+                     DeserializationException);
     } else {
         std::string result = deserializer_->Deserialize(input_.c_str(), input_.c_str() + input_.size());
         EXPECT_EQ(result, expected_);
@@ -57,15 +59,23 @@ TEST_P(PrimitiveDeserializerTest, Deserialize)
 
 INSTANTIATE_TEST_SUITE_P(
     PrimitiveDeserializerTests, PrimitiveDeserializerTest,
-    ::testing::Values(
-        std::make_tuple("true", PrimitiveType::BOOLEAN, "true", '\0', false, false), std::make_tuple("123", PrimitiveType::INTEGER, "123", '\0', false, false),
-        std::make_tuple("123.456", PrimitiveType::NUMBER, "123.456", '\0', false, false), std::make_tuple("abc", PrimitiveType::STRING, "\"abc\"", '\0', false, false),
-        std::make_tuple("test=true", PrimitiveType::BOOLEAN, "true", '\0', true, false), std::make_tuple("test=123", PrimitiveType::INTEGER, "123", '\0', true, false),
-        std::make_tuple("test=123.456", PrimitiveType::NUMBER, "123.456", '\0', true, false),
-        std::make_tuple("test=abc%20xyz", PrimitiveType::STRING, "\"abc xyz\"", '\0', true, false), std::make_tuple(".true", PrimitiveType::BOOLEAN, "true", '.', false, false),
-        std::make_tuple(".123", PrimitiveType::INTEGER, "123", '.', false, false), std::make_tuple(".123.456", PrimitiveType::NUMBER, "123.456", '.', false, false),
-        std::make_tuple(".abc", PrimitiveType::STRING, "\"abc\"", '.', false, false), std::make_tuple(";test=true", PrimitiveType::BOOLEAN, "true", ';', true, false),
-        std::make_tuple(";test=123", PrimitiveType::INTEGER, "123", ';', true, false), std::make_tuple(";test=123.456", PrimitiveType::NUMBER, "123.456", ';', true, false),
-        std::make_tuple(";test=abc", PrimitiveType::STRING, "\"abc\"", ';', true, false), std::make_tuple("invalid", PrimitiveType::BOOLEAN, "invalid", '\0', false, true),
-        std::make_tuple("invalid", PrimitiveType::INTEGER, "invalid", '\0', false, true), std::make_tuple("invalid", PrimitiveType::NUMBER, "invalid", '\0', false, true),
-        std::make_tuple("inva%lid", PrimitiveType::STRING, "invalid", '\0', false, true)));
+    ::testing::Values(std::make_tuple("true", PrimitiveType::BOOLEAN, "true", '\0', false, false),
+                      std::make_tuple("123", PrimitiveType::INTEGER, "123", '\0', false, false),
+                      std::make_tuple("123.456", PrimitiveType::NUMBER, "123.456", '\0', false, false),
+                      std::make_tuple("abc", PrimitiveType::STRING, "\"abc\"", '\0', false, false),
+                      std::make_tuple("test=true", PrimitiveType::BOOLEAN, "true", '\0', true, false),
+                      std::make_tuple("test=123", PrimitiveType::INTEGER, "123", '\0', true, false),
+                      std::make_tuple("test=123.456", PrimitiveType::NUMBER, "123.456", '\0', true, false),
+                      std::make_tuple("test=abc%20xyz", PrimitiveType::STRING, "\"abc xyz\"", '\0', true, false),
+                      std::make_tuple(".true", PrimitiveType::BOOLEAN, "true", '.', false, false),
+                      std::make_tuple(".123", PrimitiveType::INTEGER, "123", '.', false, false),
+                      std::make_tuple(".123.456", PrimitiveType::NUMBER, "123.456", '.', false, false),
+                      std::make_tuple(".abc", PrimitiveType::STRING, "\"abc\"", '.', false, false),
+                      std::make_tuple(";test=true", PrimitiveType::BOOLEAN, "true", ';', true, false),
+                      std::make_tuple(";test=123", PrimitiveType::INTEGER, "123", ';', true, false),
+                      std::make_tuple(";test=123.456", PrimitiveType::NUMBER, "123.456", ';', true, false),
+                      std::make_tuple(";test=abc", PrimitiveType::STRING, "\"abc\"", ';', true, false),
+                      std::make_tuple("invalid", PrimitiveType::BOOLEAN, "invalid", '\0', false, true),
+                      std::make_tuple("invalid", PrimitiveType::INTEGER, "invalid", '\0', false, true),
+                      std::make_tuple("invalid", PrimitiveType::NUMBER, "invalid", '\0', false, true),
+                      std::make_tuple("inva%lid", PrimitiveType::STRING, "invalid", '\0', false, true)));

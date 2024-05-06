@@ -15,7 +15,8 @@ enum : size_t
     EXPECTED_ERROR
 };
 
-class HeaderParamValidatorTest: public ::testing::TestWithParam<std::tuple<std::string, bool, std::string, ValidationError>>
+class HeaderParamValidatorTest
+    : public ::testing::TestWithParam<std::tuple<std::string, bool, std::string, ValidationError>>
 {
 protected:
     void SetUp() override
@@ -55,7 +56,11 @@ TEST_P(HeaderParamValidatorTest, ValidateParam)
 }
 
 INSTANTIATE_TEST_SUITE_P(HeaderParamValidatorTest, HeaderParamValidatorTest,
-                         ::testing::Values(std::make_tuple("123", false, "integer", ValidationError::NONE), std::make_tuple("123", true, "integer", ValidationError::NONE),
-                                           std::make_tuple("true", false, "boolean", ValidationError::NONE), std::make_tuple("true", true, "boolean", ValidationError::NONE),
-                                           std::make_tuple("123.456", false, "number", ValidationError::NONE), std::make_tuple("123.456", true, "number", ValidationError::NONE),
-                                           std::make_tuple("abc", false, "string", ValidationError::NONE), std::make_tuple("abc", true, "string", ValidationError::NONE)));
+                         ::testing::Values(std::make_tuple("123", false, "integer", ValidationError::NONE),
+                                           std::make_tuple("123", true, "integer", ValidationError::NONE),
+                                           std::make_tuple("true", false, "boolean", ValidationError::NONE),
+                                           std::make_tuple("true", true, "boolean", ValidationError::NONE),
+                                           std::make_tuple("123.456", false, "number", ValidationError::NONE),
+                                           std::make_tuple("123.456", true, "number", ValidationError::NONE),
+                                           std::make_tuple("abc", false, "string", ValidationError::NONE),
+                                           std::make_tuple("abc", true, "string", ValidationError::NONE)));

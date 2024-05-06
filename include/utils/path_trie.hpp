@@ -20,7 +20,8 @@ public:
     }
     void Insert(const std::string& path);
     bool Search(const char* beg, const char* end, std::string& oas_path);
-    bool Search(const char* beg, const char* end, std::string& oas_path, std::unordered_map<size_t, ParamRange>& param_idxs);
+    bool Search(const char* beg, const char* end, std::string& oas_path,
+                std::unordered_map<size_t, ParamRange>& param_idxs);
     ~PathTrie();
 
 private:

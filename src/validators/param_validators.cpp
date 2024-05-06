@@ -122,8 +122,12 @@ const std::unordered_map<std::string, PrimitiveType> PRIMITIVE_TYPE_MAP = {{"boo
                                                                            {"number", PrimitiveType::NUMBER},
                                                                            {"string", PrimitiveType::STRING}};
 
-const std::unordered_map<std::string, ExtendedType> EXTENDED_TYPE_MAP = {{"boolean", ExtendedType::BOOLEAN}, {"integer", ExtendedType::INTEGER}, {"number", ExtendedType::NUMBER},
-                                                                         {"string", ExtendedType::STRING},   {"array", ExtendedType::ARRAY},     {"object", ExtendedType::OBJECT}};
+const std::unordered_map<std::string, ExtendedType> EXTENDED_TYPE_MAP = {{"boolean", ExtendedType::BOOLEAN},
+                                                                         {"integer", ExtendedType::INTEGER},
+                                                                         {"number", ExtendedType::NUMBER},
+                                                                         {"string", ExtendedType::STRING},
+                                                                         {"array", ExtendedType::ARRAY},
+                                                                         {"object", ExtendedType::OBJECT}};
 
 ObjKTMap GetKTMap(const rapidjson::Value& param_val, const std::vector<std::string>& ref_keys)
 {
@@ -137,21 +141,25 @@ ObjKTMap GetKTMap(const rapidjson::Value& param_val, const std::vector<std::stri
             try {
                 kt_map.emplace("\"" + prop_name + "\"", PRIMITIVE_TYPE_MAP.at(prop_type));
             } catch (const std::out_of_range&) {
-                throw ValidatorInitExc("Type '" + prop_type + "' of property '" + prop_name + "' of parameter '" + JoinReference(ref_keys) + "' is not supported");
+                throw ValidatorInitExc("Type '" + prop_type + "' of property '" + prop_name + "' of parameter '" +
+                                       JoinReference(ref_keys) + "' is not supported");
             }
         } else {
-            throw ValidatorInitExc("Type id missing for property '" + prop_name + "' of parameter '" + JoinReference(ref_keys) + "'");
+            throw ValidatorInitExc("Type id missing for property '" + prop_name + "' of parameter '" +
+                                   JoinReference(ref_keys) + "'");
         }
     }
     return kt_map;
 }
 
-BaseDeserializer* GetDeserializer(const rapidjson::Value& param_val, const std::string& default_style, bool default_explode, const std::vector<std::string>& ref_keys)
+BaseDeserializer* GetDeserializer(const rapidjson::Value& param_val, const std::string& default_style,
+                                  bool default_explode, const std::vector<std::string>& ref_keys)
 {
     std::string param_name(param_val["name"].GetString());
     std::string in(param_val["in"].GetString());
     auto explode(param_val.HasMember("explode") ? param_val["explode"].GetBool() : default_explode);
-    auto param_style = PARAM_STYLE_MAP.at(param_val.HasMember("style") ? param_val["style"].GetString() : default_style);
+    auto param_style =
+        PARAM_STYLE_MAP.at(param_val.HasMember("style") ? param_val["style"].GetString() : default_style);
 
     auto start = GetStartChar(param_style);
 
@@ -172,9 +180,11 @@ BaseDeserializer* GetDeserializer(const rapidjson::Value& param_val, const std::
                     auto separator = GetArrayItemsSeparator(param_style, explode);
                     auto has_running_name = HasArrayRunningName(param_style, explode);
                     bool has_20_separator(ParamStyle::SPACE_DELIM == param_style && !explode);
-                    return new ArrayDeserializer(param_name, start, skip_name, items_type, separator, has_running_name, has_20_separator);
+                    return new ArrayDeserializer(param_name, start, skip_name, items_type, separator, has_running_name,
+                                                 has_20_separator);
                 } catch (const std::out_of_range&) {
-                    throw ValidatorInitExc("Type '" + items_type_s + "' of items of array parameter '" + JoinReference(ref_keys) + "' is not supported");
+                    throw ValidatorInitExc("Type '" + items_type_s + "' of items of array parameter '" +
+                                           JoinReference(ref_keys) + "' is not supported");
                 }
             } else {
                 throw ValidatorInitExc("Array parameter '" + JoinReference(ref_keys) + "' does not have type of items");
@@ -185,7 +195,8 @@ BaseDeserializer* GetDeserializer(const rapidjson::Value& param_val, const std::
             auto vk_separator = GetObjVKSep(param_style, explode);
             auto is_deep_obj(ParamStyle::DEEP_OBJ == param_style);
             auto kt_map = GetKTMap(param_val, ref_keys);
-            return new ObjectDeserializer(param_name, start, skip_name, kv_separator, vk_separator, is_deep_obj, kt_map);
+            return new ObjectDeserializer(param_name, start, skip_name, kv_separator, vk_separator, is_deep_obj,
+                                          kt_map);
         }
         }
     } else if (param_val.HasMember("content")) {
@@ -196,7 +207,8 @@ BaseDeserializer* GetDeserializer(const rapidjson::Value& param_val, const std::
 }
 } // namespace
 
-ParamValidator::ParamValidator(const ParamInfo& param_info, const std::vector<std::string>& ref_keys, ValidationError err_code)
+ParamValidator::ParamValidator(const ParamInfo& param_info, const std::vector<std::string>& ref_keys,
+                               ValidationError err_code)
     : JsonValidator(param_info.schema, ref_keys, err_code)
     , name_(param_info.name)
     , required_(param_info.required)
@@ -226,28 +238,34 @@ ValidationError ParamValidator::ErrorOnMissing(std::string& error_msg) const
     return code_on_error_;
 }
 
-ParamValidator::ParamInfo ParamValidator::GetParamInfo(const rapidjson::Value& param_val, const std::string& default_style, bool default_explode, bool default_required,
-                                                       const std::vector<std::string>& ref_keys)
+ParamValidator::ParamInfo ParamValidator::GetParamInfo(const rapidjson::Value& param_val,
+                                                       const std::string& default_style, bool default_explode,
+                                                       bool default_required, const std::vector<std::string>& ref_keys)
 {
     std::string name(param_val["name"].GetString());
     auto required(param_val.HasMember("required") ? param_val["required"].GetBool() : default_required);
 
     if (param_val.HasMember("schema")) {
-        return {name, required, GetDeserializer(param_val, default_style, default_explode, ref_keys), param_val["schema"]};
-    } else if (param_val.HasMember("content") && param_val["content"].HasMember("application/json") && param_val["content"]["application/json"].HasMember("schema")) {
-        return {name, required, GetDeserializer(param_val, default_style, default_explode, ref_keys), param_val["content"]["application/json"]["schema"]};
+        return {name, required, GetDeserializer(param_val, default_style, default_explode, ref_keys),
+                param_val["schema"]};
+    } else if (param_val.HasMember("content") && param_val["content"].HasMember("application/json") &&
+               param_val["content"]["application/json"].HasMember("schema")) {
+        return {name, required, GetDeserializer(param_val, default_style, default_explode, ref_keys),
+                param_val["content"]["application/json"]["schema"]};
     } else {
         throw ValidatorInitExc("Cannot generate deserializer for parameter: " + JoinReference(ref_keys));
     }
 }
 
 PathParamValidator::PathParamValidator(const rapidjson::Value& param_val, const std::vector<std::string>& ref_keys)
-    : ParamValidator(ParamValidator::GetParamInfo(param_val, "simple", false, true, ref_keys), ref_keys, ValidationError::INVALID_PATH_PARAM)
+    : ParamValidator(ParamValidator::GetParamInfo(param_val, "simple", false, true, ref_keys), ref_keys,
+                     ValidationError::INVALID_PATH_PARAM)
 {
 }
 
 QueryParamValidator::QueryParamValidator(const rapidjson::Value& param_val, const std::vector<std::string>& ref_keys)
-    : ParamValidator(ParamValidator::GetParamInfo(param_val, "form", true, false, ref_keys), ref_keys, ValidationError::INVALID_QUERY_PARAM)
+    : ParamValidator(ParamValidator::GetParamInfo(param_val, "form", true, false, ref_keys), ref_keys,
+                     ValidationError::INVALID_QUERY_PARAM)
     , empty_allowed_(param_val.HasMember("allowEmptyValue") && param_val["allowEmptyValue"].GetBool())
 {
 }
@@ -258,6 +276,7 @@ bool QueryParamValidator::IsEmptyAllowed() const
 }
 
 HeaderParamValidator::HeaderParamValidator(const rapidjson::Value& param_val, const std::vector<std::string>& ref_keys)
-    : ParamValidator(ParamValidator::GetParamInfo(param_val, "simple", false, false, ref_keys), ref_keys, ValidationError::INVALID_HEADER_PARAM)
+    : ParamValidator(ParamValidator::GetParamInfo(param_val, "simple", false, false, ref_keys), ref_keys,
+                     ValidationError::INVALID_HEADER_PARAM)
 {
 }

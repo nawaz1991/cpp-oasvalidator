@@ -29,11 +29,12 @@ void BaseValidator::InitErrHeader()
     err_header_ = kErrHeaders.at(code_on_error_);
 }
 
-const std::unordered_map<ValidationError, std::string> BaseValidator::kErrHeaders = {{ValidationError::NONE, "NONE"},
-                                                                                     {ValidationError::INVALID_METHOD, R"({"errorCode":"INVALID_METHOD","details":{)"},
-                                                                                     {ValidationError::INVALID_ROUTE, R"({"errorCode":"INVALID_ROUTE","details":{)"},
-                                                                                     {ValidationError::INVALID_PATH_PARAM, R"({"errorCode":"INVALID_PATH_PARAM","details":{)"},
-                                                                                     {ValidationError::INVALID_QUERY_PARAM, R"({"errorCode":"INVALID_QUERY_PARAM","details":{)"},
-                                                                                     {ValidationError::INVALID_HEADER_PARAM, R"({"errorCode":"INVALID_HEADER_PARAM","details":{)"},
-                                                                                     {ValidationError::INVALID_BODY, R"({"errorCode":"INVALID_BODY","details":{)"},
-                                                                                     {ValidationError::INVALID_RSP, R"({"errorCode":"INVALID_RSP","details":{)"}};
+const std::unordered_map<ValidationError, std::string> BaseValidator::kErrHeaders = {
+    {ValidationError::NONE, "NONE"},
+    {ValidationError::INVALID_METHOD, R"({"errorCode":"INVALID_METHOD","details":{)"},
+    {ValidationError::INVALID_ROUTE, R"({"errorCode":"INVALID_ROUTE","details":{)"},
+    {ValidationError::INVALID_PATH_PARAM, R"({"errorCode":"INVALID_PATH_PARAM","details":{)"},
+    {ValidationError::INVALID_QUERY_PARAM, R"({"errorCode":"INVALID_QUERY_PARAM","details":{)"},
+    {ValidationError::INVALID_HEADER_PARAM, R"({"errorCode":"INVALID_HEADER_PARAM","details":{)"},
+    {ValidationError::INVALID_BODY, R"({"errorCode":"INVALID_BODY","details":{)"},
+    {ValidationError::INVALID_RSP, R"({"errorCode":"INVALID_RSP","details":{)"}};

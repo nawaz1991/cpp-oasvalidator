@@ -6,7 +6,8 @@
 
 #include "deserializers/object_deserializer.hpp"
 
-ObjectDeserializer::ObjectDeserializer(const std::string& param_name, char start, bool skip_name, char kv_separator, char vk_separator, bool is_deep_obj, const ObjKTMap& kt_map)
+ObjectDeserializer::ObjectDeserializer(const std::string& param_name, char start, bool skip_name, char kv_separator,
+                                       char vk_separator, bool is_deep_obj, const ObjKTMap& kt_map)
     : BaseDeserializer(param_name, start, skip_name)
     , kv_separator_(kv_separator)
     , vk_separator_(vk_separator)

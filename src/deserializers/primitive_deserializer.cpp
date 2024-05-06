@@ -6,7 +6,8 @@
 
 #include "deserializers/primitive_deserializer.hpp"
 
-PrimitiveDeserializer::PrimitiveDeserializer(const std::string& param_name, char start, bool skip_name, PrimitiveType param_type)
+PrimitiveDeserializer::PrimitiveDeserializer(const std::string& param_name, char start, bool skip_name,
+                                             PrimitiveType param_type)
     : BaseDeserializer(param_name, start, skip_name)
     , param_type_(param_type)
 {

@@ -70,7 +70,8 @@ bool PathTrie::Search(const char* beg, const char* const end, std::string& oas_p
     return true;
 }
 
-bool PathTrie::Search(const char* beg, const char* const end, std::string& oas_path, std::unordered_map<size_t, ParamRange>& param_idxs)
+bool PathTrie::Search(const char* beg, const char* const end, std::string& oas_path,
+                      std::unordered_map<size_t, ParamRange>& param_idxs)
 {
     auto* node = root_;
     const char* dir_end;

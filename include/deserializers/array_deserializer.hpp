@@ -12,7 +12,8 @@
 class ArrayDeserializer final: public BaseDeserializer
 {
 public:
-    explicit ArrayDeserializer(const std::string& param_name, char start, bool skip_name, PrimitiveType items_type, char separator, bool has_running_name, bool has_20_separator);
+    explicit ArrayDeserializer(const std::string& param_name, char start, bool skip_name, PrimitiveType items_type,
+                               char separator, bool has_running_name, bool has_20_separator);
 
     std::string Deserialize(const char* beg, const char* const end) override;
     ~ArrayDeserializer() override = default;

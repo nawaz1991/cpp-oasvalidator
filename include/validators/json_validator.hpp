@@ -19,14 +19,16 @@ private:
     rapidjson::SchemaValidator* validator_ = nullptr;
     std::mutex mutex_;
 
-    void CreateErrorMessages(const rapidjson::GenericValue<rapidjson::UTF8<>, rapidjson::CrtAllocator>& errors, const std::string& context, std::string& error_msg,
-                             bool recursive = false);
-    void HandleError(const char* error_name, const rapidjson::GenericValue<rapidjson::UTF8<>, rapidjson::CrtAllocator>& error, const std::string& context, std::string& error_msg,
-                     bool recursive);
+    void CreateErrorMessages(const rapidjson::GenericValue<rapidjson::UTF8<>, rapidjson::CrtAllocator>& errors,
+                             const std::string& context, std::string& error_msg, bool recursive = false);
+    void HandleError(const char* error_name,
+                     const rapidjson::GenericValue<rapidjson::UTF8<>, rapidjson::CrtAllocator>& error,
+                     const std::string& context, std::string& error_msg, bool recursive);
     static std::string GetString(const rapidjson::GenericValue<rapidjson::UTF8<>, rapidjson::CrtAllocator>& val);
 
 public:
-    JsonValidator(const rapidjson::Value& schema_val, const std::vector<std::string>& ref_keys, ValidationError err_code);
+    JsonValidator(const rapidjson::Value& schema_val, const std::vector<std::string>& ref_keys,
+                  ValidationError err_code);
     ValidationError ValidateJson(const std::string& json_str, std::string& error_msg) override;
     ~JsonValidator() override;
 };

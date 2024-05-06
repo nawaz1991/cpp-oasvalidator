@@ -18,7 +18,8 @@ enum : size_t
 };
 
 // Create a parameterized fixture class using the struct
-class PathPrimitiveParam: public ::testing::TestWithParam<std::tuple<std::string, std::string, bool, std::string, ValidationError>>
+class PathPrimitiveParam
+    : public ::testing::TestWithParam<std::tuple<std::string, std::string, bool, std::string, ValidationError>>
 {
 protected:
     void SetUp() override
@@ -72,30 +73,45 @@ TEST_P(PathPrimitiveParam, ValidateParam)
 
 INSTANTIATE_TEST_SUITE_P(
     PathParamValidatorTests, PathPrimitiveParam,
-    ::testing::Values(
-        std::make_tuple("true", "simple", false, "boolean", ValidationError::NONE), std::make_tuple("true", "simple", true, "boolean", ValidationError::NONE),
-        std::make_tuple("false", "simple", false, "boolean", ValidationError::NONE), std::make_tuple("false", "simple", true, "boolean", ValidationError::NONE),
-        std::make_tuple("123", "simple", false, "boolean", ValidationError::INVALID_PATH_PARAM), std::make_tuple("123", "simple", false, "integer", ValidationError::NONE),
-        std::make_tuple("123", "simple", true, "integer", ValidationError::NONE), std::make_tuple("123.0", "simple", false, "integer", ValidationError::INVALID_PATH_PARAM),
-        std::make_tuple("123.0", "simple", false, "number", ValidationError::NONE), std::make_tuple("123.0", "simple", true, "number", ValidationError::NONE),
-        std::make_tuple("abc", "simple", false, "number", ValidationError::INVALID_PATH_PARAM), std::make_tuple("abc%20xyz", "simple", false, "string", ValidationError::NONE),
-        std::make_tuple("abc%20xyz", "simple", true, "string", ValidationError::NONE), std::make_tuple(".true", "label", false, "boolean", ValidationError::NONE),
-        std::make_tuple(".true", "label", true, "boolean", ValidationError::NONE), std::make_tuple(".false", "label", false, "boolean", ValidationError::NONE),
-        std::make_tuple(".false", "label", true, "boolean", ValidationError::NONE), std::make_tuple(".123", "label", false, "boolean", ValidationError::INVALID_PATH_PARAM),
-        std::make_tuple(".123", "label", false, "integer", ValidationError::NONE), std::make_tuple(".123", "label", true, "integer", ValidationError::NONE),
-        std::make_tuple(".123.0", "label", false, "integer", ValidationError::INVALID_PATH_PARAM), std::make_tuple(".abc%20xyz", "label", false, "string", ValidationError::NONE),
-        std::make_tuple(".abc%20xyz", "label", true, "string", ValidationError::NONE), std::make_tuple(";param=true", "matrix", false, "boolean", ValidationError::NONE),
-        std::make_tuple(";param=true", "matrix", true, "boolean", ValidationError::NONE), std::make_tuple(";param=false", "matrix", false, "boolean", ValidationError::NONE),
-        std::make_tuple(";param=false", "matrix", true, "boolean", ValidationError::NONE),
-        std::make_tuple(";param=123", "matrix", false, "boolean", ValidationError::INVALID_PATH_PARAM),
-        std::make_tuple(";param=123", "matrix", false, "integer", ValidationError::NONE), std::make_tuple(";param=123", "matrix", true, "integer", ValidationError::NONE),
-        std::make_tuple(";param=123.0", "matrix", false, "integer", ValidationError::INVALID_PATH_PARAM),
-        std::make_tuple(";param=123.0", "matrix", false, "number", ValidationError::NONE), std::make_tuple(";param=123.0", "matrix", true, "number", ValidationError::NONE),
-        std::make_tuple(";param=abc", "matrix", false, "number", ValidationError::INVALID_PATH_PARAM),
-        std::make_tuple(";param=abc%20xyz", "matrix", false, "string", ValidationError::NONE),
-        std::make_tuple(";param=abc%20xyz", "matrix", true, "string", ValidationError::NONE)));
+    ::testing::Values(std::make_tuple("true", "simple", false, "boolean", ValidationError::NONE),
+                      std::make_tuple("true", "simple", true, "boolean", ValidationError::NONE),
+                      std::make_tuple("false", "simple", false, "boolean", ValidationError::NONE),
+                      std::make_tuple("false", "simple", true, "boolean", ValidationError::NONE),
+                      std::make_tuple("123", "simple", false, "boolean", ValidationError::INVALID_PATH_PARAM),
+                      std::make_tuple("123", "simple", false, "integer", ValidationError::NONE),
+                      std::make_tuple("123", "simple", true, "integer", ValidationError::NONE),
+                      std::make_tuple("123.0", "simple", false, "integer", ValidationError::INVALID_PATH_PARAM),
+                      std::make_tuple("123.0", "simple", false, "number", ValidationError::NONE),
+                      std::make_tuple("123.0", "simple", true, "number", ValidationError::NONE),
+                      std::make_tuple("abc", "simple", false, "number", ValidationError::INVALID_PATH_PARAM),
+                      std::make_tuple("abc%20xyz", "simple", false, "string", ValidationError::NONE),
+                      std::make_tuple("abc%20xyz", "simple", true, "string", ValidationError::NONE),
+                      std::make_tuple(".true", "label", false, "boolean", ValidationError::NONE),
+                      std::make_tuple(".true", "label", true, "boolean", ValidationError::NONE),
+                      std::make_tuple(".false", "label", false, "boolean", ValidationError::NONE),
+                      std::make_tuple(".false", "label", true, "boolean", ValidationError::NONE),
+                      std::make_tuple(".123", "label", false, "boolean", ValidationError::INVALID_PATH_PARAM),
+                      std::make_tuple(".123", "label", false, "integer", ValidationError::NONE),
+                      std::make_tuple(".123", "label", true, "integer", ValidationError::NONE),
+                      std::make_tuple(".123.0", "label", false, "integer", ValidationError::INVALID_PATH_PARAM),
+                      std::make_tuple(".abc%20xyz", "label", false, "string", ValidationError::NONE),
+                      std::make_tuple(".abc%20xyz", "label", true, "string", ValidationError::NONE),
+                      std::make_tuple(";param=true", "matrix", false, "boolean", ValidationError::NONE),
+                      std::make_tuple(";param=true", "matrix", true, "boolean", ValidationError::NONE),
+                      std::make_tuple(";param=false", "matrix", false, "boolean", ValidationError::NONE),
+                      std::make_tuple(";param=false", "matrix", true, "boolean", ValidationError::NONE),
+                      std::make_tuple(";param=123", "matrix", false, "boolean", ValidationError::INVALID_PATH_PARAM),
+                      std::make_tuple(";param=123", "matrix", false, "integer", ValidationError::NONE),
+                      std::make_tuple(";param=123", "matrix", true, "integer", ValidationError::NONE),
+                      std::make_tuple(";param=123.0", "matrix", false, "integer", ValidationError::INVALID_PATH_PARAM),
+                      std::make_tuple(";param=123.0", "matrix", false, "number", ValidationError::NONE),
+                      std::make_tuple(";param=123.0", "matrix", true, "number", ValidationError::NONE),
+                      std::make_tuple(";param=abc", "matrix", false, "number", ValidationError::INVALID_PATH_PARAM),
+                      std::make_tuple(";param=abc%20xyz", "matrix", false, "string", ValidationError::NONE),
+                      std::make_tuple(";param=abc%20xyz", "matrix", true, "string", ValidationError::NONE)));
 
-class PathArrayParam: public ::testing::TestWithParam<std::tuple<std::string, std::string, bool, std::string, ValidationError>>
+class PathArrayParam
+    : public ::testing::TestWithParam<std::tuple<std::string, std::string, bool, std::string, ValidationError>>
 {
 protected:
     void SetUp() override
@@ -153,18 +169,25 @@ TEST_P(PathArrayParam, ValidateParam)
 INSTANTIATE_TEST_SUITE_P(
     PathParamValidatorTests, PathArrayParam,
     ::testing::Values(
-        std::make_tuple("true,false", "simple", false, "boolean", ValidationError::NONE), std::make_tuple("true,false", "simple", true, "boolean", ValidationError::NONE),
-        std::make_tuple("false,true", "simple", false, "boolean", ValidationError::NONE), std::make_tuple("false,true", "simple", true, "boolean", ValidationError::NONE),
-        std::make_tuple("123,456", "simple", false, "boolean", ValidationError::INVALID_PATH_PARAM), std::make_tuple("123,456", "simple", false, "integer", ValidationError::NONE),
+        std::make_tuple("true,false", "simple", false, "boolean", ValidationError::NONE),
+        std::make_tuple("true,false", "simple", true, "boolean", ValidationError::NONE),
+        std::make_tuple("false,true", "simple", false, "boolean", ValidationError::NONE),
+        std::make_tuple("false,true", "simple", true, "boolean", ValidationError::NONE),
+        std::make_tuple("123,456", "simple", false, "boolean", ValidationError::INVALID_PATH_PARAM),
+        std::make_tuple("123,456", "simple", false, "integer", ValidationError::NONE),
         std::make_tuple("123,456", "simple", true, "integer", ValidationError::NONE),
         std::make_tuple("123.0,456.0", "simple", false, "integer", ValidationError::INVALID_PATH_PARAM),
-        std::make_tuple("123.0,456.0", "simple", false, "number", ValidationError::NONE), std::make_tuple("123.0,456.0", "simple", true, "number", ValidationError::NONE),
+        std::make_tuple("123.0,456.0", "simple", false, "number", ValidationError::NONE),
+        std::make_tuple("123.0,456.0", "simple", true, "number", ValidationError::NONE),
         std::make_tuple("abc,xyz", "simple", false, "number", ValidationError::INVALID_PATH_PARAM),
         std::make_tuple("abc%20xyz,def%20ghi", "simple", false, "string", ValidationError::NONE),
-        std::make_tuple("abc%20xyz,def%20ghi", "simple", true, "string", ValidationError::NONE), std::make_tuple(".true,false", "label", false, "boolean", ValidationError::NONE),
-        std::make_tuple(".true.false", "label", true, "boolean", ValidationError::NONE), std::make_tuple(".false,true", "label", false, "boolean", ValidationError::NONE),
+        std::make_tuple("abc%20xyz,def%20ghi", "simple", true, "string", ValidationError::NONE),
+        std::make_tuple(".true,false", "label", false, "boolean", ValidationError::NONE),
+        std::make_tuple(".true.false", "label", true, "boolean", ValidationError::NONE),
+        std::make_tuple(".false,true", "label", false, "boolean", ValidationError::NONE),
         std::make_tuple(".false.true", "label", true, "boolean", ValidationError::NONE),
-        std::make_tuple(".123,456", "label", false, "boolean", ValidationError::INVALID_PATH_PARAM), std::make_tuple(".123,456", "label", false, "integer", ValidationError::NONE),
+        std::make_tuple(".123,456", "label", false, "boolean", ValidationError::INVALID_PATH_PARAM),
+        std::make_tuple(".123,456", "label", false, "integer", ValidationError::NONE),
         std::make_tuple(".123.456", "label", true, "integer", ValidationError::NONE),
         std::make_tuple(".123.0,456.0", "label", false, "integer", ValidationError::INVALID_PATH_PARAM),
         std::make_tuple(".abc%20xyz,def%20ghi", "label", false, "string", ValidationError::NONE),
@@ -252,12 +275,21 @@ TEST_P(PathObjectParam, ValidateParam)
 
 INSTANTIATE_TEST_SUITE_P(
     PathParamValidatorTests, PathObjectParam,
-    ::testing::Values(std::make_tuple("boolTrue,true,boolFalse,false,int,123,number,123.456,string,abc%20xyz", "simple", false, ValidationError::NONE),
-                      std::make_tuple("boolTrue=true,boolFalse=false,int=123,number=123.456,string=abc%20xyz", "simple", true, ValidationError::NONE),
-                      std::make_tuple(".boolTrue,true,boolFalse,false,int,123,number,123.456,string,abc%20xyz", "label", false, ValidationError::NONE),
-                      std::make_tuple(";param=boolTrue,true,boolFalse,false,int,123,number,123.456,string,abc%20xyz", "matrix", false, ValidationError::NONE),
-                      std::make_tuple(";boolTrue=true;boolFalse=false;int=123;number=123.456;string=abc%20xyz", "matrix", true, ValidationError::NONE),
-                      std::make_tuple("boolTrue,ture,boolFalse,false,int,123,number,123.456,string,abc%20xyz", "simple", false, ValidationError::INVALID_PATH_PARAM),
-                      std::make_tuple("boolTrue=true,boolFalse=false,int=1.23,number=123.456,string=abc%20xyz", "simple", false, ValidationError::INVALID_PATH_PARAM),
-                      std::make_tuple("boolTrue=true,boolFalse=false,int=123,number=123.456,string=abc%2xyz", "simple", false, ValidationError::INVALID_PATH_PARAM),
-                      std::make_tuple(".boolTrue,true,boolFalse,false,int,123,number,123.456,string,abc%20xyz", "label", true, ValidationError::INVALID_PATH_PARAM)));
+    ::testing::Values(std::make_tuple("boolTrue,true,boolFalse,false,int,123,number,123.456,string,abc%20xyz", "simple",
+                                      false, ValidationError::NONE),
+                      std::make_tuple("boolTrue=true,boolFalse=false,int=123,number=123.456,string=abc%20xyz", "simple",
+                                      true, ValidationError::NONE),
+                      std::make_tuple(".boolTrue,true,boolFalse,false,int,123,number,123.456,string,abc%20xyz", "label",
+                                      false, ValidationError::NONE),
+                      std::make_tuple(";param=boolTrue,true,boolFalse,false,int,123,number,123.456,string,abc%20xyz",
+                                      "matrix", false, ValidationError::NONE),
+                      std::make_tuple(";boolTrue=true;boolFalse=false;int=123;number=123.456;string=abc%20xyz",
+                                      "matrix", true, ValidationError::NONE),
+                      std::make_tuple("boolTrue,ture,boolFalse,false,int,123,number,123.456,string,abc%20xyz", "simple",
+                                      false, ValidationError::INVALID_PATH_PARAM),
+                      std::make_tuple("boolTrue=true,boolFalse=false,int=1.23,number=123.456,string=abc%20xyz",
+                                      "simple", false, ValidationError::INVALID_PATH_PARAM),
+                      std::make_tuple("boolTrue=true,boolFalse=false,int=123,number=123.456,string=abc%2xyz", "simple",
+                                      false, ValidationError::INVALID_PATH_PARAM),
+                      std::make_tuple(".boolTrue,true,boolFalse,false,int,123,number,123.456,string,abc%20xyz", "label",
+                                      true, ValidationError::INVALID_PATH_PARAM)));

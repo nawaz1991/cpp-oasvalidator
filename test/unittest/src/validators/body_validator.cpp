@@ -116,7 +116,8 @@ protected:
                   }
                 }
                 })");
-        std::vector<std::string> ref_keys{"paths", "/pets/test", "get", "requestBody/content/application%2Fjson/schema"};
+        std::vector<std::string> ref_keys{"paths", "/pets/test", "get",
+                                          "requestBody/content/application%2Fjson/schema"};
         validator_ = std::make_unique<BodyValidator>(schema_doc_, ref_keys);
     }
 

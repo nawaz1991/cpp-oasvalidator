@@ -54,7 +54,8 @@ protected:
             if (start_ == *cursor) {
                 ++cursor;
             } else {
-                throw DeserializationException("Parameter '" + param_name_ + "' should start with '" + std::string(1, start_) + "'");
+                throw DeserializationException("Parameter '" + param_name_ + "' should start with '" +
+                                               std::string(1, start_) + "'");
             }
         }
     }
@@ -72,7 +73,8 @@ protected:
 
     inline void CheckNSkipName(const char*& cursor, const char* const end) const
     {
-        if (std::distance(cursor, end) < static_cast<long>(param_name_.size()) || !std::equal(param_name_.begin(), param_name_.end(), cursor)) {
+        if (std::distance(cursor, end) < static_cast<long>(param_name_.size()) ||
+            !std::equal(param_name_.begin(), param_name_.end(), cursor)) {
             throw DeserializationException("Parameter name mismatch for the parameter '" + param_name_ + "'");
         }
         cursor += param_name_.size();
@@ -131,7 +133,8 @@ protected:
             has_decimal_point |= (*cursor == '.');
             ++cursor;
         }
-        if (cursor > start_cursor && (cursor - start_cursor != 1 || (*start_cursor != '-' && *start_cursor != '.')) && (!has_decimal_point || *(cursor - 1) != '.')) {
+        if (cursor > start_cursor && (cursor - start_cursor != 1 || (*start_cursor != '-' && *start_cursor != '.')) &&
+            (!has_decimal_point || *(cursor - 1) != '.')) {
             ret.append(start_cursor, cursor);
         } else {
             throw DeserializationException("Invalid 'number' format for '" + param_name_ + "'");
@@ -168,7 +171,8 @@ protected:
         ret.push_back('"');
     }
 
-    inline void DeserializeString(const char*& cursor, const char* const end, const char terminator, std::string& ret) const
+    inline void DeserializeString(const char*& cursor, const char* const end, const char terminator,
+                                  std::string& ret) const
     {
         ret.push_back('"');
         while (cursor < end && *cursor != terminator) {

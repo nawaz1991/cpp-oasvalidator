@@ -6,7 +6,8 @@
 
 #include "deserializers/array_deserializer.hpp"
 
-ArrayDeserializer::ArrayDeserializer(const std::string& param_name, char start, bool skip_name, PrimitiveType items_type, char separator, bool has_running_name,
+ArrayDeserializer::ArrayDeserializer(const std::string& param_name, char start, bool skip_name,
+                                     PrimitiveType items_type, char separator, bool has_running_name,
                                      bool has_20_separator)
     : BaseDeserializer(param_name, start, skip_name)
     , items_type_(items_type)

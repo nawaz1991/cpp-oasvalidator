@@ -18,11 +18,13 @@ class ValidatorsStore
 public:
     ValidatorsStore() = default;
     explicit ValidatorsStore(const rapidjson::Value& schema_val, const std::vector<std::string>& ref_keys);
-    void AddParamValidators(const std::string& path, const rapidjson::Value& params, std::vector<std::string>& ref_keys);
+    void AddParamValidators(const std::string& path, const rapidjson::Value& params,
+                            std::vector<std::string>& ref_keys);
     ValidationError ValidateBody(const std::string& json_body, std::string& error_msg);
     ValidationError ValidatePathParams(std::unordered_map<size_t, ParamRange>& param_idxs, std::string& error_msg);
     ValidationError ValidateQueryParams(const std::string& query, std::string& error_msg);
-    ValidationError ValidateHeaderParams(const std::unordered_map<std::string, std::string>& headers, std::string& error_msg);
+    ValidationError ValidateHeaderParams(const std::unordered_map<std::string, std::string>& headers,
+                                         std::string& error_msg);
     ~ValidatorsStore();
 
 private:

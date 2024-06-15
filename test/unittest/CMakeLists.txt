@@ -2,7 +2,9 @@ project(${OASVALIDATOR}-unittests LANGUAGES CXX)
 
 set(GOOGLETEST_VERSION 1.14.0)
 
-find_package(GTestSrc)
+# Include the custom FindGTestSrc.cmake script
+list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/../../cmake")
+find_package(GTestSrc REQUIRED)
 
 IF (GTESTSRC_FOUND)
     enable_testing()
@@ -17,7 +19,6 @@ IF (GTESTSRC_FOUND)
 
     set(TEST_LIBRARIES gtest gtest_main)
 
-
     file(GLOB_RECURSE SOURCES "src/*.cpp")
 
     find_program(CCACHE_FOUND ccache)
@@ -28,7 +29,6 @@ IF (GTESTSRC_FOUND)
             set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Qunused-arguments -fcolor-diagnostics")
         endif ()
     endif (CCACHE_FOUND)
-
 
     add_executable(${PROJECT_NAME} ${SOURCES})
 

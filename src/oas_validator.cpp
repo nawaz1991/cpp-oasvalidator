@@ -13,6 +13,22 @@ OASValidator::OASValidator(const std::string& oas_specs)
 {
 }
 
+OASValidator::OASValidator(const OASValidator& other)
+    : impl_(new OASValidatorImp(*other.impl_))
+{
+}
+
+OASValidator& OASValidator::operator=(const OASValidator& other)
+{
+    if (this == &other) {
+        return *this;
+    }
+
+    delete impl_;
+    impl_ = new OASValidatorImp(*other.impl_);
+    return *this;
+}
+
 ValidationError OASValidator::ValidateRoute(const std::string& method, const std::string& http_path,
                                             std::string& error_msg)
 {

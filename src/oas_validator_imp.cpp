@@ -212,7 +212,7 @@ ValidationError OASValidatorImp::GetValidators(const std::string& method, const 
     return ValidationError::NONE;
 }
 
-std::vector<std::string> OASValidatorImp::Split(const std::string &str)
+std::vector<std::string> OASValidatorImp::Split(const std::string& str)
 {
     std::vector<std::string> tokens;
     std::string token;

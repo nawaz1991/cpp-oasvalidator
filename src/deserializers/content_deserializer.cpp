@@ -22,7 +22,7 @@ std::string ContentDeserializer::Deserialize(const char* beg, const char* const 
     }
 
     std::string ret;
-    ret.reserve(end - cursor);
+    ret.reserve(static_cast<std::string::size_type>(end - cursor));
 
     while (cursor < end) {
         char c = *cursor++;

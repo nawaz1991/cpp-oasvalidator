@@ -65,6 +65,19 @@ public:
     explicit OASValidator(const std::string& oas_specs);
 
     /**
+     * @brief Copy constructor.
+     * @param other The OASValidator object to be copied.
+     */
+    OASValidator(const OASValidator& other);
+
+    /**
+     * @brief Copy assignment operator.
+     * @param other The OASValidator object to be copied.
+     * @return Reference to the copied OASValidator object.
+     */
+    OASValidator& operator=(const OASValidator& other);
+
+    /**
      * @brief Validates the HTTP method and route against the OpenAPI specification.
      *
      * This function performs the following validation sequence:

@@ -9,11 +9,9 @@
 JsonValidator::JsonValidator(const rapidjson::Value& schema_val, const std::vector<std::string>& ref_keys,
                              ValidationError err_code)
     : BaseValidator(ref_keys, err_code)
+    , schema_(new rapidjson::SchemaDocument(schema_val))
+    , validator_(new rapidjson::SchemaValidator(*schema_))
 {
-    schema_ = new rapidjson::SchemaDocument(schema_val);
-    if (schema_) {
-        validator_ = new rapidjson::SchemaValidator(*schema_);
-    }
 }
 
 ValidationError JsonValidator::Validate(const std::string& json_str, std::string& error_msg)

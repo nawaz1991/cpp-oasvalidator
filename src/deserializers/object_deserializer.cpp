@@ -64,6 +64,8 @@ std::string ObjectDeserializer::Deserialize(const char* beg, const char* const e
                 case PrimitiveType::STRING:
                     DeserializeString(cursor, end, vk_separator_, ret);
                     break;
+                default:
+                    throw DeserializationException("Invalid primitive type for '" + param_name_ + "'");
                 }
                 if (*cursor == vk_separator_) {
                     ret.push_back(',');
@@ -97,6 +99,8 @@ std::string ObjectDeserializer::Deserialize(const char* beg, const char* const e
                 case PrimitiveType::STRING:
                     DeserializeString(cursor, end, vk_separator_, ret);
                     break;
+                default:
+                    throw DeserializationException("Invalid primitive type for '" + param_name_ + "'");
                 }
                 if (*cursor == vk_separator_) {
                     ret.push_back(',');

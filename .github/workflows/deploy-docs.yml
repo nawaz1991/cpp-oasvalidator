@@ -53,21 +53,16 @@ jobs:
           configurePreset: 'release'
           buildPreset: 'perftests-build'
 
-      #- name: Run performance tests
-      #  run: build/release/test/perftest/oasvalidator-perftests --benchmark_format=json > build/debug/docs/benchmark.json
+      - name: Run performance tests
+        run: build/release/test/perftest/oasvalidator-perftests --benchmark_format=json > build/debug/docs/benchmark.json
 
-      #- name: Convert benchmark.json to benchmark.rst
-      #  run: python .github/workflows/convert_json_to_rst.py build/debug/docs/benchmark.json build/debug/docs/benchmark.rst
+      - name: Convert benchmark.json to benchmark.rst
+        run: python .github/workflows/convert_json_to_rst.py build/debug/docs/benchmark.json build/debug/docs/benchmark.rst
 
       - name: Build docs and code coverage
         uses: lukka/run-cmake@v10
         with:
           workflowPreset: 'build-docs-and-codecov'
-
-      - name: Run Sphinx
-        run: |
-          cd docs
-          make html
 
       - name: Copy code coverage to docs
         run: cp -r build/debug/covhtml-oasvalidator build/debug/docs/html

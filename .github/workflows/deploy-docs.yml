@@ -1,9 +1,10 @@
 name: Deploy docs and code coverage
+
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   build-and-deploy-docs-and-codecov:
@@ -40,7 +41,7 @@ jobs:
 
       - uses: lukka/get-cmake@latest
 
-      - name: Configure code coverage code coverage and docs
+      - name: Configure code coverage and docs
         uses: lukka/run-cmake@v10
         with:
           configurePreset: 'debug'
@@ -61,6 +62,11 @@ jobs:
         uses: lukka/run-cmake@v10
         with:
           workflowPreset: 'build-docs-and-codecov'
+
+      - name: Run Sphinx
+        run: |
+          cd docs
+          make html
 
       - name: Copy code coverage to docs
         run: cp -r build/debug/covhtml-oasvalidator build/debug/docs/html

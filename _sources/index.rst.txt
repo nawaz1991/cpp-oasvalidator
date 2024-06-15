@@ -26,5 +26,4 @@ A FAST C++ library to validate the HTTP requests against the OpenAPI specificati
    api/library_root
    codecov
    classdiagram
-   benchmark
    genindex

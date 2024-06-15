@@ -1,16 +1,16 @@
 <!doctype html>
-<html class="no-js">
+<html class="no-js" lang="en" data-content_root="../">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Enum ValidationError" href="enum_oas__validator_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2b.html" /><link rel="prev" title="API" href="library_root.html" />
 
-    <meta name="generator" content="sphinx-4.4.0, furo 2022.09.29"/>
+    <!-- Generated with Sphinx 7.3.7 and Furo 2024.05.06 -->
         <title>Class OASValidator - cpp-oasvalidator</title>
-      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=d81277517bee4d6b0349d71bb2661d4890b5617c" />
-    <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=387cc868" />
+    <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=36a5483c" />
     
     
 
@@ -93,7 +93,7 @@
   <symbol id="svg-sun" viewBox="0 0 24 24">
     <title>Light mode</title>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
       <circle cx="12" cy="12" r="5"></circle>
       <line x1="12" y1="1" x2="12" y2="3"></line>
       <line x1="12" y1="21" x2="12" y2="23"></line>
@@ -108,7 +108,7 @@
   <symbol id="svg-moon" viewBox="0 0 24 24">
     <title>Dark mode</title>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
       <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
     </svg>
@@ -116,7 +116,7 @@
   <symbol id="svg-sun-half" viewBox="0 0 24 24">
     <title>Auto light/dark mode</title>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
       <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
       <circle cx="12" cy="12" r="9" />
       <path d="M13 12h5" />
@@ -124,6 +124,60 @@
       <path d="M13 18h1" />
       <path d="M13 9h4" />
       <path d="M13 6h1" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-with-moon" viewBox="0 0 24 24">
+    <title>Auto light/dark, in light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path style="opacity: 50%" d="M 5.411 14.504 C 5.471 14.504 5.532 14.504 5.591 14.504 C 3.639 16.319 4.383 19.569 6.931 20.352 C 7.693 20.586 8.512 20.551 9.25 20.252 C 8.023 23.207 4.056 23.725 2.11 21.184 C 0.166 18.642 1.702 14.949 4.874 14.536 C 5.051 14.512 5.231 14.5 5.411 14.5 L 5.411 14.504 Z"/>
+      <line x1="14.5" y1="3.25" x2="14.5" y2="1.25"/>
+      <line x1="14.5" y1="15.85" x2="14.5" y2="17.85"/>
+      <line x1="10.044" y1="5.094" x2="8.63" y2="3.68"/>
+      <line x1="19" y1="14.05" x2="20.414" y2="15.464"/>
+      <line x1="8.2" y1="9.55" x2="6.2" y2="9.55"/>
+      <line x1="20.8" y1="9.55" x2="22.8" y2="9.55"/>
+      <line x1="10.044" y1="14.006" x2="8.63" y2="15.42"/>
+      <line x1="19" y1="5.05" x2="20.414" y2="3.636"/>
+      <circle cx="14.5" cy="9.55" r="3.6"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon-with-sun" viewBox="0 0 24 24">
+    <title>Auto light/dark, in dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path d="M 8.282 7.007 C 8.385 7.007 8.494 7.007 8.595 7.007 C 5.18 10.184 6.481 15.869 10.942 17.24 C 12.275 17.648 13.706 17.589 15 17.066 C 12.851 22.236 5.91 23.143 2.505 18.696 C -0.897 14.249 1.791 7.786 7.342 7.063 C 7.652 7.021 7.965 7 8.282 7 L 8.282 7.007 Z"/>
+      <line style="opacity: 50%" x1="18" y1="3.705" x2="18" y2="2.5"/>
+      <line style="opacity: 50%" x1="18" y1="11.295" x2="18" y2="12.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="4.816" x2="14.464" y2="3.964"/>
+      <line style="opacity: 50%" x1="20.711" y1="10.212" x2="21.563" y2="11.063"/>
+      <line style="opacity: 50%" x1="14.205" y1="7.5" x2="13.001" y2="7.5"/>
+      <line style="opacity: 50%" x1="21.795" y1="7.5" x2="23" y2="7.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="10.184" x2="14.464" y2="11.036"/>
+      <line style="opacity: 50%" x1="20.711" y1="4.789" x2="21.563" y2="3.937"/>
+      <circle style="opacity: 50%" cx="18" cy="7.5" r="2.169"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-pencil" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-pencil-code">
+      <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+      <path d="M13.5 6.5l4 4" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" /
+    </svg>
+  </symbol>
+  <symbol id="svg-eye" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-eye-code">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+      <path
+        d="M11.11 17.958c-3.209 -.307 -5.91 -2.293 -8.11 -5.958c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6c-.21 .352 -.427 .688 -.647 1.008" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
     </svg>
   </symbol>
 </svg>
@@ -136,6 +190,8 @@
 <label class="overlay toc-overlay" for="__toc">
   <div class="visually-hidden">Hide table of contents sidebar</div>
 </label>
+
+<a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
 
 
 
@@ -154,7 +210,8 @@
       <div class="theme-toggle-container theme-toggle-header">
         <button class="theme-toggle">
           <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
-          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+          <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
           <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
@@ -174,14 +231,14 @@
   <span class="sidebar-brand-text">cpp-oasvalidator</span>
   
 </a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
-  <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
   <input type="hidden" name="check_keywords" value="yes">
   <input type="hidden" name="area" value="default">
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../oasvalidator.html">OAS Validator</a></li>
-<li class="toctree-l1 current has-children"><a class="reference internal" href="library_root.html">API</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l1 current has-children"><a class="reference internal" href="library_root.html">API</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of API</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Class OASValidator</a></li>
 <li class="toctree-l2"><a class="reference internal" href="enum_oas__validator_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2b.html">Enum ValidationError</a></li>
 <li class="toctree-l2"><a class="reference internal" href="define_oas__validator_8hpp_1a838ca36f37b19a874eabd4eeff5be860.html">Define VALIDATION_ERROR</a></li>
@@ -189,7 +246,6 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../codecov.html">Code Coverage Report</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../classdiagram.html">Class Diagram</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../benchmark.html">Benchmark Report</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
 </ul>
 
@@ -210,11 +266,17 @@
           <span>Back to top</span>
         </a>
         <div class="content-icon-container">
-          
+          <div class="view-this-page">
+  <a class="muted-link" href="../_sources/api/classOASValidator.rst.txt" title="View this page">
+    <svg><use href="#svg-eye"></use></svg>
+    <span class="visually-hidden">View this page</span>
+  </a>
+</div>
 <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
-              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+              <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
               <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
@@ -224,39 +286,64 @@
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
         </div>
-        <article role="main">
+        <article role="main" id="furo-main-content">
           <section id="class-oasvalidator">
-<span id="exhale-class-classoasvalidator"></span><h1>Class OASValidator<a class="headerlink" href="#class-oasvalidator" title="Permalink to this headline">#</a></h1>
+<span id="exhale-class-classoasvalidator"></span><h1>Class OASValidator<a class="headerlink" href="#class-oasvalidator" title="Link to this heading">¶</a></h1>
 <ul class="simple">
 <li><p>Defined in <a class="reference internal" href="file_oas_validator.hpp.html#file-oas-validator-hpp"><span class="std std-ref">File oas_validator.hpp</span></a></p></li>
 </ul>
 <section id="class-documentation">
-<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline">#</a></h2>
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Link to this heading">¶</a></h2>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv412OASValidator">
-<span id="_CPPv312OASValidator"></span><span id="_CPPv212OASValidator"></span><span id="OASValidator"></span><span class="target" id="classOASValidator"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">OASValidator</span></span></span><a class="headerlink" href="#_CPPv412OASValidator" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv312OASValidator"></span><span id="_CPPv212OASValidator"></span><span id="OASValidator"></span><span class="target" id="classOASValidator"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">OASValidator</span></span></span><a class="headerlink" href="#_CPPv412OASValidator" title="Link to this definition">¶</a><br /></dt>
 <dd><p>Class that provides API for HTTP requests validation against OAS validation. </p>
 <p>The <a class="reference internal" href="#classOASValidator"><span class="std std-ref">OASValidator</span></a> class offers various methods for validating REST requests against a defined OAS (OpenAPI Specification) file. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N12OASValidator12OASValidatorERKNSt6stringE">
-<span id="_CPPv3N12OASValidator12OASValidatorERKNSt6stringE"></span><span id="_CPPv2N12OASValidator12OASValidatorERKNSt6stringE"></span><span id="OASValidator::OASValidator__ssCR"></span><span class="target" id="classOASValidator_1ad208b4881e7b8b45751f538db4756a22"></span><span class="k"><span class="pre">explicit</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">OASValidator</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">oas_specs</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12OASValidator12OASValidatorERKNSt6stringE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N12OASValidator12OASValidatorERKNSt6stringE"></span><span id="_CPPv2N12OASValidator12OASValidatorERKNSt6stringE"></span><span id="OASValidator::OASValidator__ssCR"></span><span class="target" id="classOASValidator_1ad208b4881e7b8b45751f538db4756a22"></span><span class="k"><span class="pre">explicit</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">OASValidator</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">oas_specs</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12OASValidator12OASValidatorERKNSt6stringE" title="Link to this definition">¶</a><br /></dt>
 <dd><p>Constructor that takes the path to the OAS specification file. </p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The OAS specification can be provided as a file path or as a JSON string. </p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>oas_specs</strong> – File path to the OAS specification in JSON format or JSON string containing the OAS specification.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12OASValidator12OASValidatorERK12OASValidator">
+<span id="_CPPv3N12OASValidator12OASValidatorERK12OASValidator"></span><span id="_CPPv2N12OASValidator12OASValidatorERK12OASValidator"></span><span id="OASValidator::OASValidator__OASValidatorCR"></span><span class="target" id="classOASValidator_1a63988d539aa06a2311b2494e48ee0150"></span><span class="sig-name descname"><span class="n"><span class="pre">OASValidator</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N12OASValidator12OASValidatorERK12OASValidator" title="OASValidator::OASValidator"><span class="n"><span class="pre">OASValidator</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">other</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12OASValidator12OASValidatorERK12OASValidator" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Copy constructor. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>other</strong> – The <a class="reference internal" href="#classOASValidator"><span class="std std-ref">OASValidator</span></a> object to be copied. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12OASValidatoraSERK12OASValidator">
+<span id="_CPPv3N12OASValidatoraSERK12OASValidator"></span><span id="_CPPv2N12OASValidatoraSERK12OASValidator"></span><span id="OASValidator::assign-operator__OASValidatorCR"></span><span class="target" id="classOASValidator_1ac30cee140e32812453dbfda3560bb0a7"></span><a class="reference internal" href="#_CPPv412OASValidator" title="OASValidator"><span class="n"><span class="pre">OASValidator</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">=</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv412OASValidator" title="OASValidator"><span class="n"><span class="pre">OASValidator</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">other</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12OASValidatoraSERK12OASValidator" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Copy assignment operator. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>other</strong> – The <a class="reference internal" href="#classOASValidator"><span class="std std-ref">OASValidator</span></a> object to be copied. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Reference to the copied <a class="reference internal" href="#classOASValidator"><span class="std std-ref">OASValidator</span></a> object. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N12OASValidator13ValidateRouteERKNSt6stringERKNSt6stringERNSt6stringE">
-<span id="_CPPv3N12OASValidator13ValidateRouteERKNSt6stringERKNSt6stringERNSt6stringE"></span><span id="_CPPv2N12OASValidator13ValidateRouteERKNSt6stringERKNSt6stringERNSt6stringE"></span><span id="OASValidator::ValidateRoute__ssCR.ssCR.ssR"></span><span class="target" id="classOASValidator_1a9167cbc47e25992831ab5ff09da2097a"></span><a class="reference internal" href="enum_oas__validator_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2b.html#_CPPv415ValidationError" title="ValidationError"><span class="n"><span class="pre">ValidationError</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ValidateRoute</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">method</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">http_path</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">error_msg</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12OASValidator13ValidateRouteERKNSt6stringERKNSt6stringERNSt6stringE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N12OASValidator13ValidateRouteERKNSt6stringERKNSt6stringERNSt6stringE"></span><span id="_CPPv2N12OASValidator13ValidateRouteERKNSt6stringERKNSt6stringERNSt6stringE"></span><span id="OASValidator::ValidateRoute__ssCR.ssCR.ssR"></span><span class="target" id="classOASValidator_1a9167cbc47e25992831ab5ff09da2097a"></span><a class="reference internal" href="enum_oas__validator_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2b.html#_CPPv415ValidationError" title="ValidationError"><span class="n"><span class="pre">ValidationError</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ValidateRoute</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">method</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">http_path</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">error_msg</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12OASValidator13ValidateRouteERKNSt6stringERKNSt6stringERNSt6stringE" title="Link to this definition">¶</a><br /></dt>
 <dd><p>Validates the HTTP method and route against the OpenAPI specification. </p>
 <p>This function performs the following validation sequence:<ol class="lowerroman simple">
 <li><p>HTTP method</p></li>
@@ -268,14 +355,14 @@
 <p>The error_msg argument will be populated with a JSON string in case of a validation error. </p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>method</strong> – The HTTP method as a std::string (e.g., “GET”, “POST”). </p></li>
 <li><p><strong>http_path</strong> – The HTTP path as a std::string (e.g., “/api/v1/resource”). </p></li>
 <li><p><strong>error_msg</strong> – Reference to a std::string where the error message will be stored in case of a validation error.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>ValidationError enum indicating the result of the validation. Possible values include:<ul class="simple">
 <li><p><a class="reference internal" href="enum_oas__validator_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2b.html#oas__validator_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2bab50339a10e1de285ac99d4c3990b8693"><span class="std std-ref">ValidationError::NONE</span></a>: No validation error.</p></li>
 <li><p><a class="reference internal" href="enum_oas__validator_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2b.html#oas__validator_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2ba0287a379ca2c3ad10431b4ff17491106"><span class="std std-ref">ValidationError::INVALID_METHOD</span></a>: Invalid HTTP method.</p></li>
@@ -288,7 +375,7 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N12OASValidator12ValidateBodyERKNSt6stringERKNSt6stringERKNSt6stringERNSt6stringE">
-<span id="_CPPv3N12OASValidator12ValidateBodyERKNSt6stringERKNSt6stringERKNSt6stringERNSt6stringE"></span><span id="_CPPv2N12OASValidator12ValidateBodyERKNSt6stringERKNSt6stringERKNSt6stringERNSt6stringE"></span><span id="OASValidator::ValidateBody__ssCR.ssCR.ssCR.ssR"></span><span class="target" id="classOASValidator_1abc670d5a364a3a5148e1c38862d46027"></span><a class="reference internal" href="enum_oas__validator_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2b.html#_CPPv415ValidationError" title="ValidationError"><span class="n"><span class="pre">ValidationError</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ValidateBody</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">method</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">http_path</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">json_body</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">error_msg</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12OASValidator12ValidateBodyERKNSt6stringERKNSt6stringERKNSt6stringERNSt6stringE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N12OASValidator12ValidateBodyERKNSt6stringERKNSt6stringERKNSt6stringERNSt6stringE"></span><span id="_CPPv2N12OASValidator12ValidateBodyERKNSt6stringERKNSt6stringERKNSt6stringERNSt6stringE"></span><span id="OASValidator::ValidateBody__ssCR.ssCR.ssCR.ssR"></span><span class="target" id="classOASValidator_1abc670d5a364a3a5148e1c38862d46027"></span><a class="reference internal" href="enum_oas__validator_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2b.html#_CPPv415ValidationError" title="ValidationError"><span class="n"><span class="pre">ValidationError</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ValidateBody</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">method</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">http_path</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">json_body</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">error_msg</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12OASValidator12ValidateBodyERKNSt6stringERKNSt6stringERKNSt6stringERNSt6stringE" title="Link to this definition">¶</a><br /></dt>
 <dd><p>Validates the JSON body of the HTTP request against the OpenAPI specification. </p>
 <p>This function performs the following validation sequence:<ol class="lowerroman simple">
 <li><p>HTTP method</p></li>
@@ -301,7 +388,7 @@
 <p>The error_msg argument will be populated with a JSON string in case of a validation error. </p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>method</strong> – The HTTP method as a std::string (e.g., “POST”, “PUT”). </p></li>
 <li><p><strong>http_path</strong> – The HTTP path as a std::string (e.g., “/api/v1/resource”). </p></li>
@@ -309,7 +396,7 @@
 <li><p><strong>error_msg</strong> – Reference to a std::string where the error message will be stored in case of a validation error.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>ValidationError enum indicating the result of the validation. Possible values include:<ul class="simple">
 <li><p><a class="reference internal" href="enum_oas__validator_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2b.html#oas__validator_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2bab50339a10e1de285ac99d4c3990b8693"><span class="std std-ref">ValidationError::NONE</span></a>: No validation error.</p></li>
 <li><p><a class="reference internal" href="enum_oas__validator_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2b.html#oas__validator_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2ba0287a379ca2c3ad10431b4ff17491106"><span class="std std-ref">ValidationError::INVALID_METHOD</span></a>: Invalid HTTP method.</p></li>
@@ -323,7 +410,7 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N12OASValidator17ValidatePathParamERKNSt6stringERKNSt6stringERNSt6stringE">
-<span id="_CPPv3N12OASValidator17ValidatePathParamERKNSt6stringERKNSt6stringERNSt6stringE"></span><span id="_CPPv2N12OASValidator17ValidatePathParamERKNSt6stringERKNSt6stringERNSt6stringE"></span><span id="OASValidator::ValidatePathParam__ssCR.ssCR.ssR"></span><span class="target" id="classOASValidator_1a4c69884bfd3f2f6c619312fcb366e5be"></span><a class="reference internal" href="enum_oas__validator_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2b.html#_CPPv415ValidationError" title="ValidationError"><span class="n"><span class="pre">ValidationError</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ValidatePathParam</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">method</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">http_path</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">error_msg</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12OASValidator17ValidatePathParamERKNSt6stringERKNSt6stringERNSt6stringE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N12OASValidator17ValidatePathParamERKNSt6stringERKNSt6stringERNSt6stringE"></span><span id="_CPPv2N12OASValidator17ValidatePathParamERKNSt6stringERKNSt6stringERNSt6stringE"></span><span id="OASValidator::ValidatePathParam__ssCR.ssCR.ssR"></span><span class="target" id="classOASValidator_1a4c69884bfd3f2f6c619312fcb366e5be"></span><a class="reference internal" href="enum_oas__validator_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2b.html#_CPPv415ValidationError" title="ValidationError"><span class="n"><span class="pre">ValidationError</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ValidatePathParam</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">method</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">http_path</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">error_msg</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12OASValidator17ValidatePathParamERKNSt6stringERKNSt6stringERNSt6stringE" title="Link to this definition">¶</a><br /></dt>
 <dd><p>Validates the path parameters of the HTTP request against the OpenAPI specification. </p>
 <p>This function performs the following validation sequence:<ol class="lowerroman simple">
 <li><p>HTTP method</p></li>
@@ -336,14 +423,14 @@
 <p>The error_msg argument will be populated with a JSON string in case of a validation error. </p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>method</strong> – The HTTP method as a std::string (e.g., “GET”, “DELETE”). </p></li>
 <li><p><strong>http_path</strong> – The HTTP path with parameters as a std::string (e.g., “/api/v1/resource/{id}”). </p></li>
 <li><p><strong>error_msg</strong> – Reference to a std::string where the error message will be stored in case of a validation error.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>ValidationError enum indicating the result of the validation. Possible values include:<ul class="simple">
 <li><p><a class="reference internal" href="enum_oas__validator_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2b.html#oas__validator_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2bab50339a10e1de285ac99d4c3990b8693"><span class="std std-ref">ValidationError::NONE</span></a>: No validation error.</p></li>
 <li><p><a class="reference internal" href="enum_oas__validator_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2b.html#oas__validator_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2ba0287a379ca2c3ad10431b4ff17491106"><span class="std std-ref">ValidationError::INVALID_METHOD</span></a>: Invalid HTTP method.</p></li>
@@ -357,7 +444,7 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N12OASValidator18ValidateQueryParamERKNSt6stringERKNSt6stringERNSt6stringE">
-<span id="_CPPv3N12OASValidator18ValidateQueryParamERKNSt6stringERKNSt6stringERNSt6stringE"></span><span id="_CPPv2N12OASValidator18ValidateQueryParamERKNSt6stringERKNSt6stringERNSt6stringE"></span><span id="OASValidator::ValidateQueryParam__ssCR.ssCR.ssR"></span><span class="target" id="classOASValidator_1ad0d2596150987a006c43fb0b898f8e28"></span><a class="reference internal" href="enum_oas__validator_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2b.html#_CPPv415ValidationError" title="ValidationError"><span class="n"><span class="pre">ValidationError</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ValidateQueryParam</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">method</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">http_path</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">error_msg</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12OASValidator18ValidateQueryParamERKNSt6stringERKNSt6stringERNSt6stringE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N12OASValidator18ValidateQueryParamERKNSt6stringERKNSt6stringERNSt6stringE"></span><span id="_CPPv2N12OASValidator18ValidateQueryParamERKNSt6stringERKNSt6stringERNSt6stringE"></span><span id="OASValidator::ValidateQueryParam__ssCR.ssCR.ssR"></span><span class="target" id="classOASValidator_1ad0d2596150987a006c43fb0b898f8e28"></span><a class="reference internal" href="enum_oas__validator_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2b.html#_CPPv415ValidationError" title="ValidationError"><span class="n"><span class="pre">ValidationError</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ValidateQueryParam</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">method</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">http_path</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">error_msg</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12OASValidator18ValidateQueryParamERKNSt6stringERKNSt6stringERNSt6stringE" title="Link to this definition">¶</a><br /></dt>
 <dd><p>Validates the query parameters of the HTTP request against the OpenAPI specification. </p>
 <p>This function performs the following validation sequence:<ol class="lowerroman simple">
 <li><p>HTTP method</p></li>
@@ -370,14 +457,14 @@
 <p>The error_msg argument will be populated with a JSON string in case of a validation error. </p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>method</strong> – The HTTP method as a std::string (e.g., “GET”, “DELETE”). </p></li>
 <li><p><strong>http_path</strong> – The HTTP path including query parameters as a std::string (e.g., “/api/v1/resource?name=value”). </p></li>
 <li><p><strong>error_msg</strong> – Reference to a std::string where the error message will be stored in case of a validation error.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>ValidationError enum indicating the result of the validation. Possible values include:<ul class="simple">
 <li><p><a class="reference internal" href="enum_oas__validator_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2b.html#oas__validator_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2bab50339a10e1de285ac99d4c3990b8693"><span class="std std-ref">ValidationError::NONE</span></a>: No validation error.</p></li>
 <li><p><a class="reference internal" href="enum_oas__validator_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2b.html#oas__validator_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2ba0287a379ca2c3ad10431b4ff17491106"><span class="std std-ref">ValidationError::INVALID_METHOD</span></a>: Invalid HTTP method.</p></li>
@@ -391,7 +478,7 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N12OASValidator15ValidateHeadersERKNSt6stringERKNSt6stringERKNSt13unordered_mapINSt6stringENSt6stringEEERNSt6stringE">
-<span id="_CPPv3N12OASValidator15ValidateHeadersERKNSt6stringERKNSt6stringERKNSt13unordered_mapINSt6stringENSt6stringEEERNSt6stringE"></span><span id="_CPPv2N12OASValidator15ValidateHeadersERKNSt6stringERKNSt6stringERKNSt13unordered_mapINSt6stringENSt6stringEEERNSt6stringE"></span><span id="OASValidator::ValidateHeaders__ssCR.ssCR.std::unordered_map:ss.ss:CR.ssR"></span><span class="target" id="classOASValidator_1a38564b0c028606220ee43b0402d29c4c"></span><a class="reference internal" href="enum_oas__validator_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2b.html#_CPPv415ValidationError" title="ValidationError"><span class="n"><span class="pre">ValidationError</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ValidateHeaders</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">method</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">http_path</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">unordered_map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">headers</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">error_msg</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12OASValidator15ValidateHeadersERKNSt6stringERKNSt6stringERKNSt13unordered_mapINSt6stringENSt6stringEEERNSt6stringE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N12OASValidator15ValidateHeadersERKNSt6stringERKNSt6stringERKNSt13unordered_mapINSt6stringENSt6stringEEERNSt6stringE"></span><span id="_CPPv2N12OASValidator15ValidateHeadersERKNSt6stringERKNSt6stringERKNSt13unordered_mapINSt6stringENSt6stringEEERNSt6stringE"></span><span id="OASValidator::ValidateHeaders__ssCR.ssCR.std::unordered_map:ss.ss:CR.ssR"></span><span class="target" id="classOASValidator_1a38564b0c028606220ee43b0402d29c4c"></span><a class="reference internal" href="enum_oas__validator_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2b.html#_CPPv415ValidationError" title="ValidationError"><span class="n"><span class="pre">ValidationError</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ValidateHeaders</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">method</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">http_path</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">unordered_map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">headers</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">error_msg</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12OASValidator15ValidateHeadersERKNSt6stringERKNSt6stringERKNSt13unordered_mapINSt6stringENSt6stringEEERNSt6stringE" title="Link to this definition">¶</a><br /></dt>
 <dd><p>Validates the HTTP headers of the request against the OpenAPI specification. </p>
 <p>This function performs the following validation sequence:<ol class="lowerroman simple">
 <li><p>HTTP method</p></li>
@@ -404,7 +491,7 @@
 <p>The error_msg argument will be populated with a JSON string in case of a validation error. </p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>method</strong> – The HTTP method as a std::string (e.g., “GET”, “POST”). </p></li>
 <li><p><strong>http_path</strong> – The HTTP path as a std::string (e.g., “/api/v1/resource”). </p></li>
@@ -412,7 +499,7 @@
 <li><p><strong>error_msg</strong> – Reference to a std::string where the error message will be stored in case of a validation error.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>ValidationError enum indicating the result of the validation. Possible return values include:<ul class="simple">
 <li><p><a class="reference internal" href="enum_oas__validator_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2b.html#oas__validator_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2bab50339a10e1de285ac99d4c3990b8693"><span class="std std-ref">ValidationError::NONE</span></a>: No validation error.</p></li>
 <li><p><a class="reference internal" href="enum_oas__validator_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2b.html#oas__validator_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2ba0287a379ca2c3ad10431b4ff17491106"><span class="std std-ref">ValidationError::INVALID_METHOD</span></a>: Invalid HTTP method.</p></li>
@@ -426,7 +513,7 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N12OASValidator15ValidateRequestERKNSt6stringERKNSt6stringERNSt6stringE">
-<span id="_CPPv3N12OASValidator15ValidateRequestERKNSt6stringERKNSt6stringERNSt6stringE"></span><span id="_CPPv2N12OASValidator15ValidateRequestERKNSt6stringERKNSt6stringERNSt6stringE"></span><span id="OASValidator::ValidateRequest__ssCR.ssCR.ssR"></span><span class="target" id="classOASValidator_1a3646379b31cae10929bb60726dc249f4"></span><a class="reference internal" href="enum_oas__validator_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2b.html#_CPPv415ValidationError" title="ValidationError"><span class="n"><span class="pre">ValidationError</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ValidateRequest</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">method</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">http_path</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">error_msg</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12OASValidator15ValidateRequestERKNSt6stringERKNSt6stringERNSt6stringE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N12OASValidator15ValidateRequestERKNSt6stringERKNSt6stringERNSt6stringE"></span><span id="_CPPv2N12OASValidator15ValidateRequestERKNSt6stringERKNSt6stringERNSt6stringE"></span><span id="OASValidator::ValidateRequest__ssCR.ssCR.ssR"></span><span class="target" id="classOASValidator_1a3646379b31cae10929bb60726dc249f4"></span><a class="reference internal" href="enum_oas__validator_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2b.html#_CPPv415ValidationError" title="ValidationError"><span class="n"><span class="pre">ValidationError</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ValidateRequest</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">method</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">http_path</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">error_msg</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12OASValidator15ValidateRequestERKNSt6stringERKNSt6stringERNSt6stringE" title="Link to this definition">¶</a><br /></dt>
 <dd><p>Validates the entire HTTP request against the OpenAPI specification. </p>
 <p>This function performs a comprehensive validation of the entire HTTP request based on the following sequence:<ol class="lowerroman simple">
 <li><p>HTTP method</p></li>
@@ -440,14 +527,14 @@
 <p>The error_msg argument will be populated with a JSON string in case of a validation error. </p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>method</strong> – The HTTP method as a std::string (e.g., “POST”, “PUT”). </p></li>
 <li><p><strong>http_path</strong> – The HTTP path as a std::string (e.g., “/api/v1/resource”). </p></li>
 <li><p><strong>error_msg</strong> – Reference to a std::string where the error message will be stored in case of a validation error.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>ValidationError enum indicating the result of the validation. Possible return values include:<ul class="simple">
 <li><p><a class="reference internal" href="enum_oas__validator_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2b.html#oas__validator_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2bab50339a10e1de285ac99d4c3990b8693"><span class="std std-ref">ValidationError::NONE</span></a>: No validation error.</p></li>
 <li><p><a class="reference internal" href="enum_oas__validator_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2b.html#oas__validator_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2ba0287a379ca2c3ad10431b4ff17491106"><span class="std std-ref">ValidationError::INVALID_METHOD</span></a>: Invalid HTTP method.</p></li>
@@ -462,7 +549,7 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N12OASValidator15ValidateRequestERKNSt6stringERKNSt6stringERKNSt6stringERNSt6stringE">
-<span id="_CPPv3N12OASValidator15ValidateRequestERKNSt6stringERKNSt6stringERKNSt6stringERNSt6stringE"></span><span id="_CPPv2N12OASValidator15ValidateRequestERKNSt6stringERKNSt6stringERKNSt6stringERNSt6stringE"></span><span id="OASValidator::ValidateRequest__ssCR.ssCR.ssCR.ssR"></span><span class="target" id="classOASValidator_1a90ddb6e6e36c0b2733d0d10626a88fc8"></span><a class="reference internal" href="enum_oas__validator_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2b.html#_CPPv415ValidationError" title="ValidationError"><span class="n"><span class="pre">ValidationError</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ValidateRequest</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">method</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">http_path</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">json_body</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">error_msg</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12OASValidator15ValidateRequestERKNSt6stringERKNSt6stringERKNSt6stringERNSt6stringE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N12OASValidator15ValidateRequestERKNSt6stringERKNSt6stringERKNSt6stringERNSt6stringE"></span><span id="_CPPv2N12OASValidator15ValidateRequestERKNSt6stringERKNSt6stringERKNSt6stringERNSt6stringE"></span><span id="OASValidator::ValidateRequest__ssCR.ssCR.ssCR.ssR"></span><span class="target" id="classOASValidator_1a90ddb6e6e36c0b2733d0d10626a88fc8"></span><a class="reference internal" href="enum_oas__validator_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2b.html#_CPPv415ValidationError" title="ValidationError"><span class="n"><span class="pre">ValidationError</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ValidateRequest</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">method</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">http_path</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">json_body</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">error_msg</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12OASValidator15ValidateRequestERKNSt6stringERKNSt6stringERKNSt6stringERNSt6stringE" title="Link to this definition">¶</a><br /></dt>
 <dd><p>Validates the entire HTTP request including JSON body against the OpenAPI specification. </p>
 <p>This overloaded function performs a comprehensive validation of the entire HTTP request, including the JSON body, based on the following sequence:<ol class="lowerroman simple">
 <li><p>HTTP method</p></li>
@@ -477,7 +564,7 @@
 <p>The error_msg argument will be populated with a JSON string in case of a validation error. </p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>method</strong> – The HTTP method as a std::string (e.g., “POST”, “PUT”). </p></li>
 <li><p><strong>http_path</strong> – The HTTP path as a std::string (e.g., “/api/v1/resource”). </p></li>
@@ -485,7 +572,7 @@
 <li><p><strong>error_msg</strong> – Reference to a std::string where the error message will be stored in case of a validation error.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>ValidationError enum indicating the result of the validation. Possible return values include:<ul class="simple">
 <li><p><a class="reference internal" href="enum_oas__validator_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2b.html#oas__validator_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2bab50339a10e1de285ac99d4c3990b8693"><span class="std std-ref">ValidationError::NONE</span></a>: No validation error.</p></li>
 <li><p><a class="reference internal" href="enum_oas__validator_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2b.html#oas__validator_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2ba0287a379ca2c3ad10431b4ff17491106"><span class="std std-ref">ValidationError::INVALID_METHOD</span></a>: Invalid HTTP method.</p></li>
@@ -501,7 +588,7 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N12OASValidator15ValidateRequestERKNSt6stringERKNSt6stringERKNSt13unordered_mapINSt6stringENSt6stringEEERNSt6stringE">
-<span id="_CPPv3N12OASValidator15ValidateRequestERKNSt6stringERKNSt6stringERKNSt13unordered_mapINSt6stringENSt6stringEEERNSt6stringE"></span><span id="_CPPv2N12OASValidator15ValidateRequestERKNSt6stringERKNSt6stringERKNSt13unordered_mapINSt6stringENSt6stringEEERNSt6stringE"></span><span id="OASValidator::ValidateRequest__ssCR.ssCR.std::unordered_map:ss.ss:CR.ssR"></span><span class="target" id="classOASValidator_1ad9428ebb0cdde93e9f964c2d4008e042"></span><a class="reference internal" href="enum_oas__validator_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2b.html#_CPPv415ValidationError" title="ValidationError"><span class="n"><span class="pre">ValidationError</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ValidateRequest</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">method</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">http_path</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">unordered_map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">headers</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">error_msg</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12OASValidator15ValidateRequestERKNSt6stringERKNSt6stringERKNSt13unordered_mapINSt6stringENSt6stringEEERNSt6stringE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N12OASValidator15ValidateRequestERKNSt6stringERKNSt6stringERKNSt13unordered_mapINSt6stringENSt6stringEEERNSt6stringE"></span><span id="_CPPv2N12OASValidator15ValidateRequestERKNSt6stringERKNSt6stringERKNSt13unordered_mapINSt6stringENSt6stringEEERNSt6stringE"></span><span id="OASValidator::ValidateRequest__ssCR.ssCR.std::unordered_map:ss.ss:CR.ssR"></span><span class="target" id="classOASValidator_1ad9428ebb0cdde93e9f964c2d4008e042"></span><a class="reference internal" href="enum_oas__validator_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2b.html#_CPPv415ValidationError" title="ValidationError"><span class="n"><span class="pre">ValidationError</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ValidateRequest</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">method</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">http_path</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">unordered_map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">headers</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">error_msg</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12OASValidator15ValidateRequestERKNSt6stringERKNSt6stringERKNSt13unordered_mapINSt6stringENSt6stringEEERNSt6stringE" title="Link to this definition">¶</a><br /></dt>
 <dd><p>Validates the entire HTTP request, including headers, against the OpenAPI specification. </p>
 <p>This overloaded function performs a comprehensive validation of the entire HTTP request, including HTTP headers, based on the following sequence:<ol class="lowerroman simple">
 <li><p>HTTP method</p></li>
@@ -516,7 +603,7 @@
 <p>The error_msg argument will be populated with a JSON string in case of a validation error. </p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>method</strong> – The HTTP method as a std::string (e.g., “GET”, “DELETE”). </p></li>
 <li><p><strong>http_path</strong> – The HTTP path as a std::string (e.g., “/api/v1/resource”). </p></li>
@@ -524,7 +611,7 @@
 <li><p><strong>error_msg</strong> – Reference to a std::string where the error message will be stored in case of a validation error.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>ValidationError enum indicating the result of the validation. Possible return values include:<ul class="simple">
 <li><p><a class="reference internal" href="enum_oas__validator_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2b.html#oas__validator_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2bab50339a10e1de285ac99d4c3990b8693"><span class="std std-ref">ValidationError::NONE</span></a>: No validation error.</p></li>
 <li><p><a class="reference internal" href="enum_oas__validator_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2b.html#oas__validator_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2ba0287a379ca2c3ad10431b4ff17491106"><span class="std std-ref">ValidationError::INVALID_METHOD</span></a>: Invalid HTTP method.</p></li>
@@ -540,7 +627,7 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N12OASValidator15ValidateRequestERKNSt6stringERKNSt6stringERKNSt6stringERKNSt13unordered_mapINSt6stringENSt6stringEEERNSt6stringE">
-<span id="_CPPv3N12OASValidator15ValidateRequestERKNSt6stringERKNSt6stringERKNSt6stringERKNSt13unordered_mapINSt6stringENSt6stringEEERNSt6stringE"></span><span id="_CPPv2N12OASValidator15ValidateRequestERKNSt6stringERKNSt6stringERKNSt6stringERKNSt13unordered_mapINSt6stringENSt6stringEEERNSt6stringE"></span><span id="OASValidator::ValidateRequest__ssCR.ssCR.ssCR.std::unordered_map:ss.ss:CR.ssR"></span><span class="target" id="classOASValidator_1a76ea2504a42b26486a48b5ae10550244"></span><a class="reference internal" href="enum_oas__validator_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2b.html#_CPPv415ValidationError" title="ValidationError"><span class="n"><span class="pre">ValidationError</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ValidateRequest</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">method</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">http_path</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">json_body</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">unordered_map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">headers</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">error_msg</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12OASValidator15ValidateRequestERKNSt6stringERKNSt6stringERKNSt6stringERKNSt13unordered_mapINSt6stringENSt6stringEEERNSt6stringE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N12OASValidator15ValidateRequestERKNSt6stringERKNSt6stringERKNSt6stringERKNSt13unordered_mapINSt6stringENSt6stringEEERNSt6stringE"></span><span id="_CPPv2N12OASValidator15ValidateRequestERKNSt6stringERKNSt6stringERKNSt6stringERKNSt13unordered_mapINSt6stringENSt6stringEEERNSt6stringE"></span><span id="OASValidator::ValidateRequest__ssCR.ssCR.ssCR.std::unordered_map:ss.ss:CR.ssR"></span><span class="target" id="classOASValidator_1a76ea2504a42b26486a48b5ae10550244"></span><a class="reference internal" href="enum_oas__validator_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2b.html#_CPPv415ValidationError" title="ValidationError"><span class="n"><span class="pre">ValidationError</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ValidateRequest</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">method</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">http_path</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">json_body</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">unordered_map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">headers</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">error_msg</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12OASValidator15ValidateRequestERKNSt6stringERKNSt6stringERKNSt6stringERKNSt13unordered_mapINSt6stringENSt6stringEEERNSt6stringE" title="Link to this definition">¶</a><br /></dt>
 <dd><p>Validates the entire HTTP request, including JSON body and headers, against the OpenAPI specification. </p>
 <p>This overloaded function performs a comprehensive validation of the entire HTTP request, including the JSON body and HTTP headers, based on the following sequence:<ol class="lowerroman simple">
 <li><p>HTTP method</p></li>
@@ -556,7 +643,7 @@
 <p>The error_msg argument will be populated with a JSON string in case of a validation error. </p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>method</strong> – The HTTP method as a std::string (e.g., “POST”, “PUT”). </p></li>
 <li><p><strong>http_path</strong> – The HTTP path as a std::string (e.g., “/api/v1/resource”). </p></li>
@@ -565,7 +652,7 @@
 <li><p><strong>error_msg</strong> – Reference to a std::string where the error message will be stored in case of a validation error.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>ValidationError enum indicating the result of the validation. Possible return values include:<ul class="simple">
 <li><p><a class="reference internal" href="enum_oas__validator_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2b.html#oas__validator_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2bab50339a10e1de285ac99d4c3990b8693"><span class="std std-ref">ValidationError::NONE</span></a>: No validation error.</p></li>
 <li><p><a class="reference internal" href="enum_oas__validator_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2b.html#oas__validator_8hpp_1a1ff35fa09f5edbd315e3fa9999983f2ba0287a379ca2c3ad10431b4ff17491106"><span class="std std-ref">ValidationError::INVALID_METHOD</span></a>: Invalid HTTP method.</p></li>
@@ -582,7 +669,7 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N12OASValidatorD0Ev">
-<span id="_CPPv3N12OASValidatorD0Ev"></span><span id="_CPPv2N12OASValidatorD0Ev"></span><span id="OASValidator::~OASValidator"></span><span class="target" id="classOASValidator_1a7170cae1a3e3175be481e6df4e975ba1"></span><span class="sig-name descname"><span class="n"><span class="pre">~OASValidator</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12OASValidatorD0Ev" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N12OASValidatorD0Ev"></span><span id="_CPPv2N12OASValidatorD0Ev"></span><span id="OASValidator::~OASValidator"></span><span class="target" id="classOASValidator_1a7170cae1a3e3175be481e6df4e975ba1"></span><span class="sig-name descname"><span class="n"><span class="pre">~OASValidator</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12OASValidatorD0Ev" title="Link to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -628,9 +715,7 @@
             
           </div>
           <div class="right-details">
-            <div class="icons">
-              
-            </div>
+            
           </div>
         </div>
         
@@ -649,7 +734,25 @@
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">Class OASValidator</a><ul>
-<li><a class="reference internal" href="#class-documentation">Class Documentation</a></li>
+<li><a class="reference internal" href="#class-documentation">Class Documentation</a><ul>
+<li><a class="reference internal" href="#_CPPv412OASValidator"><code class="docutils literal notranslate"><span class="pre">OASValidator</span></code></a><ul>
+<li><a class="reference internal" href="#_CPPv4N12OASValidator12OASValidatorERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">OASValidator::OASValidator()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12OASValidator12OASValidatorERK12OASValidator"><code class="docutils literal notranslate"><span class="pre">OASValidator::OASValidator()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12OASValidatoraSERK12OASValidator"><code class="docutils literal notranslate"><span class="pre">OASValidator::operator=()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12OASValidator13ValidateRouteERKNSt6stringERKNSt6stringERNSt6stringE"><code class="docutils literal notranslate"><span class="pre">OASValidator::ValidateRoute()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12OASValidator12ValidateBodyERKNSt6stringERKNSt6stringERKNSt6stringERNSt6stringE"><code class="docutils literal notranslate"><span class="pre">OASValidator::ValidateBody()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12OASValidator17ValidatePathParamERKNSt6stringERKNSt6stringERNSt6stringE"><code class="docutils literal notranslate"><span class="pre">OASValidator::ValidatePathParam()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12OASValidator18ValidateQueryParamERKNSt6stringERKNSt6stringERNSt6stringE"><code class="docutils literal notranslate"><span class="pre">OASValidator::ValidateQueryParam()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12OASValidator15ValidateHeadersERKNSt6stringERKNSt6stringERKNSt13unordered_mapINSt6stringENSt6stringEEERNSt6stringE"><code class="docutils literal notranslate"><span class="pre">OASValidator::ValidateHeaders()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12OASValidator15ValidateRequestERKNSt6stringERKNSt6stringERNSt6stringE"><code class="docutils literal notranslate"><span class="pre">OASValidator::ValidateRequest()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12OASValidator15ValidateRequestERKNSt6stringERKNSt6stringERKNSt6stringERNSt6stringE"><code class="docutils literal notranslate"><span class="pre">OASValidator::ValidateRequest()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12OASValidator15ValidateRequestERKNSt6stringERKNSt6stringERKNSt13unordered_mapINSt6stringENSt6stringEEERNSt6stringE"><code class="docutils literal notranslate"><span class="pre">OASValidator::ValidateRequest()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12OASValidator15ValidateRequestERKNSt6stringERKNSt6stringERKNSt6stringERKNSt13unordered_mapINSt6stringENSt6stringEEERNSt6stringE"><code class="docutils literal notranslate"><span class="pre">OASValidator::ValidateRequest()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12OASValidatorD0Ev"><code class="docutils literal notranslate"><span class="pre">OASValidator::~OASValidator()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -661,12 +764,11 @@
       
     </aside>
   </div>
-</div><script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/scripts/furo.js"></script>
-    <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
-    <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+</div><script src="../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/furo.js?v=4e2eecee"></script>
+    <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js?v=73120307"></script>
+    <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
     </body>
 </html>

@@ -27,7 +27,7 @@
     </tr>
     <tr>
       <th scope="row">Date:</th>
-      <td>2024-01-12 13:16:38</td>
+      <td>2024-06-15 16:24:34</td>
     </tr>
   </table>
 </div>
@@ -69,32 +69,12 @@
   <summary>List of functions</summary>
   <table class="listOfFunctions">
     <tr>
-      <th>Function</th>
-      <th>Line</th>
+      <th>Function (Line)</th>
       <th>Call count</th>
+      <th>Block coverage</th>
     </tr>
-    <tr>
-      <td>
-        <a href="#l9">ContentDeserializer::ContentDeserializer(std::__cxx11::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const&amp;, char, bool)</a>
-      </td>
-      <td>
-        <a href="#l9">9</a>
-      </td>
-      <td>
-        <a href="#l9"> called 46 times</a>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="#l14">ContentDeserializer::Deserialize[abi:cxx11](char const*, char const*)</a>
-      </td>
-      <td>
-        <a href="#l14">14</a>
-      </td>
-      <td>
-        <a href="#l14"> called 11 times</a>
-      </td>
-    </tr>
+    <tr><td><a href="#l9">ContentDeserializer::ContentDeserializer(std::__cxx11::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const&amp;, char, bool) (line 9)</a></td><td>called 46 times, returned 46 times</td><td>100.0%</td></tr>
+    <tr><td><a href="#l14">ContentDeserializer::Deserialize[abi:cxx11](char const*, char const*) (line 14)</a></td><td>called 11 times, returned 10 times</td><td>40.0%</td></tr>
   </table>
 </details>
 
@@ -239,8 +219,8 @@
         </div>
         </details>
       </td>
-      <td class="linecount coveredLine">11</td>
-      <td class="src coveredLine"><span class="w">    </span><span class="n">CheckNSkipStart</span><span class="p">(</span><span class="n">cursor</span><span class="p">);</span></td>
+      <td class="linecount partialCoveredLine">11</td>
+      <td class="src partialCoveredLine"><span class="w">    </span><span class="n">CheckNSkipStart</span><span class="p">(</span><span class="n">cursor</span><span class="p">);</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l19" href="#l19">19</a></td>
@@ -267,8 +247,8 @@
         </div>
         </details>
       </td>
-      <td class="linecount coveredLine">7</td>
-      <td class="src coveredLine"><span class="w">        </span><span class="n">CheckNSkipName</span><span class="p">(</span><span class="n">cursor</span><span class="p">,</span><span class="w"> </span><span class="n">end</span><span class="p">);</span></td>
+      <td class="linecount partialCoveredLine">7</td>
+      <td class="src partialCoveredLine"><span class="w">        </span><span class="n">CheckNSkipName</span><span class="p">(</span><span class="n">cursor</span><span class="p">,</span><span class="w"> </span><span class="n">end</span><span class="p">);</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l21" href="#l21">21</a></td>
@@ -316,8 +296,8 @@
         </div>
         </details>
       </td>
-      <td class="linecount coveredLine">10</td>
-      <td class="src coveredLine"><span class="w">    </span><span class="n">ret</span><span class="p">.</span><span class="n">reserve</span><span class="p">(</span><span class="n">end</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">cursor</span><span class="p">);</span></td>
+      <td class="linecount partialCoveredLine">10</td>
+      <td class="src partialCoveredLine"><span class="w">    </span><span class="n">ret</span><span class="p">.</span><span class="n">reserve</span><span class="p">(</span><span class="k">static_cast</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">::</span><span class="n">size_type</span><span class="o">&gt;</span><span class="p">(</span><span class="n">end</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">cursor</span><span class="p">));</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l26" href="#l26">26</a></td>
@@ -359,8 +339,8 @@
         </div>
         </details>
       </td>
-      <td class="linecount coveredLine">438</td>
-      <td class="src coveredLine"><span class="w">        </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="p">{</span></td>
+      <td class="linecount partialCoveredLine">438</td>
+      <td class="src partialCoveredLine"><span class="w">        </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="p">{</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l30" href="#l30">30</a></td>
@@ -380,8 +360,8 @@
         </div>
         </details>
       </td>
-      <td class="linecount coveredLine">166</td>
-      <td class="src coveredLine"><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">cursor</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">end</span><span class="p">)</span><span class="w"> </span><span class="p">{</span></td>
+      <td class="linecount partialCoveredLine">166</td>
+      <td class="src partialCoveredLine"><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">cursor</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">end</span><span class="p">)</span><span class="w"> </span><span class="p">{</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l32" href="#l32">32</a></td>
@@ -424,8 +404,8 @@
         </div>
         </details>
       </td>
-      <td class="linecount coveredLine">166</td>
-      <td class="src coveredLine"><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">dec1</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">dec2</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span></td>
+      <td class="linecount partialCoveredLine">166</td>
+      <td class="src partialCoveredLine"><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">dec1</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">dec2</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l37" href="#l37">37</a></td>
@@ -452,8 +432,8 @@
         </div>
         </details>
       </td>
-      <td class="linecount coveredLine">166</td>
-      <td class="src coveredLine"><span class="w">            </span><span class="n">ret</span><span class="p">.</span><span class="n">push_back</span><span class="p">((</span><span class="n">dec1</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">4</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">dec2</span><span class="p">);</span></td>
+      <td class="linecount partialCoveredLine">166</td>
+      <td class="src partialCoveredLine"><span class="w">            </span><span class="n">ret</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">char</span><span class="o">&gt;</span><span class="p">((</span><span class="n">dec1</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">4</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">dec2</span><span class="p">));</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l40" href="#l40">40</a></td>
@@ -515,8 +495,8 @@
         </div>
         </details>
       </td>
-      <td class="linecount coveredLine">272</td>
-      <td class="src coveredLine"><span class="w">            </span><span class="n">ret</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">c</span><span class="p">;</span></td>
+      <td class="linecount partialCoveredLine">272</td>
+      <td class="src partialCoveredLine"><span class="w">            </span><span class="n">ret</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">c</span><span class="p">;</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l48" href="#l48">48</a></td>
@@ -557,8 +537,8 @@
         </div>
         </details>
       </td>
-      <td class="linecount coveredLine">10</td>
-      <td class="src coveredLine"><span class="w">    </span><span class="n">CheckEnd</span><span class="p">(</span><span class="n">cursor</span><span class="p">,</span><span class="w"> </span><span class="n">end</span><span class="p">);</span></td>
+      <td class="linecount partialCoveredLine">10</td>
+      <td class="src partialCoveredLine"><span class="w">    </span><span class="n">CheckEnd</span><span class="p">(</span><span class="n">cursor</span><span class="p">,</span><span class="w"> </span><span class="n">end</span><span class="p">);</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l53" href="#l53">53</a></td>
@@ -587,7 +567,7 @@
     </main>
 
     <footer>
-      Generated by: <a href="http://gcovr.com/en/6.0">GCOVR (Version 6.0)</a>
+      Generated by: <a href="http://gcovr.com/en/7.2">GCOVR (Version 7.2)</a>
     </footer>
   </body>
 </html>

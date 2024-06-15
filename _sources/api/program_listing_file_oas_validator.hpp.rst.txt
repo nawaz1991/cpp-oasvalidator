@@ -49,23 +49,35 @@ Program Listing for File oas_validator.hpp
    public:
        explicit OASValidator(const std::string& oas_specs);
    
+       OASValidator(const OASValidator& other);
+   
+       OASValidator& operator=(const OASValidator& other);
+   
        ValidationError ValidateRoute(const std::string& method, const std::string& http_path, std::string& error_msg);
-       ValidationError ValidateBody(const std::string& method, const std::string& http_path, const std::string& json_body, std::string& error_msg);
+       ValidationError ValidateBody(const std::string& method, const std::string& http_path, const std::string& json_body,
+                                    std::string& error_msg);
    
        ValidationError ValidatePathParam(const std::string& method, const std::string& http_path, std::string& error_msg);
    
        ValidationError ValidateQueryParam(const std::string& method, const std::string& http_path, std::string& error_msg);
    
-       ValidationError ValidateHeaders(const std::string& method, const std::string& http_path, const std::unordered_map<std::string, std::string>& headers, std::string& error_msg);
+       ValidationError ValidateHeaders(const std::string& method, const std::string& http_path,
+                                       const std::unordered_map<std::string, std::string>& headers,
+                                       std::string& error_msg);
    
        ValidationError ValidateRequest(const std::string& method, const std::string& http_path, std::string& error_msg);
    
-       ValidationError ValidateRequest(const std::string& method, const std::string& http_path, const std::string& json_body, std::string& error_msg);
+       ValidationError ValidateRequest(const std::string& method, const std::string& http_path,
+                                       const std::string& json_body, std::string& error_msg);
    
-       ValidationError ValidateRequest(const std::string& method, const std::string& http_path, const std::unordered_map<std::string, std::string>& headers, std::string& error_msg);
+       ValidationError ValidateRequest(const std::string& method, const std::string& http_path,
+                                       const std::unordered_map<std::string, std::string>& headers,
+                                       std::string& error_msg);
    
-       ValidationError ValidateRequest(const std::string& method, const std::string& http_path, const std::string& json_body,
-                                       const std::unordered_map<std::string, std::string>& headers, std::string& error_msg);
+       ValidationError ValidateRequest(const std::string& method, const std::string& http_path,
+                                       const std::string& json_body,
+                                       const std::unordered_map<std::string, std::string>& headers,
+                                       std::string& error_msg);
    
        ~OASValidator();
    };

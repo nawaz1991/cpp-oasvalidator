@@ -27,7 +27,7 @@
     </tr>
     <tr>
       <th scope="row">Date:</th>
-      <td>2024-01-12 13:16:38</td>
+      <td>2024-06-15 16:24:34</td>
     </tr>
   </table>
 </div>
@@ -69,32 +69,12 @@
   <summary>List of functions</summary>
   <table class="listOfFunctions">
     <tr>
-      <th>Function</th>
-      <th>Line</th>
+      <th>Function (Line)</th>
       <th>Call count</th>
+      <th>Block coverage</th>
     </tr>
-    <tr>
-      <td>
-        <a href="#l9">MethodValidator::MethodValidator()</a>
-      </td>
-      <td>
-        <a href="#l9">9</a>
-      </td>
-      <td>
-        <a href="#l9"> called 9 times</a>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="#l14">MethodValidator::ValidateJson(std::__cxx11::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const&amp;, std::__cxx11::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;&amp;)</a>
-      </td>
-      <td>
-        <a href="#l14">14</a>
-      </td>
-      <td>
-        <a href="#l14"> called 88 times</a>
-      </td>
-    </tr>
+    <tr><td><a href="#l9">MethodValidator::MethodValidator() (line 9)</a></td><td>called 9 times, returned 9 times</td><td>100.0%</td></tr>
+    <tr><td><a href="#l14">MethodValidator::Validate(std::__cxx11::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const&amp;, std::__cxx11::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;&amp;) (line 14)</a></td><td>called 91 times, returned 91 times</td><td>59.0%</td></tr>
   </table>
 </details>
 
@@ -204,8 +184,8 @@
       <td class="lineno"><a id="l14" href="#l14">14</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">88</td>
-      <td class="src coveredLine"><span class="n">ValidationError</span><span class="w"> </span><span class="n">MethodValidator</span><span class="o">::</span><span class="n">ValidateJson</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">method</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">err_msg</span><span class="p">)</span></td>
+      <td class="linecount coveredLine">91</td>
+      <td class="src coveredLine"><span class="n">ValidationError</span><span class="w"> </span><span class="n">MethodValidator</span><span class="o">::</span><span class="n">Validate</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">method</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">err_msg</span><span class="p">)</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l15" href="#l15">15</a></td>
@@ -220,15 +200,15 @@
         <details class="linebranchDetails">
         <summary class="linebranchSummary">3/4</summary>
         <div class="linebranchContents">
-          <div class="takenBranch">&check; Branch 2 taken 88 times.</div>
+          <div class="takenBranch">&check; Branch 2 taken 91 times.</div>
           <div class="notTakenBranch">&cross; Branch 3 not taken.</div>
           <div class="takenBranch">&check; Branch 5 taken 10 times.</div>
-          <div class="takenBranch">&check; Branch 6 taken 78 times.</div>
+          <div class="takenBranch">&check; Branch 6 taken 81 times.</div>
         </div>
         </details>
       </td>
-      <td class="linecount coveredLine">88</td>
-      <td class="src coveredLine"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">kValidMethods</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="n">method</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">kValidMethods</span><span class="p">.</span><span class="n">end</span><span class="p">())</span><span class="w"> </span><span class="p">{</span></td>
+      <td class="linecount partialCoveredLine">91</td>
+      <td class="src partialCoveredLine"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">kValidMethods</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="n">method</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">kValidMethods</span><span class="p">.</span><span class="n">end</span><span class="p">())</span><span class="w"> </span><span class="p">{</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l17" href="#l17">17</a></td>
@@ -247,8 +227,8 @@
         </div>
         </details>
       </td>
-      <td class="linecount coveredLine">10</td>
-      <td class="src coveredLine"><span class="w">        </span><span class="n">err_msg</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">err_header_</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="sa">R</span><span class="s">&quot;</span><span class="dl">(</span><span class="s">&quot;description&quot;: &quot;Invalid HTTP method &#39;</span><span class="dl">)</span><span class="s">&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">method</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;&#39;&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="sa">R</span><span class="s">&quot;</span><span class="dl">(</span><span class="s">&quot;}}</span><span class="dl">)</span><span class="s">&quot;</span><span class="p">;</span></td>
+      <td class="linecount partialCoveredLine">10</td>
+      <td class="src partialCoveredLine"><span class="w">        </span><span class="n">err_msg</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">err_header_</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="sa">R</span><span class="s">&quot;</span><span class="dl">(</span><span class="s">&quot;description&quot;: &quot;Invalid HTTP method &#39;</span><span class="dl">)</span><span class="s">&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">method</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;&#39;&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="sa">R</span><span class="s">&quot;</span><span class="dl">(</span><span class="s">&quot;}}</span><span class="dl">)</span><span class="s">&quot;</span><span class="p">;</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l18" href="#l18">18</a></td>
@@ -268,7 +248,7 @@
       <td class="lineno"><a id="l20" href="#l20">20</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">78</td>
+      <td class="linecount coveredLine">81</td>
       <td class="src coveredLine"><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">ValidationError</span><span class="o">::</span><span class="n">NONE</span><span class="p">;</span></td>
     </tr>
     <tr class="source-line">
@@ -290,17 +270,38 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">unordered_set</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">MethodValidator</span><span class="o">::</span><span class="n">kValidMethods</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;GET&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;POST&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;PUT&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;DELETE&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;HEAD&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;OPTIONS&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;PATCH&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;CONNECT&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;TRACE&quot;</span><span class="p">,</span></td>
+      <td class="src "><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">unordered_set</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">MethodValidator</span><span class="o">::</span><span class="n">kValidMethods</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;GET&quot;</span><span class="p">,</span><span class="w">     </span><span class="s">&quot;POST&quot;</span><span class="p">,</span><span class="w">    </span><span class="s">&quot;PUT&quot;</span><span class="p">,</span><span class="w">     </span><span class="s">&quot;DELETE&quot;</span><span class="p">,</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l24" href="#l24">24</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">                                                                        </span><span class="s">&quot;get&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;post&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;put&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;delete&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;head&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;options&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;patch&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;connect&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;trace&quot;</span><span class="p">};</span></td>
+      <td class="src "><span class="w">                                                                        </span><span class="s">&quot;HEAD&quot;</span><span class="p">,</span><span class="w">    </span><span class="s">&quot;OPTIONS&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;PATCH&quot;</span><span class="p">,</span><span class="w">   </span><span class="s">&quot;CONNECT&quot;</span><span class="p">,</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l25" href="#l25">25</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="w">                                                                        </span><span class="s">&quot;TRACE&quot;</span><span class="p">,</span><span class="w">   </span><span class="s">&quot;get&quot;</span><span class="p">,</span><span class="w">     </span><span class="s">&quot;post&quot;</span><span class="p">,</span><span class="w">    </span><span class="s">&quot;put&quot;</span><span class="p">,</span></td>
+    </tr>
+    <tr class="source-line">
+      <td class="lineno"><a id="l26" href="#l26">26</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="w">                                                                        </span><span class="s">&quot;delete&quot;</span><span class="p">,</span><span class="w">  </span><span class="s">&quot;head&quot;</span><span class="p">,</span><span class="w">    </span><span class="s">&quot;options&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;patch&quot;</span><span class="p">,</span></td>
+    </tr>
+    <tr class="source-line">
+      <td class="lineno"><a id="l27" href="#l27">27</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="w">                                                                        </span><span class="s">&quot;connect&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;trace&quot;</span><span class="p">};</span></td>
+    </tr>
+    <tr class="source-line">
+      <td class="lineno"><a id="l28" href="#l28">28</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
@@ -312,7 +313,7 @@
     </main>
 
     <footer>
-      Generated by: <a href="http://gcovr.com/en/6.0">GCOVR (Version 6.0)</a>
+      Generated by: <a href="http://gcovr.com/en/7.2">GCOVR (Version 7.2)</a>
     </footer>
   </body>
 </html>

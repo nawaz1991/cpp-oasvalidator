@@ -156,7 +156,7 @@ protected:
                 if (dec1 < 0 || dec2 < 0) {
                     throw DeserializationException("Invalid HEX character for '" + param_name_ + "'");
                 }
-                ret.push_back((dec1 << 4) | dec2);
+                ret.push_back(static_cast<char>((dec1 << 4) | dec2));
             } break;
 
             case '+':
@@ -187,7 +187,7 @@ protected:
                 if (dec1 < 0 || dec2 < 0) {
                     throw DeserializationException("Invalid HEX character for '" + param_name_ + "'");
                 }
-                ret.push_back((dec1 << 4) | dec2);
+                ret.push_back(static_cast<char>((dec1 << 4) | dec2));
             } break;
 
             case '+':

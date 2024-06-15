@@ -29,7 +29,7 @@ private:
 public:
     JsonValidator(const rapidjson::Value& schema_val, const std::vector<std::string>& ref_keys,
                   ValidationError err_code);
-    ValidationError ValidateJson(const std::string& json_str, std::string& error_msg) override;
+    ValidationError Validate(const std::string& json_str, std::string& error_msg) override;
     ~JsonValidator() override;
 };
 

@@ -39,7 +39,7 @@ void ValidatorsStore::AddParamValidators(const std::string& path, const rapidjso
 ValidationError ValidatorsStore::ValidateBody(const std::string& json_body, std::string& error_msg)
 {
     if (body_validator_) {
-        return body_validator_->ValidateJson(json_body, error_msg);
+        return body_validator_->Validate(json_body, error_msg);
     }
     return ValidationError::NONE; // No validator, no error
 }

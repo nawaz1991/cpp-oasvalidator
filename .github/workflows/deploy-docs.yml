@@ -36,7 +36,7 @@ jobs:
       - name: Install python dependencies
         run: |
           pip install -U pip
-          pip install -U sphinx==5.3.0
+          pip install -U sphinx==7.3.7 
           pip install gcovr breathe exhale furo sphinx-plantuml
 
       - uses: lukka/get-cmake@latest

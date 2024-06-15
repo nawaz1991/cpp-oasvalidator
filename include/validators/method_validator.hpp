@@ -15,7 +15,7 @@ class MethodValidator: public BaseValidator
 {
 public:
     MethodValidator();
-    ValidationError ValidateJson(const std::string& method, std::string& err_msg) override;
+    ValidationError Validate(const std::string& method, std::string& err_msg) override;
 
 private:
     static const std::unordered_set<std::string> kValidMethods;

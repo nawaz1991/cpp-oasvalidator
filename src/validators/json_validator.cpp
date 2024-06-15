@@ -16,7 +16,7 @@ JsonValidator::JsonValidator(const rapidjson::Value& schema_val, const std::vect
     }
 }
 
-ValidationError JsonValidator::ValidateJson(const std::string& json_str, std::string& error_msg)
+ValidationError JsonValidator::Validate(const std::string& json_str, std::string& error_msg)
 {
     rapidjson::Document doc;
     doc.Parse(json_str.c_str());

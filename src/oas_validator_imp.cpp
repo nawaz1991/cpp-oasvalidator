@@ -222,7 +222,7 @@ ValidationError OASValidatorImp::GetValidators(const std::string& method, const 
                                                ValidatorsStore*& validators, std::string& error_msg,
                                                std::unordered_map<size_t, ParamRange>* param_idxs, std::string* query)
 {
-    auto err_code = method_validator_.ValidateJson(method, error_msg);
+    auto err_code = method_validator_.Validate(method, error_msg);
     CHECK_ERROR(err_code)
 
     auto enum_method = kStringToMethod.at(method);

@@ -220,7 +220,7 @@ ValidationError ParamValidator::ValidateParam(const char* beg, const char* end, 
 {
     try {
         auto ret = deserializer_->Deserialize(beg, end);
-        return JsonValidator::ValidateJson(ret, error_msg);
+        return JsonValidator::Validate(ret, error_msg);
     } catch (const DeserializationException& exc) {
         error_msg = err_header_ + exc.what() + "}}";
         return code_on_error_;

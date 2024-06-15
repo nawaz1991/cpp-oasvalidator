@@ -198,6 +198,8 @@ BaseDeserializer* GetDeserializer(const rapidjson::Value& param_val, const std::
             return new ObjectDeserializer(param_name, start, skip_name, kv_separator, vk_separator, is_deep_obj,
                                           kt_map);
         }
+        default:
+            throw ValidatorInitExc("Invalid type of parameter: " + JoinReference(ref_keys));
         }
     } else if (param_val.HasMember("content")) {
         auto skip_name = HasNameAtStart(in, ParamStyle::CONTENT, explode, ExtendedType::OBJECT);

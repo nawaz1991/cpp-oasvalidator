@@ -20,6 +20,8 @@ public:
 
     OASValidatorPerf()
         : ::benchmark::Fixture()
+        , validator(nullptr)
+
     {
         constexpr static double K_MIN_WARM_UP_TIME = 5.0;
         constexpr static double K_MIN_TIME = 3.50;

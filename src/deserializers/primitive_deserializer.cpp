@@ -44,6 +44,8 @@ std::string PrimitiveDeserializer::Deserialize(const char* beg, const char* cons
     case PrimitiveType::STRING:
         DeserializeString(cursor, end, ret);
         break;
+    default:
+        throw DeserializationException("Invalid primitive type for '" + param_name_ + "'");
     }
 
     CheckEnd(cursor, end);

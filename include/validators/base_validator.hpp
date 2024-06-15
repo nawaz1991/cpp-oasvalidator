@@ -26,8 +26,6 @@ protected:
     ValidationError code_on_error_;
     std::string err_header_;
 
-    void InitErrHeader();
-
 private:
     static const std::unordered_map<ValidationError, std::string> kErrHeaders;
 };

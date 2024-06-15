@@ -8,25 +8,20 @@
 
 BaseValidator::BaseValidator(ValidationError err_code)
     : code_on_error_(err_code)
+    , err_header_(kErrHeaders.at(err_code))
 {
-    InitErrHeader();
 }
 
 BaseValidator::BaseValidator(const std::vector<std::string>& ref_keys, ValidationError err_code)
     : code_on_error_(err_code)
+    , err_header_(kErrHeaders.at(err_code))
 {
-    InitErrHeader();
     err_header_ += R"("specRef":")" + JoinReference(ref_keys) + R"(",)";
 }
 
 std::string BaseValidator::GetErrHeader() const
 {
     return err_header_;
-}
-
-void BaseValidator::InitErrHeader()
-{
-    err_header_ = kErrHeaders.at(code_on_error_);
 }
 
 const std::unordered_map<ValidationError, std::string> BaseValidator::kErrHeaders = {

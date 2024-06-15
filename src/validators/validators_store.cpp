@@ -126,9 +126,9 @@ ValidatorsStore::~ValidatorsStore()
 #endif
 }
 
-std::unordered_map<std::string, int> ValidatorsStore::GetPathParamIndices(const std::string& path)
+std::unordered_map<std::string, size_t> ValidatorsStore::GetPathParamIndices(const std::string& path)
 {
-    std::unordered_map<std::string, int> param_idxs;
+    std::unordered_map<std::string, size_t> param_idxs;
     const char* dir_start = path.data();
     const char* const path_end = dir_start + path.length();
     const char* dir_end;

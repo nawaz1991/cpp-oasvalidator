@@ -41,17 +41,17 @@ private:
 
     struct PerMethod
     {
-        std::unordered_map<std::string, ValidatorsStore*> per_path_validators;
-        PathTrie path_trie;
+        std::unordered_map<std::string, ValidatorsStore*> per_path_validators{};
+        PathTrie path_trie{};
     };
 
-    std::array<PerMethod, static_cast<size_t>(HttpMethod::COUNT)> oas_validators_;
-    MethodValidator method_validator_;
+    std::array<PerMethod, static_cast<size_t>(HttpMethod::COUNT)> oas_validators_{};
+    MethodValidator method_validator_{};
 
     ValidationError GetValidators(const std::string& method, const std::string& http_path, ValidatorsStore*& validators,
                                   std::string& error_msg, std::unordered_map<size_t, ParamRange>* param_idxs = nullptr,
                                   std::string* query = nullptr);
-    static std::vector<std::string> Split(const std::string &str);
+    static std::vector<std::string> Split(const std::string& str);
     static rapidjson::Value* ResolvePath(rapidjson::Document& doc, const std::string& path);
     static void ParseSpecs(const std::string& oas_specs, rapidjson::Document& doc);
     void ProcessPath(const rapidjson::Value::ConstMemberIterator& path_itr, std::vector<std::string>& ref_keys);

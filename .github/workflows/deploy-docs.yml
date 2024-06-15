@@ -18,9 +18,9 @@ jobs:
           fetch-depth: 0
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
-          python-version: '3.x'
+          python-version: '3.12'
 
       - name: Set up latest Oracle JDK 21
         uses: oracle-actions/setup-java@v1
@@ -37,7 +37,8 @@ jobs:
         run: |
           pip install -U pip
           pip install -U sphinx==7.3.7 
-          pip install gcovr breathe exhale furo sphinx-plantuml
+          pip install gcovr breathe exhale sphinx-plantuml
+          pip install furo==2024.5.6
 
       - uses: lukka/get-cmake@latest
 

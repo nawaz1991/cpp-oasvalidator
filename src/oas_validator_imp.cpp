@@ -12,65 +12,15 @@
 OASValidatorImp::OASValidatorImp(const std::string& oas_specs)
 {
     rapidjson::Document doc;
-    std::ifstream ifs(oas_specs);
-
-    // Check if input is a file path
-    if (ifs.is_open()) {
-        rapidjson::IStreamWrapper isw(ifs);
-        doc.ParseStream(isw);
-        ifs.close();
-    } else { // Otherwise input is a json string
-        doc.Parse(oas_specs.c_str());
-    }
-
-    if (doc.HasParseError()) {
-        throw ValidatorInitExc("Unable to parse specs: " + oas_specs +
-                               " \nError code: " + std::to_string(doc.GetParseError()) +
-                               " at offset: " + std::to_string(doc.GetErrorOffset()) +
-                               " Error message: " + rapidjson::GetParseError_En(doc.GetParseError()));
-    }
-
+    ParseSpecs(oas_specs, doc);
     ResolveReferences(doc, doc, doc.GetAllocator());
 
     const rapidjson::Value& paths = doc["paths"];
     std::vector<std::string> ref_keys;
     ref_keys.emplace_back("paths");
+
     for (auto path_itr = paths.MemberBegin(); path_itr != paths.MemberEnd(); ++path_itr) {
-        std::string path(path_itr->name.GetString());
-        ref_keys.emplace_back(EscapeSlash(path));
-        const rapidjson::Value& methods = path_itr->value;
-        for (auto method_itr = methods.MemberBegin(); method_itr != methods.MemberEnd(); ++method_itr) {
-            ref_keys.emplace_back(method_itr->name.GetString());
-            auto method(kStringToMethod.at(method_itr->name.GetString()));
-            auto& per_method_validator = oas_validators_[static_cast<size_t>(method)];
-            auto& per_path_validator = per_method_validator.per_path_validators;
-
-            if ((method_itr->value.HasMember("requestBody")) &&
-                (method_itr->value["requestBody"].HasMember("content")) &&
-                (method_itr->value["requestBody"]["content"].HasMember("application/json")) &&
-                (method_itr->value["requestBody"]["content"]["application/json"].HasMember(
-                    "schema"))) { //  if "method+path" has json body
-                ref_keys.emplace_back("requestBody/content/application%2Fjson/schema");
-                per_path_validator.emplace(
-                    path, new ValidatorsStore(method_itr->value["requestBody"]["content"]["application/json"]["schema"],
-                                              ref_keys));
-                ref_keys.pop_back(); // pop body ref
-            } else { // Otherwise validators without body
-                per_path_validator.emplace(path, new ValidatorsStore());
-            }
-
-            if (method_itr->value.HasMember("parameters")) { //  if "method+path" has parameters
-                ref_keys.emplace_back("parameters");
-                per_path_validator.at(path)->AddParamValidators(path, method_itr->value["parameters"], ref_keys);
-                ref_keys.pop_back();
-            }
-
-            if (std::string::npos != path.find('{') && std::string::npos != path.find('}')) { // has path params
-                per_method_validator.path_trie.Insert(path);
-            }
-            ref_keys.pop_back(); // Pop the method key
-        }
-        ref_keys.pop_back(); // Pop the path key
+        ProcessPath(path_itr, ref_keys);
     }
 }
 
@@ -262,12 +212,12 @@ ValidationError OASValidatorImp::GetValidators(const std::string& method, const 
     return ValidationError::NONE;
 }
 
-std::vector<std::string> OASValidatorImp::Split(const std::string& str, char delimiter)
+std::vector<std::string> OASValidatorImp::Split(const std::string &str)
 {
     std::vector<std::string> tokens;
     std::string token;
     std::istringstream token_stream(str);
-    while (getline(token_stream, token, delimiter)) {
+    while (getline(token_stream, token, '/')) {
         tokens.push_back(token);
     }
     return tokens;
@@ -275,7 +225,7 @@ std::vector<std::string> OASValidatorImp::Split(const std::string& str, char del
 
 rapidjson::Value* OASValidatorImp::ResolvePath(rapidjson::Document& doc, const std::string& path)
 {
-    std::vector<std::string> parts = Split(path, '/');
+    std::vector<std::string> parts = Split(path);
     rapidjson::Value* current = &doc;
     for (const std::string& part : parts) {
         if (!current->IsObject() || !current->HasMember(part.c_str())) {
@@ -284,6 +234,87 @@ rapidjson::Value* OASValidatorImp::ResolvePath(rapidjson::Document& doc, const s
         current = &(*current)[part.c_str()];
     }
     return current;
+}
+
+void OASValidatorImp::ParseSpecs(const std::string& oas_specs, rapidjson::Document& doc)
+{
+    std::ifstream ifs(oas_specs);
+
+    if (ifs.is_open()) {
+        rapidjson::IStreamWrapper isw(ifs);
+        doc.ParseStream(isw);
+        ifs.close();
+    } else {
+        doc.Parse(oas_specs.c_str());
+    }
+
+    if (doc.HasParseError()) {
+        throw ValidatorInitExc("Unable to parse specs: " + oas_specs +
+                               " \nError code: " + std::to_string(doc.GetParseError()) +
+                               " at offset: " + std::to_string(doc.GetErrorOffset()) +
+                               " Error message: " + rapidjson::GetParseError_En(doc.GetParseError()));
+    }
+}
+
+void OASValidatorImp::ProcessPath(const rapidjson::Value::ConstMemberIterator& path_itr,
+                                  std::vector<std::string>& ref_keys)
+{
+    std::string path(path_itr->name.GetString());
+    ref_keys.emplace_back(EscapeSlash(path));
+    const rapidjson::Value& methods = path_itr->value;
+
+    for (auto method_itr = methods.MemberBegin(); method_itr != methods.MemberEnd(); ++method_itr) {
+        ProcessMethod(method_itr, path, ref_keys);
+    }
+
+    ref_keys.pop_back(); // Pop the path key
+}
+
+void OASValidatorImp::ProcessMethod(const rapidjson::Value::ConstMemberIterator& method_itr, const std::string& path,
+                                    std::vector<std::string>& ref_keys)
+{
+    ref_keys.emplace_back(method_itr->name.GetString());
+    auto method(kStringToMethod.at(method_itr->name.GetString()));
+    auto& per_method_validator = oas_validators_[static_cast<size_t>(method)];
+    auto& per_path_validator = per_method_validator.per_path_validators;
+
+    ProcessRequestBody(method_itr, path, ref_keys, per_path_validator);
+    ProcessParameters(method_itr, path, ref_keys, per_path_validator);
+
+    if (std::string::npos != path.find('{') && std::string::npos != path.find('}')) { // has path params
+        per_method_validator.path_trie.Insert(path);
+    }
+
+    ref_keys.pop_back(); // Pop the method key
+}
+
+void OASValidatorImp::ProcessRequestBody(const rapidjson::Value::ConstMemberIterator& method_itr,
+                                         const std::string& path, std::vector<std::string>& ref_keys,
+                                         std::unordered_map<std::string, ValidatorsStore*>& per_path_validator)
+{
+    if ((method_itr->value.HasMember("requestBody")) && (method_itr->value["requestBody"].HasMember("content")) &&
+        (method_itr->value["requestBody"]["content"].HasMember("application/json")) &&
+        (method_itr->value["requestBody"]["content"]["application/json"].HasMember(
+            "schema"))) { //  if "method+path" has json body
+        ref_keys.emplace_back("requestBody/content/application%2Fjson/schema");
+        per_path_validator.emplace(
+            path,
+            new ValidatorsStore(method_itr->value["requestBody"]["content"]["application/json"]["schema"], ref_keys));
+        ref_keys.pop_back(); // pop body ref
+    } else { // Otherwise validators without body
+        per_path_validator.emplace(path, new ValidatorsStore());
+    }
+}
+
+void OASValidatorImp::ProcessParameters(const rapidjson::Value::ConstMemberIterator& method_itr,
+                                        const std::string& path, std::vector<std::string>& ref_keys,
+                                        std::unordered_map<std::string, ValidatorsStore*>& per_path_validator)
+{
+    if (method_itr->value.HasMember("parameters")) { //  if "method+path" has parameters
+        ref_keys.emplace_back("parameters");
+        per_path_validator.at(path)->AddParamValidators(path, method_itr->value["parameters"], ref_keys);
+        ref_keys.pop_back();
+    }
 }
 
 void OASValidatorImp::ResolveReferences(rapidjson::Value& value, rapidjson::Document& doc,

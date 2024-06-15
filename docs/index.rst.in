@@ -26,4 +26,5 @@ cpp-oasvalidator
    @EXHALE_REL_OUTPUT_DIR@/library_root
    codecov
    classdiagram
+   benchmark
    genindex

@@ -42,7 +42,7 @@ abstract class BaseValidator {
 	+BaseValidator(ValidationError err_code)
 	+BaseValidator(const vector<string>& ref_keys, ValidationError err_code)
 	+~BaseValidator()
-	+{abstract} ValidateJson(const string& content, string& err_msg) : ValidationError
+	+{abstract} Validate(const string& content, string& err_msg) : ValidationError
 	#code_on_error_ : ValidationError
 	-{static} kErrHeaders : static const unordered_map<ValidationError, string>
 	+GetErrHeader() : string {query}
@@ -69,7 +69,7 @@ class HeaderParamValidator {
 class JsonValidator {
 	+JsonValidator(const Value& schema_val, const vector<string>& ref_keys, ValidationError err_code)
 	+~JsonValidator()
-	+ValidateJson(const string& json_str, string& error_msg) : ValidationError
+	+Validate(const string& json_str, string& error_msg) : ValidationError
 	-schema_ : SchemaDocument*
 	-validator_ : SchemaValidator*
 	-mutex_ : mutex
@@ -79,7 +79,7 @@ class JsonValidator {
 }
 class MethodValidator {
 	+MethodValidator()
-	+ValidateJson(const string& method, string& err_msg) : ValidationError
+	+Validate(const string& method, string& err_msg) : ValidationError
 	-{static} kValidMethods : static const unordered_set<string>
 }
 class OASValidator {

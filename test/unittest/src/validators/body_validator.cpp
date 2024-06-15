@@ -116,7 +116,8 @@ protected:
                   }
                 }
                 })");
-        std::vector<std::string> ref_keys{"paths", "/pets/test", "get", "requestBody/content/application%2Fjson/schema"};
+        std::vector<std::string> ref_keys{"paths", "/pets/test", "get",
+                                          "requestBody/content/application%2Fjson/schema"};
         validator_ = std::make_unique<BodyValidator>(schema_doc_, ref_keys);
     }
 
@@ -147,7 +148,7 @@ TEST_F(TestBodyValidator, ValidJson)
             "S_example": "This is a pattern property"
         })";
     std::string error_msg;
-    EXPECT_EQ(validator_->ValidateJson(json_str, error_msg), ValidationError::NONE);
+    EXPECT_EQ(validator_->Validate(json_str, error_msg), ValidationError::NONE);
     EXPECT_TRUE(error_msg.empty());
 }
 
@@ -174,7 +175,7 @@ TEST_F(TestBodyValidator, InvalidParsing)
             "S_example": "This is a pattern property"
         })";
     std::string error_msg;
-    EXPECT_EQ(validator_->ValidateJson(json_str, error_msg), ValidationError::INVALID_BODY);
+    EXPECT_EQ(validator_->Validate(json_str, error_msg), ValidationError::INVALID_BODY);
     EXPECT_FALSE(error_msg.empty());
     rapidjson::Document doc;
     doc.Parse(error_msg.c_str());
@@ -205,7 +206,7 @@ TEST_F(TestBodyValidator, InvalidIntegerType)
             "S_example": "This is a pattern property"
         })";
     std::string error_msg;
-    EXPECT_EQ(validator_->ValidateJson(json_str, error_msg), ValidationError::INVALID_BODY);
+    EXPECT_EQ(validator_->Validate(json_str, error_msg), ValidationError::INVALID_BODY);
     EXPECT_FALSE(error_msg.empty());
     rapidjson::Document doc;
     doc.Parse(error_msg.c_str());
@@ -238,7 +239,7 @@ TEST_F(TestBodyValidator, InvalidStringType)
             "S_example": "This is a pattern property"
         })";
     std::string error_msg;
-    EXPECT_EQ(validator_->ValidateJson(json_str, error_msg), ValidationError::INVALID_BODY);
+    EXPECT_EQ(validator_->Validate(json_str, error_msg), ValidationError::INVALID_BODY);
     EXPECT_FALSE(error_msg.empty());
     rapidjson::Document doc;
     doc.Parse(error_msg.c_str());
@@ -271,7 +272,7 @@ TEST_F(TestBodyValidator, InvalidArrayUniqueItems)
             "S_example": "This is a pattern property"
         })";
     std::string error_msg;
-    EXPECT_EQ(validator_->ValidateJson(json_str, error_msg), ValidationError::INVALID_BODY);
+    EXPECT_EQ(validator_->Validate(json_str, error_msg), ValidationError::INVALID_BODY);
     EXPECT_FALSE(error_msg.empty());
     rapidjson::Document doc;
     doc.Parse(error_msg.c_str());
@@ -304,7 +305,7 @@ TEST_F(TestBodyValidator, InvalidIntegerMinimum)
             "S_example": "This is a pattern property"
         })";
     std::string error_msg;
-    EXPECT_EQ(validator_->ValidateJson(json_str, error_msg), ValidationError::INVALID_BODY);
+    EXPECT_EQ(validator_->Validate(json_str, error_msg), ValidationError::INVALID_BODY);
     EXPECT_FALSE(error_msg.empty());
     rapidjson::Document doc;
     doc.Parse(error_msg.c_str());
@@ -337,7 +338,7 @@ TEST_F(TestBodyValidator, InvalidIntegerMaximim)
             "S_example": "This is a pattern property"
         })";
     std::string error_msg;
-    EXPECT_EQ(validator_->ValidateJson(json_str, error_msg), ValidationError::INVALID_BODY);
+    EXPECT_EQ(validator_->Validate(json_str, error_msg), ValidationError::INVALID_BODY);
     EXPECT_FALSE(error_msg.empty());
     rapidjson::Document doc;
     doc.Parse(error_msg.c_str());
@@ -368,7 +369,7 @@ TEST_F(TestBodyValidator, InvalidRequired)
             "S_example": "This is a pattern property"
         })";
     std::string error_msg;
-    EXPECT_EQ(validator_->ValidateJson(json_str, error_msg), ValidationError::INVALID_BODY);
+    EXPECT_EQ(validator_->Validate(json_str, error_msg), ValidationError::INVALID_BODY);
     EXPECT_FALSE(error_msg.empty());
     rapidjson::Document doc;
     doc.Parse(error_msg.c_str());
@@ -403,7 +404,7 @@ TEST_F(TestBodyValidator, InvalidPatternProp)
               "T_example": "Another invalid property"
         })";
     std::string error_msg;
-    EXPECT_EQ(validator_->ValidateJson(json_str, error_msg), ValidationError::INVALID_BODY);
+    EXPECT_EQ(validator_->Validate(json_str, error_msg), ValidationError::INVALID_BODY);
     EXPECT_FALSE(error_msg.empty());
     rapidjson::Document doc;
     doc.Parse(error_msg.c_str());
@@ -438,7 +439,7 @@ TEST_F(TestBodyValidator, InvalidEnum)
               "T_example": "Another invalid property"
         })";
     std::string error_msg;
-    EXPECT_EQ(validator_->ValidateJson(json_str, error_msg), ValidationError::INVALID_BODY);
+    EXPECT_EQ(validator_->Validate(json_str, error_msg), ValidationError::INVALID_BODY);
     EXPECT_FALSE(error_msg.empty());
     rapidjson::Document doc;
     doc.Parse(error_msg.c_str());

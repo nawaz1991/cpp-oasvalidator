@@ -11,7 +11,7 @@ MethodValidator::MethodValidator()
 {
 }
 
-ValidationError MethodValidator::ValidateJson(const std::string& method, std::string& err_msg)
+ValidationError MethodValidator::Validate(const std::string& method, std::string& err_msg)
 {
     if (kValidMethods.find(method) == kValidMethods.end()) {
         err_msg += err_header_ + R"("description": "Invalid HTTP method ')" + method + "'" + R"("}})";
@@ -20,5 +20,8 @@ ValidationError MethodValidator::ValidateJson(const std::string& method, std::st
     return ValidationError::NONE;
 }
 
-const std::unordered_set<std::string> MethodValidator::kValidMethods = {"GET", "POST", "PUT", "DELETE", "HEAD", "OPTIONS", "PATCH", "CONNECT", "TRACE",
-                                                                        "get", "post", "put", "delete", "head", "options", "patch", "connect", "trace"};
+const std::unordered_set<std::string> MethodValidator::kValidMethods = {"GET",     "POST",    "PUT",     "DELETE",
+                                                                        "HEAD",    "OPTIONS", "PATCH",   "CONNECT",
+                                                                        "TRACE",   "get",     "post",    "put",
+                                                                        "delete",  "head",    "options", "patch",
+                                                                        "connect", "trace"};

@@ -22,7 +22,7 @@ std::string ContentDeserializer::Deserialize(const char* beg, const char* const 
     }
 
     std::string ret;
-    ret.reserve(end - cursor);
+    ret.reserve(static_cast<std::string::size_type>(end - cursor));
 
     while (cursor < end) {
         char c = *cursor++;
@@ -36,7 +36,7 @@ std::string ContentDeserializer::Deserialize(const char* beg, const char* const 
             if (dec1 < 0 || dec2 < 0) {
                 throw DeserializationException("Invalid HEX character for '" + param_name_ + "'");
             }
-            ret.push_back((dec1 << 4) | dec2);
+            ret.push_back(static_cast<char>((dec1 << 4) | dec2));
         } break;
 
         case '+':

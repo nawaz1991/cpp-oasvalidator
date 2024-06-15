@@ -15,8 +15,11 @@ BaseDeserializer::BaseDeserializer(const std::string& param_name, char start, bo
 
 const std::array<char, 256> BaseDeserializer::kHexLookupTable = []() {
     std::array<char, 256> table{};
-    for (int i = 0; i < 256; ++i) {
-        table[i] = (i >= '0' && i <= '9') ? i - '0' : (i >= 'A' && i <= 'F') ? i - 'A' + 10 : (i >= 'a' && i <= 'f') ? i - 'a' + 10 : -1;
+    for (size_t i = 0; i < 256; ++i) {
+        table[i] = (i >= '0' && i <= '9')   ? static_cast<char>(i - '0')
+                   : (i >= 'A' && i <= 'F') ? static_cast<char>(i - 'A' + 10)
+                   : (i >= 'a' && i <= 'f') ? static_cast<char>(i - 'a' + 10)
+                                            : static_cast<char>(-1);
     }
     return table;
 }();

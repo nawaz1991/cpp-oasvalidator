@@ -18,15 +18,13 @@ public:
     explicit BaseValidator(ValidationError err_code);
     explicit BaseValidator(const std::vector<std::string>& ref_keys, ValidationError err_code);
 
-    virtual ValidationError ValidateJson(const std::string& content, std::string& err_msg) = 0;
+    virtual ValidationError Validate(const std::string& content, std::string& err_msg) = 0;
     std::string GetErrHeader() const;
     virtual ~BaseValidator() = default;
 
 protected:
     ValidationError code_on_error_;
     std::string err_header_;
-
-    void InitErrHeader();
 
 private:
     static const std::unordered_map<ValidationError, std::string> kErrHeaders;

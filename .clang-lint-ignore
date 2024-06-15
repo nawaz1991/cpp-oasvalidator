@@ -1,0 +1,7 @@
+# ignore third_party code from clang-format checks
+./thirdparty/*
+./build/*
+./cmake-build-debug/*
+./env/*
+
+

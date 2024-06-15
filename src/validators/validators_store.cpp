@@ -13,7 +13,8 @@ ValidatorsStore::ValidatorsStore(const rapidjson::Value& schema_val, const std::
 {
 }
 
-void ValidatorsStore::AddParamValidators(const std::string& path, const rapidjson::Value& params, std::vector<std::string>& ref_keys)
+void ValidatorsStore::AddParamValidators(const std::string& path, const rapidjson::Value& params,
+                                         std::vector<std::string>& ref_keys)
 {
     auto path_param_idxs = GetPathParamIndices(path);
     for (const auto& param_val : params.GetArray()) {
@@ -21,9 +22,11 @@ void ValidatorsStore::AddParamValidators(const std::string& path, const rapidjso
         std::string name(param_val["name"].GetString());
         ref_keys.emplace_back(name);
         if ("path" == in) {
-            path_param_validators_.emplace_back(PathParamValidatorInfo{path_param_idxs.at(name), new PathParamValidator(param_val, ref_keys)});
+            path_param_validators_.emplace_back(
+                PathParamValidatorInfo{path_param_idxs.at(name), new PathParamValidator(param_val, ref_keys)});
         } else if ("query" == in) {
-            query_param_validators_.emplace_back(QueryParamValidatorInfo{name, new QueryParamValidator(param_val, ref_keys)});
+            query_param_validators_.emplace_back(
+                QueryParamValidatorInfo{name, new QueryParamValidator(param_val, ref_keys)});
         } else if ("header" == in) {
             header_param_validators_.emplace(name, new HeaderParamValidator(param_val, ref_keys));
         } else {
@@ -36,12 +39,13 @@ void ValidatorsStore::AddParamValidators(const std::string& path, const rapidjso
 ValidationError ValidatorsStore::ValidateBody(const std::string& json_body, std::string& error_msg)
 {
     if (body_validator_) {
-        return body_validator_->ValidateJson(json_body, error_msg);
+        return body_validator_->Validate(json_body, error_msg);
     }
     return ValidationError::NONE; // No validator, no error
 }
 
-ValidationError ValidatorsStore::ValidatePathParams(std::unordered_map<size_t, ParamRange>& param_idxs, std::string& error_msg)
+ValidationError ValidatorsStore::ValidatePathParams(std::unordered_map<size_t, ParamRange>& param_idxs,
+                                                    std::string& error_msg)
 {
     for (auto& param_validator : path_param_validators_) {
         try {
@@ -70,7 +74,8 @@ ValidationError ValidatorsStore::ValidateQueryParams(const std::string& query, s
             }
         }
         if (query[start - 1] != '?' && query[start - 1] != '&') {
-            error_msg = param_validator.validator->GetErrHeader() + R"("description": "Query parameter ')" + param_validator.name + R"(' should start with '?' or '&'"}})";
+            error_msg = param_validator.validator->GetErrHeader() + R"("description": "Query parameter ')" +
+                        param_validator.name + R"(' should start with '?' or '&'"}})";
             return ValidationError::INVALID_QUERY_PARAM;
         }
         starts.emplace(start);
@@ -82,7 +87,8 @@ ValidationError ValidatorsStore::ValidateQueryParams(const std::string& query, s
         try {
             auto start = start_map.at(param_validator.name);
             auto end = (*std::next(starts.find(start))) - 1;
-            auto err_code = param_validator.validator->ValidateParam(query.data() + start, query.data() + end, error_msg);
+            auto err_code = param_validator.validator->ValidateParam(query.data() + start, query.data() + end,
+                                                                     error_msg);
             CHECK_ERROR(err_code)
         } catch (const std::out_of_range&) {
             if (param_validator.validator->IsRequired()) {
@@ -93,12 +99,14 @@ ValidationError ValidatorsStore::ValidateQueryParams(const std::string& query, s
     return ValidationError::NONE;
 }
 
-ValidationError ValidatorsStore::ValidateHeaderParams(const std::unordered_map<std::string, std::string>& headers, std::string& error_msg)
+ValidationError ValidatorsStore::ValidateHeaderParams(const std::unordered_map<std::string, std::string>& headers,
+                                                      std::string& error_msg)
 {
     for (auto& header_validator : header_param_validators_) {
         try {
             const auto& param = headers.at(header_validator.first);
-            auto err_code = header_validator.second->ValidateParam(param.data(), param.data() + param.size(), error_msg);
+            auto err_code = header_validator.second->ValidateParam(param.data(), param.data() + param.size(),
+                                                                   error_msg);
             CHECK_ERROR(err_code)
         } catch (const std::out_of_range&) {
             if (header_validator.second->IsRequired()) {
@@ -118,9 +126,9 @@ ValidatorsStore::~ValidatorsStore()
 #endif
 }
 
-std::unordered_map<std::string, int> ValidatorsStore::GetPathParamIndices(const std::string& path)
+std::unordered_map<std::string, size_t> ValidatorsStore::GetPathParamIndices(const std::string& path)
 {
-    std::unordered_map<std::string, int> param_idxs;
+    std::unordered_map<std::string, size_t> param_idxs;
     const char* dir_start = path.data();
     const char* const path_end = dir_start + path.length();
     const char* dir_end;

@@ -26,6 +26,8 @@ private:
 
 public:
     ParamValidator(const ParamInfo& param_info, const std::vector<std::string>& ref_keys, ValidationError err_code);
+    ParamValidator(const ParamValidator&) = delete;
+    ParamValidator& operator=(const ParamValidator&) = delete;
 
     ValidationError ValidateParam(const char* beg, const char* end, std::string& error_msg);
     bool IsRequired() const;
@@ -33,7 +35,8 @@ public:
     ~ParamValidator() override = default;
 
 protected:
-    static ParamInfo GetParamInfo(const rapidjson::Value& param_val, const std::string& default_style, bool default_explode, bool default_required,
+    static ParamInfo GetParamInfo(const rapidjson::Value& param_val, const std::string& default_style,
+                                  bool default_explode, bool default_required,
                                   const std::vector<std::string>& ref_keys);
 
 private:
@@ -46,6 +49,8 @@ class PathParamValidator final: public ParamValidator
 {
 public:
     explicit PathParamValidator(const rapidjson::Value& param_val, const std::vector<std::string>& keys);
+    PathParamValidator(const PathParamValidator&) = delete;
+    PathParamValidator& operator=(const PathParamValidator&) = delete;
     ~PathParamValidator() override = default;
 };
 
@@ -53,6 +58,8 @@ class QueryParamValidator final: public ParamValidator
 {
 public:
     explicit QueryParamValidator(const rapidjson::Value& param_val, const std::vector<std::string>& keys);
+    QueryParamValidator(const QueryParamValidator&) = delete;
+    QueryParamValidator& operator=(const QueryParamValidator&) = delete;
     bool IsEmptyAllowed() const;
     ~QueryParamValidator() override = default;
 
@@ -64,6 +71,8 @@ class HeaderParamValidator final: public ParamValidator
 {
 public:
     explicit HeaderParamValidator(const rapidjson::Value& param_val, const std::vector<std::string>& keys);
+    HeaderParamValidator(const HeaderParamValidator&) = delete;
+    HeaderParamValidator& operator=(const HeaderParamValidator&) = delete;
     ~HeaderParamValidator() override = default;
 };
 #endif // PARAM_VALIDATOR_HPP

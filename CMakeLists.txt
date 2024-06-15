@@ -1,17 +1,6 @@
 cmake_minimum_required(VERSION 3.10 FATAL_ERROR)
-if (POLICY CMP0025)
-    # detect Apple's Clang
-    cmake_policy(SET CMP0025 NEW)
-endif ()
-if (POLICY CMP0054)
-    cmake_policy(SET CMP0054 NEW)
-endif ()
-if (POLICY CMP0091)
-    cmake_policy(SET CMP0091 NEW)
-endif ()
 
-SET(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
-
+# Version and other settings
 set(OASVALIDATOR_VERSION_MAJOR "1")
 set(OASVALIDATOR_VERSION_MINOR "0")
 set(OASVALIDATOR_VERSION_PATCH "0")
@@ -20,13 +9,15 @@ set(OASVALIDATOR_SUMMARY "C++ library")
 set(OASVALIDATOR_REPOSITORY_URL "https://github.com/nawaz1991/cpp-oasvalidator")
 set(OASVALIDATOR_LICENSE "${CMAKE_CURRENT_SOURCE_DIR}/LICENSE")
 set(OASVALIDATOR_README "${CMAKE_CURRENT_SOURCE_DIR}/README.md")
-message(STATUS "Building oasvalidator version ${OASVALIDATOR_VERSION_STRING}")
+message(STATUS "Building cpp-oasvalidator version ${OASVALIDATOR_VERSION_STRING}")
 
-project(cpp-oasvalidator LANGUAGES CXX
-        VERSION "${OASVALIDATOR_VERSION_STRING}"
-        DESCRIPTION "A FAST C++ library to validate the HTTP requests against the OpenAPI specifications of the REST server")
+project(cpp-oasvalidator LANGUAGES CXX VERSION ${OASVALIDATOR_VERSION_STRING} DESCRIPTION "A FAST C++ library to validate the HTTP requests against the OpenAPI specifications of the REST server")
 
-set(OASVALIDATOR oasvalidator)
+include(GNUInstallDirs)
+
+# Include the SetCompilerFlags module
+set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
+include(SetCompilerFlags)
 
 # Default to release build type with specific optimization flags
 if (NOT CMAKE_BUILD_TYPE)
@@ -41,124 +32,35 @@ option(BUILD_PERF "Build benchmark tests" OFF)
 option(BUILD_DOCS "Build documentation" OFF)
 option(BUILD_SHARED_LIB "Build using shared libraries" ON)
 
-option(OASVALIDATOR_BUILD_CXX11 "Build oasvalidator with C++11" OFF)
-option(OASVALIDATOR_BUILD_CXX17 "Build oasvalidator with C++17" ON)
+option(OASVALIDATOR_BUILD_CXX11 "Build cpp-oasvalidator with C++11" OFF)
+option(OASVALIDATOR_BUILD_CXX17 "Build cpp-oasvalidator with C++17" ON)
+
 if (OASVALIDATOR_BUILD_CXX11)
     set(CMAKE_CXX_STANDARD 11)
-    set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
+    message(STATUS "Building with C++11")
 elseif (OASVALIDATOR_BUILD_CXX17)
     set(CMAKE_CXX_STANDARD 17)
-    set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
+    message(STATUS "Building with C++17")
 endif ()
-
-find_program(CCACHE_FOUND ccache)
-if (CCACHE_FOUND)
-    message(STATUS "Using ccache")
-    set_property(GLOBAL PROPERTY RULE_LAUNCH_COMPILE ccache)
-    set_property(GLOBAL PROPERTY RULE_LAUNCH_LINK ccache)
-    if (CMAKE_CXX_COMPILER_ID MATCHES "Clang")
-        set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Qunused-arguments -fcolor-diagnostics")
-    endif ()
-endif ()
-
-############################# Compiler-specific settings #############################
-if (CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
-    message(STATUS "Using GNU compiler")
-    if (NOT CMAKE_CROSSCOMPILING)
-        message(STATUS "Using native CPU optimizations")
-        set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -march=native")
-    endif ()
-    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra -Werror")
-    set(EXTRA_CXX_FLAGS -Weffc++ -Wswitch-default -Wfloat-equal -Wconversion -Wsign-conversion)
-    if (OASVALIDATOR_BUILD_CXX11)
-        if (CMAKE_CXX_COMPILER_VERSION VERSION_LESS "4.7.0")
-            message(STATUS "Building with C++0x")
-            set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++0x")
-        else ()
-            message(STATUS "Building with C++11")
-            set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
-        endif ()
-    elseif (OASVALIDATOR_BUILD_CXX17 AND NOT CMAKE_CXX_COMPILER_VERSION VERSION_LESS "5.0")
-        message(STATUS "Building with C++17")
-        set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17")
-    endif ()
-elseif (CMAKE_CXX_COMPILER_ID MATCHES "Clang")
-    message(STATUS "Using Clang compiler")
-    if (NOT CMAKE_CROSSCOMPILING)
-        message(STATUS "Using native CPU optimizations")
-        set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -march=native")
-    endif ()
-    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra -Werror -Wno-missing-field-initializers")
-    set(EXTRA_CXX_FLAGS -Weffc++ -Wswitch-default -Wfloat-equal -Wconversion -Wimplicit-fallthrough)
-    if (OASVALIDATOR_BUILD_CXX11)
-        if (CMAKE_CXX_COMPILER_VERSION VERSION_LESS "3.3")
-            message(STATUS "Building with C++0x")
-            set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++0x")
-        else ()
-            message(STATUS "Building with C++11")
-            set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
-        endif ()
-    elseif (OASVALIDATOR_BUILD_CXX17 AND NOT CMAKE_CXX_COMPILER_VERSION VERSION_LESS "4.0")
-        message(STATUS "Building with C++17")
-        set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17")
-    endif ()
-elseif (CMAKE_CXX_COMPILER_ID STREQUAL "MSVC")
-    message(STATUS "Using MSVC compiler")
-    add_definitions(-D_CRT_SECURE_NO_WARNINGS=1)
-    add_definitions(-DNOMINMAX)
-    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /EHsc")
-    if (OASVALIDATOR_BUILD_CXX11 AND NOT CMAKE_CXX_COMPILER_VERSION VERSION_LESS "19.10")
-        message(STATUS "Building with C++11")
-        set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /std:c++11")
-    elseif (OASVALIDATOR_BUILD_CXX17)
-        message(STATUS "Building with C++17")
-        set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /std:c++17")
-    endif ()
-    # Always compile with /WX
-    if (CMAKE_CXX_FLAGS MATCHES "/WX-")
-        string(REGEX REPLACE "/WX-" "/WX" CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}")
-    else ()
-        set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /WX")
-    endif ()
-elseif (CMAKE_CXX_COMPILER_ID MATCHES "XL")
-    message(STATUS "Using XL compiler")
-    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -qarch=auto")
-endif ()
-# if release build, add extra optimization flags
-if (CMAKE_BUILD_TYPE STREQUAL "Release")
-    message(STATUS "Adding extra optimization flags for release build")
-    if (CMAKE_CXX_COMPILER_ID STREQUAL "GNU" OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
-        set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O3 -ffast-math -funroll-loops -fomit-frame-pointer -DNDEBUG -fno-strict-aliasing -fvisibility-inlines-hidden")
-    elseif (CMAKE_CXX_COMPILER_ID STREQUAL "MSVC")
-        set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /Ox /Ob2 /Oi /Ot /Oy /GL /fp:fast /GS- /Gy /DNDEBUG")
-    endif ()
-endif ()
-
-#add extra search paths for libraries and includes
-SET(INCLUDE_INSTALL_DIR "${CMAKE_INSTALL_PREFIX}/include" CACHE PATH "The directory the headers are installed in")
-SET(LIB_INSTALL_DIR "${CMAKE_INSTALL_PREFIX}/lib" CACHE STRING "Directory where lib will install")
-SET(DOC_INSTALL_DIR "${CMAKE_INSTALL_PREFIX}/share/doc/${OASVALIDATOR}" CACHE PATH "Path to the documentation")
-
-if (UNIX OR CYGWIN)
-    SET(_CMAKE_INSTALL_DIR "${LIB_INSTALL_DIR}/cmake/${OASVALIDATOR}")
-elseif (WIN32)
-    SET(_CMAKE_INSTALL_DIR "${CMAKE_INSTALL_PREFIX}/cmake")
-endif ()
-SET(CMAKE_INSTALL_DIR "${_CMAKE_INSTALL_DIR}" CACHE PATH "The directory cmake files are installed in")
+set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
 
 # Specify RapidJSON directories or fallback to default
 if (NOT RAPIDJSON_INCLUDE_DIRS)
     set(RAPIDJSON_INCLUDE_DIRS "${CMAKE_CURRENT_SOURCE_DIR}/thirdparty/rapidjson/include")
 endif ()
 
+# Source files
 file(GLOB_RECURSE SOURCES "src/*.cpp")
 
+# Add library
+set(OASVALIDATOR oasvalidator)
 if (BUILD_SHARED_LIB)
-    add_library(oasvalidator SHARED ${SOURCES})
+    add_library(${OASVALIDATOR} SHARED ${SOURCES})
 else ()
-    add_library(oasvalidator STATIC ${SOURCES})
+    add_library(${OASVALIDATOR} STATIC ${SOURCES})
 endif ()
 
+# Include directories
 set(OAS_INCLUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/include")
 
 target_include_directories(${OASVALIDATOR}
@@ -173,25 +75,64 @@ set_target_properties(${OASVALIDATOR} PROPERTIES
         LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib
 )
 
-############################# Installation #############################
+# Apply compiler flags
+set_compiler_flags(${OASVALIDATOR})
+
+# Add extra search paths for libraries and includes
+set(INCLUDE_INSTALL_DIR "${CMAKE_INSTALL_INCLUDEDIR}" CACHE PATH "The directory the headers are installed in")
+set(DOC_INSTALL_DIR "${CMAKE_INSTALL_DATAROOTDIR}/doc/${OASVALIDATOR}" CACHE PATH "Path to the documentation")
+
+set(CMAKE_INSTALL_DIR "${CMAKE_INSTALL_LIBDIR}/cmake/OASValidator" CACHE PATH "The directory cmake files are installed in")
+
+# Installation
 install(TARGETS ${OASVALIDATOR}
         EXPORT ${OASVALIDATOR}-targets
-        LIBRARY DESTINATION lib
-        ARCHIVE DESTINATION lib
+        LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
+        ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
+        RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
+        INCLUDES DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
 )
-install(FILES "${OAS_INCLUDE_DIR}/oas_validator.hpp"
-        DESTINATION include
-)
-install(FILES README.md
-        DESTINATION "${DOC_INSTALL_DIR}"
-        COMPONENT doc)
-install(FILES LICENSE
-        DESTINATION "${DOC_INSTALL_DIR}"
-        COMPONENT doc)
 
-############################# Subprojects #############################
+install(FILES "${OAS_INCLUDE_DIR}/oas_validator.hpp"
+        DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
+)
+
+install(FILES README.md LICENSE
+        DESTINATION "${DOC_INSTALL_DIR}"
+        COMPONENT doc
+)
+
 # Export package for use from the build tree
-EXPORT(PACKAGE ${OASVALIDATOR})
+export(EXPORT ${OASVALIDATOR}-targets
+        FILE "${CMAKE_BINARY_DIR}/${OASVALIDATOR}Targets.cmake"
+        NAMESPACE OASValidator::
+)
+
+# Create and install the Config.cmake and ConfigVersion.cmake files
+include(CMakePackageConfigHelpers)
+write_basic_package_version_file(
+        "${CMAKE_CURRENT_BINARY_DIR}/OASValidatorConfigVersion.cmake"
+        VERSION ${OASVALIDATOR_VERSION_STRING}
+        COMPATIBILITY AnyNewerVersion
+)
+
+configure_file("${CMAKE_CURRENT_SOURCE_DIR}/cmake/OASValidatorConfig.cmake.in"
+        "${CMAKE_CURRENT_BINARY_DIR}/OASValidatorConfig.cmake"
+        @ONLY)
+
+install(FILES
+        "${CMAKE_CURRENT_BINARY_DIR}/OASValidatorConfig.cmake"
+        "${CMAKE_CURRENT_BINARY_DIR}/OASValidatorConfigVersion.cmake"
+        DESTINATION "${CMAKE_INSTALL_DIR}"
+)
+
+install(EXPORT ${OASVALIDATOR}-targets
+        FILE OASValidatorTargets.cmake
+        NAMESPACE OASValidator::
+        DESTINATION ${CMAKE_INSTALL_DIR}
+)
+
+# Build coverage
 if (BUILD_COVERAGE)
     set(TEST_TARGET ${OASVALIDATOR}-unittests)
     set(DOWNLOADED_CMAKE_MODULES "${CMAKE_BINARY_DIR}/downloaded_cmake_modules")
@@ -210,12 +151,13 @@ if (BUILD_COVERAGE)
     )
 endif ()
 
-
+# Build tests
 if (BUILD_TESTS OR BUILD_COVERAGE)
     add_subdirectory(test/unittest)
     include(CTest)
 endif ()
 
+# Build performance tests
 if (BUILD_PERF)
     # Use thirdparty/benchmark as a subproject
     set(BENCHMARK_ENABLE_INSTALL OFF CACHE BOOL "Disable benchmark install")
@@ -228,10 +170,12 @@ if (BUILD_PERF)
     add_subdirectory(test/perftest)
 endif ()
 
+# Build example
 if (BUILD_EXAMPLE)
     add_subdirectory(example)
 endif ()
 
+# Build documentation
 if (BUILD_DOCS)
     add_subdirectory(docs)
 endif ()

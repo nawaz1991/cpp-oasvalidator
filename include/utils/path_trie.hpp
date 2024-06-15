@@ -6,33 +6,37 @@
 
 #ifndef PATH_TRIE_HPP
 #define PATH_TRIE_HPP
-#include "utils/common.hpp"
 
+#include "utils/common.hpp"
 #include <string>
 #include <unordered_map>
 
 class PathTrie
 {
 public:
-    PathTrie()
-        : root_(new Node())
-    {
-    }
+    PathTrie();
+    PathTrie(const PathTrie& other); // Copy constructor
+    PathTrie& operator=(const PathTrie& other); // Copy assignment operator
+    ~PathTrie();
+
     void Insert(const std::string& path);
     bool Search(const char* beg, const char* end, std::string& oas_path);
-    bool Search(const char* beg, const char* end, std::string& oas_path, std::unordered_map<size_t, ParamRange>& param_idxs);
-    ~PathTrie();
+    bool Search(const char* beg, const char* end, std::string& oas_path,
+                std::unordered_map<size_t, ParamRange>& param_idxs);
 
 private:
     struct Node
     {
-        std::string dir;
-        bool is_param{false};
-        int frag_idx{0};
-        std::unordered_map<std::string, Node*> children;
+        Node() = default;
+        std::string dir{};
+        bool is_param = false;
+        int frag_idx = 0;
+        std::unordered_map<std::string, Node*> children{};
     };
 
     void DeleteNode(Node* node);
+    void CopyNode(Node*& this_node, Node* other_node);
+
     Node* root_;
 };
 

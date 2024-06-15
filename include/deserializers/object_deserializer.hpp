@@ -15,7 +15,8 @@ using ObjKTMap = std::unordered_map<std::string, PrimitiveType>; // Object Key-n
 class ObjectDeserializer final: public BaseDeserializer
 {
 public:
-    explicit ObjectDeserializer(const std::string& param_name, char start, bool skip_name, char kv_separator, char vk_separator, bool is_deep_obj, const ObjKTMap& kt_map);
+    explicit ObjectDeserializer(const std::string& param_name, char start, bool skip_name, char kv_separator,
+                                char vk_separator, bool is_deep_obj, const ObjKTMap& kt_map);
 
     std::string Deserialize(const char* beg, const char* const end) override;
     ~ObjectDeserializer() override = default;
@@ -26,7 +27,8 @@ private:
     const bool is_deep_obj_;
     const ObjKTMap kt_map_; // key-type map
 
-    inline void DeserializeKey(const char*& cursor, const char* const end, const char terminator, std::string& key) const
+    inline void DeserializeKey(const char*& cursor, const char* const end, const char terminator,
+                               std::string& key) const
     {
         key.push_back('"');
         while (cursor < end && *cursor != terminator) {

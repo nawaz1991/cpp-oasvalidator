@@ -1,11 +1,45 @@
-/*
- * Copyright (c) 2023 Muhammad Nawaz
- * Licensed under the MIT License. See LICENSE file for more information.
- */
-// [ END OF LICENSE 7982e23aed1dc8eda1fdc979fee617354ae998dc ]
-
 #include "utils/path_trie.hpp"
 #include "utils/common.hpp"
+
+PathTrie::PathTrie()
+    : root_(new Node())
+{
+}
+
+PathTrie::PathTrie(const PathTrie& other)
+    : root_(nullptr)
+{
+    if (other.root_) {
+        root_ = new Node(*other.root_);
+        CopyNode(root_, other.root_);
+    }
+}
+
+PathTrie& PathTrie::operator=(const PathTrie& other)
+{
+    if (this == &other)
+        return *this;
+
+    DeleteNode(root_);
+    if (other.root_) {
+        root_ = new Node(*other.root_);
+        CopyNode(root_, other.root_);
+    } else {
+        root_ = nullptr;
+    }
+
+    return *this;
+}
+
+void PathTrie::CopyNode(Node*& thisNode, Node* otherNode)
+{
+    if (otherNode) {
+        thisNode = new Node(*otherNode);
+        for (const auto& child : otherNode->children) {
+            CopyNode(thisNode->children[child.first], child.second);
+        }
+    }
+}
 
 void PathTrie::Insert(const std::string& path)
 {
@@ -70,7 +104,8 @@ bool PathTrie::Search(const char* beg, const char* const end, std::string& oas_p
     return true;
 }
 
-bool PathTrie::Search(const char* beg, const char* const end, std::string& oas_path, std::unordered_map<size_t, ParamRange>& param_idxs)
+bool PathTrie::Search(const char* beg, const char* const end, std::string& oas_path,
+                      std::unordered_map<size_t, ParamRange>& param_idxs)
 {
     auto* node = root_;
     const char* dir_end;

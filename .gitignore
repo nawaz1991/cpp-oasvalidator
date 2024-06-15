@@ -14,10 +14,5 @@ deps/
 /*.src.rock
 /cmake-build-debug
 /.idea
-.clang-format
-.clang-lint-ignore
-.clang-tidy
-lint.py
-/example
 CMakeSettings.json
 .vs

@@ -6,22 +6,22 @@
 
 #include "validators/json_validator.hpp"
 
-JsonValidator::JsonValidator(const rapidjson::Value& schema_val, const std::vector<std::string>& ref_keys, ValidationError err_code)
+JsonValidator::JsonValidator(const rapidjson::Value& schema_val, const std::vector<std::string>& ref_keys,
+                             ValidationError err_code)
     : BaseValidator(ref_keys, err_code)
+    , schema_(new rapidjson::SchemaDocument(schema_val))
+    , validator_(new rapidjson::SchemaValidator(*schema_))
 {
-    schema_ = new rapidjson::SchemaDocument(schema_val);
-    if (schema_) {
-        validator_ = new rapidjson::SchemaValidator(*schema_);
-    }
 }
 
-ValidationError JsonValidator::ValidateJson(const std::string& json_str, std::string& error_msg)
+ValidationError JsonValidator::Validate(const std::string& json_str, std::string& error_msg)
 {
     rapidjson::Document doc;
     doc.Parse(json_str.c_str());
 
     if (doc.HasParseError()) {
-        error_msg = err_header_ + R"("code":"parserError","description":")" + rapidjson::GetParseError_En(doc.GetParseError()) + R"(","offset":)" +
+        error_msg = err_header_ + R"("code":"parserError","description":")" +
+                    rapidjson::GetParseError_En(doc.GetParseError()) + R"(","offset":)" +
                     std::to_string(doc.GetErrorOffset()) + "}}";
         return code_on_error_;
     }
@@ -46,8 +46,9 @@ ValidationError JsonValidator::ValidateJson(const std::string& json_str, std::st
     return code_on_error_;
 }
 
-void JsonValidator::CreateErrorMessages(const rapidjson::GenericValue<rapidjson::UTF8<>, rapidjson::CrtAllocator>& errors, const std::string& context, std::string& error_msg,
-                                        bool recursive)
+void JsonValidator::CreateErrorMessages(
+    const rapidjson::GenericValue<rapidjson::UTF8<>, rapidjson::CrtAllocator>& errors, const std::string& context,
+    std::string& error_msg, bool recursive)
 {
     for (const auto& error_type : errors.GetObject()) {
         const char* error_name = error_type.name.GetString();
@@ -63,8 +64,9 @@ void JsonValidator::CreateErrorMessages(const rapidjson::GenericValue<rapidjson:
     }
 }
 
-void JsonValidator::HandleError(const char* error_name, const rapidjson::GenericValue<rapidjson::UTF8<>, rapidjson::CrtAllocator>& error, const std::string& context,
-                                std::string& error_msg, bool recursive)
+void JsonValidator::HandleError(const char* error_name,
+                                const rapidjson::GenericValue<rapidjson::UTF8<>, rapidjson::CrtAllocator>& error,
+                                const std::string& context, std::string& error_msg, bool recursive)
 {
     if (!error.ObjectEmpty()) {
         int code = error["errorCode"].GetInt();
@@ -95,8 +97,9 @@ void JsonValidator::HandleError(const char* error_name, const rapidjson::Generic
         if (recursive) {
             error_msg.push_back('{');
         }
-        error_msg += R"("code":")" + std::string(error_name) + R"(",)" + R"("description":")" + message + R"(",)" + R"("instance":")" + error["instanceRef"].GetString() + R"(",)" +
-                     R"("schema":")" + error["schemaRef"].GetString() + R"(")";
+        error_msg += R"("code":")" + std::string(error_name) + R"(",)" + R"("description":")" + message + R"(",)" +
+                     R"("instance":")" + error["instanceRef"].GetString() + R"(",)" + R"("schema":")" +
+                     error["schemaRef"].GetString() + R"(")";
 
         if (!context.empty()) {
             error_msg += R"(,"context":")" + context + R"(")";

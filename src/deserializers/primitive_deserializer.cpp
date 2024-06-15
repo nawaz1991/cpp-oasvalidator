@@ -6,7 +6,8 @@
 
 #include "deserializers/primitive_deserializer.hpp"
 
-PrimitiveDeserializer::PrimitiveDeserializer(const std::string& param_name, char start, bool skip_name, PrimitiveType param_type)
+PrimitiveDeserializer::PrimitiveDeserializer(const std::string& param_name, char start, bool skip_name,
+                                             PrimitiveType param_type)
     : BaseDeserializer(param_name, start, skip_name)
     , param_type_(param_type)
 {
@@ -43,6 +44,8 @@ std::string PrimitiveDeserializer::Deserialize(const char* beg, const char* cons
     case PrimitiveType::STRING:
         DeserializeString(cursor, end, ret);
         break;
+    default:
+        throw DeserializationException("Invalid primitive type for '" + param_name_ + "'");
     }
 
     CheckEnd(cursor, end);

@@ -43,6 +43,12 @@ jobs:
           # Clean up
           rm -rf $TEMP_DIR
 
+      - name: List created files for debugging
+        run: |
+          ls -alh
+          ls -alh cpp-oasvalidator-${TAG}.tar.gz
+          ls -alh cpp-oasvalidator-${TAG}.zip
+
       - name: Upload tar.gz to release
         uses: svenstaro/upload-release-action@v2
         with:

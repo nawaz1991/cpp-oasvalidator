@@ -23,23 +23,24 @@ jobs:
       - name: Create release archives
         run: |
           TAG=${GITHUB_REF#refs/tags/}
-          echo "TAG is ${TAG}"
+          TAR_FILENAME=cpp-oasvalidator-${TAG}.tar.gz
+          ZIP_FILENAME=cpp-oasvalidator-${TAG}.zip
           # Create tar.gz archive
-          git archive --format=tar.gz --prefix=cpp-oasvalidator-${TAG}/ -o cpp-oasvalidator-${TAG}.tar.gz ${TAG}
+          git archive --format=tar.gz --prefix=cpp-oasvalidator-${TAG}/ -o $TAR_FILENAME ${TAG}
           # Create zip archive
-          git archive --format=zip --prefix=cpp-oasvalidator-${TAG}/ -o cpp-oasvalidator-${TAG}.zip ${TAG}
+          git archive --format=zip --prefix=cpp-oasvalidator-${TAG}/ -o $ZIP_FILENAME ${TAG}
           
           # Include submodules
           TEMP_DIR=$(mktemp -d)
           git clone --recursive . $TEMP_DIR/cpp-oasvalidator-${TAG}
           
           # Add submodule content to tar.gz archive
-          tar -czf cpp-oasvalidator-${TAG}-with-submodules.tar.gz -C $TEMP_DIR cpp-oasvalidator-${TAG}
-          mv cpp-oasvalidator-${TAG}-with-submodules.tar.gz cpp-oasvalidator-${TAG}.tar.gz
+          tar -czf $TEMP_DIR/cpp-oasvalidator-${TAG}-with-submodules.tar.gz -C $TEMP_DIR cpp-oasvalidator-${TAG}
+          mv $TEMP_DIR/cpp-oasvalidator-${TAG}-with-submodules.tar.gz $TAR_FILENAME
           
           # Add submodule content to zip archive
           (cd $TEMP_DIR && zip -r cpp-oasvalidator-${TAG}-with-submodules.zip cpp-oasvalidator-${TAG})
-          mv $TEMP_DIR/cpp-oasvalidator-${TAG}-with-submodules.zip cpp-oasvalidator-${TAG}.zip
+          mv $TEMP_DIR/cpp-oasvalidator-${TAG}-with-submodules.zip $ZIP_FILENAME
           
           # Clean up
           rm -rf $TEMP_DIR
@@ -47,15 +48,15 @@ jobs:
       - name: List created files for debugging
         run: |
           ls -alh
-          ls -alh cpp-oasvalidator-${TAG}.tar.gz
-          ls -alh cpp-oasvalidator-${TAG}.zip
+          ls -alh $TAR_FILENAME
+          ls -alh $ZIP_FILENAME
 
       - name: Upload tar.gz to release
         uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.MY_PAT }}
-          file: cpp-oasvalidator-${TAG}.tar.gz
-          asset_name: cpp-oasvalidator-${TAG}.tar.gz
+          file: ${{ steps.build.outputs.TAR_FILENAME }}
+          asset_name: ${{ steps.build.outputs.TAR_FILENAME }}
           tag: ${{ github.ref }}
           overwrite: true
           body: "Release ${TAG}"
@@ -64,8 +65,8 @@ jobs:
         uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.MY_PAT }}
-          file: cpp-oasvalidator-${TAG}.zip
-          asset_name: cpp-oasvalidator-${TAG}.zip
+          file: ${{ steps.build.outputs.ZIP_FILENAME }}
+          asset_name: ${{ steps.build.outputs.ZIP_FILENAME }}
           tag: ${{ github.ref }}
           overwrite: true
           body: "Release ${TAG}"

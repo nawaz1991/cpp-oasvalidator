@@ -23,6 +23,7 @@ jobs:
       - name: Create release archives
         run: |
           TAG=${GITHUB_REF#refs/tags/}
+          echo "TAG is ${TAG}"
           # Create tar.gz archive
           git archive --format=tar.gz --prefix=cpp-oasvalidator-${TAG}/ -o cpp-oasvalidator-${TAG}.tar.gz ${TAG}
           # Create zip archive

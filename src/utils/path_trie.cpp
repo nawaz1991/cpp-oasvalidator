@@ -1,3 +1,9 @@
+/*
+ * Copyright (c) 2024 Muhammad Nawaz
+ * Licensed under the MIT License. See LICENSE file for more information.
+ */
+// [ END OF LICENSE c6bd0f49d040fca8d8a9cb05868e66aa63f0e2e0 ]
+
 #include "utils/path_trie.hpp"
 #include "utils/common.hpp"
 

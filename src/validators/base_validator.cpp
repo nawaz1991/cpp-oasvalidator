@@ -1,8 +1,8 @@
 /*
- * Copyright (c) 2023 Muhammad Nawaz
+ * Copyright (c) 2024 Muhammad Nawaz
  * Licensed under the MIT License. See LICENSE file for more information.
  */
-// [ END OF LICENSE 7982e23aed1dc8eda1fdc979fee617354ae998dc ]
+// [ END OF LICENSE c6bd0f49d040fca8d8a9cb05868e66aa63f0e2e0 ]
 
 #include "validators/base_validator.hpp"
 

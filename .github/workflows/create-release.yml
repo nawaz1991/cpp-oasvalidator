@@ -1,0 +1,64 @@
+name: Create and Upload Release
+
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          submodules: true
+
+      - name: Set up Git
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+
+      - name: Create release archives
+        run: |
+          TAG=${GITHUB_REF#refs/tags/}
+          # Create tar.gz archive
+          git archive --format=tar.gz --prefix=cpp-oasvalidator-${TAG}/ -o cpp-oasvalidator-${TAG}.tar.gz ${TAG}
+          # Create zip archive
+          git archive --format=zip --prefix=cpp-oasvalidator-${TAG}/ -o cpp-oasvalidator-${TAG}.zip ${TAG}
+          
+          # Include submodules
+          TEMP_DIR=$(mktemp -d)
+          git clone --recursive . $TEMP_DIR/cpp-oasvalidator-${TAG}
+          
+          # Add submodule content to tar.gz archive
+          tar -czf cpp-oasvalidator-${TAG}-with-submodules.tar.gz -C $TEMP_DIR cpp-oasvalidator-${TAG}
+          mv cpp-oasvalidator-${TAG}-with-submodules.tar.gz cpp-oasvalidator-${TAG}.tar.gz
+          
+          # Add submodule content to zip archive
+          (cd $TEMP_DIR && zip -r cpp-oasvalidator-${TAG}-with-submodules.zip cpp-oasvalidator-${TAG})
+          mv $TEMP_DIR/cpp-oasvalidator-${TAG}-with-submodules.zip cpp-oasvalidator-${TAG}.zip
+          
+          # Clean up
+          rm -rf $TEMP_DIR
+
+      - name: Upload tar.gz to release
+        uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: cpp-oasvalidator-${TAG}.tar.gz
+          asset_name: cpp-oasvalidator-${TAG}.tar.gz
+          tag: ${{ github.ref }}
+          overwrite: true
+          body: "Release ${TAG}"
+
+      - name: Upload zip to release
+        uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: cpp-oasvalidator-${TAG}.zip
+          asset_name: cpp-oasvalidator-${TAG}.zip
+          tag: ${{ github.ref }}
+          overwrite: true
+          body: "Release ${TAG}"

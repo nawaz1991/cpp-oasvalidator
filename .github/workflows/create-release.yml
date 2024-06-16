@@ -18,27 +18,23 @@ jobs:
 
       - name: Create tar.gz archive
         run: |
-          mkdir -p release
-          git archive --format=tar.gz --prefix=cpp-oasvalidator-${GITHUB_REF#refs/tags/}/ HEAD > release/cpp-oasvalidator-${GITHUB_REF#refs/tags/}.tar.gz
+          mkdir -p release/cpp-oasvalidator-${GITHUB_REF#refs/tags/}
+          git archive --format=tar.gz --prefix=cpp-oasvalidator-${GITHUB_REF#refs/tags/}/ HEAD | tar -x -C release
+          git submodule foreach --recursive 'git archive --format=tar.gz --prefix=cpp-oasvalidator-${GITHUB_REF#refs/tags/}/$path/ HEAD | tar -x -C release'
           cd release
-          tar -xzf cpp-oasvalidator-${GITHUB_REF#refs/tags/}.tar.gz
-          git submodule foreach --recursive 'git archive --format=tar.gz --prefix=$path/ HEAD > ../$path.tar.gz'
-          for f in *.tar.gz; do tar -xzf "$f"; done
-          rm *.tar.gz
+          tar -czf ../cpp-oasvalidator-${GITHUB_REF#refs/tags/}.tar.gz cpp-oasvalidator-${GITHUB_REF#refs/tags/}
           cd ..
-          tar -czf cpp-oasvalidator-${GITHUB_REF#refs/tags/}.tar.gz -C release .
 
       - name: Create zip archive
         run: |
-          mkdir -p release
-          git archive --format=zip --prefix=cpp-oasvalidator-${GITHUB_REF#refs/tags/}/ HEAD > release/cpp-oasvalidator-${GITHUB_REF#refs/tags/}.zip
+          mkdir -p release/cpp-oasvalidator-${GITHUB_REF#refs/tags/}
+          git archive --format=zip --prefix=cpp-oasvalidator-${GITHUB_REF#refs/tags/}/ HEAD -o release/cpp-oasvalidator-${GITHUB_REF#refs/tags/}.zip
           cd release
-          unzip cpp-oasvalidator-${GITHUB_REF#refs/tags/}.zip
-          git submodule foreach --recursive 'git archive --format=zip --prefix=$path/ HEAD > ../$path.zip'
-          for f in *.zip; do unzip "$f"; done
-          rm *.zip
+          unzip cpp-oasvalidator-${GITHUB_REF#refs/tags/}.zip -d .
+          rm cpp-oasvalidator-${GITHUB_REF#refs/tags/}.zip
+          git submodule foreach --recursive 'git archive --format=zip --prefix=cpp-oasvalidator-${GITHUB_REF#refs/tags/}/$path/ HEAD -o ../$path.zip && unzip ../$path.zip -d . && rm ../$path.zip'
+          zip -r ../cpp-oasvalidator-${GITHUB_REF#refs/tags/}.zip cpp-oasvalidator-${GITHUB_REF#refs/tags/}
           cd ..
-          zip -r cpp-oasvalidator-${GITHUB_REF#refs/tags/}.zip release
 
       - name: Upload Release Assets
         uses: actions/upload-artifact@v2

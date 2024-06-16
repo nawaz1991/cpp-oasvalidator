@@ -1,4 +1,4 @@
-# cpp-oasvalidator v1.0.0: API Reference
+# cpp-oasvalidator v1.1.0: API Reference
 `cpp-oasvalidator` offers a comprehensive API for validating HTTP requests in accordance with OpenAPI specifications. It encompasses various validation categories including *Path, Body, Parameters, and Response*.
 
 The API functions return a `ValidationError` type and accept a reference to a `std::string` for populating error messages in case of validation failure. A successful validation returns `ValidationError::NONE`. Otherwise, an error code is returned and the error message is populated. The error message follows this JSON schema:
@@ -43,7 +43,7 @@ Four overloaded methods are available to validate different combinations of requ
 The following API reference outlines each function and its sequence of validation checks.
 
 ## Table of Contents
-1. [Constructor](#1-constructor)
+1. [Constructor](#1-constructor-)
 2. [Validate Route](#2-validate-route-)
 3. [Validate Body](#3-validate-body-)
 4. [Validate Path Parameters](#4-validate-path-parameters-)

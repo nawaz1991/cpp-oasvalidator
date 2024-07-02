@@ -261,4 +261,4 @@ cpp-oasvalidator is your one-stop solution for rigorous REST request validation 
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for the full license text.
 
-© 2023 Muhammad Nawaz. All Rights Reserved.
+© 2024 Muhammad Nawaz. All Rights Reserved.

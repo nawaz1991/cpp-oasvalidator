@@ -22,6 +22,7 @@ Program Listing for File oas_validator.hpp
    #include <exception>
    #include <string>
    #include <unordered_map>
+   #include <unordered_set>
    
    class ValidatorInitExc; 
    class OASValidatorImp; 
@@ -47,7 +48,8 @@ Program Listing for File oas_validator.hpp
        OASValidatorImp* impl_; 
    
    public:
-       explicit OASValidator(const std::string& oas_specs);
+       explicit OASValidator(const std::string& oas_specs,
+                             const std::unordered_map<std::string, std::unordered_set<std::string>>& method_map = {});
    
        OASValidator(const OASValidator& other);
    

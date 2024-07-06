@@ -18,6 +18,7 @@
 #include <exception>
 #include <string>
 #include <unordered_map>
+#include <unordered_set>
 
 class ValidatorInitExc; ///< Forward declaration for the custom exception class.
 class OASValidatorImp; ///< Forward declaration for the implementation class.
@@ -56,13 +57,29 @@ private:
 
 public:
     /**
-     * @brief Constructor that takes the path to the OAS specification file.
+     * @brief Constructor that takes the path to the OAS specification file and an optional method mapping.
+     *
      * @param oas_specs File path to the OAS specification in JSON format or JSON string containing the OAS
      * specification.
      *
-     * @note The OAS specification can be provided as a file path or as a JSON string.
+     * @param method_map An optional unordered_map where each key is an HTTP method and the value is an unordered_set
+     * of methods that can be treated as the key method. This allows certain HTTP methods to be treated as others.
+     *
+     * For example:
+     * @code
+     * std::unordered_map<std::string, std::unordered_set<std::string>> method_map = {
+     *     {"OPTIONS", {"GET", "POST", "PUT", "DELETE", "HEAD", "PATCH"}},
+     *     {"HEAD", {"GET"}} // Treat HEAD request as GET
+     * };
+     * OASValidator validator(oas_specs, method_map);
+     * @endcode
+     *
+     * @note The OAS specification can be provided as a file path or as a JSON string. If the method map is provided,
+     * it allows certain HTTP methods to be treated as others. For instance, with the mapping {"HEAD", {"GET"}},
+     * a HEAD request can be validated as the GET request, if HEAD method is not defined.
      */
-    explicit OASValidator(const std::string& oas_specs);
+    explicit OASValidator(const std::string& oas_specs,
+                          const std::unordered_map<std::string, std::unordered_set<std::string>>& method_map = {});
 
     /**
      * @brief Copy constructor.

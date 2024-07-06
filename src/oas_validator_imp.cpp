@@ -9,8 +9,9 @@
 #include <rapidjson/istreamwrapper.h>
 #include <sstream>
 
-OASValidatorImp::OASValidatorImp(const std::string& oas_specs, bool head_mapped_get)
-    : head_mapped_get_(head_mapped_get)
+OASValidatorImp::OASValidatorImp(const std::string& oas_specs,
+                                 const std::unordered_map<std::string, std::unordered_set<std::string>>& method_map)
+    : method_map_(method_map)
 {
     rapidjson::Document doc;
     ParseSpecs(oas_specs, doc);
@@ -177,9 +178,18 @@ ValidationError OASValidatorImp::GetValidators(const std::string& method, const 
     CHECK_ERROR(err_code)
 
     err_code = GetValidators(method, method, http_path, validators, error_msg, param_idxs, query);
-
-    if (head_mapped_get_ && ValidationError::INVALID_ROUTE == err_code && (method == "head" || method == "HEAD")) {
-        return GetValidators(method, "get", http_path, validators, error_msg, param_idxs, query);
+    if (ValidationError::INVALID_ROUTE == err_code) {
+        try {
+            auto mapped_methods = method_map_.at(method);
+            for (const auto& mapped_method : mapped_methods) {
+                err_code = GetValidators(method, mapped_method, http_path, validators, error_msg, param_idxs, query);
+                if (ValidationError::NONE == err_code) {
+                    return err_code;
+                }
+            }
+        } catch (const std::out_of_range&) {
+            return err_code;
+        }
     }
 
     return err_code;

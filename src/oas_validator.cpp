@@ -8,8 +8,9 @@
 
 #include "oas_validator_imp.hpp"
 
-OASValidator::OASValidator(const std::string& oas_specs)
-    : impl_(new OASValidatorImp(oas_specs))
+OASValidator::OASValidator(const std::string& oas_specs,
+                           const std::unordered_map<std::string, std::unordered_set<std::string>>& method_map)
+    : impl_(new OASValidatorImp(oas_specs, method_map))
 {
 }
 

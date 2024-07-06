@@ -15,7 +15,8 @@
 class OASValidatorImp
 {
 public:
-    explicit OASValidatorImp(const std::string& oas_specs, bool head_mapped_get = false);
+    explicit OASValidatorImp(const std::string& oas_specs,
+                             const std::unordered_map<std::string, std::unordered_set<std::string>>& method_map = {});
     ValidationError ValidateRoute(const std::string& method, const std::string& http_path, std::string& error_msg);
     ValidationError ValidateBody(const std::string& method, const std::string& http_path, const std::string& json_body,
                                  std::string& error_msg);
@@ -45,16 +46,16 @@ private:
         PathTrie path_trie{};
     };
 
-    bool head_mapped_get_;
+    const std::unordered_map<std::string, std::unordered_set<std::string>> method_map_;
     std::array<PerMethod, static_cast<size_t>(HttpMethod::COUNT)> oas_validators_{};
     MethodValidator method_validator_{};
 
-    ValidationError GetValidators(const std::string& method, const std::string& http_path, ValidatorsStore*& validators,
-                                  std::string& error_msg, std::unordered_map<size_t, ParamRange>* param_idxs = nullptr,
-                                  std::string* query = nullptr);
     ValidationError GetValidators(const std::string& method, const std::string& mapped_method,
                                   const std::string& http_path, ValidatorsStore*& validators, std::string& error_msg,
                                   std::unordered_map<size_t, ParamRange>* param_idxs = nullptr,
+                                  std::string* query = nullptr);
+    ValidationError GetValidators(const std::string& method, const std::string& http_path, ValidatorsStore*& validators,
+                                  std::string& error_msg, std::unordered_map<size_t, ParamRange>* param_idxs = nullptr,
                                   std::string* query = nullptr);
     static std::vector<std::string> Split(const std::string& str);
     static rapidjson::Value* ResolvePath(rapidjson::Document& doc, const std::string& path);

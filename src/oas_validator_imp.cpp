@@ -9,7 +9,8 @@
 #include <rapidjson/istreamwrapper.h>
 #include <sstream>
 
-OASValidatorImp::OASValidatorImp(const std::string& oas_specs)
+OASValidatorImp::OASValidatorImp(const std::string& oas_specs, bool head_mapped_get)
+    : head_mapped_get_(head_mapped_get)
 {
     rapidjson::Document doc;
     ParseSpecs(oas_specs, doc);
@@ -175,7 +176,21 @@ ValidationError OASValidatorImp::GetValidators(const std::string& method, const 
     auto err_code = method_validator_.Validate(method, error_msg);
     CHECK_ERROR(err_code)
 
-    auto enum_method = kStringToMethod.at(method);
+    err_code = GetValidators(method, method, http_path, validators, error_msg, param_idxs, query);
+
+    if (head_mapped_get_ && ValidationError::INVALID_ROUTE == err_code && (method == "head" || method == "HEAD")) {
+        return GetValidators(method, "get", http_path, validators, error_msg, param_idxs, query);
+    }
+
+    return err_code;
+}
+
+ValidationError OASValidatorImp::GetValidators(const std::string& method, const std::string& mapped_method,
+                                               const std::string& http_path, ValidatorsStore*& validators,
+                                               std::string& error_msg,
+                                               std::unordered_map<size_t, ParamRange>* param_idxs, std::string* query)
+{
+    auto enum_method = kStringToMethod.at(mapped_method);
 
     auto query_pos = http_path.find('?');
     if (std::string::npos != query_pos && query) {

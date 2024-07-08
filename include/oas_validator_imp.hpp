@@ -71,6 +71,8 @@ private:
                                   std::unordered_map<std::string, ValidatorsStore*>& per_path_validator);
     void ResolveReferences(rapidjson::Value& value, rapidjson::Document& doc,
                            rapidjson::Document::AllocatorType& allocator);
+    static std::unordered_map<std::string, std::unordered_set<std::string>>
+    BuildCaseInsensitiveMap(const std::unordered_map<std::string, std::unordered_set<std::string>>& method_map);
 };
 
 #endif // OAS_VALIDATION_HPP

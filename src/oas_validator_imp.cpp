@@ -5,13 +5,14 @@
 // [ END OF LICENSE c6bd0f49d040fca8d8a9cb05868e66aa63f0e2e0 ]
 
 #include "oas_validator_imp.hpp"
+#include <algorithm>
 #include <fstream>
 #include <rapidjson/istreamwrapper.h>
 #include <sstream>
 
 OASValidatorImp::OASValidatorImp(const std::string& oas_specs,
                                  const std::unordered_map<std::string, std::unordered_set<std::string>>& method_map)
-    : method_map_(method_map)
+    : method_map_(BuildCaseInsensitiveMap(method_map))
 {
     rapidjson::Document doc;
     ParseSpecs(oas_specs, doc);
@@ -372,6 +373,24 @@ void OASValidatorImp::ResolveReferences(rapidjson::Value& value, rapidjson::Docu
             ResolveReferences(value[i], doc, allocator);
         }
     }
+}
+
+std::unordered_map<std::string, std::unordered_set<std::string>> OASValidatorImp::BuildCaseInsensitiveMap(
+    const std::unordered_map<std::string, std::unordered_set<std::string>>& method_map)
+{
+
+    std::unordered_map<std::string, std::unordered_set<std::string>> case_insensitive_map;
+
+    for (const auto& entry : method_map) {
+        std::string lower_key(entry.first);
+        std::transform(lower_key.begin(), lower_key.end(), lower_key.begin(), ::tolower);
+        std::string upper_key(entry.first);
+        std::transform(upper_key.begin(), upper_key.end(), upper_key.begin(), ::toupper);
+        case_insensitive_map[lower_key] = entry.second;
+        case_insensitive_map[upper_key] = entry.second;
+    }
+
+    return case_insensitive_map;
 }
 
 const std::unordered_map<std::string, HttpMethod> OASValidatorImp::kStringToMethod = {

@@ -1,4 +1,4 @@
-# cpp-oasvalidator v1.1.0: API Reference
+# cpp-oasvalidator v1.1.1: API Reference
 `cpp-oasvalidator` offers a comprehensive API for validating HTTP requests in accordance with OpenAPI specifications. It encompasses various validation categories including *Path, Body, Parameters, and Response*.
 
 The API functions return a `ValidationError` type and accept a reference to a `std::string` for populating error messages in case of validation failure. A successful validation returns `ValidationError::NONE`. Otherwise, an error code is returned and the error message is populated. The error message follows this JSON schema:

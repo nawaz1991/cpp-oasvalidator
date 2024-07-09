@@ -8,7 +8,7 @@ cpp-oasvalidator: REST Request Validator
 ![Win build](https://img.shields.io/github/actions/workflow/status/nawaz1991/cpp-oasvalidator/windows-build.yml?logo=windows&label=Tests)
 [![codecov](https://codecov.io/gh/nawaz1991/cpp-oasvalidator/branch/main/graph/badge.svg?token=96b475c2-8dc1-4693-8ce3-84a572720d43)](https://codecov.io/gh/nawaz1991/cpp-oasvalidator)
 [![License](https://img.shields.io/github/license/nawaz1991/cpp-oasvalidator.svg)](./LICENSE)
-[![API Docs](https://img.shields.io/badge/API%20Docs-v1.1.0-brightgreen)](API.md)
+[![API Docs](https://img.shields.io/badge/API%20Docs-v1.1.1-brightgreen)](API.md)
 [![Benchmark](https://img.shields.io/badge/Benchmark-brightgreen)](https://nawaz1991.github.io/cpp-oasvalidator/benchmark.html)
 
 

@@ -68,7 +68,7 @@ jobs:
         run: cp -r build/debug/covhtml-oasvalidator build/debug/docs/html
 
       - name: Deploy docs
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.MY_PAT }}
           publish_dir: build/debug/docs/html
@@ -81,6 +81,6 @@ jobs:
           lcov --list coverage.info
 
       - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v3
+        uses: codecov/codecov-action@v4
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}

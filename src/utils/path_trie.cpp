@@ -16,8 +16,9 @@ PathTrie::PathTrie(const PathTrie& other)
     : root_(nullptr)
 {
     if (other.root_) {
-        root_ = new Node(*other.root_);
         CopyNode(root_, other.root_);
+    } else {
+        root_ = new Node();
     }
 }
 
@@ -27,11 +28,11 @@ PathTrie& PathTrie::operator=(const PathTrie& other)
         return *this;
 
     DeleteNode(root_);
+    root_ = nullptr;
     if (other.root_) {
-        root_ = new Node(*other.root_);
         CopyNode(root_, other.root_);
     } else {
-        root_ = nullptr;
+        root_ = new Node();
     }
 
     return *this;
@@ -156,6 +157,9 @@ PathTrie::~PathTrie()
 void PathTrie::DeleteNode(Node* node)
 {
 #ifndef LUA_OAS_VALIDATOR // LUA manages garbage collection itself
+    if (!node) {
+        return;
+    }
     for (auto& pair : node->children) {
         DeleteNode(pair.second);
     }

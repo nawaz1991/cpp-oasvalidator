@@ -65,3 +65,32 @@ TEST_F(PathTrieTest, InsertAndSearchMultiParamPath)
     EXPECT_EQ(std::string(param_idxs[3].beg, param_idxs[3].end), "123");
     EXPECT_EQ(std::string(param_idxs[5].beg, param_idxs[5].end), "update");
 }
+
+// Verify copy constructor correctly duplicates the trie
+TEST_F(PathTrieTest, CopyConstructor)
+{
+    trie_.Insert("/api/data/{id}");
+    PathTrie copied(trie_);
+    std::string oas_path;
+    std::unordered_map<size_t, ParamRange> param_idxs;
+    std::string search_path = "/api/data/456";
+    EXPECT_TRUE(copied.Search(search_path.data(), search_path.data() + search_path.size(), oas_path, param_idxs));
+    EXPECT_EQ(oas_path, "/api/data/{id}");
+    ASSERT_TRUE(param_idxs.find(3) != param_idxs.end());
+    EXPECT_EQ(std::string(param_idxs[3].beg, param_idxs[3].end), "456");
+}
+
+// Verify copy assignment correctly duplicates the trie
+TEST_F(PathTrieTest, CopyAssignment)
+{
+    PathTrie other;
+    other.Insert("/api/info/{name}");
+    trie_ = other;
+    std::string oas_path;
+    std::unordered_map<size_t, ParamRange> param_idxs;
+    std::string search_path = "/api/info/john";
+    EXPECT_TRUE(trie_.Search(search_path.data(), search_path.data() + search_path.size(), oas_path, param_idxs));
+    EXPECT_EQ(oas_path, "/api/info/{name}");
+    ASSERT_TRUE(param_idxs.find(2) != param_idxs.end());
+    EXPECT_EQ(std::string(param_idxs[2].beg, param_idxs[2].end), "john");
+}
